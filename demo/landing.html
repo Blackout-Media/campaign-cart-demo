@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Landing</title>
+  <meta content="Landing" property="og:title">
+  <meta content="Landing" property="twitter:title">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/components.css" rel="stylesheet" type="text/css">
+  <link href="../css/next-staging-core.css" rel="stylesheet" type="text/css">
+  <link href="../css/custom.css" rel="stylesheet" type="text/css">
+
+
+
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+
+
+  <meta name="next-api-key" content="kLGpgEfCX3iUZG16hpI5zrCH9qxcOdahDY1im6ud">
+  <meta name="next-debug" content="true">
+  <meta name="next-page-type" content="product">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <!--  DNS prefetch for faster API calls  -->
+  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+
+  <!--  Preload modules for faster loading  -->
+  <script type="module">
+    const qs = new URLSearchParams(location.search);
+    const isDebug = qs.get('debug') === 'true';
+    const DEV_HOST = 'http://localhost:3000';
+    const PROD_HOST = 'https://campaign-cart-v2.pages.dev';
+    const DEV_ENTRY_PATH = '/src/index.ts';
+    const PROD_ENTRY_PATH = '/index.es.js';
+    const sdkUrl = isDebug ? DEV_HOST + DEV_ENTRY_PATH : PROD_HOST + PROD_ENTRY_PATH;
+    // Preload the SDK module
+    const link = document.createElement('link');
+    link.rel = 'modulepreload';
+    link.href = sdkUrl;
+    document.head.appendChild(link);
+  </script>
+
+  <!--  Enhanced SDK loader with parallel initialization  -->
+  <script type="module">
+    const qs = new URLSearchParams(location.search);
+    const isDebug = qs.get('debug') === 'true';
+    const DEV_HOST = 'http://localhost:3000';
+    const PROD_HOST = 'https://campaign-cart-v2.pages.dev';
+    const DEV_ENTRY_PATH = '/src/index.ts';
+    const PROD_ENTRY_PATH = '/index.es.js';
+    const sdkUrl = isDebug ? DEV_HOST + DEV_ENTRY_PATH : PROD_HOST + PROD_ENTRY_PATH;
+    // Store start time for performance tracking
+    window.tn29StartTime = performance.now();
+    // Check if data is already cached
+    const hasCampaignCache = !!sessionStorage.getItem('next-campaign-cache');
+    const hasLocationCache = !!sessionStorage.getItem('next_country_location_data');
+    // Start data preloading immediately (before SDK loads)
+    const configData = {
+      apiKey: document.querySelector('meta[name="next-api-key"]')?.content,
+      ...window.nextConfig
+    };
+    // Preload critical data if we have config
+    let dataPreloadPromise = null;
+    if (configData.apiKey) {
+      const preloadTasks = [];
+      // Only preload campaign if not cached
+      if (!hasCampaignCache) {
+        preloadTasks.push(
+          fetch('https://campaigns.apps.29next.com/api/v1/campaigns/', {
+            headers: {
+              'Authorization': configData.apiKey
+            }
+          })
+            .then(r => r.ok ? r.json() : null)
+            .then(data => {
+              if (data) {
+                const cacheData = {
+                  campaign: data,
+                  timestamp: Date.now(),
+                  apiKey: configData.apiKey
+                };
+                sessionStorage.setItem('next-campaign-cache', JSON.stringify(cacheData));
+                console.log('💾 Campaign data preloaded and cached');
+              }
+              return data;
+            })
+            .catch(() => null)
+        );
+      }
+      // Only preload location if not cached
+      if (!hasLocationCache) {
+        preloadTasks.push(
+          fetch('https://cdn-countries.muddy-wind-c7ca.workers.dev/location')
+            .then(r => r.ok ? r.json() : null)
+            .then(data => {
+              if (data) {
+                const cacheData = {
+                  data,
+                  timestamp: Date.now()
+                };
+                sessionStorage.setItem('next_country_location_data',
+                  JSON.stringify(cacheData));
+                console.log('💾 Location data preloaded and cached');
+              }
+              return data;
+            })
+            .catch(() => null)
+        );
+      }
+      // Only create promise if we have tasks to run
+      if (preloadTasks.length > 0) {
+        dataPreloadPromise = Promise.all(preloadTasks);
+      }
+    }
+    try {
+      // Load SDK in parallel with data preloading - NO ARTIFICIAL DELAY
+      const [sdk] = await Promise.all([
+        import(sdkUrl),
+        dataPreloadPromise || Promise.resolve()
+      ]);
+      // Make SDK available globally
+      window.NextCommerce = sdk;
+      // Performance tracking
+      const loadTime = performance.now() - window.nextStartTime;
+      if (isDebug) {
+        // Dev mode helpers
+        window.nextDebug = {
+          loadTime: `${loadTime.toFixed(2)}ms`,
+          cartStore: () => import(`${DEV_HOST}/src/stores/cartStore.ts`)
+            .then(m => m.useCartStore.getState()),
+          configStore: () => import(`${DEV_HOST}/src/stores/configStore.ts`)
+            .then(m => m.useConfigStore.getState()),
+          campaignStore: () => import(`${DEV_HOST}/src/stores/campaignStore.ts`)
+            .then(m => m.useCampaignStore.getState()),
+          performance: {
+            loadTime,
+            dataPreloaded: !!dataPreloadPromise,
+            cacheHits: performance.getEntriesByType('navigation')[0]
+          }
+        };
+        console.log('🚀 Next Commerce Campaign-Cart SDK v0.1 — DEV build loaded');
+        console.log(`⚡ Load time: ${loadTime.toFixed(2)}ms`);
+        console.log('💡 Try nextDebug.cartStore() or nextDebug.performance');
+      } else {
+        console.log('🚀 Next Commerce Campaign-Cart SDK v0.1 — ES Module loaded');
+        if (loadTime > 500) {
+          console.warn(`⚠️ Slow load detected: ${loadTime.toFixed(2)}ms`);
+        }
+      }
+      // Emit ready event with performance data
+      window.dispatchEvent(new CustomEvent('next:ready', {
+        detail: {
+          loadTime,
+          version: '0.1.0'
+        }
+      }));
+    } catch (error) {
+      console.error('Failed to load ES module:', error);
+      if (!isDebug) {
+        console.log('🔄 Attempting fallback loading...');
+      }
+    }
+  </script>
+
+  <!--  Optimized fallback for older browsers  -->
+  <script nomodule="">
+    const script = document.createElement('script');
+    script.src = 'https://campaign-cart-v2.pages.dev/index.umd.js';
+    script.async = true;
+    script.onload = function () {
+      console.log('🚀 Next Commerce Campaign-Cart SDK v0.1 — UMB fallback ready');
+      window.dispatchEvent(new CustomEvent('next:ready', {
+        detail: {
+          fallback: true,
+          version: '0.1.0'
+        }
+      }));
+    };
+    script.onerror = function () {
+      console.error('❌ Failed to load SDK - please contact support');
+    };
+    document.head.appendChild(script);
+  </script>
+
+
+
+  <script src="../js/config.js"></script>
+
+
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="pageblock-styles">
+      <div class="next-styles w-embed"><!--  For development on webflow  -->
+        <link href="http://localhost:3000/src/styles/main.css" rel="stylesheet" type="text/css">
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="hero__wrapper cc-center">
+          <div class="hero__left cc-55">
+            <div class="hero__left-wrapper cc-sticky">
+              <div class="hero__left-gallery-2">
+                <div pb-component="swiper" class="component">
+                  <div class="swiper8_component">
+                    <div swiper="sw08" class="slider_component is-v6">
+                      <div swiper="slider" class="swiper">
+                        <div class="swiper-wrapper is-product">
+                          <div class="swiper-slide">
+                            <div class="swiper-slide__image-wrap"><img loading="eager" src="../images/4x3.svg" alt=""
+                                class="swiper__image"></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide__image-wrap"><img loading="eager" src="../images/4x3.svg" alt=""
+                                class="swiper__image"></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide__image-wrap"><img loading="eager" src="../images/4x3.svg" alt=""
+                                class="swiper__image"></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide__image-wrap"><img loading="eager" src="../images/4x3.svg" alt=""
+                                class="swiper__image"></div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide__image-wrap"><img loading="eager" src="../images/4x3.svg" alt=""
+                                class="swiper__image"></div>
+                          </div>
+                        </div>
+                        <div swiper="prev-button" class="swiper__button swiper__button--prev">
+                          <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24"
+                              fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z"
+                                fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                        <div swiper="next-button" class="swiper__button swiper__button--next">
+                          <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24"
+                              fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z"
+                                fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                        <div class="swiper__navigation is-v4 hide">
+                          <div swiper="pagination" class="swiper-pagination-7 is-product_hero"></div>
+                          <div swiper="scrollbar" class="swiper-scrollbar is-hero"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div swiper="thumbnails-holder" class="product-thumbnails-holder">
+                      <div swiper="gallery-thumbnail" class="swiper8__thumbnail is-current"><img loading="eager"
+                          src="../images/4x3.svg" alt="" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper8__thumbnail"><img loading="eager"
+                          src="../images/4x3.svg" alt="" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper8__thumbnail"><img loading="eager"
+                          src="../images/4x3.svg" alt="" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper8__thumbnail"><img loading="eager"
+                          src="../images/4x3.svg" alt="" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper8__thumbnail"><img loading="eager"
+                          src="../images/4x3.svg" alt="" class="swiper8__thumbnail-image"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero__left-bottom">
+                <div class="hero__review-desk">
+                  <div class="review_component">
+                    <div class="review_component-wrapper cc-wrap">
+                      <div class="review_stars-wrapper">
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--heroicons" width="100%" height="100%"
+                            preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z"
+                              clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--heroicons" width="100%" height="100%"
+                            preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z"
+                              clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--heroicons" width="100%" height="100%"
+                            preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z"
+                              clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--heroicons" width="100%" height="100%"
+                            preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z"
+                              clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--heroicons" width="100%" height="100%"
+                            preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z"
+                              clip-rule="evenodd"></path>
+                          </svg></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero__review-text">&quot;Our conversion rate jumped from 2.4% to 7.8% after switching to
+                    Next Commerce.&quot;</div>
+                  <div class="review_component cc-xs">
+                    <div class="review_component-wrapper">
+                      <div>Jose D.</div>
+                      <div class="u-horizontal-wrap cc-2xs">
+                        <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true" focusable="false" width="16.566" height="16.566"
+                            viewbox="0 0 16.566 16.566">
+                            <g data-name="Grupo 9174">
+                              <path data-name="Trazado 113450"
+                                d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z"
+                                style="fill: currentColor"></path>
+                              <path data-name="Icon awesome-check"
+                                d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z"
+                                transform="translate(4.381 .966)" style="fill: white"></path>
+                            </g>
+                          </svg></div>
+                        <div class="review_component-text"><strong>Verified Buyer</strong></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__right">
+            <div class="hero__right-wrapper">
+              <div class="order-form__wrapper">
+                <div class="order-form__review">
+                  <div class="review_component cc-sm">
+                    <div class="review_component-wrapper">
+                      <div class="review_stars-wrapper">
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--heroicons" width="100%" height="100%"
+                            preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z"
+                              clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--heroicons" width="100%" height="100%"
+                            preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z"
+                              clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--heroicons" width="100%" height="100%"
+                            preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z"
+                              clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--heroicons" width="100%" height="100%"
+                            preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z"
+                              clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--heroicons" width="100%" height="100%"
+                            preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z"
+                              clip-rule="evenodd"></path>
+                          </svg></div>
+                      </div>
+                      <div>Excellent</div>
+                      <div class="u-font-bold">4.8</div>
+                      <div class="review_divider">
+                        <div>19,579 reviews</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-hide_tablet">
+                  <div class="order-title-wrapper">
+                    <h2 class="h-hero"><strong>Product Name</strong></h2>
+                    <div class="text-sm"><em>The secret is out. But only for those who act.</em></div>
+                  </div>
+                </div>
+                <div class="os-form">
+                  <div class="os-form__step">
+                    <div class="os-form__step-title">
+                      <div>Select Quantity</div>
+                    </div>
+
+
+                    <!-- NEXT SELECTOR  -->
+
+                    <div data-next-selector-id="drone-packages" data-next-cart-selector=""
+                      data-next-selection-mode="swap" class="os-option">
+
+                      <div class="os-cards__vertical os--gap-m">
+
+                        <div data-next-selected="true" role="button" data-next-selector-card="" data-next-package-id="4"
+                          data-next-quantity="1" class="os-card next-selected">
+
+                          <div os-slot="header" class="os-card__header-slot"></div>
+                          <div class="os-card__wrapper">
+                            <div class="os-card__content os--align-middle">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                              <div class="os-card__image-slot hide-tablet"><img data-next-display="package.image"
+                                  class="image"></div>
+                              <div os-slot="left" class="os-card__main-slot">
+                                <div os-component="title-section" class="os-card__title-section">
+                                  <div class="os-card__title-wrapper">
+
+                                    <div data-next-display="package.name" class="os-card__title">Package Title</div>
+                                    <div data-next-show="package.hasSavings"
+                                      class="os-card__title-badge pb--bestseller">
+                                      <div>SAVE <span data-next-display="package.savingsPercentage">-</span></div>
+                                    </div>
+                                  </div>
+                                  <div class="os-card__subtitle-wrapper">
+                                    <div data-next-show="package.hasSavings" class="os-card__subtitle-text">Save <span
+                                        data-next-display="package.savings">$XX.00</span> + Free Shipping</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div os-slot="right" class="os-card__secondary-slot">
+                                <div class="os-card__pricing">
+                                  <div os-component="price-container" class="os-card__price-container">
+                                    <div data-next-show="package.hasRetailPrice"
+                                      data-next-display="package.price_retail"
+                                      class="os-card__price os--compare os-style">-</div>
+                                    <div class="os-card__price os--current"><span
+                                        data-next-display="package.price">-</span>/ea</div>
+                                  </div>
+                                  <div os-component="total-container" class="os-card__total-container">
+                                    <div class="os-card__total-label">Total:</div>
+                                    <div data-next-show="package.hasRetailPrice"
+                                      data-next-display="package.price_retail_total" class="os-card__total-compare">-
+                                    </div>
+                                    <div data-next-display="package.price_total" class="os-card__total-current">-</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
+                          </div>
+                          <div os-slot="footer" class="os-card__footer-slot"></div>
+                          <div os-slot="label" class="os-card__label-slot">
+                            <div os-label-position="top-right" class="os-card__label os-card__label--top-right">
+                              <div class="os-card__label-text">BEST DEAL</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-next-quantity="1" role="button" data-next-selector-card="" data-next-package-id="3"
+                          class="os-card">
+                          <div os-slot="header" class="os-card__header-slot"></div>
+                          <div class="os-card__wrapper">
+                            <div class="os-card__content os--align-middle">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                              <div class="os-card__image-slot hide-tablet"><img data-next-display="package.image"
+                                  class="image"></div>
+                              <div os-slot="left" class="os-card__main-slot">
+                                <div os-component="title-section" class="os-card__title-section">
+                                  <div class="os-card__title-wrapper">
+                                    <div data-next-display="package.name" class="os-card__title">Package Title</div>
+                                    <div data-next-show="package.hasSavings"
+                                      class="os-card__title-badge pb--bestseller">
+                                      <div>SAVE <span data-next-display="package.savingsPercentage">-</span></div>
+                                    </div>
+                                  </div>
+                                  <div class="os-card__subtitle-wrapper">
+                                    <div data-next-show="package.hasSavings" class="os-card__subtitle-text">Save <span
+                                        data-next-display="package.savings">$XX.00</span> + Free Shipping</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div os-slot="right" class="os-card__secondary-slot">
+                                <div class="os-card__pricing">
+                                  <div os-component="price-container" class="os-card__price-container">
+                                    <div data-next-display="package.price_retail"
+                                      class="os-card__price os--compare os-style">$16.95</div>
+                                    <div class="os-card__price os--current"><span
+                                        data-next-display="package.price">-</span>/ea</div>
+                                  </div>
+                                  <div os-component="total-container" class="os-card__total-container">
+                                    <div class="os-card__total-label">Total:</div>
+                                    <div data-next-show="package.hasRetailPrice"
+                                      data-next-display="package.price_retail_total" class="os-card__total-compare">-
+                                    </div>
+                                    <div data-next-display="package.price_total" class="os-card__total-current">-</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
+                          </div>
+                          <div os-slot="footer" class="os-card__footer-slot"></div>
+                        </div>
+                        <div data-next-quantity="1" role="button" data-next-selector-card="" data-next-package-id="2"
+                          class="os-card">
+                          <div os-slot="header" class="os-card__header-slot"></div>
+                          <div class="os-card__wrapper">
+                            <div class="os-card__content os--align-middle">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                              <div class="os-card__image-slot hide-tablet"><img data-next-display="package.image"
+                                  class="image"></div>
+                              <div os-slot="left" class="os-card__main-slot">
+                                <div os-component="title-section" class="os-card__title-section">
+                                  <div class="os-card__title-wrapper">
+                                    <div data-next-display="package.name" class="os-card__title">Package Title</div>
+                                    <div data-next-show="package.hasSavings"
+                                      class="os-card__title-badge pb--bestseller">
+                                      <div>SAVE <span data-next-display="package.savingsPercentage">-</span></div>
+                                    </div>
+                                  </div>
+                                  <div class="os-card__subtitle-wrapper">
+                                    <div data-next-show="package.hasSavings" class="os-card__subtitle-text">Save <span
+                                        data-next-display="package.savings">$XX.00</span> + Free Shipping</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div os-slot="right" class="os-card__secondary-slot">
+                                <div class="os-card__pricing">
+                                  <div os-component="price-container" class="os-card__price-container">
+                                    <div data-next-display="package.price_retail"
+                                      class="os-card__price os--compare os-style">-</div>
+                                    <div class="os-card__price os--current"><span
+                                        data-next-display="package.price">-</span>/ea</div>
+                                  </div>
+                                  <div os-component="total-container" class="os-card__total-container">
+                                    <div class="os-card__total-label">Total:</div>
+                                    <div data-next-show="package.hasRetailPrice"
+                                      data-next-display="package.price_retail_total" class="os-card__total-compare">-
+                                    </div>
+                                    <div data-next-display="package.price_total" class="os-card__total-current os-dark">
+                                      -</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
+                          </div>
+                          <div os-slot="footer" class="os-card__footer-slot"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="os-form__cta">
+                    <a os-state="active" os-component="button" os-variant="checkout" data-action="submit"
+                      href="../demo/checkout.html" class="os-button w-inline-block">
+                      <div os-slot="content" class="button_content">
+                        <div class="os-button__main-slot">
+                          <div class="os-button__text-wrapper">
+                            <div id="cta_text" class="os-button__text">Add to Cart</div>
+                          </div>
+                        </div>
+                        <div class="os-button__secondary-slot">
+                          <div class="os-button__price-bubble">
+                            <div data-next-display="cart.compareTotal" class="pb-form-price__amount pb--compare">-</div>
+                            <div data-next-display="cart.subtotal" class="pb-form-price__amount">-</div>
+                          </div>
+                          <div os-slot="icon" class="os-button__icon os--absolutes w-embed"><svg
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                              aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%"
+                              height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 20 20">
+                              <path fill="currentColor" fill-rule="evenodd"
+                                d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                                clip-rule="evenodd" width="100%" height="100%"></path>
+                            </svg></div>
+                        </div>
+                      </div>
+                      <div class="os-button__spinner-slot"><svg viewbox="0 0 50 50" os-component="spinner"
+                          class="os-button__spinner os-button__spinner">
+                          <circle cx="25" cy="25" r="20" fill="none" stroke-width="5"
+                            class="os-button__spinner-path os-button__spinner-path"></circle>
+                        </svg></div>
+                    </a>
+                    <link rel="prerender" href="/demo/checkout">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+
+</html>
