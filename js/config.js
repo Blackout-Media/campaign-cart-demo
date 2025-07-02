@@ -1,4 +1,4 @@
-window.tnConfig = {
+window.nextConfig = {
     // Address configuration
 
     apiKey: 'kLGpgEfCX3iUZG16hpI5zrCH9qxcOdahDY1im6ud',
