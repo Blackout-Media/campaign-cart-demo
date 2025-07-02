@@ -1,5 +1,8 @@
 window.tnConfig = {
     // Address configuration
+
+    apiKey: 'kLGpgEfCX3iUZG16hpI5zrCH9qxcOdahDY1im6ud',
+    debug: true,
     addressConfig: {
       defaultCountry: 'US', // Default selected country
       showCountries: ['US', 'CA', 'GB'], // Only show these countries
