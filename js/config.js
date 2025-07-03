@@ -1,58 +1,74 @@
-window.nextConfig = {
-    // Address configuration
+  window.dataLayer = window.dataLayer || [];
+  window.nextReady = window.nextReady || [];
 
-    apiKey: 'kLGpgEfCX3iUZG16hpI5zrCH9qxcOdahDY1im6ud',
+  window.nextConfig = {
+    apiKey: "kLGpgEfCX3iUZG16hpI5zrCH9qxcOdahDY1im6ud",
     debug: true,
-    addressConfig: {
-      defaultCountry: 'US', // Default selected country
-      showCountries: ['US', 'CA', 'GB'], // Only show these countries
-      dontShowStates: ['AS', 'GU', 'PR', 'VI'], // Hide specific states (e.g. US territories)
-      // Or use custom country list
-      // countries: [
-      //   { code: 'US', name: 'United States' },
-      //   { code: 'CA', name: 'Canada' }
-      // ]
-    },
-    // Discounts configuration
-    discounts: {
-      'SAVE10': {
-        code: 'SAVE10',
-        type: 'percentage',
-        value: 10,
-        scope: 'order',
-        description: '10% off entire order',
-        combinable: true
-      },
-      'FREESHIP': {
-        code: 'FREESHIP',
-        type: 'fixed',
-        value: 9.99,
-        scope: 'order',
-        description: 'Free shipping',
-        combinable: true
-      },
-      'SAVE20': {
-        code: 'SAVE20',
-        type: 'percentage',
-        value: 20,
-        scope: 'order',
-        description: '20% off entire order',
-        minOrderValue: 50,
-        combinable: false
-      },
-      'EXPIRED': {
-        code: 'EXPIRED',
-        type: 'percentage',
-        value: 15,
-        scope: 'order',
-        description: 'Expired coupon',
-        validUntil: '2023-01-01'
+    paymentConfig: {
+      expressCheckout: {
+        enabled: true,
+        methods: {
+          paypal: true,
+          applePay: true,
+          googlePay: false
+        }
       }
     },
-    // Google Maps configuration
+    addressConfig: {
+      defaultCountry: "US",
+      showCountries: ["US", "CA", "GB"],
+      dontShowStates: ["AS", "GU", "PR", "VI"]
+    },
+    discounts: {
+      SAVE10: {
+        code: "SAVE10",
+        type: "percentage",
+        value: 10,
+        scope: "order",
+        description: "10% off entire order",
+        combinable: true
+      }
+    },
     googleMaps: {
-      apiKey: 'AIzaSyBmrv1QRE41P9FhFOTwUhRMGg6LcFH1ehs',
-      region: 'US', // Bias results to this region
-      enableAutocomplete: true // Enable address autocomplete
-    }
+      apiKey: "AIzaSyBmrv1QRE41P9FhFOTwUhRMGg6LcFH1ehs",
+      region: "US",
+      enableAutocomplete: true
+    },
+    tracking: "auto",
+    analytics: {
+      enabled: true,
+      mode: 'auto', // auto | manual | disabled
+      providers: {
+        nextCampaign: {
+          enabled: true
+        },
+        gtm: {
+          enabled: true,
+          settings: {
+            containerId: "GTM-MCGB3JBM",
+            dataLayerName: "dataLayer"
+          }
+        },
+        facebook: {
+          enabled: true,
+          settings: {
+            pixelId: "286865669194576"
+          }
+        },
+        // custom: {
+        //   enabled: false,
+        //   settings: {
+        //     endpoint: "https://your-analytics.com/track",
+        //     apiKey: "your-api-key"
+        //   }
+        // }
+      }
+    },
+  utmTransfer: {
+    enabled: true,                    // Enable/disable feature
+    applyToExternalLinks: false,      // Apply to external domains
+    excludedDomains: ['example.com'], // Domains to exclude
+    paramsToCopy: []                  // Specific params (empty = all)
+  }
+
   };
