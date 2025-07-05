@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import fs from 'fs/promises';
 import { config as defaultConfig } from './config.js';
 import { HtmlProcessor } from './processors/htmlProcessor.js';
+import { CssProcessor } from './processors/cssProcessor.js';
 import { findFiles, readFile, writeFile, getOutputPath, ensureDirectoryExists } from './utils/fileUtils.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -14,6 +15,7 @@ class WebflowProcessor {
   constructor(config) {
     this.config = { ...defaultConfig, ...config };
     this.htmlProcessor = new HtmlProcessor(this.config);
+    this.cssProcessor = new CssProcessor();
   }
 
   async processFiles() {
@@ -142,7 +144,14 @@ class WebflowProcessor {
       if (entry.isDirectory()) {
         await this.copyDirectory(sourcePath, destPath);
       } else {
-        await fs.copyFile(sourcePath, destPath);
+        // Check if it's next-staging-core.css and process it
+        if (entry.name === 'next-staging-core.css') {
+          const cssContent = await readFile(sourcePath);
+          const processedCss = await this.cssProcessor.process(cssContent);
+          await writeFile(destPath, processedCss);
+        } else {
+          await fs.copyFile(sourcePath, destPath);
+        }
       }
     }
   }

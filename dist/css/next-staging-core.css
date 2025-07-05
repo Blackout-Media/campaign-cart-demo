@@ -3,7 +3,6 @@
   --_text---font-family--primary: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   --brand--color--text-primary: var(--_labels---brand--color--label-status);
   --_text---font-family--heading: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --text-color--text-primary\<deleted\|relume-variable-text-color-1\>: var(--brand--25\<deleted\|relume-variable-color-neutral-1\>);
   --brand--color--cta-primary: var(--brand--color--primary);
   --radius--button: var(--radius-size--buttons);
   --brand--color--text-inverse: white;
@@ -11,10 +10,7 @@
   --font-size--paragraph-m: .875rem;
   --brand--color--primary: #3c7dff;
   --neutral--300: #d0d5dd;
-  --brand--25\<deleted\|relume-variable-color-neutral-1\>: #f8f8f8;
   --neutral--25: #fcfcfd;
-  --background-color--background-error\<deleted\|relume-variable-background-color-8\>: var(--base-color-system--error-red-light\<deleted\|relume-variable-system-color-6\>);
-  --text-color--text-error\<deleted\|relume-variable-text-color-5\>: var(--system-color--error\<deleted\|relume-variable-system-color-5\>);
   --spacing--4: 4rem;
   --spacing--3: 3rem;
   --spacing--2: 2rem;
@@ -36,7 +32,6 @@
   --site--gutter: 4rem;
   --site--gutter-mobile: 2rem;
   --radius-size--sm: 4px;
-  --base--white\<deleted\|relume-variable-color-primary-2\>: white;
   --brand--color--border: #eee;
   --radius-size--md: 8px;
   --spacing--1-5: 1.5rem;
@@ -153,8 +148,6 @@
   --spacing-new--unit: 4px;
   --site--width: 67.5rem;
   --site--margin: 0px;
-  --base-color-system--error-red-light\<deleted\|relume-variable-system-color-6\>: #fef3f2;
-  --system-color--error\<deleted\|relume-variable-system-color-5\>: #f04438;
 }
 
 .w-layout-blockcontainer {
@@ -289,7 +282,7 @@ label {
 }
 
 blockquote {
-  border-left: .1875rem solid var(--text-color--text-primary\<deleted\|relume-variable-text-color-1\>);
+  border-left: .1875rem solid inherit;
   margin-bottom: 0;
   padding: .75rem 1.25rem;
   font-size: 1.25rem;
@@ -605,9 +598,9 @@ figcaption {
 }
 
 .form_input {
-  border: 1px solid var(--brand--25\<deleted\|relume-variable-color-neutral-1\>);
+  border: 1px solid inherit;
   background-color: var(--neutral--25);
-  color: var(--text-color--text-primary\<deleted\|relume-variable-text-color-1\>);
+  color: inherit;
   border-radius: 0;
   height: auto;
   min-height: 2.75rem;
@@ -660,7 +653,7 @@ figcaption {
 }
 
 .text-rich-text figcaption {
-  border-left: 2px solid var(--text-color--text-primary\<deleted\|relume-variable-text-color-1\>);
+  border-left: 2px solid inherit;
   text-align: left;
   margin-top: .5rem;
   padding-left: .5rem;
@@ -681,8 +674,8 @@ figcaption {
 }
 
 .form_message-error {
-  background-color: var(--background-color--background-error\<deleted\|relume-variable-background-color-8\>);
-  color: var(--text-color--text-error\<deleted\|relume-variable-text-color-5\>);
+  background-color: inherit;
+  color: inherit;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -2312,7 +2305,7 @@ figcaption {
 }
 
 .pb-sg_header-title {
-  color: var(--base--white\<deleted\|relume-variable-color-primary-2\>);
+  color: inherit;
   font-size: 6rem;
   font-weight: 400;
 }
