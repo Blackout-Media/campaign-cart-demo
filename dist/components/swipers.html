@@ -1,0 +1,2263 @@
+<!DOCTYPE html><!--  Last Published: Sat Jul 05 2025 12:36:08 GMT+0000 (Coordinated Universal Time)  --><html><head>
+  <meta charset="utf-8">
+  <title>Swipers</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/components.css" rel="stylesheet" type="text/css">
+  <link href="../css/next-staging-core.css" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+  
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+  <script src="https://campaign-cart-v2.pages.dev/config.js"></script>
+  <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
+  <style>
+      html:not(.next-display-ready) [data-next-await] {
+        position: relative;
+        overflow: hidden;
+        border-color: transparent !important;
+        box-shadow: none !important;
+      }
+      [data-next-await] * {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+      [data-next-await]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #e0e0e0;
+        animation: pulse-gray 1.5s ease-in-out infinite;
+        z-index: 1;
+        pointer-events: none;
+      }
+      @keyframes pulse-gray {
+        0%,
+        100% {
+          background-color: #e0e0e0;
+          opacity: 0.6;
+        }
+        50% {
+          background-color: #f5f5f5;
+          opacity: 0.8;
+        }
+      }
+      html.next-display-ready [data-next-await] * {
+        opacity: 1;
+      }
+      html.next-display-ready [data-next-await]::before {
+        display: none;
+      }
+    </style>
+  <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+      }
+      /*Text Selection Color*/
+      ::selection {
+        background: #d14424;
+        color: #fff;
+      }
+      ::-moz-selection {
+        background: #d14424;
+        color: #fff;
+      }
+      .test-mode-indicator {
+        display: none !important;
+      }
+    </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="pageblock-styles">
+      <div class="next-styles w-embed"><!--  For development on webflow  -->
+        <link href="https://campaign-cart-v2.pages.dev/campaign-cart.css" rel="stylesheet" type="text/css">
+      </div>
+    </div>
+    <main class="main-wrapper">
+      <div class="div-block-1284">
+        <div class="elements-grid cc-swiper">
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components">
+                <div pb-component="swiper" class="component">
+                  <div class="custom-css w-embed">
+                    <style>
+                        [swiper="sw01"] .swiper-slide_image-wrap {
+                          aspect-ratio: 4 / 3;
+                        }
+                        [swiper="sw01"] .swiper-pagination-bullet {
+                          border: 1px solid #000;
+                          background-color: transparent;
+                          opacity: 1;
+                        }
+                        [swiper="sw01"] .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                          background-color: #000;
+                        }
+                      </style>
+                  </div>
+                  <div swiper="sw01" class="slider_component is-v1">
+                    <div swiper="slider" class="swiper is-v1">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide sw01">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-4x3"><img loading="eager" src="../images/3x2.svg" alt="" class="image"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide sw01">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-4x3"><img loading="eager" src="../images/3x2.svg" alt="" class="image"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide sw01">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-4x3"><img loading="eager" src="../images/3x2.svg" alt="" class="image"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide sw01">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-4x3"><img loading="eager" src="../images/3x2.svg" alt="" class="image"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div swiper="prev-button" class="swiper-button is-v1">
+                      <div class="swiper-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                        </svg></div>
+                    </div>
+                    <div swiper="next-button" class="swiper-button is-v1 is-next">
+                      <div class="swiper-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                        </svg></div>
+                    </div>
+                    <div class="swiper-navigation sw01">
+                      <div swiper="pagination" class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                  <div class="custom-code w-embed w-script">
+                    <script>
+                        document.querySelectorAll('[swiper="sw01"]').forEach((sliderComponent) => {
+                          const sliderEl = sliderComponent.querySelector('[swiper="slider"]');
+                          const buttonNextEl = sliderComponent.querySelector('[swiper="next-button"]');
+                          const buttonPrevEl = sliderComponent.querySelector('[swiper="prev-button"]');
+                          const paginationEl = sliderComponent.querySelector('[swiper="pagination"]');
+                          new Swiper(sliderEl, {
+                            slidesPerView: 1,
+                            spaceBetween: 0,
+                            direction: 'horizontal',
+                            pagination: {
+                              el: paginationEl,
+                            },
+                            navigation: {
+                              nextEl: buttonNextEl,
+                              prevEl: buttonPrevEl,
+                            },
+                            breakpoints: {
+                              // when window width is >= 768px
+                              768: {
+                                spaceBetween: 0,
+                              },
+                            },
+                          });
+                        });
+                      </script>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components">
+                <div pb-component="swiper" class="component">
+                  <div swiper="sw02" class="slider_component is-v9">
+                    <div class="custom-css w-embed">
+                      <style>
+                          [swiper="sw02"] .swiper-slide_image-wrap {
+                            aspect-ratio: 1 / 1;
+                          }
+                          [swiper="sw02"] [swiper="slider-thumbs"] .swiper-slide {
+                            filter: grayscale(100%);
+                            transition: filter 0.4s ease;
+                            cursor: pointer;
+                          }
+                          [swiper="sw02"] [swiper="slider-thumbs"] .swiper-slide:focus-visible {
+                            border: 2px solid #000;
+                          }
+                          [swiper="sw02"] [swiper="slider-thumbs"] .swiper-slide.swiper-slide-thumb-active {
+                            filter: grayscale(0);
+                          }
+                        </style>
+                    </div>
+                    <div class="slider_component">
+                      <div swiper="slider-main" class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide sw02">
+                            <div class="swiper-slide_inner">
+                              <div class="image-wrapper cc-1x1"><img loading="eager" src="../images/1x1.svg" alt="" class="image"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide sw02">
+                            <div class="swiper-slide_inner">
+                              <div class="image-wrapper cc-1x1"><img loading="eager" src="../images/1x1.svg" alt="" class="image"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide sw02">
+                            <div class="swiper-slide_inner">
+                              <div class="image-wrapper cc-1x1"><img loading="eager" src="../images/1x1.svg" alt="" class="image"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide sw02">
+                            <div class="swiper-slide_inner">
+                              <div class="image-wrapper cc-1x1"><img loading="eager" src="../images/1x1.svg" alt="" class="image"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slider2_thumbs-wrap">
+                        <div thumbsslider="" swiper="slider-thumbs" class="swiper is-v9-thumbs">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide is-thumb swiper-slide-thumb-active">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide is-thumb">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide is-thumb">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide is-thumb">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide is-thumb">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-code w-embed w-script">
+                      <script>
+                          /* START: Swiper 9 - Gallery Swiper */
+                          document.querySelectorAll('[swiper="sw02"]').forEach((sliderComponent) => {
+                            const sliderMainEl = sliderComponent.querySelector('[swiper="slider-main"]');
+                            const sliderThumbsEl = sliderComponent.querySelector('[swiper="slider-thumbs"]');
+                            const thumbsSlider = new Swiper(sliderThumbsEl, {
+                              spaceBetween: 8,
+                              slidesPerView: 5,
+                              watchSlidesProgress: true,
+                              breakpoints: {
+                                // when window width is >= 400px
+                                0: {
+                                  spaceBetween: 8,
+                                },
+                                // when window width is >= 400px
+                                400: {
+                                  spaceBetween: 8,
+                                },
+                                // when window width is >= 768px
+                                768: {
+                                  slidesPerView: 4,
+                                },
+                              },
+                            });
+                            const mainSlider = new Swiper(sliderMainEl, {
+                              spaceBetween: 16,
+                              speed: 800,
+                              effect: 'fade',
+                              thumbs: {
+                                swiper: thumbsSlider,
+                                autoScrollOffset: 1,
+                              },
+                              breakpoints: {
+                                // when window width is >= 768px
+                                768: {
+                                  spaceBetween: 32,
+                                },
+                              },
+                            });
+                            sliderThumbsEl.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+                              slide.addEventListener('keydown', (event) => {
+                                if (event.key === 'Enter' || event.key === ' ') {
+                                  event.preventDefault();
+                                  thumbsSlider.slideTo(index, 0);
+                                  mainSlider.slideTo(index);
+                                }
+                              });
+                            });
+                          });
+                        </script>
+                    </div>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div id="w-node-_5a675e63-a18c-6d4e-cc0d-0f22ce467360-5dd70389" class="component-wrapper cc-col col-2">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components cc-col">
+                <div class="component negative-swiper">
+                  <div class="custom-css w-embed">
+                    <style>
+                        [swiper="sw03"] .swiper-pagination-bullet {
+                          border: 1px solid #000;
+                          background-color: transparent;
+                          opacity: 1;
+                        }
+                        [swiper="sw03"] .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                          background-color: #000;
+                        }
+                      </style>
+                  </div>
+                  <div swiper="sw03" class="slider_component">
+                    <div swiper="slider" class="swiper">
+                      <div class="swiper-wrapper vertical-center">
+                        <div class="swiper-slide full-height">
+                          <div class="swiper-slide_inner">
+                            <div class="seenon_grid-item">
+                              <div class="text-seenon_quote">“The Only Steamer I’llEver Use Again.”</div><img loading="lazy" src="../images/pb-logo.svg" alt="" class="feaures-logo">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="seenon_grid-item">
+                              <div class="text-seenon_quote">“An iron that doesn’t require an ironing board and doubles as a steamer. An absolute game-changer.”</div><img loading="lazy" src="../images/pb-logo.svg" alt="" class="feaures-logo">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="seenon_grid-item">
+                              <div class="text-seenon_quote">“If you've ever felt like your clothessteamer just isn't cutting it, The NoriPress is the solution”</div><img loading="lazy" src="../images/pb-logo.svg" alt="" class="feaures-logo">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="show-tablet">
+                      <div class="spacer-m"></div>
+                      <div class="swiper-navigation">
+                        <div class="swiper-sw-wrap">
+                          <div swiper="prev-button" class="swiper-button is-v2">
+                            <div class="swiper-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                              </svg></div>
+                          </div>
+                          <div swiper="pagination" class="swiper-dots-pagination"></div>
+                          <div swiper="next-button" class="swiper-button is-v2">
+                            <div class="swiper-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                              </svg></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="custom-code w-embed w-script">
+                    <script>
+                        /* START: Swiper features - Swiper Simple Starter 2 */
+                        document.querySelectorAll('[swiper="sw03"]').forEach((sliderComponent) => {
+                          const sliderEl = sliderComponent.querySelector('[swiper="slider"]');
+                          const buttonNextEl = sliderComponent.querySelector('[swiper="next-button"]');
+                          const buttonPrevEl = sliderComponent.querySelector('[swiper="prev-button"]');
+                          const paginationEl = sliderComponent.querySelector('[swiper="pagination"]');
+                          new Swiper(sliderEl, {
+                            slidesPerView: 3,
+                            spaceBetween: 16,
+                            direction: 'horizontal',
+                            rewind: true,
+                            effect: 'slide',
+                            pagination: {
+                              el: paginationEl,
+                            },
+                            navigation: {
+                              nextEl: buttonNextEl,
+                              prevEl: buttonPrevEl,
+                            },
+                            breakpoints: {
+                              768: {
+                                slidesPerView: 3,
+                                spaceBetween: 24,
+                              },
+                              0: {
+                                slidesPerView: 1,
+                                spaceBetween: 24,
+                              },
+                            },
+                          });
+                        });
+                        /* END: Swiper features - Swiper Simple Starter 2 */
+                      </script>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div id="w-node-_5a675e63-a18c-6d4e-cc0d-0f22ce467385-5dd70389" class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components cc-col">
+                <div pb-component="swiper" class="component">
+                  <div swiper="sw04" class="slider_component">
+                    <div class="custom-css w-embed">
+                      <style>
+                          [swiper="sw04"] .span.swiper-pagination-bullet {
+                            border: 1px solid #000;
+                            background-color: transparent;
+                            opacity: 1;
+                          }
+                          [swiper="sw04"] span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+                            background-color: #000;
+                          }
+                        </style>
+                    </div>
+                    <div swiper="slider" class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="feature_card">
+                              <div class="icon-embed-xlarge w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="cube" width="100%" height="100%">
+                                  <g>
+                                    <path fill="CurrentColor" d="M20.66 7.26c0-.07-.1-.14-.15-.21l-.09-.1a2.5 2.5 0 0 0-.86-.68l-6.4-3a2.7 2.7 0 0 0-2.26 0l-6.4 3a2.6 2.6 0 0 0-.86.68L3.52 7a1 1 0 0 0-.15.2A2.39 2.39 0 0 0 3 8.46v7.06a2.49 2.49 0 0 0 1.46 2.26l6.4 3a2.7 2.7 0 0 0 2.27 0l6.4-3A2.49 2.49 0 0 0 21 15.54V8.46a2.39 2.39 0 0 0-.34-1.2zm-8.95-2.2a.73.73 0 0 1 .58 0l5.33 2.48L12 10.15 6.38 7.54zM5.3 16a.47.47 0 0 1-.3-.43V9.1l6 2.79v6.72zm13.39 0L13 18.61v-6.72l6-2.79v6.44a.48.48 0 0 1-.31.46z"></path>
+                                  </g>
+                                </svg></div>
+                              <h3 class="display-sm">Lorem Ipsum</h3>
+                              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="feature_card">
+                              <div class="icon-embed-xlarge w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="cube" width="100%" height="100%">
+                                  <g>
+                                    <path fill="CurrentColor" d="M20.66 7.26c0-.07-.1-.14-.15-.21l-.09-.1a2.5 2.5 0 0 0-.86-.68l-6.4-3a2.7 2.7 0 0 0-2.26 0l-6.4 3a2.6 2.6 0 0 0-.86.68L3.52 7a1 1 0 0 0-.15.2A2.39 2.39 0 0 0 3 8.46v7.06a2.49 2.49 0 0 0 1.46 2.26l6.4 3a2.7 2.7 0 0 0 2.27 0l6.4-3A2.49 2.49 0 0 0 21 15.54V8.46a2.39 2.39 0 0 0-.34-1.2zm-8.95-2.2a.73.73 0 0 1 .58 0l5.33 2.48L12 10.15 6.38 7.54zM5.3 16a.47.47 0 0 1-.3-.43V9.1l6 2.79v6.72zm13.39 0L13 18.61v-6.72l6-2.79v6.44a.48.48 0 0 1-.31.46z"></path>
+                                  </g>
+                                </svg></div>
+                              <h3 class="display-sm">Lorem Ipsum</h3>
+                              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="feature_card">
+                              <div class="icon-embed-xlarge w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="cube" width="100%" height="100%">
+                                  <g>
+                                    <path fill="CurrentColor" d="M20.66 7.26c0-.07-.1-.14-.15-.21l-.09-.1a2.5 2.5 0 0 0-.86-.68l-6.4-3a2.7 2.7 0 0 0-2.26 0l-6.4 3a2.6 2.6 0 0 0-.86.68L3.52 7a1 1 0 0 0-.15.2A2.39 2.39 0 0 0 3 8.46v7.06a2.49 2.49 0 0 0 1.46 2.26l6.4 3a2.7 2.7 0 0 0 2.27 0l6.4-3A2.49 2.49 0 0 0 21 15.54V8.46a2.39 2.39 0 0 0-.34-1.2zm-8.95-2.2a.73.73 0 0 1 .58 0l5.33 2.48L12 10.15 6.38 7.54zM5.3 16a.47.47 0 0 1-.3-.43V9.1l6 2.79v6.72zm13.39 0L13 18.61v-6.72l6-2.79v6.44a.48.48 0 0 1-.31.46z"></path>
+                                  </g>
+                                </svg></div>
+                              <h3 class="display-sm">Lorem Ipsum</h3>
+                              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="feature_card">
+                              <div class="icon-embed-xlarge w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="cube" width="100%" height="100%">
+                                  <g>
+                                    <path fill="CurrentColor" d="M20.66 7.26c0-.07-.1-.14-.15-.21l-.09-.1a2.5 2.5 0 0 0-.86-.68l-6.4-3a2.7 2.7 0 0 0-2.26 0l-6.4 3a2.6 2.6 0 0 0-.86.68L3.52 7a1 1 0 0 0-.15.2A2.39 2.39 0 0 0 3 8.46v7.06a2.49 2.49 0 0 0 1.46 2.26l6.4 3a2.7 2.7 0 0 0 2.27 0l6.4-3A2.49 2.49 0 0 0 21 15.54V8.46a2.39 2.39 0 0 0-.34-1.2zm-8.95-2.2a.73.73 0 0 1 .58 0l5.33 2.48L12 10.15 6.38 7.54zM5.3 16a.47.47 0 0 1-.3-.43V9.1l6 2.79v6.72zm13.39 0L13 18.61v-6.72l6-2.79v6.44a.48.48 0 0 1-.31.46z"></path>
+                                  </g>
+                                </svg></div>
+                              <h3 class="display-sm">Lorem Ipsum</h3>
+                              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-navigation is-v2">
+                      <div class="swiper-button-wrap">
+                        <div swiper="prev-button" class="swiper-button is-v2">
+                          <div class="swiper-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                        <div swiper="next-button" class="swiper-button is-v2">
+                          <div class="swiper-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-code w-embed w-script"><!--  [Leadlane Components] SwiperV1  -->
+                      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+                      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                      <script>
+                          /* START: Swiper features - Swiper Simple Starter 2 */
+                          document.querySelectorAll('[swiper="sw04"]').forEach((sliderComponent) => {
+                            const sliderEl = sliderComponent.querySelector('[swiper="slider"]');
+                            const buttonNextEl = sliderComponent.querySelector('[swiper="next-button"]');
+                            const buttonPrevEl = sliderComponent.querySelector('[swiper="prev-button"]');
+                            new Swiper(sliderEl, {
+                              slidesPerView: 4,
+                              spaceBetween: 16,
+                              direction: 'horizontal',
+                              rewind: true,
+                              effect: 'slide',
+                              navigation: {
+                                nextEl: buttonNextEl,
+                                prevEl: buttonPrevEl,
+                              },
+                              breakpoints: {
+                                768: {
+                                  slidesPerView: 4,
+                                  spaceBetween: 24,
+                                },
+                                0: {
+                                  slidesPerView: 1,
+                                  spaceBetween: 24,
+                                },
+                              },
+                            });
+                          });
+                          /* END: Swiper features - Swiper Simple Starter 2 */
+                        </script>
+                    </div>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div id="w-node-_5a675e63-a18c-6d4e-cc0d-0f22ce4673b5-5dd70389" class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components cc-col">
+                <div pb-component="swiper" class="component">
+                  <div swiper="sw05" class="slider_component">
+                    <div class="custom-css w-embed">
+                      <style>
+                          [swiper="sw05"] .swiper-pagination-bullet {
+                            border: 1px solid #000;
+                            background-color: transparent;
+                            opacity: 1;
+                          }
+                          [swiper="sw05"] .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                            background-color: #000;
+                          }
+                        </style>
+                    </div>
+                    <div swiper="slider" class="swiper is-features">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide is-gray">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-2x3"><img sizes="(max-width: 1024px) 100vw, 1024px" srcset="../images/1x1_woman-p-500.webp 500w, ../images/1x1_woman-p-800.webp 800w, ../images/1x1_woman.webp 1024w" alt="" src="../images/1x1_woman.webp" loading="eager" class="image"></div>
+                            <div class="athlete-container">
+                              <div class="athlete-overlay">
+                                <div class="overlay_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                <div class="overlay_athlete">Feature Item</div>
+                                <div class="overlay_role">Feature Description</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide is-gray">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-2x3"><img sizes="(max-width: 1024px) 100vw, 1024px" srcset="../images/1x1_woman-p-500.webp 500w, ../images/1x1_woman-p-800.webp 800w, ../images/1x1_woman.webp 1024w" alt="" src="../images/1x1_woman.webp" loading="eager" class="image"></div>
+                            <div class="athlete-container">
+                              <div class="athlete-overlay">
+                                <div class="overlay_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                <div class="overlay_athlete">Feature Item</div>
+                                <div class="overlay_role">Feature Description</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide is-gray">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-2x3"><img sizes="(max-width: 1024px) 100vw, 1024px" srcset="../images/1x1_woman-p-500.webp 500w, ../images/1x1_woman-p-800.webp 800w, ../images/1x1_woman.webp 1024w" alt="" src="../images/1x1_woman.webp" loading="eager" class="image"></div>
+                            <div class="athlete-container">
+                              <div class="athlete-overlay">
+                                <div class="overlay_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                <div class="overlay_athlete">Feature Item</div>
+                                <div class="overlay_role">Feature Description</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide is-gray">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-2x3"><img sizes="(max-width: 1024px) 100vw, 1024px" srcset="../images/1x1_woman-p-500.webp 500w, ../images/1x1_woman-p-800.webp 800w, ../images/1x1_woman.webp 1024w" alt="" src="../images/1x1_woman.webp" loading="eager" class="image"></div>
+                            <div class="athlete-container">
+                              <div class="athlete-overlay">
+                                <div class="overlay_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                <div class="overlay_athlete">Feature Item</div>
+                                <div class="overlay_role">Feature Description</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide is-gray">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-2x3"><img sizes="(max-width: 1024px) 100vw, 1024px" srcset="../images/1x1_woman-p-500.webp 500w, ../images/1x1_woman-p-800.webp 800w, ../images/1x1_woman.webp 1024w" alt="" src="../images/1x1_woman.webp" loading="eager" class="image"></div>
+                            <div class="athlete-container">
+                              <div class="athlete-overlay">
+                                <div class="overlay_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                <div class="overlay_athlete">Feature Item</div>
+                                <div class="overlay_role">Feature Description</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="spacer-s"></div>
+                    <div class="swiper-navigation sw05">
+                      <div swiper="pagination" class="swiper-dots-pagination"></div>
+                    </div>
+                    <div class="custom-code w-embed w-script">
+                      <script>
+                          /* START: Swiper features - Swiper Simple Starter 2 */
+                          document.querySelectorAll('[swiper="sw05"]').forEach((sliderComponent) => {
+                            const sliderEl = sliderComponent.querySelector('[swiper="slider"]');
+                            const buttonNextEl = sliderComponent.querySelector('[swiper="next-button"]');
+                            const buttonPrevEl = sliderComponent.querySelector('[swiper="prev-button"]');
+                            const paginationEl = sliderComponent.querySelector('[swiper="pagination"]');
+                            new Swiper(sliderEl, {
+                              slidesPerView: 3,
+                              spaceBetween: 16,
+                              direction: 'horizontal',
+                              initialSlide: 1,
+                              rewind: true,
+                              effect: 'slide',
+                              pagination: {
+                                el: paginationEl,
+                              },
+                              navigation: {
+                                nextEl: buttonNextEl,
+                                prevEl: buttonPrevEl,
+                              },
+                              breakpoints: {
+                                768: {
+                                  slidesPerView: 3,
+                                  spaceBetween: 16,
+                                },
+                                0: {
+                                  slidesPerView: 1.1,
+                                  centeredSlides: true,
+                                  spaceBetween: 12,
+                                },
+                              },
+                            });
+                          });
+                        </script>
+                    </div>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components cc-col">
+                <div pb-component="swiper" class="component negative-swiper">
+                  <div swiper="sw06" class="slider_component">
+                    <div class="custom-css w-embed">
+                      <style>
+                          [swiper="sw06"] .swiper-pagination-bullet {
+                            border: 1px solid #000;
+                            background-color: transparent;
+                            opacity: 1;
+                          }
+                          [swiper="sw06"] .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                            background-color: #000;
+                          }
+                        </style>
+                    </div>
+                    <div swiper="slider" class="swiper is-ugc">
+                      <div class="swiper-wrapper padding-left">
+                        <div class="swiper-slide is-gray">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-2x3"><img sizes="(max-width: 1024px) 100vw, 1024px" srcset="../images/1x1_woman-p-500.webp 500w, ../images/1x1_woman-p-800.webp 800w, ../images/1x1_woman.webp 1024w" alt="" src="../images/1x1_woman.webp" loading="eager" class="image"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide is-gray">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-2x3"><img sizes="(max-width: 1024px) 100vw, 1024px" srcset="../images/1x1_woman-p-500.webp 500w, ../images/1x1_woman-p-800.webp 800w, ../images/1x1_woman.webp 1024w" alt="" src="../images/1x1_woman.webp" loading="eager" class="image"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide is-gray">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-2x3"><img sizes="(max-width: 1024px) 100vw, 1024px" srcset="../images/1x1_woman-p-500.webp 500w, ../images/1x1_woman-p-800.webp 800w, ../images/1x1_woman.webp 1024w" alt="" src="../images/1x1_woman.webp" loading="eager" class="image"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide is-gray">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-2x3"><img sizes="(max-width: 1024px) 100vw, 1024px" srcset="../images/1x1_woman-p-500.webp 500w, ../images/1x1_woman-p-800.webp 800w, ../images/1x1_woman.webp 1024w" alt="" src="../images/1x1_woman.webp" loading="eager" class="image"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide is-gray">
+                          <div class="swiper-slide_inner">
+                            <div class="image-wrapper cc-2x3"><img sizes="(max-width: 1024px) 100vw, 1024px" srcset="../images/1x1_woman-p-500.webp 500w, ../images/1x1_woman-p-800.webp 800w, ../images/1x1_woman.webp 1024w" alt="" src="../images/1x1_woman.webp" loading="eager" class="image"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="spacer-s"></div>
+                    <div class="swiper-navigation sw06">
+                      <div swiper="pagination" class="swiper-pagination sw06"></div>
+                      <div class="swiper-button-wrap sw06">
+                        <div swiper="prev-button" class="swiper-button-2 is-v2">
+                          <div class="swiper-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                        <div swiper="next-button" class="swiper-button-2 is-v2">
+                          <div class="swiper-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-code w-embed w-script"><!--  Add the Swiper CSS file to the <head> area of your page or project.  -->
+                      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+                      <!--  Add the following JavaScripts to the "before </body>" section of your page or project  -->
+                      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+                      <script>
+                          /* START: Swiper ugc - Swiper Simple Starter 2 */
+                          document.querySelectorAll('[swiper="sw06"]').forEach((sliderComponent) => {
+                            const sliderEl = sliderComponent.querySelector('[swiper="slider"]');
+                            const buttonNextEl = sliderComponent.querySelector('[swiper="next-button"]');
+                            const buttonPrevEl = sliderComponent.querySelector('[swiper="prev-button"]');
+                            const paginationEl = sliderComponent.querySelector('[swiper="pagination"]');
+                            new Swiper(sliderEl, {
+                              slidesPerView: 4,
+                              spaceBetween: 16,
+                              loop: false,
+                              direction: 'horizontal',
+                              rewind: true,
+                              pagination: {
+                                el: paginationEl,
+                              },
+                              navigation: {
+                                nextEl: buttonNextEl,
+                                prevEl: buttonPrevEl,
+                              },
+                              breakpoints: {
+                                // when window width is >= 768px
+                                768: {
+                                  slidesPerView: 4,
+                                  spaceBetween: 16,
+                                },
+                                0: {
+                                  slidesPerView: 1.6,
+                                  centeredSlides: true,
+                                  loop: true,
+                                  spaceBetween: 16,
+                                },
+                              },
+                            });
+                          });
+                          /* END: Swiper ugc - Swiper Simple Starter 2 */
+                        </script>
+                    </div>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components cc-col">
+                <div pb-component="swiper" class="component negative-swiper is-padding">
+                  <div class="custom-css w-embed">
+                    <style>
+                        @media screen and (min-width: 991px) {
+                          [swiper="sw07"] .swiper-slide {
+                            opacity: 0.6;
+                          }
+                          [swiper="sw07"] .swiper-slide.swiper-slide-active {
+                            scale: 1.2;
+                            z-index: 2;
+                            opacity: 1;
+                          }
+                        }
+                        [swiper="sw07"] .swiper-pagination-bullet {
+                          border: 1px solid #000;
+                          background-color: transparent;
+                          opacity: 1;
+                        }
+                        [swiper="sw07"] .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                          background-color: #000;
+                        }
+                      </style>
+                  </div>
+                  <div swiper="sw07" class="slider_component">
+                    <div swiper="slider" class="swiper is-reviews-v2">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-review">
+                              <div class="results4__head">
+                                <div class="product-header8_rating-wrapper">
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999ZM14.1087 16.56L12.9918 11.88L16.6517 8.74999L11.8549 8.36999L9.99999 3.90999V14.05L14.1087 16.56Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989ZM16.6517 8.74999L11.8549 8.36999L9.99999 3.90999L8.14509 8.36999L3.3483 8.74999L7.00822 11.88L5.88132 16.56L9.99999 14.05L14.1087 16.56L12.9918 11.88L16.6517 8.74999Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                </div>
+                                <div><strong>BYE BYE IRONING BOARD!</strong><br></div>
+                              </div>
+                              <div>I hate wrinkled clothing, but I also hate dragging out the massive clunky ironing board. The Nori Press saves me so much time and space in my tiny LA apartment.<br></div>
+                              <div class="review-owner-verified">
+                                <div class="text-weight-bold">Samantha</div>
+                                <div class="display-col">
+                                  <div class="icon-embed-xxsmall-7 w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                                      <g data-name="Grupo 9174">
+                                        <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" fill="CurrentColor"></path>
+                                        <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" fill="#fff"></path>
+                                      </g>
+                                    </svg></div>
+                                  <p class="ts-tiny text-weight-medium color-primary">Verified Purchase</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-review">
+                              <div class="results4__head">
+                                <div class="product-header8_rating-wrapper">
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999ZM14.1087 16.56L12.9918 11.88L16.6517 8.74999L11.8549 8.36999L9.99999 3.90999V14.05L14.1087 16.56Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989ZM16.6517 8.74999L11.8549 8.36999L9.99999 3.90999L8.14509 8.36999L3.3483 8.74999L7.00822 11.88L5.88132 16.56L9.99999 14.05L14.1087 16.56L12.9918 11.88L16.6517 8.74999Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                </div>
+                                <div><strong>BYE BYE IRONING BOARD!</strong><br></div>
+                              </div>
+                              <div>I hate wrinkled clothing, but I also hate dragging out the massive clunky ironing board. The Nori Press saves me so much time and space in my tiny LA apartment.<br></div>
+                              <div class="review-owner-verified">
+                                <div class="text-weight-bold">Samantha</div>
+                                <div class="display-col">
+                                  <div class="icon-embed-xxsmall-7 w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                                      <g data-name="Grupo 9174">
+                                        <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" fill="CurrentColor"></path>
+                                        <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" fill="#fff"></path>
+                                      </g>
+                                    </svg></div>
+                                  <p class="ts-tiny text-weight-medium color-primary">Verified Purchase</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-review">
+                              <div class="results4__head">
+                                <div class="product-header8_rating-wrapper">
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999ZM14.1087 16.56L12.9918 11.88L16.6517 8.74999L11.8549 8.36999L9.99999 3.90999V14.05L14.1087 16.56Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989ZM16.6517 8.74999L11.8549 8.36999L9.99999 3.90999L8.14509 8.36999L3.3483 8.74999L7.00822 11.88L5.88132 16.56L9.99999 14.05L14.1087 16.56L12.9918 11.88L16.6517 8.74999Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                </div>
+                                <div><strong>BYE BYE IRONING BOARD!</strong><br></div>
+                              </div>
+                              <div>I hate wrinkled clothing, but I also hate dragging out the massive clunky ironing board. The Nori Press saves me so much time and space in my tiny LA apartment.<br></div>
+                              <div class="review-owner-verified">
+                                <div class="text-weight-bold">Samantha</div>
+                                <div class="display-col">
+                                  <div class="icon-embed-xxsmall-7 w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                                      <g data-name="Grupo 9174">
+                                        <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" fill="CurrentColor"></path>
+                                        <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" fill="#fff"></path>
+                                      </g>
+                                    </svg></div>
+                                  <p class="ts-tiny text-weight-medium color-primary">Verified Purchase</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-review">
+                              <div class="results4__head">
+                                <div class="product-header8_rating-wrapper">
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999ZM14.1087 16.56L12.9918 11.88L16.6517 8.74999L11.8549 8.36999L9.99999 3.90999V14.05L14.1087 16.56Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989ZM16.6517 8.74999L11.8549 8.36999L9.99999 3.90999L8.14509 8.36999L3.3483 8.74999L7.00822 11.88L5.88132 16.56L9.99999 14.05L14.1087 16.56L12.9918 11.88L16.6517 8.74999Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                </div>
+                                <div><strong>BYE BYE IRONING BOARD!</strong><br></div>
+                              </div>
+                              <div>I hate wrinkled clothing, but I also hate dragging out the massive clunky ironing board. The Nori Press saves me so much time and space in my tiny LA apartment.<br></div>
+                              <div class="review-owner-verified">
+                                <div class="text-weight-bold">Samantha</div>
+                                <div class="display-col">
+                                  <div class="icon-embed-xxsmall-7 w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                                      <g data-name="Grupo 9174">
+                                        <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" fill="CurrentColor"></path>
+                                        <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" fill="#fff"></path>
+                                      </g>
+                                    </svg></div>
+                                  <p class="ts-tiny text-weight-medium color-primary">Verified Purchase</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-review">
+                              <div class="results4__head">
+                                <div class="product-header8_rating-wrapper">
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999ZM14.1087 16.56L12.9918 11.88L16.6517 8.74999L11.8549 8.36999L9.99999 3.90999V14.05L14.1087 16.56Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989ZM16.6517 8.74999L11.8549 8.36999L9.99999 3.90999L8.14509 8.36999L3.3483 8.74999L7.00822 11.88L5.88132 16.56L9.99999 14.05L14.1087 16.56L12.9918 11.88L16.6517 8.74999Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                </div>
+                                <div><strong>BYE BYE IRONING BOARD!</strong><br></div>
+                              </div>
+                              <div>I hate wrinkled clothing, but I also hate dragging out the massive clunky ironing board. The Nori Press saves me so much time and space in my tiny LA apartment.<br></div>
+                              <div class="review-owner-verified">
+                                <div class="text-weight-bold">Samantha</div>
+                                <div class="display-col">
+                                  <div class="icon-embed-xxsmall-7 w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                                      <g data-name="Grupo 9174">
+                                        <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" fill="CurrentColor"></path>
+                                        <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" fill="#fff"></path>
+                                      </g>
+                                    </svg></div>
+                                  <p class="ts-tiny text-weight-medium color-primary">Verified Purchase</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-review">
+                              <div class="results4__head">
+                                <div class="product-header8_rating-wrapper">
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.201432 8.35425C0.0324796 8.23123 -0.0397528 8.01452 0.021606 7.81473L0.101529 7.56496C0.159961 7.36756 0.335635 7.22781 0.541103 7.21527L6.92493 6.70573L9.37256 0.821007C9.45466 0.614853 9.66074 0.485543 9.88206 0.501294H10.1418C10.3505 0.496866 10.539 0.62523 10.6114 0.821007L13.069 6.70573L19.4528 7.21527C19.6583 7.22781 19.8339 7.36756 19.8924 7.56496L19.9723 7.81473C20.0403 8.00821 19.9805 8.22355 19.8224 8.35425L15.0071 12.4905L16.4857 18.695C16.5344 18.8936 16.4596 19.1021 16.2959 19.2245L16.0061 19.3843C15.8371 19.4986 15.6157 19.4986 15.4467 19.3843L10.0119 16.0873L4.54723 19.4143C4.37823 19.5286 4.15676 19.5286 3.98777 19.4143L3.76798 19.2645C3.60419 19.142 3.52945 18.9335 3.57816 18.7349L5.01677 12.4905L0.201432 8.35425Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999ZM14.1087 16.56L12.9918 11.88L16.6517 8.74999L11.8549 8.36999L9.99999 3.90999V14.05L14.1087 16.56Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="buybox4__testimonials-star">
+                                    <div class="icon-embed-xxsmall-7 w-embed"><svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.39166 0.819989C9.46995 0.624384 9.66017 0.497222 9.87035 0.499989H10.1296C10.3379 0.495557 10.5261 0.624037 10.5983 0.819989L13.0815 6.70999L19.454 7.21999C19.6591 7.23254 19.8344 7.37241 19.8928 7.56999L19.9725 7.81999C20.0381 8.00868 19.9829 8.21839 19.8329 8.34999L14.9863 12.5L16.4223 18.72C16.4709 18.9188 16.3963 19.1275 16.2328 19.25L16.0134 19.4C15.9282 19.467 15.8225 19.5023 15.7143 19.5C15.6229 19.5019 15.533 19.4776 15.455 19.43L9.99999 16.1L4.57492 19.43C4.49692 19.4776 4.40695 19.5019 4.31563 19.5C4.20738 19.5023 4.10167 19.467 4.01646 19.4L3.76714 19.25C3.60364 19.1275 3.52904 18.9188 3.57766 18.72L5.01371 12.5L0.177024 8.35999C0.0192942 8.22917 -0.0404113 8.01364 0.027436 7.81999L0.137134 7.56999C0.195462 7.37241 0.370823 7.23254 0.575926 7.21999L6.94839 6.70999L9.39166 0.819989ZM16.6517 8.74999L11.8549 8.36999L9.99999 3.90999L8.14509 8.36999L3.3483 8.74999L7.00822 11.88L5.88132 16.56L9.99999 14.05L14.1087 16.56L12.9918 11.88L16.6517 8.74999Z" fill="CurrentColor"></path>
+                                      </svg></div>
+                                  </div>
+                                </div>
+                                <div><strong>BYE BYE IRONING BOARD!</strong><br></div>
+                              </div>
+                              <div>I hate wrinkled clothing, but I also hate dragging out the massive clunky ironing board. The Nori Press saves me so much time and space in my tiny LA apartment.<br></div>
+                              <div class="review-owner-verified">
+                                <div class="text-weight-bold">Samantha</div>
+                                <div class="display-col">
+                                  <div class="icon-embed-xxsmall-7 w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                                      <g data-name="Grupo 9174">
+                                        <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" fill="CurrentColor"></path>
+                                        <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" fill="#fff"></path>
+                                      </g>
+                                    </svg></div>
+                                  <p class="ts-tiny text-weight-medium color-primary">Verified Purchase</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="spacer-s"></div>
+                    <div class="swiper-navigation">
+                      <div class="swiper-sw-wrap">
+                        <div class="swiper-button_wrapper sw07"><button swiper="prev-button" class="swiper__button-static">
+                            <div class="swiper-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                              </svg></div>
+                          </button>
+                          <div swiper="pagination" class="swiper-dots-pagination"></div><button swiper="next-button" class="swiper__button-static">
+                            <div class="swiper-button_icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                              </svg></div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="custom-code w-embed w-script">
+                    <script>
+                        /* START: Swiper features - Swiper Simple Starter 2 */
+                        document.querySelectorAll('[swiper="sw07"]').forEach((sliderComponent) => {
+                          const sliderEl = sliderComponent.querySelector('[swiper="slider"]');
+                          const buttonNextEl = sliderComponent.querySelector('[swiper="next-button"]');
+                          const buttonPrevEl = sliderComponent.querySelector('[swiper="prev-button"]');
+                          const paginationEl = sliderComponent.querySelector('[swiper="pagination"]');
+                          new Swiper(sliderEl, {
+                            slidesPerView: 3,
+                            spaceBetween: 16,
+                            direction: 'horizontal',
+                            centeredSlides: true,
+                            loop: true,
+                            rewind: true,
+                            effect: 'slide',
+                            pagination: {
+                              el: paginationEl,
+                            },
+                            navigation: {
+                              nextEl: buttonNextEl,
+                              prevEl: buttonPrevEl,
+                            },
+                            breakpoints: {
+                              768: {
+                                slidesPerView: 3,
+                                spaceBetween: 24,
+                              },
+                              0: {
+                                slidesPerView: 1,
+                                spaceBetween: 24,
+                              },
+                            },
+                          });
+                        });
+                        /* END: Swiper features - Swiper Simple Starter 2 */
+                      </script>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components">
+                <div pb-component="swiper" class="component">
+                  <div class="custom-css w-embed">
+                    <style>
+                        [swiper="sw08"] .swiper-slide_image-wrap {
+                          aspect-ratio: 16 / 9;
+                        }
+                        [swiper="sw08"] [swiper="slider-nav"] .swiper-slide {
+                          width: auto;
+                        }
+                        [swiper="sw08"] [swiper="slider-nav"] .swiper-slide.swiper-slide-active {
+                          color: #000;
+                        }
+                        /* Add the button disabled style here instead of in JS */
+                        .swiper-button-disabled {
+                          opacity: 30% !important;
+                        }
+                      </style>
+                  </div>
+                  <div class="swiper8_component">
+                    <div swiper="sw08" class="slider_component is-v6">
+                      <div class="u-negative-margin-tm">
+                        <div swiper="slider" class="swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__image-wrap cc-landscape cc-brm-0"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper__image"></div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__image-wrap cc-landscape cc-brm-0"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper__image"></div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__image-wrap cc-landscape cc-brm-0"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper__image"></div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__image-wrap cc-landscape cc-brm-0"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper__image"></div>
+                            </div>
+                            <div class="swiper-slide">
+                              <div class="swiper-slide__image-wrap cc-landscape cc-brm-0"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper__image"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-button_wrapper"><button swiper="prev-button" class="swiper__button swiper__button--prev">
+                              <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                                </svg></div>
+                            </button><button swiper="next-button" class="swiper__button swiper__button--next">
+                              <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                                </svg></div>
+                            </button></div>
+                          <div class="swiper__navigation is-v4 hide">
+                            <div swiper="pagination" class="swiper-pagination-4 is-product_hero"></div>
+                            <div swiper="scrollbar" class="swiper-scrollbar is-hero"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div swiper="thumbnails-holder" class="product-thumbnails-holder">
+                      <div swiper="gallery-thumbnail" class="swiper8__thumbnail is-current"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper8__thumbnail"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper8__thumbnail"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper8__thumbnail"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper8__thumbnail"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper8__thumbnail-image"></div>
+                    </div>
+                  </div>
+                  <div class="custom-code w-embed w-script">
+                    <script>
+                        document.querySelectorAll('[swiper="sw08"]').forEach((sliderComponent) => {
+                          // Get elements
+                          const sliderEl = sliderComponent.querySelector('[swiper="slider"]');
+                          const buttonNextEl = sliderComponent.querySelector('[swiper="next-button"]');
+                          const buttonPrevEl = sliderComponent.querySelector('[swiper="prev-button"]');
+                          const paginationEl = sliderComponent.querySelector('[swiper="pagination"]');
+                          const thumbnailsHolder = document.querySelector('[swiper="thumbnails-holder"]');
+                          // Initialize main swiper
+                          const mainSwiper = new Swiper(sliderEl, {
+                            slidesPerView: 1,
+                            spaceBetween: 16,
+                            direction: 'horizontal',
+                            navigation: {
+                              nextEl: buttonNextEl,
+                              prevEl: buttonPrevEl,
+                            },
+                            pagination: {
+                              el: paginationEl,
+                            },
+                            breakpoints: {
+                              768: {
+                                spaceBetween: 32,
+                              },
+                            },
+                            on: {
+                              slideChange: function() {
+                                // Update thumbnails when slide changes
+                                if (thumbnailsHolder) {
+                                  const thumbnails = thumbnailsHolder.querySelectorAll('[swiper="gallery-thumbnail"]');
+                                  thumbnails.forEach((thumbnail, index) => {
+                                    if (index === this.activeIndex) {
+                                      thumbnail.setAttribute('swiper-state', 'active');
+                                      thumbnail.classList.add('is-current');
+                                    } else {
+                                      thumbnail.removeAttribute('swiper-state');
+                                      thumbnail.classList.remove('is-current');
+                                    }
+                                  });
+                                }
+                              },
+                              init: function() {
+                                // Set initial active state
+                                if (thumbnailsHolder) {
+                                  const firstThumbnail = thumbnailsHolder.querySelector('[swiper="gallery-thumbnail"]');
+                                  if (firstThumbnail) {
+                                    firstThumbnail.setAttribute('swiper-state', 'active');
+                                    firstThumbnail.classList.add('is-current');
+                                  }
+                                }
+                              }
+                            }
+                          });
+                          // Set up thumbnail click handlers
+                          if (thumbnailsHolder) {
+                            const thumbnails = thumbnailsHolder.querySelectorAll('[swiper="gallery-thumbnail"]');
+                            thumbnails.forEach((thumbnail, index) => {
+                              thumbnail.style.userSelect = 'none';
+                              thumbnail.setAttribute('tabindex', '0');
+                              // Add click handler
+                              thumbnail.addEventListener('click', () => {
+                                mainSwiper.slideTo(index);
+                              });
+                              // Add keyboard support
+                              thumbnail.addEventListener('keydown', (event) => {
+                                if (event.key === 'Enter' || event.key === ' ') {
+                                  event.preventDefault();
+                                  mainSwiper.slideTo(index);
+                                }
+                              });
+                            });
+                          }
+                        });
+                      </script>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components">
+                <div pb-component="swiper" class="component">
+                  <div class="custom-css w-embed">
+                    <style>
+                        [swiper="sw09"] .swiper-slide_image-wrap {
+                          aspect-ratio: 16 / 9;
+                        }
+                        [swiper="sw09"] [swiper="slider-nav"] .swiper-slide {
+                          width: auto;
+                        }
+                      </style>
+                  </div>
+                  <div swiper="sw09" class="slider_component sw9">
+                    <div thumbsslider="" swiper="slider-nav" class="swiper is-v6-tab-nav">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide sw9 swiper-slide-thumb-active">
+                          <div class="swiper_tab-nav">
+                            <div>First Button</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide sw9">
+                          <div class="swiper_tab-nav">
+                            <div>Second Button</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide sw9">
+                          <div class="swiper_tab-nav">
+                            <div>Third Button</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide sw9">
+                          <div class="swiper_tab-nav">
+                            <div>Fourth Button</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div swiper="slider-content" class="swiper is-v6-tab-nav">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-slide_image-wrap"><img loading="lazy" src="../images/3x2.svg" alt="" class="cover"></div>
+                            <div class="swiper-slide_body-content">
+                              <div>Testes</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-slide_image-wrap"><img loading="lazy" src="../images/3x2.svg" alt="" class="cover"></div>
+                            <div class="swiper-slide_body-content">
+                              <div>Testes</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-slide_image-wrap"><img loading="lazy" src="../images/3x2.svg" alt="" class="cover"></div>
+                            <div class="swiper-slide_body-content">
+                              <div>Testes</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-slide_image-wrap"><img loading="lazy" src="../images/3x2.svg" alt="" class="cover"></div>
+                            <div class="swiper-slide_body-content">
+                              <div>Testes</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="custom-code w-embed w-script">
+                    <script>
+                        /* START: Swiper 7 - Swiper Tabs 2 */
+                        const sliderComponent7 = document.querySelectorAll('[swiper="sw09"]');
+                        sliderComponent7.forEach((sliderComponent) => {
+                          const sliderNavEl = sliderComponent.querySelector('[swiper="slider-nav"]');
+                          const sliderContentEl = sliderComponent.querySelector('[swiper="slider-content"]');
+                          const tabNav = new Swiper(sliderNavEl, {
+                            spaceBetween: 12,
+                            slidesPerView: 'auto',
+                            watchSlidesProgress: true,
+                            breakpoints: {
+                              // when window width is >= 768px
+                              768: {
+                                spaceBetween: 12,
+                              },
+                            },
+                          });
+                          const tabContent = new Swiper(sliderContentEl, {
+                            allowTouchMove: false,
+                            autoHeight: true,
+                            speed: 800,
+                            effect: 'creative',
+                            creativeEffect: {
+                              prev: {
+                                translate: [0, 0, -1],
+                                opacity: 0,
+                              },
+                              next: {
+                                translate: [0, 0, -1],
+                                opacity: 0,
+                              },
+                            },
+                            thumbs: {
+                              swiper: tabNav,
+                              autoScrollOffset: 1,
+                            },
+                          });
+                          sliderNavEl.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+                            slide.addEventListener('click', () => {
+                              tabNav.slideTo(index);
+                              tabContent.slideTo(index);
+                            });
+                            // Keydown-Event-Listener
+                            slide.addEventListener('keydown', (event) => {
+                              if (event.key === 'Enter' || event.key === ' ') {
+                                event.preventDefault();
+                                tabNav.slideTo(index);
+                                tabContent.slideTo(index);
+                              }
+                            });
+                          });
+                        });
+                        /* END: Swiper 7 - Swiper Tabs 2 */
+                      </script>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components">
+                <div pb-component="swiper" class="component">
+                  <div swiper="sw10" class="slider_component">
+                    <div class="custom-css w-embed">
+                      <style>
+                          [swiper="sw10"] .swiper-slide_image-wrap {
+                            aspect-ratio: 1 / 1;
+                          }
+                          [swiper="sw10"] .swiper-slide-thumb-active {
+                            border: 1px solid #000;
+                          }
+                          [swiper="sw10"] [swiper="slider-thumbs"] .swiper-slide {
+                            filter: grayscale(100%);
+                            transition: filter 0.4s ease;
+                            cursor: pointer;
+                          }
+                          [swiper="sw10"] [swiper="slider-thumbs"] .swiper-slide:focus-visible {
+                            border: 2px solid #000;
+                          }
+                          [swiper="sw10"] [swiper="slider-thumbs"] .swiper-slide.swiper-slide-thumb-active {
+                            filter: grayscale(0);
+                          }
+                        </style>
+                    </div>
+                    <div class="slider2_component-wrapper">
+                      <div swiper="slider-main" class="swiper is-sw11">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="swiper-slide_inner">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide_inner">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide_inner">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide_inner">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-thumbs-wrap is-sw11">
+                        <div thumbsslider="" swiper="slider-thumbs" class="swiper is-s11-thumbs">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide is-sw10">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover is-sw11"></div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide is-sw10">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover is-sw11"></div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide is-sw10">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover is-sw11"></div>
+                              </div>
+                            </div>
+                            <div class="swiper-slide is-sw10">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover is-sw11"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-code w-embed w-script">
+                      <script>
+                          /* START: Swiper 9 - Gallery Swiper */
+                          document.querySelectorAll('[swiper="sw10"]').forEach((sliderComponent) => {
+                            const sliderMainEl = sliderComponent.querySelector('[swiper="slider-main"]');
+                            const sliderThumbsEl = sliderComponent.querySelector('[swiper="slider-thumbs"]');
+                            const thumbsSlider = new Swiper(sliderThumbsEl, {
+                              spaceBetween: 8,
+                              slidesPerView: 5,
+                              watchSlidesProgress: true,
+                              breakpoints: {
+                                // when window width is >= 400px
+                                400: {
+                                  spaceBetween: 8,
+                                },
+                                // when window width is >= 768px
+                                768: {
+                                  slidesPerView: 5,
+                                },
+                              },
+                            });
+                            const mainSlider = new Swiper(sliderMainEl, {
+                              spaceBetween: 8,
+                              speed: 300,
+                              slidesPerView: 1.10,
+                              thumbs: {
+                                swiper: thumbsSlider,
+                                autoScrollOffset: 1,
+                              },
+                              breakpoints: {
+                                // when window width is >= 768px
+                                768: {
+                                  spaceBetween: 16,
+                                },
+                              },
+                            });
+                            sliderThumbsEl.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+                              slide.addEventListener('keydown', (event) => {
+                                if (event.key === 'Enter' || event.key === ' ') {
+                                  event.preventDefault();
+                                  thumbsSlider.slideTo(index, 0);
+                                  mainSlider.slideTo(index);
+                                }
+                              });
+                            });
+                            function debounce(func) {
+                              var timer;
+                              return function(event) {
+                                if (timer) clearTimeout(timer);
+                                timer = setTimeout(func, 80, event);
+                              };
+                            }
+                            function addMarginToComponent() {
+                              const thumbsSliderHeight =
+                                sliderComponent.querySelector('.swiper-thumbs-wrap.is-sw10').offsetHeight;
+                              sliderComponent.style.marginBottom = thumbsSliderHeight / 2 + 'px';
+                            }
+                            // addMarginToComponent();
+                            // window.addEventListener('resize', debounce(addMarginToComponent));
+                          });
+                          /* END: Swiper 9 - Gallery Swiper */
+                        </script>
+                    </div>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components">
+                <div pb-component="swiper" class="slider1_component">
+                  <div class="custom-css w-embed">
+                    <style>
+                        [swiper="sw11"] .swiper-slide_image-wrap {
+                          aspect-ratio: 4 / 3;
+                        }
+                        [swiper="sw11"] .swiper-slide_image-wrap.is-square {
+                          aspect-ratio: 1 / 1;
+                        }
+                        [swiper="sw11"] .swiper-slide-thumb-active {
+                          border: 1px solid #000;
+                        }
+                        [swiper="sw11"] .swiper-pagination-bullet {
+                          border: 1px solid #000;
+                          background-color: transparent;
+                          opacity: 1;
+                        }
+                        [swiper="sw11"] .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                          background-color: #000;
+                        }
+                      </style>
+                  </div>
+                  <div swiper="sw11" class="slider_component is-sw13">
+                    <div swiper="slider-main" class="swiper is-sw13-main">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-slide_image-wrap"><img loading="eager" src="../images/1x1.svg" alt="" class="image-fill"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-slide_image-wrap"><img loading="eager" src="../images/1x1.svg" alt="" class="image-fill"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-slide_image-wrap"><img loading="eager" src="../images/1x1.svg" alt="" class="image-fill"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide_inner">
+                            <div class="swiper-slide_image-wrap"><img loading="eager" src="../images/1x1.svg" alt="" class="image-fill"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-thumbs-wrap is-sw13">
+                      <div thumbsslider="" swiper="slider-thumbs" class="swiper is-sw13-thumbs">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide is-sw11">
+                            <div class="swiper-slide_inner is-thumb">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover is-sw13-thumb"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide is-sw11">
+                            <div class="swiper-slide_inner is-thumb">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover is-sw13-thumb"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide is-sw11">
+                            <div class="swiper-slide_inner is-thumb">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover is-sw13-thumb"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide is-sw11">
+                            <div class="swiper-slide_inner is-thumb">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover is-sw13-thumb"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="custom-code w-embed w-script">
+                    <script>
+                        /* START: Swiper 9 - Gallery Swiper */
+                        document.querySelectorAll('[swiper="sw11"]').forEach((sliderComponent) => {
+                          const sliderMainEl = sliderComponent.querySelector('[swiper="slider-main"]');
+                          const sliderThumbsEl = sliderComponent.querySelector('[swiper="slider-thumbs"]');
+                          const thumbsSlider = new Swiper(sliderThumbsEl, {
+                            spaceBetween: 8,
+                            slidesPerView: 6,
+                            watchSlidesProgress: true,
+                            breakpoints: {
+                              // when window width is >= 400px
+                              400: {
+                                spaceBetween: 8,
+                              },
+                              // when window width is >= 768px
+                              768: {
+                                slidesPerView: 6,
+                              },
+                            },
+                          });
+                          const mainSlider = new Swiper(sliderMainEl, {
+                            spaceBetween: 8,
+                            speed: 300,
+                            slidesPerView: 1.10,
+                            thumbs: {
+                              swiper: thumbsSlider,
+                              autoScrollOffset: 1,
+                            },
+                            breakpoints: {
+                              // when window width is >= 768px
+                              768: {
+                                spaceBetween: 8,
+                              },
+                            },
+                          });
+                          sliderThumbsEl.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+                            slide.addEventListener('keydown', (event) => {
+                              if (event.key === 'Enter' || event.key === ' ') {
+                                event.preventDefault();
+                                thumbsSlider.slideTo(index, 0);
+                                mainSlider.slideTo(index);
+                              }
+                            });
+                          });
+                          function debounce(func) {
+                            var timer;
+                            return function(event) {
+                              if (timer) clearTimeout(timer);
+                              timer = setTimeout(func, 80, event);
+                            };
+                          }
+                          function addMarginToComponent() {
+                            const thumbsSliderHeight =
+                              sliderComponent.querySelector('.swiper-thumbs-wrap.is-sw11').offsetHeight;
+                            sliderComponent.style.marginBottom = thumbsSliderHeight / 2 + 'px';
+                          }
+                          // addMarginToComponent();
+                          // window.addEventListener('resize', debounce(addMarginToComponent));
+                        });
+                        /* END: Swiper 9 - Gallery Swiper */
+                      </script>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components">
+                <div pb-component="swiper" class="slider2_component">
+                  <div swiper="sw12" class="slider_component is-v9">
+                    <div class="custom-css w-embed">
+                      <style>
+                          [swiper="sw12"] .swiper-slide_image-wrap {
+                            aspect-ratio: 1 / 1;
+                          }
+                          [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide {
+                            filter: grayscale(100%);
+                            transition: filter 0.4s ease;
+                            cursor: pointer;
+                          }
+                          [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide:focus-visible {
+                            border: 2px solid #000;
+                          }
+                          [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide.swiper-slide-thumb-active {
+                            filter: grayscale(0);
+                          }
+                        </style>
+                    </div>
+                    <div class="slider2_component-wrapper">
+                      <div swiper="slider-main" class="swiper is-v9-main">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="swiper-slide_inner">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide_inner">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide_inner">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide_inner">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide_inner">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide_inner">
+                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-thumbs-arrow">
+                        <div swiper="prev-button" class="swiper__button-static is-sw22">
+                          <div class="swiper__button-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                        <div class="slider2_thumbs-wrap is-sw22">
+                          <div thumbsslider="" swiper="slider-thumbs" class="swiper is-v9-thumbs">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide is-thumb swiper-slide-thumb-active">
+                                <div class="swiper-slide_inner">
+                                  <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide is-thumb">
+                                <div class="swiper-slide_inner">
+                                  <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide is-thumb">
+                                <div class="swiper-slide_inner">
+                                  <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide is-thumb">
+                                <div class="swiper-slide_inner">
+                                  <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide is-thumb">
+                                <div class="swiper-slide_inner">
+                                  <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide is-thumb">
+                                <div class="swiper-slide_inner">
+                                  <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../images/1x1.svg" alt="" class="cover"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div swiper="next-button" class="swiper__button-static is-sw22">
+                          <div class="swiper__button-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-code w-embed w-script">
+                      <script>
+                          document.querySelectorAll('[swiper="sw12"]').forEach((sliderComponent) => {
+                            const sliderMain = sliderComponent.querySelector('[swiper="slider-main"]');
+                            const sliderThumbs = sliderComponent.querySelector('[swiper="slider-thumbs"]');
+                            const buttonNextEl = sliderComponent.querySelector('[swiper="next-button"]');
+                            const buttonPrevEl = sliderComponent.querySelector('[swiper="prev-button"]');
+                            // Initialize thumbs swiper first
+                            const thumbsSwiper = new Swiper(sliderThumbs, {
+                              slidesPerView: 5, // Show a fixed number of thumbs
+                              spaceBetween: 10,
+                              freeMode: false, // Disable free mode for proper controlled movement
+                              watchSlidesProgress: true,
+                              watchOverflow: true, // Prevent extra spacing when fewer slides exist
+                              centerInsufficientSlides: true, // Prevents misalignment when fewer thumbs exist
+                              breakpoints: {
+                                768: {
+                                  slidesPerView: 5, // Adjust for desktop
+                                  spaceBetween: 10,
+                                },
+                                480: {
+                                  slidesPerView: 5, // Adjust for mobile
+                                  spaceBetween: 8,
+                                },
+                              },
+                            });
+                            // Initialize main swiper with thumbs navigation
+                            new Swiper(sliderMain, {
+                              slidesPerView: 1,
+                              spaceBetween: 0,
+                              navigation: {
+                                nextEl: buttonNextEl,
+                                prevEl: buttonPrevEl,
+                              },
+                              thumbs: {
+                                swiper: thumbsSwiper,
+                              },
+                            });
+                            // Add keyboard accessibility for thumbs
+                            if (sliderThumbs) {
+                              sliderThumbs.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+                                slide.addEventListener('keydown', (event) => {
+                                  if (event.key === 'Enter' || event.key === ' ') {
+                                    event.preventDefault();
+                                    thumbsSwiper.slideTo(index, 300);
+                                  }
+                                });
+                              });
+                            }
+                          });
+                        </script>
+                    </div>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components cc-800">
+                <div pb-component="swiper" class="component is-sw20">
+                  <div class="custom-css w-embed">
+                    <style>
+                        [swiper="sw20"] .swiper-pagination-bullet {
+                          border: 1px solid #000;
+                          background-color: transparent;
+                          opacity: 1;
+                        }
+                        [swiper="sw20"] .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                          background-color: #000;
+                        }
+                      </style>
+                  </div>
+                  <div class="swiper10_component is-sw20">
+                    <div swiper="sw13" class="slider_component is-sw20">
+                      <div swiper="slider" class="swiper is-sw20">
+                        <div class="swiper-wrapper sw20">
+                          <div class="swiper-slide sw20">
+                            <div class="swiper-slide__image-wrap"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper__image"></div>
+                          </div>
+                          <div class="swiper-slide sw20">
+                            <div class="swiper-slide__image-wrap"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper__image"></div>
+                          </div>
+                          <div class="swiper-slide sw20">
+                            <div class="swiper-slide__image-wrap"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper__image"></div>
+                          </div>
+                        </div>
+                        <div class="swiper-button_wrapper"><button swiper="prev-button" class="swiper__button swiper__button--prev">
+                            <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                              </svg></div>
+                          </button><button swiper="next-button" class="swiper__button swiper__button--next">
+                            <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                              </svg></div>
+                          </button></div>
+                        <div class="swiper__navigation is-sw20">
+                          <div swiper="pagination" class="swiper-pagination"></div>
+                          <div swiper="scrollbar" class="swiper-scrollbar is-hero"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper10__thumbnails">
+                      <div swiper="thumbnails-holder" class="swiper10__thumbnails-on">
+                        <div swiper="gallery-thumbnail" class="swiper20_thumb is-current"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper8__thumbnail-image"></div>
+                        <div swiper="gallery-thumbnail" class="swiper20_thumb is-current"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper8__thumbnail-image"></div>
+                        <div swiper="gallery-thumbnail" class="swiper20_thumb is-current"><img loading="eager" src="../images/3x2.svg" alt="" class="swiper8__thumbnail-image"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="custom-code w-embed w-script">
+                    <script>
+                        function initiateSlider() {
+                          document.querySelectorAll('[swiper="sw13"]').forEach((sliderComponent) => {
+                            let currentSlide = 0;
+                            const swiperStyle = document.createElement('style');
+                            swiperStyle.innerHTML = `.swiper-button-disabled {opacity: 30%!important}`;
+                            document.body.appendChild(swiperStyle);
+                            const numberOfSlides = document
+                              .querySelector('[swiper="thumbnails-holder"]')
+                              .querySelectorAll('[swiper="gallery-thumbnail"]').length - 1;
+                            const sliderEl = sliderComponent.querySelector('[swiper="slider"]');
+                            const buttonNextEl = sliderComponent.querySelector('[swiper="next-button"]');
+                            const buttonPrevEl = sliderComponent.querySelector('[swiper="prev-button"]');
+                            const scrollbarEl = sliderComponent.querySelector('[swiper="scrollbar"]');
+                            const paginationEl = sliderComponent.querySelector('[swiper="pagination"]');
+                            const swiperModule = new Swiper(sliderEl, {
+                              slidesPerView: 1,
+                              spaceBetween: 16,
+                              direction: 'horizontal',
+                              navigation: {
+                                nextEl: buttonNextEl,
+                                prevEl: buttonPrevEl,
+                              },
+                              on: {
+                                slideChange: function() {
+                                  currentSlide = this.activeIndex;
+                                  updateActiveStates(currentSlide);
+                                },
+                              },
+                              pagination: {
+                                el: paginationEl,
+                              },
+                              breakpoints: {
+                                768: {
+                                  spaceBetween: 32,
+                                },
+                              },
+                            });
+                            if (currentSlide == 0) {
+                              buttonPrevEl.classList.add('swiper-button-disabled');
+                            } else {
+                              buttonPrevEl.classList.remove('swiper-button-disabled');
+                            }
+                            document.querySelectorAll('[swiper="thumbnails-holder"]').forEach((container) =>
+                              container.querySelectorAll('[swiper="gallery-thumbnail"]').forEach((el, i) => {
+                                el.style.userSelect = 'none';
+                                el.addEventListener('click', (e) => {
+                                  swiperModule.slideTo(i);
+                                  currentSlide = i;
+                                  updateActiveStates(currentSlide);
+                                });
+                              })
+                            );
+                            // Initial state
+                            updateActiveStates(0);
+                          });
+                        }
+                        function updateActiveStates(activeIndex) {
+                          // Update thumbnails
+                          document.querySelectorAll('[swiper="thumbnails-holder"]').forEach((container) =>
+                            container.querySelectorAll('[swiper="gallery-thumbnail"]').forEach((el, i) => {
+                              if (i === activeIndex) {
+                                el.setAttribute('swiper-state', 'active');
+                                el.classList.add('is-current');
+                              } else {
+                                el.removeAttribute('swiper-state');
+                                el.classList.remove('is-current');
+                              }
+                            })
+                          );
+                          // Update slides
+                          document.querySelectorAll('.swiper-slide').forEach((slide, i) => {
+                            if (i === activeIndex) {
+                              slide.classList.add('is-current');
+                            } else {
+                              slide.classList.remove('is-current');
+                            }
+                          });
+                        }
+                        initiateSlider();
+                      </script>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+          <div class="component-wrapper">
+            <div class="component-holders">
+              <div class="bz-component w-embed"><span class="frame__corner frame__corner--top-left"></span>
+                <span class="frame__corner frame__corner--bottom-right"></span>
+                <div class="bz-vertical"></div>
+                <div class="bz-horizontal"></div>
+              </div><cs-component name="SW00" class="cs-components">
+                <div pb-component="swiper" class="component">
+                  <div class="custom-css w-embed">
+                    <style>
+                        [swiper="HERO-PDP-009"] .swiper-slide_image-wrap {
+                          aspect-ratio: 16 / 9;
+                        }
+                        [swiper="HERO-PDP-009"] [swiper="slider-nav"] .swiper-slide {
+                          width: auto;
+                        }
+                        [swiper="HERO-PDP-009"] [swiper="slider-nav"] .swiper-slide.swiper-slide-active {
+                          color: #000;
+                        }
+                      </style>
+                  </div>
+                  <div class="swiper8_component">
+                    <div swiper="sw14" class="slider_component is-v6">
+                      <div class="u-negative-margin-tm">
+                        <div swiper="slider" class="swiper cc-hero-pdp-009">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide cc-hero-pdp-009">
+                              <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../images/1x1.svg" alt="" class="swiper__image"></div>
+                            </div>
+                            <div class="swiper-slide cc-hero-pdp-009">
+                              <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../images/1x1.svg" alt="" class="swiper__image"></div>
+                            </div>
+                            <div class="swiper-slide cc-hero-pdp-009">
+                              <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../images/1x1.svg" alt="" class="swiper__image"></div>
+                            </div>
+                          </div>
+                          <div class="swiper-button_wrapper cc-hero-pdp-009"><button swiper="prev-button" class="swiper__button-static cc-hero-pdp-009">
+                              <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                                </svg></div>
+                            </button><button swiper="next-button" class="swiper__button-static cc-hero-pdp-009">
+                              <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                                </svg></div>
+                            </button></div>
+                          <div class="swiper__navigation is-v4 hide">
+                            <div swiper="pagination" class="swiper-pagination-4 is-product_hero"></div>
+                            <div swiper="scrollbar" class="swiper-scrollbar is-hero"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div swiper="thumbnails-holder" class="product-thumbnails-holder hide">
+                      <div swiper="gallery-thumbnail" class="swiper-thumbnail_square is-current"><img sizes="100vw" srcset="../images/3x2_jar-p-500.webp 500w, ../images/3x2_jar-p-800.webp 800w, ../images/3x2_jar-p-1080.webp 1080w, ../images/3x2_jar.webp 1200w" alt="" src="../images/3x2_jar.webp" loading="eager" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../images/3x2_quote_benefit-p-500.webp 500w, ../images/3x2_quote_benefit-p-800.webp 800w, ../images/3x2_quote_benefit-p-1080.webp 1080w, ../images/3x2_quote_benefit.webp 1200w" alt="" src="../images/3x2_quote_benefit.webp" loading="eager" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../images/3x2_cap-text-p-500.webp 500w, ../images/3x2_cap-text-p-800.webp 800w, ../images/3x2_cap-text-p-1080.webp 1080w, ../images/3x2_cap-text.webp 1200w" alt="" src="../images/3x2_cap-text.webp" loading="eager" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../images/3x2_person-p-500.webp 500w, ../images/3x2_person-p-800.webp 800w, ../images/3x2_person-p-1080.webp 1080w, ../images/3x2_person.webp 1200w" alt="" src="../images/3x2_person.webp" loading="eager" class="swiper8__thumbnail-image"></div>
+                      <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../images/3x2_nutrition-p-500.webp 500w, ../images/3x2_nutrition-p-800.webp 800w, ../images/3x2_nutrition-p-1080.webp 1080w, ../images/3x2_nutrition.webp 1200w" alt="" src="../images/3x2_nutrition.webp" loading="eager" class="swiper8__thumbnail-image"></div>
+                    </div>
+                  </div>
+                  <div class="custom-code w-embed w-script">
+                    <script>
+                        function initiateSlider() {
+                          document.querySelectorAll('[swiper="sw14"]').forEach((sliderComponent) => {
+                            let currentSlide = 0;
+                            const swiperStyle = document.createElement('style');
+                            swiperStyle.innerHTML = `.swiper-button-disabled {opacity: 30%!important}`;
+                            document.body.appendChild(swiperStyle);
+                            const numberOfSlides = document
+                              .querySelector('[swiper="thumbnails-holder"]')
+                              .querySelectorAll('[swiper="gallery-thumbnail"]').length - 1;
+                            const sliderEl = sliderComponent.querySelector('[swiper="slider"]');
+                            const buttonNextEl = sliderComponent.querySelector('[swiper="next-button"]');
+                            const buttonPrevEl = sliderComponent.querySelector('[swiper="prev-button"]');
+                            const scrollbarEl = sliderComponent.querySelector('[swiper="scrollbar"]');
+                            const paginationEl = sliderComponent.querySelector('[swiper="pagination"]');
+                            const swiperModule = new Swiper(sliderEl, {
+                              slidesPerView: 1,
+                              spaceBetween: 16,
+                              direction: 'horizontal',
+                              navigation: {
+                                nextEl: buttonNextEl,
+                                prevEl: buttonPrevEl,
+                              },
+                              on: {
+                                slideChange: function() {
+                                  currentSlide = this.activeIndex;
+                                  updateActiveStates(currentSlide);
+                                },
+                              },
+                              pagination: {
+                                el: paginationEl,
+                              },
+                              breakpoints: {
+                                0: { // From 0px
+                                  slidesPerView: 1.4,
+                                  spaceBetween: 16,
+                                },
+                                480: { // From 480px
+                                  slidesPerView: 1.4,
+                                  spaceBetween: 16,
+                                },
+                                768: { // From 768px
+                                  slidesPerView: 1,
+                                  spaceBetween: 16,
+                                },
+                              },
+                            });
+                            if (currentSlide == 0) {
+                              buttonPrevEl.classList.add('swiper-button-disabled');
+                            } else {
+                              buttonPrevEl.classList.remove('swiper-button-disabled');
+                            }
+                            document.querySelectorAll('[swiper="thumbnails-holder"]').forEach((container) =>
+                              container.querySelectorAll('[swiper="gallery-thumbnail"]').forEach((el, i) => {
+                                el.style.userSelect = 'none';
+                                el.addEventListener('click', (e) => {
+                                  swiperModule.slideTo(i);
+                                  currentSlide = i;
+                                  updateActiveStates(currentSlide);
+                                });
+                              })
+                            );
+                            // Initial state
+                            updateActiveStates(0);
+                          });
+                        }
+                        function updateActiveStates(activeIndex) {
+                          // Update thumbnails
+                          document.querySelectorAll('[swiper="thumbnails-holder"]').forEach((container) =>
+                            container.querySelectorAll('[swiper="gallery-thumbnail"]').forEach((el, i) => {
+                              if (i === activeIndex) {
+                                el.setAttribute('swiper-state', 'active');
+                                el.classList.add('is-current');
+                              } else {
+                                el.removeAttribute('swiper-state');
+                                el.classList.remove('is-current');
+                              }
+                            })
+                          );
+                          // Update slides
+                          document.querySelectorAll('.swiper-slide').forEach((slide, i) => {
+                            if (i === activeIndex) {
+                              slide.classList.add('is-current');
+                            } else {
+                              slide.classList.remove('is-current');
+                            }
+                          });
+                        }
+                        initiateSlider();
+                      </script>
+                  </div>
+                </div>
+              </cs-component>
+            </div>
+          </div>
+        </div>
+        <div class="bg-styleguide w-embed"><svg class="react-flow__background" data-testid="rf__background" style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; z-index:-1">
+            <pattern id="diagonal-pattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="8" stroke="CurrentColor" stroke-width="0.5"></line>
+            </pattern>
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#diagonal-pattern)"></rect>
+          </svg></div>
+      </div>
+    </main>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=685996de362613655dd702b4" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../js/next-staging-core.js" type="text/javascript"></script>
+
+</body></html>

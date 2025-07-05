@@ -1,0 +1,1523 @@
+<!DOCTYPE html><!--  Last Published: Sat Jul 05 2025 12:36:08 GMT+0000 (Coordinated Universal Time)  --><html><head>
+  <meta charset="utf-8">
+  <title>Variant Selectors</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/components.css" rel="stylesheet" type="text/css">
+  <link href="../css/next-staging-core.css" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+  
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+  <script src="https://campaign-cart-v2.pages.dev/config.js"></script>
+  <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
+  <style>
+      html:not(.next-display-ready) [data-next-await] {
+        position: relative;
+        overflow: hidden;
+        border-color: transparent !important;
+        box-shadow: none !important;
+      }
+      [data-next-await] * {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+      [data-next-await]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #e0e0e0;
+        animation: pulse-gray 1.5s ease-in-out infinite;
+        z-index: 1;
+        pointer-events: none;
+      }
+      @keyframes pulse-gray {
+        0%,
+        100% {
+          background-color: #e0e0e0;
+          opacity: 0.6;
+        }
+        50% {
+          background-color: #f5f5f5;
+          opacity: 0.8;
+        }
+      }
+      html.next-display-ready [data-next-await] * {
+        opacity: 1;
+      }
+      html.next-display-ready [data-next-await]::before {
+        display: none;
+      }
+    </style>
+  <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+      }
+      /*Text Selection Color*/
+      ::selection {
+        background: #d14424;
+        color: #fff;
+      }
+      ::-moz-selection {
+        background: #d14424;
+        color: #fff;
+      }
+      .test-mode-indicator {
+        display: none !important;
+      }
+    </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="pageblock-styles">
+      <div class="next-styles w-embed"><!--  For development on webflow  -->
+        <link href="https://campaign-cart-v2.pages.dev/campaign-cart.css" rel="stylesheet" type="text/css">
+      </div>
+    </div>
+    <div>
+      <div class="slot-override w-embed">
+        <style>
+            [os-slot]:empty {
+              display: none;
+            }
+          </style>
+      </div>
+      <div class="form-main w-embed">
+        <style>
+            /* ========================================
+   FORM ELEMENTS
+======================================== */
+            /* Select Elements */
+            select {
+              /* Removes the native dropdown arrow in most modern browsers */
+              -moz-appearance: none;
+              -webkit-appearance: none;
+              appearance: none;
+              /* Ensures that the arrow graphic is not displayed in Internet Explorer / Edge */
+              background: none;
+              /* or your preferred background */
+              background-repeat: no-repeat;
+              padding-right: 1em;
+              /* ensure there's space if you replace with a custom icon */
+            }
+          </style>
+      </div>
+      <div class="card-conditional-system w-embed">
+        <style>
+            /* ========================================
+   CARD CONDITIONAL DISPLAY SYSTEM
+======================================== */
+            /* Basic Show/Hide When Active */
+            [os-element="card"]:not(.os--selected) [os-display="show-when-active"] {
+              display: none !important;
+            }
+            [os-element="card"].os--selected [os-display="show-when-active"] {
+              display: block !important;
+            }
+            [os-element="card"].os--selected [os-display="hide-when-active"] {
+              display: none !important;
+            }
+            [os-element="card"]:not(.os--selected) [os-display="hide-when-active"] {
+              display: block !important;
+            }
+            /* Flex Display Variants */
+            [os-element="card"]:not(.os--selected) [os-display="show-when-active-flex"] {
+              display: none !important;
+            }
+            [os-element="card"].os--selected [os-display="show-when-active-flex"] {
+              display: flex !important;
+            }
+            [os-element="card"].os--selected [os-display="hide-when-active-flex"] {
+              display: none !important;
+            }
+            [os-element="card"]:not(.os--selected) [os-display="hide-when-active-flex"] {
+              display: flex !important;
+            }
+            /* Inline Display Variants */
+            [os-element="card"]:not(.os--selected) [os-display="show-when-active-inline"] {
+              display: none !important;
+            }
+            [os-element="card"].os--selected [os-display="show-when-active-inline"] {
+              display: inline !important;
+            }
+            /* Inline-Block Display Variants */
+            [os-element="card"]:not(.os--selected) [os-display="show-when-active-inline-block"] {
+              display: none !important;
+            }
+            [os-element="card"].os--selected [os-display="show-when-active-inline-block"] {
+              display: inline-block !important;
+            }
+            /* Grid Display Variants */
+            [os-element="card"]:not(.os--selected) [os-display="show-when-active-grid"] {
+              display: none !important;
+            }
+            [os-element="card"].os--selected [os-display="show-when-active-grid"] {
+              display: grid !important;
+            }
+            /* Opacity-Based Conditional Display */
+            [os-element="card"]:not(.os--selected) [os-display="fade-when-inactive"] {
+              opacity: 0.3;
+              pointer-events: none;
+              transition: opacity 0.2s ease;
+            }
+            [os-element="card"].os--selected [os-display="fade-when-inactive"] {
+              opacity: 1;
+              pointer-events: auto;
+              transition: opacity 0.2s ease;
+            }
+            /* Visibility-Based Conditional Display */
+            [os-element="card"]:not(.os--selected) [os-display="hide-when-inactive-visibility"] {
+              visibility: hidden;
+              transition: visibility 0.2s ease;
+            }
+            [os-element="card"].os--selected [os-display="hide-when-inactive-visibility"] {
+              visibility: visible;
+              transition: visibility 0.2s ease;
+            }
+            /* Scale-Based Conditional Display */
+            [os-element="card"]:not(.os--selected) [os-display="scale-when-inactive"] {
+              transform: scale(0.95);
+              opacity: 0.7;
+              transition: transform 0.2s ease, opacity 0.2s ease;
+            }
+            [os-element="card"].os--selected [os-display="scale-when-inactive"] {
+              transform: scale(1);
+              opacity: 1;
+              transition: transform 0.2s ease, opacity 0.2s ease;
+            }
+            /* Height-Based Conditional Display */
+            [os-element="card"]:not(.os--selected) [os-display="collapse-when-inactive"] {
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.3s ease;
+            }
+            [os-element="card"].os--selected [os-display="collapse-when-inactive"] {
+              max-height: 500px;
+              /* Adjust based on your content */
+              transition: max-height 0.3s ease;
+            }
+          </style>
+      </div>
+      <div class="tooltips w-embed">
+        <style>
+            /* ========================================
+   TOOLTIP COMPONENTS
+======================================== */
+            /* Tooltip Base */
+            .os-tooltip {
+              position: absolute;
+              bottom: calc(100% + 12px);
+              left: 0;
+              background-color: #2d3748;
+              color: white;
+              padding: 6px 12px;
+              border-radius: 6px;
+              font-size: 12px;
+              font-weight: 500;
+              white-space: nowrap;
+              opacity: 1;
+              visibility: visible;
+              transition: opacity 0.3s, visibility 0.3s;
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+              animation: floatAnimation 3s ease-in-out infinite;
+            }
+            /* Tooltip Arrow */
+            .os-tooltip::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 22px;
+              /* Half of switch width (44px / 2) */
+              transform: translateX(-50%);
+              width: 0;
+              height: 0;
+              border-left: 8px solid transparent;
+              border-right: 8px solid transparent;
+              border-top: 8px solid #2d3748;
+            }
+            /* Tooltip Animation */
+            @keyframes floatAnimation {
+              0%,
+              100% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(-5px);
+              }
+            }
+          </style>
+      </div>
+      <div class="switches w-embed">
+        <style>
+            /* ========================================
+   SWITCH TOGGLE COMPONENTS
+======================================== */
+            /* Switch Base Styles */
+            .os-switch {
+              position: relative;
+              display: inline-block;
+              width: 44px;
+              height: 24px;
+            }
+            .os-switch input {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+            /* Switch Slider */
+            .os-slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: white;
+              border: 0.5px solid gray;
+              transition: .3s;
+              border-radius: 24px;
+            }
+            .os-slider:before {
+              position: absolute;
+              content: "";
+              height: 16px;
+              width: 16px;
+              left: 4px;
+              top: 50%;
+              transform: translateY(-50%);
+              background-color: #586280;
+              transition: .3s;
+              border-radius: 50%;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 10px 10px;
+            }
+            /* Switch Active State */
+            input:checked+.os-slider {
+              background-color: transparent;
+              border-color: #586280;
+            }
+            input:checked+.os-slider:before {
+              transform: translateY(-50%) translateX(20px);
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12l5 5L20 7' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            }
+            /* Switch Size Variants */
+            .os-switch.small {
+              width: 36px;
+              height: 20px;
+            }
+            .os-switch.small .os-slider:before {
+              height: 12px;
+              width: 12px;
+              left: 4px;
+              background-size: 8px 8px;
+            }
+            .os-switch.small input:checked+.os-slider:before {
+              transform: translateY(-50%) translateX(16px);
+            }
+            .os-switch.xs {
+              width: 28px;
+              height: 16px;
+            }
+            .os-switch.xs .os-slider:before {
+              height: 10px;
+              width: 10px;
+              left: 3px;
+              background-size: 6px 6px;
+            }
+            .os-switch.xs input:checked+.os-slider:before {
+              transform: translateY(-50%) translateX(12px);
+            }
+          </style>
+      </div>
+      <div class="variant-swatches w-embed">
+        <style>
+            /* ========================================
+   VARIANT COMPONENTS - SWATCHES
+======================================== */
+            /* Swatch Base Styles */
+            .os-card__variant-swatch {
+              position: relative;
+            }
+            .os-card__variant-swatch:hover {
+              transform: scale(1.1);
+            }
+            .os-card__variant-swatch--selected {
+              border-color: #333;
+              box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1);
+            }
+            .os-card__variant-swatch::after {
+              content: '';
+              position: absolute;
+              inset: -4px;
+              border: 1px solid #e5e5e5;
+              border-radius: 50%;
+              z-index: -1;
+            }
+            /* Swatch Color Definitions */
+            [os-swatch="red"] {
+              background-color: #E63946;
+            }
+            [os-swatch="cream"] {
+              background-color: #F1FAEE;
+            }
+            [os-swatch="teal"] {
+              background-color: #A8DADC;
+            }
+            [os-swatch="blue"] {
+              background-color: #457B9D;
+            }
+            [os-swatch="navy"] {
+              background-color: #1D3557;
+            }
+            [os-swatch="light-blue"] {
+              background-color: #dbeafe;
+            }
+            [os-swatch="light-green"] {
+              background-color: #d1fae5;
+            }
+            [os-swatch="light-purple"] {
+              background-color: #e9d5ff;
+            }
+            [os-swatch="light-pink"] {
+              background-color: #fce7f3;
+            }
+            [os-swatch="light-yellow"] {
+              background-color: #fef3c7;
+            }
+            /* ========================================
+   VARIANT COMPONENTS - SIZE BUTTONS
+======================================== */
+            /* Size Button Selected State */
+            .os-card__variant-size--selected:hover {
+              background: #222;
+              border-color: #222;
+            }
+            /* Size Button Unavailable State */
+            .os-card__variant-size--unavailable {
+              opacity: 0.4;
+              cursor: not-allowed;
+              text-decoration: line-through;
+            }
+            .os-card__variant-size--unavailable:hover {
+              background: #fff;
+              border-color: #ddd;
+            }
+            /* ========================================
+   VARIANT COMPONENTS - IMAGES
+======================================== */
+            /* Image Variant Base */
+            .os-card__variant-image img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            .os-card__variant-image:hover {
+              transform: scale(1.05);
+            }
+            .os-card__variant-image--selected {
+              border-color: #333;
+              box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1);
+            }
+          </style>
+      </div>
+      <div class="variant-dropdowns w-embed">
+        <style>
+            /* ========================================
+   VARIANT COMPONENTS - DROPDOWNS
+======================================== */
+            /* Dropdown Container */
+            .os-card__variant-dropdown-component {
+              position: relative;
+              width: 100%;
+            }
+            /* Dropdown Toggle */
+            .os-card__variant-dropdown-toggle {
+              cursor: pointer;
+              transition: all 0.3s ease;
+              user-select: none;
+            }
+            .os-card__variant-dropdown-toggle:hover {
+              border-color: #999;
+            }
+            .os-card__variant-dropdown-toggle.active {
+              border-color: #333;
+              box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1);
+            }
+            /* Dropdown Icon */
+            .os-card__variant-dropdown-icon {
+              width: 20px;
+              height: 20px;
+              color: #6b7280;
+              transition: transform 0.15s ease;
+            }
+            .os-card__variant-dropdown-toggle.active .os-card__variant-dropdown-icon {
+              transform: rotate(180deg);
+            }
+            /* Dropdown Menu */
+            .os-card__variant-dropdown-menu {
+              position: absolute;
+              top: calc(100% + 8px);
+              left: 0;
+              right: 0;
+              background: white;
+              border-radius: var(--radius--selector);
+              box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+              opacity: 0;
+              visibility: hidden;
+              transform: translateY(-12px) scale(0.95);
+              transform-origin: top center;
+              transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+              z-index: 100;
+              overflow: hidden;
+            }
+            .os-card__variant-dropdown-menu.show {
+              opacity: 1;
+              visibility: visible;
+              transform: translateY(0) scale(1);
+            }
+            /* Dropdown List */
+            .os-card__variant-dropdown-list {
+              list-style: none;
+              padding: 8px;
+            }
+            /* Dropdown Items */
+            .os-card__variant-dropdown-item {
+              border-radius: var(--radius--selector);
+              transition: background-color 0.2s ease;
+              cursor: pointer;
+            }
+            .os-card__variant-dropdown-item:hover {
+              background-color: #f9f9f9;
+            }
+            .os-card__variant-dropdown-wrapper:has(.os-card__variant-dropdown-menu.show) {
+              z-index: 999;
+              position: relative;
+            }
+            .os-card__variant-dropdown-item .os-card__toggle-option {
+              padding: 0.5rem 0.75rem;
+              min-height: 2.5rem;
+            }
+            .os-card__variant-dropdown-item.selected .os-card__variant-toggle-name {
+              font-weight: 600;
+            }
+          </style>
+      </div>
+      <div class="radio-styles w-embed">
+        <style>
+            /* ── Base (unchanged) ────────────────────────────── */
+            .radio-style-1,
+            .radio-style-2,
+            .radio-default {
+              display: inline-block;
+              width: 1rem;
+              height: 1rem;
+              border: 1px solid var(--os--color--border);
+              border-radius: 50%;
+              background: #fff;
+              position: relative;
+              box-sizing: border-box;
+              transition: all .2s ease;
+            }
+            .radio-style-none {
+              display: none;
+            }
+            .radio-inner {
+              position: absolute;
+              width: 0;
+              height: 0;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+            /* ── “Selected” state driven by .os--active ─────── */
+            /* Style 1 – filled dot with border */
+            .os--selected .radio-style-1 {
+              border: .1875rem solid #fff;
+              background: var(--radio-color, #000);
+              box-shadow: 0 0 0 .125rem var(--os--color--radio, #000);
+            }
+            .os--selected .radio-style-1 .radio-inner {
+              width: .5rem;
+              height: .5rem;
+              border-radius: 50%;
+              background: var(--os--color--radio, #000);
+            }
+            /* Style 2 – hollow circle */
+            .os--selected .radio-style-2 {
+              border-width: .3125rem;
+              border-color: var(--os--color--radio, #000);
+              background: #fff;
+              box-shadow: 0 0 0 .0625rem var(--os--color--radio, #000);
+            }
+            .os--selected .radio-style-2 .radio-inner {
+              width: .3rem;
+              height: .3rem;
+              border-radius: 50%;
+              background: #fff;
+              /* keeps the hollow look */
+            }
+            /* Fallback / default style */
+            .os--selected .radio-default {
+              border: .1875rem solid #fff;
+              background: var(--os--color--radio, #000);
+              box-shadow: 0 0 0 .125rem var(--os--color--radio, #000);
+            }
+            .os--selected .radio-default .radio-inner {
+              width: .5rem;
+              height: .5rem;
+              border-radius: 50%;
+              background: var(--os--color--radio, #000);
+            }
+          </style>
+      </div>
+      <div class="buttons-spinners w-embed">
+        <style>
+            [data-action="submit"] {
+              position: relative;
+            }
+            [os-component="spinner"] {
+              width: 1.6em;
+              display: block;
+              height: 1.6em;
+              opacity: 0;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              transform-origin: center;
+              pointer-events: none;
+            }
+            [os-component="spinner"] .os-button__spinner-path {
+              stroke: currentColor;
+              stroke-linecap: round;
+              animation: spinner-dash 1.5s ease-in-out infinite;
+            }
+            [data-action="submit"].os--submitting [os-slot="content"] {
+              opacity: 0;
+              transition: opacity 0.2s ease;
+            }
+            [data-action="submit"].os--submitting [os-component="spinner"] {
+              opacity: 1;
+              transition: opacity 0.2s ease;
+              animation: spinner-rotate 2s linear infinite;
+            }
+            @keyframes spinner-rotate {
+              100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+              }
+            }
+            @keyframes spinner-dash {
+              0% {
+                stroke-dasharray: 1, 150;
+                stroke-dashoffset: 0;
+              }
+              50% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -35;
+              }
+              100% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -124;
+              }
+            }
+          </style>
+      </div>
+    </div>
+    <main class="main-wrapper">
+      <div class="section">
+        <div class="container">
+          <div class="headline-component">
+            <h1>Variant Selectors</h1>
+            <div>This is some text inside of a div block.</div>
+          </div>
+          <div class="showcase_components">
+            <div class="comp-showcase">
+              <div class="showcase-holder os-full">
+                <div class="os-variant__content">
+                  <div class="pair-numbersss">
+                    <div os-slot-step="container" class="pair-circle is-active">
+                      <div os-slot-step="number" class="step-number">1</div>
+                      <div os-slot-step="icon" class="step-check w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M4 12.5 9.5 18 20 6"></path>
+                        </svg></div>
+                    </div>
+                  </div>
+                  <div class="pb-qunatity__information">
+                    <div class="grid_shoes">
+                      <div id="w-node-_5249f644-3879-f744-2cd6-38345a2d22c0-5dd703e4" class="selector_wrap">
+                        <div class="selector-label">Select Color: Black Orca</div>
+                        <div os-component="variant-dropdown" class="os-card__variant-dropdown-wrapper">
+                          <div class="os-card__variant-dropdown-component">
+                            <div os-element="dropdown-toggle" aria-expanded="false" class="os-card__variant-dropdown-toggle">
+                              <div class="os-card__toggle-option"><img sizes="(max-width: 770px) 100vw, 770px" srcset="../images/black_product-1-p-500.png 500w, ../images/black_product-1.png 770w" alt="" src="../images/black_product-1.png" loading="lazy" class="variant-product-color">
+                                <div class="os-card__variant-toggle-info">
+                                  <div class="os-card__variant-toggle-name">Black Orca</div>
+                                </div>
+                              </div>
+                              <div class="os-card__variant-dropdown-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                                </svg></div>
+                            </div>
+                            <div os-element="dropdown-menu" class="os-card__variant-dropdown-menu">
+                              <div class="os-card__variant-dropdown-list">
+                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item selected">
+                                  <div class="os-card__toggle-option">
+                                    <div class="os-card__variant-toggle-info"><img sizes="(max-width: 479px) 87vw, (max-width: 991px) 90vw, 731.5px" srcset="../images/black_product-1-p-500.png 500w, ../images/black_product-1.png 770w" alt="" src="../images/black_product-1.png" loading="lazy" class="variant-product-color">
+                                      <div class="os-card__variant-toggle-name">Black Orca</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                                  <div class="os-card__toggle-option">
+                                    <div class="os-card__variant-toggle-info"><img sizes="(max-width: 479px) 87vw, (max-width: 991px) 90vw, 734.3499755859375px" srcset="../images/white_product-p-500.png 500w, ../images/white_product.png 773w" alt="" src="../images/white_product.png" loading="lazy" class="variant-product-color">
+                                      <div class="os-card__variant-toggle-name">White Citrus</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="selector_wrap">
+                        <div class="selector-label">Select Size</div>
+                        <div os-component="variant-dropdown" class="os-card__variant-dropdown-wrapper">
+                          <div class="os-card__variant-dropdown-component">
+                            <div os-element="dropdown-toggle" aria-expanded="false" class="os-card__variant-dropdown-toggle">
+                              <div class="os-card__toggle-option">
+                                <div class="os-card__variant-toggle-info">
+                                  <div class="os-card__variant-toggle-name">MEN 5 / WOMEN 6.5</div>
+                                </div>
+                              </div>
+                              <div class="os-card__variant-dropdown-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                                </svg></div>
+                            </div>
+                            <div os-element="dropdown-menu" class="os-card__variant-dropdown-menu">
+                              <div class="os-card__variant-dropdown-list">
+                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item selected">
+                                  <div class="os-card__toggle-option">
+                                    <div class="os-card__variant-toggle-info">
+                                      <div class="os-card__variant-toggle-name">MEN 4.5 / WOMEN 6</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                                  <div class="os-card__toggle-option">
+                                    <div class="os-card__variant-toggle-info">
+                                      <div class="os-card__variant-toggle-name">MEN 5 / WOMEN 6.5</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                                  <div class="os-card__toggle-option">
+                                    <div class="os-card__variant-toggle-info">
+                                      <div class="os-card__variant-toggle-name">MEN 6 / WOMEN 7.5</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                                  <div class="os-card__toggle-option">
+                                    <div class="os-card__variant-toggle-info">
+                                      <div class="os-card__variant-toggle-name">MEN 6.5 / WOMEN 8</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                                  <div class="os-card__toggle-option">
+                                    <div class="os-card__variant-toggle-info">
+                                      <div class="os-card__variant-toggle-name">MEN 7.5 / WOMEN 9</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comp-showcase">
+              <div class="showcase-holder os-full">
+                <div class="variant_group">
+                  <div class="os-card__variant-label-item">
+                    <div>Custom Select</div>
+                  </div>
+                  <div os-component="variant-dropdown" class="os-card__variant-dropdown-wrapper">
+                    <div class="os-card__variant-dropdown-component">
+                      <div os-element="dropdown-toggle" aria-expanded="false" class="os-card__variant-dropdown-toggle">
+                        <div class="os-card__toggle-option os--distribute">
+                          <div class="os-card__variant-toggle-info">
+                            <div class="os-card__variant-toggle-name">Twin</div>
+                          </div>
+                          <div class="os-card__variant-toggle-price">
+                            <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                            <div class="os-card__variant-toggle-price--sale">$649</div>
+                          </div>
+                        </div>
+                        <div class="os-card__variant-dropdown-icon w-embed"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined mui-1dngmot" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
+                            <path d="M7 10l5 5 5-5z"></path>
+                          </svg></div>
+                      </div>
+                      <div os-element="dropdown-menu" class="os-card__variant-dropdown-menu">
+                        <div class="os-card__variant-dropdown-list">
+                          <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item selected">
+                            <div class="os-card__toggle-option os--distribute">
+                              <div class="os-card__variant-toggle-info">
+                                <div class="os-card__variant-toggle-name os--font-bold">Twin</div>
+                              </div>
+                              <div class="os-card__variant-toggle-price">
+                                <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                                <div class="os-card__variant-toggle-price--sale">$649</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                            <div class="os-card__toggle-option os--distribute">
+                              <div class="os-card__variant-toggle-info">
+                                <div class="os-card__variant-toggle-name os--font-bold">Twin XL</div>
+                              </div>
+                              <div class="os-card__variant-toggle-price">
+                                <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                                <div class="os-card__variant-toggle-price--sale">$649</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                            <div class="os-card__toggle-option os--distribute">
+                              <div class="os-card__variant-toggle-info">
+                                <div class="os-card__variant-toggle-name os--font-bold">Full</div>
+                              </div>
+                              <div class="os-card__variant-toggle-price">
+                                <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                                <div class="os-card__variant-toggle-price--sale">$649</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                            <div class="os-card__toggle-option os--distribute">
+                              <div class="os-card__variant-toggle-info">
+                                <div class="os-card__variant-toggle-name os--font-bold">Queen</div>
+                              </div>
+                              <div class="os-card__variant-toggle-price">
+                                <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                                <div class="os-card__variant-toggle-price--sale">$649</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                            <div class="os-card__toggle-option os--distribute">
+                              <div class="os-card__variant-toggle-info">
+                                <div class="os-card__variant-toggle-name os--font-bold">King</div>
+                              </div>
+                              <div class="os-card__variant-toggle-price">
+                                <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                                <div class="os-card__variant-toggle-price--sale">$649</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comp-showcase">
+              <div class="showcase-holder os-full">
+                <div class="variant_group">
+                  <div class="os-card__variant-label-item">
+                    <div>Color Swatch</div>
+                  </div>
+                  <div os-component="variant-swatches" class="os-card__variant-swatches">
+                    <div os-element="swatch-item" os-swatch="red" class="os-card__variant-swatch os-card__variant-swatch--selected"></div>
+                    <div os-element="swatch-item" os-swatch="cream" class="os-card__variant-swatch"></div>
+                    <div os-element="swatch-item" os-swatch="teal" class="os-card__variant-swatch"></div>
+                    <div os-element="swatch-item" os-swatch="blue" class="os-card__variant-swatch"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comp-showcase">
+              <div class="showcase-holder os-full">
+                <div class="variant_group">
+                  <div class="os-card__variant-label-item">
+                    <div>Card Select</div>
+                  </div>
+                  <div os-component="variant-buttons" class="os-card__variant-sizes">
+                    <div os-element="button-item" class="os-card__variant-size os-card__variant-size--selected">
+                      <div>S</div>
+                    </div>
+                    <div os-element="button-item" class="os-card__variant-size">
+                      <div>M</div>
+                    </div>
+                    <div os-element="button-item" class="os-card__variant-size">
+                      <div>L</div>
+                    </div>
+                    <div os-element="button-item" class="os-card__variant-size os-card__variant-size--unavailable">
+                      <div>XL</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comp-showcase">
+              <div class="showcase-holder os-full">
+                <div class="variant_group">
+                  <div class="os-card__variant-label-item">
+                    <div>Image Select</div>
+                  </div>
+                  <div os-component="variant-images" class="os-card__variant-sizes">
+                    <div os-element="image-item" class="os-card__variant-image os-card__variant-image--selected"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
+                    <div os-element="image-item" class="os-card__variant-image"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
+                    <div os-element="image-item" class="os-card__variant-image"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
+                    <div os-element="image-item" class="os-card__variant-image"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="comp-showcase">
+              <div class="showcase-holder"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=685996de362613655dd702b4" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../js/next-staging-core.js" type="text/javascript"></script>
+  <script>
+      // Variant Dropdown Class
+      class VariantDropdown {
+        constructor(dropdownElement) {
+          this.dropdown = dropdownElement;
+          this.toggle = dropdownElement.querySelector('[os-element="dropdown-toggle"]');
+          this.menu = dropdownElement.querySelector('[os-element="dropdown-menu"]');
+          this.items = dropdownElement.querySelectorAll('[os-element="dropdown-item"]');
+          this.isOpen = false;
+          this.selectedValue = null;
+          this.scrollHandler = null;
+          this.resizeHandler = null;
+          this.init();
+        }
+        init() {
+          // Store the original toggle content structure
+          this.toggleContentWrapper = this.toggle.querySelector('.os-card__toggle-option');
+          // Toggle dropdown
+          this.toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleDropdown();
+          });
+          // Handle item selection
+          this.items.forEach(item => {
+            item.addEventListener('click', (e) => {
+              e.stopPropagation();
+              this.selectItem(item);
+            });
+          });
+          // Handle keyboard navigation
+          this.toggle.addEventListener('keydown', (e) => this.handleKeyboard(e));
+          // Set initial selected value
+          const selectedItem = this.dropdown.querySelector('[os-element="dropdown-item"].selected');
+          if (selectedItem) {
+            this.selectedValue = selectedItem.getAttribute('os-variant-value');
+            // Update toggle with selected item content
+            this.updateToggleContent(selectedItem);
+          }
+        }
+        calculateOptimalPosition() {
+          const toggleRect = this.toggle.getBoundingClientRect();
+          const menuHeight = this.menu.offsetHeight;
+          const viewportHeight = window.innerHeight;
+          const scrollY = window.scrollY;
+          // Calculate space above and below
+          const spaceBelow = viewportHeight - toggleRect.bottom;
+          const spaceAbove = toggleRect.top;
+          // Determine if we should position above or below
+          const shouldPositionAbove = spaceBelow < menuHeight && spaceAbove > spaceBelow;
+          // Calculate the position
+          const position = {
+            shouldPositionAbove,
+            top: shouldPositionAbove ?
+              -(menuHeight + 4) : // 4px gap when above
+              toggleRect.height + 4 // 4px gap when below
+          };
+          return position;
+        }
+        updateDropdownPosition() {
+          if (!this.isOpen) return;
+          const position = this.calculateOptimalPosition();
+          // Remove existing position classes
+          this.menu.classList.remove('position-above', 'position-below');
+          // Add appropriate position class
+          if (position.shouldPositionAbove) {
+            this.menu.classList.add('position-above');
+            this.menu.style.bottom = `${this.toggle.offsetHeight + 4}px`;
+            this.menu.style.top = 'auto';
+          } else {
+            this.menu.classList.add('position-below');
+            this.menu.style.top = `${this.toggle.offsetHeight + 4}px`;
+            this.menu.style.bottom = 'auto';
+          }
+        }
+        toggleDropdown() {
+          if (this.isOpen) {
+            this.closeDropdown();
+          } else {
+            // Close all other dropdowns first
+            VariantDropdown.closeAllDropdowns();
+            this.openDropdown();
+          }
+        }
+        openDropdown() {
+          this.isOpen = true;
+          this.toggle.classList.add('active');
+          this.menu.classList.add('show');
+          this.toggle.setAttribute('aria-expanded', 'true');
+          // Calculate and set position
+          this.updateDropdownPosition();
+          // Add scroll and resize listeners for dynamic repositioning
+          this.scrollHandler = () => this.updateDropdownPosition();
+          this.resizeHandler = () => this.updateDropdownPosition();
+          window.addEventListener('scroll', this.scrollHandler, true);
+          window.addEventListener('resize', this.resizeHandler);
+          // Add this instance to the list of open dropdowns
+          VariantDropdown.openDropdowns.add(this);
+        }
+        closeDropdown() {
+          this.isOpen = false;
+          this.toggle.classList.remove('active');
+          this.menu.classList.remove('show');
+          this.toggle.setAttribute('aria-expanded', 'false');
+          // Remove event listeners
+          if (this.scrollHandler) {
+            window.removeEventListener('scroll', this.scrollHandler, true);
+            this.scrollHandler = null;
+          }
+          if (this.resizeHandler) {
+            window.removeEventListener('resize', this.resizeHandler);
+            this.resizeHandler = null;
+          }
+          // Remove position classes
+          this.menu.classList.remove('position-above', 'position-below');
+          // Remove this instance from the list of open dropdowns
+          VariantDropdown.openDropdowns.delete(this);
+        }
+        updateToggleContent(item) {
+          // Clone the content from the selected item
+          const itemContent = item.querySelector('.os-card__toggle-option');
+          if (itemContent && this.toggleContentWrapper) {
+            // Clone the content
+            const clonedContent = itemContent.cloneNode(true);
+            // Replace the toggle content while preserving the wrapper
+            this.toggleContentWrapper.innerHTML = clonedContent.innerHTML;
+            // Copy any attributes from the item's content to maintain styling
+            Array.from(clonedContent.attributes).forEach(attr => {
+              this.toggleContentWrapper.setAttribute(attr.name, attr.value);
+            });
+          }
+        }
+        selectItem(item) {
+          // Update selected state
+          this.items.forEach(i => i.classList.remove('selected'));
+          item.classList.add('selected');
+          // Get selected values
+          const value = item.getAttribute('os-variant-value');
+          const colorClass = item.getAttribute('os-variant-color');
+          const name = item.querySelector('[os-element="variant-name"]')?.textContent || '';
+          // Update toggle display by cloning the selected item's content
+          this.updateToggleContent(item);
+          this.selectedValue = value;
+          this.closeDropdown();
+          // Dispatch custom event with dropdown identifier
+          const event = new CustomEvent('variantSelected', {
+            detail: {
+              value,
+              name,
+              colorClass,
+              component: this.dropdown,
+              type: 'dropdown'
+            }
+          });
+          document.dispatchEvent(event);
+        }
+        handleKeyboard(e) {
+          if (!this.isOpen && e.key === 'Enter') {
+            e.preventDefault();
+            this.openDropdown();
+          } else if (this.isOpen && e.key === 'Escape') {
+            e.preventDefault();
+            this.closeDropdown();
+          } else if (this.isOpen && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+            e.preventDefault();
+            this.navigateItems(e.key === 'ArrowDown' ? 1 : -1);
+          }
+        }
+        navigateItems(direction) {
+          const currentIndex = Array.from(this.items).findIndex(item =>
+            item.classList.contains('selected')
+          );
+          const newIndex = Math.max(0, Math.min(this.items.length - 1, currentIndex + direction));
+          if (newIndex !== currentIndex) {
+            this.items[newIndex].focus();
+            this.selectItem(this.items[newIndex]);
+          }
+        }
+        static openDropdowns = new Set();
+        static closeAllDropdowns() {
+          VariantDropdown.openDropdowns.forEach(dropdown => {
+            dropdown.closeDropdown();
+          });
+        }
+      }
+      // Variant Swatches Class
+      class VariantSwatches {
+        constructor(swatchesElement) {
+          this.swatches = swatchesElement;
+          this.items = swatchesElement.querySelectorAll('[os-element="swatch-item"]');
+          this.selectedValue = null;
+          this.init();
+        }
+        init() {
+          // Handle item selection
+          this.items.forEach(item => {
+            // Skip if unavailable
+            if (item.classList.contains('os-card__variant-swatch--unavailable')) {
+              return;
+            }
+            item.addEventListener('click', (e) => {
+              e.stopPropagation();
+              this.selectItem(item);
+            });
+            // Add keyboard support
+            item.addEventListener('keydown', (e) => this.handleKeyboard(e, item));
+            // Make focusable
+            item.setAttribute('tabindex', '0');
+          });
+          // Set initial selected value
+          const selectedItem = this.swatches.querySelector('[os-element="swatch-item"].os-card__variant-swatch--selected');
+          if (selectedItem) {
+            this.selectedValue = selectedItem.getAttribute('os-swatch');
+          }
+        }
+        selectItem(item) {
+          // Don't select unavailable items
+          if (item.classList.contains('os-card__variant-swatch--unavailable')) {
+            return;
+          }
+          // Update selected state
+          this.items.forEach(i => i.classList.remove('os-card__variant-swatch--selected'));
+          item.classList.add('os-card__variant-swatch--selected');
+          // Get selected values
+          const value = item.getAttribute('os-swatch');
+          const variantValue = item.getAttribute('os-variant-value') || value;
+          this.selectedValue = value;
+          // Dispatch custom event
+          const event = new CustomEvent('variantSelected', {
+            detail: {
+              value: variantValue,
+              swatch: value,
+              name: value,
+              component: this.swatches,
+              type: 'swatch'
+            }
+          });
+          document.dispatchEvent(event);
+        }
+        handleKeyboard(e, item) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.selectItem(item);
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+            e.preventDefault();
+            this.navigateItems(e.key === 'ArrowRight' ? 1 : -1, item);
+          }
+        }
+        navigateItems(direction, currentItem) {
+          const availableItems = Array.from(this.items).filter(item =>
+            !item.classList.contains('os-card__variant-swatch--unavailable')
+          );
+          const currentIndex = availableItems.indexOf(currentItem);
+          const newIndex = Math.max(0, Math.min(availableItems.length - 1, currentIndex + direction));
+          if (newIndex !== currentIndex && availableItems[newIndex]) {
+            availableItems[newIndex].focus();
+          }
+        }
+      }
+      // Variant Buttons Class
+      class VariantButtons {
+        constructor(buttonsElement) {
+          this.buttons = buttonsElement;
+          this.items = buttonsElement.querySelectorAll('[os-element="button-item"]');
+          this.selectedValue = null;
+          this.init();
+        }
+        init() {
+          // Handle item selection
+          this.items.forEach(item => {
+            // Skip if unavailable
+            if (item.classList.contains('os-card__variant-size--unavailable')) {
+              return;
+            }
+            item.addEventListener('click', (e) => {
+              e.stopPropagation();
+              this.selectItem(item);
+            });
+            // Add keyboard support
+            item.addEventListener('keydown', (e) => this.handleKeyboard(e, item));
+            // Make focusable
+            item.setAttribute('tabindex', '0');
+          });
+          // Set initial selected value
+          const selectedItem = this.buttons.querySelector('[os-element="button-item"].os-card__variant-size--selected');
+          if (selectedItem) {
+            this.selectedValue = selectedItem.getAttribute('os-variant-value') ||
+              selectedItem.textContent.trim();
+          }
+        }
+        selectItem(item) {
+          // Don't select unavailable items
+          if (item.classList.contains('os-card__variant-size--unavailable')) {
+            return;
+          }
+          // Update selected state
+          this.items.forEach(i => i.classList.remove('os-card__variant-size--selected'));
+          item.classList.add('os-card__variant-size--selected');
+          // Get selected values
+          const value = item.getAttribute('os-variant-value') || item.textContent.trim();
+          const name = item.textContent.trim();
+          this.selectedValue = value;
+          // Dispatch custom event
+          const event = new CustomEvent('variantSelected', {
+            detail: {
+              value,
+              name,
+              component: this.buttons,
+              type: 'button'
+            }
+          });
+          document.dispatchEvent(event);
+        }
+        handleKeyboard(e, item) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.selectItem(item);
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+            e.preventDefault();
+            this.navigateItems(e.key === 'ArrowRight' ? 1 : -1, item);
+          }
+        }
+        navigateItems(direction, currentItem) {
+          const availableItems = Array.from(this.items).filter(item =>
+            !item.classList.contains('os-card__variant-size--unavailable')
+          );
+          const currentIndex = availableItems.indexOf(currentItem);
+          const newIndex = Math.max(0, Math.min(availableItems.length - 1, currentIndex + direction));
+          if (newIndex !== currentIndex && availableItems[newIndex]) {
+            availableItems[newIndex].focus();
+          }
+        }
+      }
+      // Variant Images Class
+      class VariantImages {
+        constructor(imagesElement) {
+          this.images = imagesElement;
+          this.items = imagesElement.querySelectorAll('[os-element="image-item"]');
+          this.selectedValue = null;
+          this.init();
+        }
+        init() {
+          // Handle item selection
+          this.items.forEach(item => {
+            // Skip if unavailable
+            if (item.classList.contains('os-card__variant-image--unavailable')) {
+              return;
+            }
+            item.addEventListener('click', (e) => {
+              e.stopPropagation();
+              this.selectItem(item);
+            });
+            // Add keyboard support
+            item.addEventListener('keydown', (e) => this.handleKeyboard(e, item));
+            // Make focusable
+            item.setAttribute('tabindex', '0');
+          });
+          // Set initial selected value
+          const selectedItem = this.images.querySelector('[os-element="image-item"].os-card__variant-image--selected');
+          if (selectedItem) {
+            this.selectedValue = selectedItem.getAttribute('os-variant-value') ||
+              selectedItem.querySelector('img')?.getAttribute('alt') ||
+              'image-' + Array.from(this.items).indexOf(selectedItem);
+          }
+        }
+        selectItem(item) {
+          // Don't select unavailable items
+          if (item.classList.contains('os-card__variant-image--unavailable')) {
+            return;
+          }
+          // Update selected state
+          this.items.forEach(i => i.classList.remove('os-card__variant-image--selected'));
+          item.classList.add('os-card__variant-image--selected');
+          // Get selected values
+          const value = item.getAttribute('os-variant-value') ||
+            item.querySelector('img')?.getAttribute('alt') ||
+            'image-' + Array.from(this.items).indexOf(item);
+          const imageSrc = item.querySelector('img')?.getAttribute('src');
+          const imageAlt = item.querySelector('img')?.getAttribute('alt');
+          this.selectedValue = value;
+          // Dispatch custom event
+          const event = new CustomEvent('variantSelected', {
+            detail: {
+              value,
+              name: imageAlt || value,
+              imageSrc,
+              component: this.images,
+              type: 'image'
+            }
+          });
+          document.dispatchEvent(event);
+        }
+        handleKeyboard(e, item) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.selectItem(item);
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+            e.preventDefault();
+            this.navigateItems(e.key === 'ArrowRight' ? 1 : -1, item);
+          }
+        }
+        navigateItems(direction, currentItem) {
+          const availableItems = Array.from(this.items).filter(item =>
+            !item.classList.contains('os-card__variant-image--unavailable')
+          );
+          const currentIndex = availableItems.indexOf(currentItem);
+          const newIndex = Math.max(0, Math.min(availableItems.length - 1, currentIndex + direction));
+          if (newIndex !== currentIndex && availableItems[newIndex]) {
+            availableItems[newIndex].focus();
+          }
+        }
+      }
+      // Initialize all variant components
+      document.addEventListener('DOMContentLoaded', () => {
+        const componentInstances = [];
+        // Initialize dropdowns
+        const dropdowns = document.querySelectorAll('[os-component="variant-dropdown"] .os-card__variant-dropdown-component');
+        dropdowns.forEach(dropdown => {
+          componentInstances.push(new VariantDropdown(dropdown));
+        });
+        // Initialize swatches
+        const swatches = document.querySelectorAll('[os-component="variant-swatches"]');
+        swatches.forEach(swatch => {
+          componentInstances.push(new VariantSwatches(swatch));
+        });
+        // Initialize buttons
+        const buttons = document.querySelectorAll('[os-component="variant-buttons"]');
+        buttons.forEach(button => {
+          componentInstances.push(new VariantButtons(button));
+        });
+        // Initialize images
+        const images = document.querySelectorAll('[os-component="variant-images"]');
+        images.forEach(image => {
+          componentInstances.push(new VariantImages(image));
+        });
+        // Global click handler for dropdowns
+        document.addEventListener('click', (e) => {
+          const isClickInsideAnyDropdown = Array.from(dropdowns).some(dropdown =>
+            dropdown.contains(e.target)
+          );
+          if (!isClickInsideAnyDropdown) {
+            VariantDropdown.closeAllDropdowns();
+          }
+        });
+        // Listen for all variant selection changes
+        document.addEventListener('variantSelected', (e) => {
+          console.log('Selected variant:', e.detail);
+          // You can handle different component types
+          switch (e.detail.type) {
+            case 'dropdown':
+              console.log('Dropdown selection:', e.detail.value);
+              break;
+            case 'swatch':
+              console.log('Swatch selection:', e.detail.swatch);
+              break;
+            case 'button':
+              console.log('Button selection:', e.detail.name);
+              break;
+            case 'image':
+              console.log('Image selection:', e.detail.imageSrc);
+              break;
+          }
+        });
+      });
+    </script>
+  <script>
+      // Card Selector Class
+      class CardSelector {
+        constructor(selectorElement) {
+          this.selector = selectorElement;
+          this.cards = selectorElement.querySelectorAll('[os-element="card"]');
+          this.selectedValue = null;
+          this.selectorId = selectorElement.getAttribute('os-id');
+          this.variantType = selectorElement.getAttribute('os-variant');
+          this.init();
+        }
+        init() {
+          // Handle card selection
+          this.cards.forEach(card => {
+            // Skip if unavailable
+            if (card.classList.contains('os-card--unavailable')) {
+              return;
+            }
+            card.addEventListener('click', (e) => {
+              e.stopPropagation();
+              this.selectCard(card);
+            });
+            // Add keyboard support
+            card.addEventListener('keydown', (e) => this.handleKeyboard(e, card));
+            // Ensure cards are focusable
+            if (!card.getAttribute('tabindex')) {
+              card.setAttribute('tabindex', '0');
+            }
+          });
+          // Set initial selected value
+          const selectedCard = this.selector.querySelector('[os-element="card"].os--selected');
+          if (selectedCard) {
+            this.selectedValue = selectedCard.getAttribute('os-value');
+            this.updateRadioState(selectedCard);
+          }
+        }
+        selectCard(card) {
+          // Don't select unavailable cards
+          if (card.classList.contains('os-card--unavailable')) {
+            return;
+          }
+          // Update selected state
+          this.cards.forEach(c => {
+            c.classList.remove('os--selected');
+            // Update radio button state
+            const radio = c.querySelector('[os-component="radio"] [data-selected]');
+            if (radio) {
+              radio.setAttribute('data-selected', 'false');
+            }
+          });
+          // Set new selected card
+          card.classList.add('os--selected');
+          this.updateRadioState(card);
+          // Get selected values
+          const value = card.getAttribute('os-value');
+          const title = card.querySelector('.os-card__title')?.textContent?.trim() || '';
+          const currentPrice = card.querySelector('.os-card__price.os--current')?.textContent?.trim() || '';
+          const comparePrice = card.querySelector('.os-card__price.os--compare')?.textContent?.trim() || '';
+          this.selectedValue = value;
+          // Dispatch custom event
+          const event = new CustomEvent('cardSelected', {
+            detail: {
+              value,
+              title,
+              currentPrice,
+              comparePrice,
+              selectorId: this.selectorId,
+              variantType: this.variantType,
+              component: this.selector,
+              card: card,
+              type: 'card'
+            }
+          });
+          document.dispatchEvent(event);
+        }
+        updateRadioState(selectedCard) {
+          // Update radio button for selected card
+          const selectedRadio = selectedCard.querySelector('[os-component="radio"] [data-selected]');
+          if (selectedRadio) {
+            selectedRadio.setAttribute('data-selected', 'true');
+          }
+        }
+        handleKeyboard(e, card) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.selectCard(card);
+          } else if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            this.navigateCards(e.key === 'ArrowDown' ? 1 : -1, card);
+          }
+        }
+        navigateCards(direction, currentCard) {
+          const availableCards = Array.from(this.cards).filter(card =>
+            !card.classList.contains('os-card--unavailable')
+          );
+          const currentIndex = availableCards.indexOf(currentCard);
+          const newIndex = Math.max(0, Math.min(availableCards.length - 1, currentIndex + direction));
+          if (newIndex !== currentIndex && availableCards[newIndex]) {
+            availableCards[newIndex].focus();
+          }
+        }
+        // Method to get current selection
+        getCurrentSelection() {
+          const selectedCard = this.selector.querySelector('[os-element="card"].os--selected');
+          if (selectedCard) {
+            return {
+              value: selectedCard.getAttribute('os-value'),
+              title: selectedCard.querySelector('.os-card__title')?.textContent?.trim() || '',
+              currentPrice: selectedCard.querySelector('.os-card__price.os--current')?.textContent?.trim() || '',
+              comparePrice: selectedCard.querySelector('.os-card__price.os--compare')?.textContent?.trim() || '',
+              selectorId: this.selectorId,
+              variantType: this.variantType
+            };
+          }
+          return null;
+        }
+        // Method to programmatically select a card by value
+        selectByValue(value) {
+          const targetCard = this.selector.querySelector(`[os-element="card"][os-value="${value}"]`);
+          if (targetCard) {
+            this.selectCard(targetCard);
+          }
+        }
+      }
+      // Add to existing initialization
+      document.addEventListener('DOMContentLoaded', () => {
+        const componentInstances = [];
+        // Initialize existing variant components (dropdowns, swatches, buttons, images)
+        // ... your existing initialization code ...
+        // Initialize card selectors
+        const cardSelectors = document.querySelectorAll('[os-component="selector"]');
+        cardSelectors.forEach(selector => {
+          componentInstances.push(new CardSelector(selector));
+        });
+        // Listen for card selection changes
+        document.addEventListener('cardSelected', (e) => {
+          console.log('Selected card:', e.detail);
+          // Handle card selection
+          console.log(`Card selected in ${e.detail.selectorId}:`, {
+            value: e.detail.value,
+            title: e.detail.title,
+            price: e.detail.currentPrice,
+            variantType: e.detail.variantType
+          });
+        });
+        // Example: Listen for both card and variant selections
+        document.addEventListener('variantSelected', (e) => {
+          console.log('Variant selected:', e.detail);
+        });
+        // Store instances globally for external access
+        window.cardSelectorInstances = componentInstances.filter(instance => instance instanceof CardSelector);
+      });
+    </script>
+
+</body></html>
