@@ -12,6 +12,9 @@ export const config = {
     removePageblockStyles: {
       enabled: true
     },
+    removeFontSmoothingStyles: {
+      enabled: true
+    },
     injectCustomCSS: {
       enabled: true
     },
@@ -25,6 +28,9 @@ export const config = {
         { src: 'config.js', external: false },
         { src: 'https://campaign-cart-v2.pages.dev/loader.js', external: true }
       ]
+    },
+    relocateNextMetaTags: {
+      enabled: true
     },
     removeWebflowComment: {
       enabled: true

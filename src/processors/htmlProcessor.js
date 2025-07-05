@@ -21,11 +21,17 @@ export class HtmlProcessor {
     if (this.config.processors.removePageblockStyles?.enabled) {
       this.processors.push(this.removePageblockStyles.bind(this));
     }
+    if (this.config.processors.removeFontSmoothingStyles?.enabled) {
+      this.processors.push(this.removeFontSmoothingStyles.bind(this));
+    }
     if (this.config.processors.injectCustomCSS?.enabled) {
       this.processors.push(this.injectCustomCSS.bind(this));
     }
     if (this.config.processors.relocateCampaignScripts?.enabled) {
       this.processors.push(this.relocateCampaignScripts.bind(this));
+    }
+    if (this.config.processors.relocateNextMetaTags?.enabled) {
+      this.processors.push(this.relocateNextMetaTags.bind(this));
     }
   }
 
@@ -131,6 +137,23 @@ export class HtmlProcessor {
     return $;
   }
 
+  removeFontSmoothingStyles($) {
+    // Remove the specific style block containing font smoothing and selection styles
+    $('style').each((i, elem) => {
+      const $elem = $(elem);
+      const styleContent = $elem.html();
+      
+      if (styleContent && 
+          styleContent.includes('-webkit-font-smoothing') && 
+          styleContent.includes('::selection') && 
+          styleContent.includes('.test-mode-indicator')) {
+        $elem.remove();
+      }
+    });
+
+    return $;
+  }
+
   injectCustomCSS($) {
     // Find the next-staging-core.css link (handles both relative and absolute paths)
     const nextStagingCoreLinks = $('link[href$="next-staging-core.css"]');
@@ -202,6 +225,36 @@ export class HtmlProcessor {
       
       // Insert after FIRST viewport meta only
       viewportMeta.after(campaignBlock);
+    }
+
+    return $;
+  }
+
+  relocateNextMetaTags($) {
+    // Find all meta tags with names containing "next-"
+    const nextMetaTags = $('meta[name*="next-"]');
+    
+    if (nextMetaTags.length > 0) {
+      // Remove the meta tags from their current position
+      const metaTagsHtml = [];
+      nextMetaTags.each((i, elem) => {
+        const $elem = $(elem);
+        metaTagsHtml.push($elem.prop('outerHTML'));
+        $elem.remove();
+      });
+      
+      // Find the last campaign script (loader.js)
+      const loaderScript = $('script[src*="campaign-cart-v2.pages.dev/loader.js"]').last();
+      
+      if (loaderScript.length > 0) {
+        // Add one empty line and then the meta tags
+        let metaBlock = '\n';
+        metaTagsHtml.forEach(metaHtml => {
+          metaBlock += `  ${metaHtml}\n`;
+        });
+        
+        loaderScript.after(metaBlock);
+      }
     }
 
     return $;
