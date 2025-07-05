@@ -203,9 +203,11 @@ export class HtmlProcessor {
         campaignBlock += `  <link rel="dns-prefetch" href="${href}">\n`;
       });
       
-      // Add script tags
+      // Add script tags with comments
       config.scripts.forEach(script => {
         if (script.external) {
+          // Add comment for loader.js
+          campaignBlock += `  <!-- Campaign Loader Script -->\n`;
           campaignBlock += `  <script src="${script.src}"></script>\n`;
         } else {
           // For local config.js, calculate relative path
@@ -217,6 +219,8 @@ export class HtmlProcessor {
             relativePath = '../'.repeat(depth);
           }
           
+          // Add comment for config.js
+          campaignBlock += `  <!-- Campaign Configuration -->\n`;
           campaignBlock += `  <script src="${relativePath}${script.src}"></script>\n`;
         }
       });
@@ -247,8 +251,10 @@ export class HtmlProcessor {
       const loaderScript = $('script[src*="campaign-cart-v2.pages.dev/loader.js"]').last();
       
       if (loaderScript.length > 0) {
-        // Add one empty line and then the meta tags
-        let metaBlock = '\n';
+        // Add empty line, comment, empty line, then meta tags
+        let metaBlock = '\n\n';
+        metaBlock += '  <!-- NEXT Metatags -->\n';
+        metaBlock += '\n';
         metaTagsHtml.forEach(metaHtml => {
           metaBlock += `  ${metaHtml}\n`;
         });
