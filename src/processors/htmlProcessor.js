@@ -66,9 +66,12 @@ export class HtmlProcessor {
         wrap_attributes: 'auto',
         wrap_attributes_indent_size: 2,
         end_with_newline: true,
-        unformatted: ['script', 'style'],
+        unformatted: ['script'],  // Remove 'style' from unformatted
         content_unformatted: [],
-        extra_liners: []
+        extra_liners: [],
+        indent_inner_html: true,
+        indent_head_inner_html: true,
+        indent_body_inner_html: true
       });
     }
 
@@ -298,25 +301,19 @@ export class HtmlProcessor {
       // If we have CSS to consolidate
       if (cssBlocks.size > 0) {
         // Create consolidated style tag
-        let consolidatedCSS = '\n  <!-- Consolidated Custom CSS -->\n';
-        consolidatedCSS += '  <style>\n';
+        let consolidatedCSS = '\n<!-- Consolidated Custom CSS -->\n';
+        consolidatedCSS += '<style>\n';
         
-        // Add all unique CSS blocks with proper indentation
-        cssBlocks.forEach(css => {
-          // Split CSS into lines and re-indent properly
-          const lines = css.split('\n');
-          lines.forEach(line => {
-            const trimmedLine = line.trim();
-            if (trimmedLine) {
-              // Add consistent 4-space indentation
-              consolidatedCSS += '    ' + trimmedLine + '\n';
-            }
-          });
-          // Add a blank line between CSS blocks for readability
-          consolidatedCSS += '\n';
+        // Add all unique CSS blocks (js-beautify will handle the formatting)
+        cssBlocks.forEach((css, index) => {
+          consolidatedCSS += css;
+          // Add newline between blocks
+          if (index < cssBlocks.size - 1) {
+            consolidatedCSS += '\n';
+          }
         });
         
-        consolidatedCSS += '  </style>\n\n';
+        consolidatedCSS += '\n</style>\n';
         
         // Insert before closing body tag
         $('body').append(consolidatedCSS);

@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Package Selectorss</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <head>
+    <meta charset="utf-8">
+    <title>Package Selectorss</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
-  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+    <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+    <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
 
-  <!-- Campaign Configuration -->
-  <script src="../config.js"></script>
-  <!-- Campaign Loader Script -->
-  <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
-
-
-  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="../css/components.css" rel="stylesheet" type="text/css">
-  <link href="../css/next-staging-core.css" rel="stylesheet" type="text/css">
-  <link href="../css/custom.css" rel="stylesheet" type="text/css">
+    <!-- Campaign Configuration -->
+    <script src="../config.js"></script>
+    <!-- Campaign Loader Script -->
+    <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
 
 
-  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="../images/webclip.png" rel="apple-touch-icon">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../css/components.css" rel="stylesheet" type="text/css">
+    <link href="../css/next-staging-core.css" rel="stylesheet" type="text/css">
+    <link href="../css/custom.css" rel="stylesheet" type="text/css">
 
 
-  <style>
+    <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../images/webclip.png" rel="apple-touch-icon">
+
+
+    <style>
       html:not(.next-display-ready) [data-next-await] {
         position: relative;
         overflow: hidden;
         border-color: transparent !important;
         box-shadow: none !important;
       }
+
       [data-next-await] * {
         opacity: 0;
         transition: opacity 0.2s ease;
       }
+
       [data-next-await]::before {
         content: '';
         position: absolute;
@@ -47,827 +49,833 @@
         z-index: 1;
         pointer-events: none;
       }
+
       @keyframes pulse-gray {
+
         0%,
         100% {
           background-color: #e0e0e0;
           opacity: 0.6;
         }
+
         50% {
           background-color: #f5f5f5;
           opacity: 0.8;
         }
       }
+
       html.next-display-ready [data-next-await] * {
         opacity: 1;
       }
+
       html.next-display-ready [data-next-await]::before {
         display: none;
       }
+
     </style>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</head>
-<body>
-  <div class="page-wrapper">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
 
-    <main class="main-wrapper">
-      <div class="section">
-        <div class="container">
-          <div class="headline-component">
-            <h1>Package Selectors</h1>
-            <div>This is some text inside of a div block.</div>
-          </div>
-          <div class="showcase_components">
-            <div class="comp-showcase">
-              <div class="showcase-holder">
-                <div data-next-selector-id="drone-packages" os-component="selector" data-next-selection-mode="swap" class="os-option">
-                  <div class="os-cards__vertical os--gap-lg">
-                    <div data-next-selected="true" role="button" data-next-selector-card="" data-next-package-id="2" data-next-quantity="1" class="os-card next-selected">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div class="os-card__image-slot"><img src="../images/1x1_2.svg" loading="lazy" data-next-display="image" alt=""></div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section os--full">
-                              <div class="os-card__title-wrapper os--vertical">
-                                <div data-next-display="name" class="os-card__title">Buy 3 Get 2 Free</div>
-                              </div>
-                              <div class="os--badge">Save&nbsp; <span data-card-price="total-savings-percentage">40%</span></div>
-                            </div>
-                          </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container os--stacked">
-                                <div data-next-display="price_retail_total" class="os-card__price os--compare ts-sm">$174.95</div>
-                                <div data-next-display="price" class="os-card__price os--current ts-md">$16.95/ea</div>
-                                <div class="text-xs">+FREE SHIPPING</div>
+      <main class="main-wrapper">
+        <div class="section">
+          <div class="container">
+            <div class="headline-component">
+              <h1>Package Selectors</h1>
+              <div>This is some text inside of a div block.</div>
+            </div>
+            <div class="showcase_components">
+              <div class="comp-showcase">
+                <div class="showcase-holder">
+                  <div data-next-selector-id="drone-packages" os-component="selector" data-next-selection-mode="swap" class="os-option">
+                    <div class="os-cards__vertical os--gap-lg">
+                      <div data-next-selected="true" role="button" data-next-selector-card="" data-next-package-id="2" data-next-quantity="1" class="os-card next-selected">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
                               </div>
                             </div>
+                            <div class="os-card__image-slot"><img src="../images/1x1_2.svg" loading="lazy" data-next-display="image" alt=""></div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section os--full">
+                                <div class="os-card__title-wrapper os--vertical">
+                                  <div data-next-display="name" class="os-card__title">Buy 3 Get 2 Free</div>
+                                </div>
+                                <div class="os--badge">Save&nbsp; <span data-card-price="total-savings-percentage">40%</span></div>
+                              </div>
+                            </div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container os--stacked">
+                                  <div data-next-display="price_retail_total" class="os-card__price os--compare ts-sm">$174.95</div>
+                                  <div data-next-display="price" class="os-card__price os--current ts-md">$16.95/ea</div>
+                                  <div class="text-xs">+FREE SHIPPING</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
+                        </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                        <div os-slot="label" class="os-card__label-slot">
+                          <div os-label-position="top-right" class="os-card__label os-card__label--middle-left">
+                            <div class="os-card__label-text">BEST DEAL</div>
                           </div>
                         </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
                       </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                      <div os-slot="label" class="os-card__label-slot">
-                        <div os-label-position="top-right" class="os-card__label os-card__label--middle-left">
-                          <div class="os-card__label-text">BEST DEAL</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-next-quantity="1" role="button" data-next-selector-card="" data-next-package-id="3" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div class="os-card__image-slot"><img src="../images/1x1_2.svg" loading="lazy" data-next-display="image" alt=""></div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section os--full">
-                              <div class="os-card__title-wrapper os--vertical">
-                                <div data-next-display="name" class="os-card__title">Buy 3 Get 2 Free</div>
+                      <div data-next-quantity="1" role="button" data-next-selector-card="" data-next-package-id="3" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
                               </div>
-                              <div class="os--badge">Save&nbsp; <span data-card-price="total-savings-percentage">40%</span></div>
                             </div>
-                          </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container os--stacked">
-                                <div data-next-display="price_retail_total" class="os-card__price os--compare ts-sm">$174.95</div>
-                                <div data-next-display="price" class="os-card__price os--current ts-md">$16.95/ea</div>
-                                <div class="text-xs">+FREE SHIPPING</div>
+                            <div class="os-card__image-slot"><img src="../images/1x1_2.svg" loading="lazy" data-next-display="image" alt=""></div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section os--full">
+                                <div class="os-card__title-wrapper os--vertical">
+                                  <div data-next-display="name" class="os-card__title">Buy 3 Get 2 Free</div>
+                                </div>
+                                <div class="os--badge">Save&nbsp; <span data-card-price="total-savings-percentage">40%</span></div>
+                              </div>
+                            </div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container os--stacked">
+                                  <div data-next-display="price_retail_total" class="os-card__price os--compare ts-sm">$174.95</div>
+                                  <div data-next-display="price" class="os-card__price os--current ts-md">$16.95/ea</div>
+                                  <div class="text-xs">+FREE SHIPPING</div>
+                                </div>
                               </div>
                             </div>
                           </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
                         </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
-                      </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                      <div os-slot="label" class="os-card__label-slot">
-                        <div os-label-position="top-right" class="os-card__label os-card__label--middle-left">
-                          <div class="os-card__label-text">BEST SELLER</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div data-next-quantity="1" role="button" data-next-selector-card="" data-next-package-id="9" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                        <div os-slot="label" class="os-card__label-slot">
+                          <div os-label-position="top-right" class="os-card__label os-card__label--middle-left">
+                            <div class="os-card__label-text">BEST SELLER</div>
                           </div>
-                          <div class="os-card__image-slot"><img src="../images/1x1_2.svg" loading="lazy" data-next-display="image" alt=""></div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section os--full">
-                              <div class="os-card__title-wrapper os--vertical">
-                                <div data-next-display="name" class="os-card__title">Buy 3 Get 2 Free</div>
+                        </div>
+                      </div>
+                      <div data-next-quantity="1" role="button" data-next-selector-card="" data-next-package-id="9" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                            </div>
+                            <div class="os-card__image-slot"><img src="../images/1x1_2.svg" loading="lazy" data-next-display="image" alt=""></div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section os--full">
+                                <div class="os-card__title-wrapper os--vertical">
+                                  <div data-next-display="name" class="os-card__title">Buy 3 Get 2 Free</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container os--stacked">
+                                  <div data-next-display="price_retail_total" class="os-card__price os--compare ts-sm">$174.95</div>
+                                  <div data-next-display="price" class="os-card__price os--current ts-md">$16.95/ea</div>
+                                  <div class="text-xs">+FREE SHIPPING</div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container os--stacked">
-                                <div data-next-display="price_retail_total" class="os-card__price os--compare ts-sm">$174.95</div>
-                                <div data-next-display="price" class="os-card__price os--current ts-md">$16.95/ea</div>
-                                <div class="text-xs">+FREE SHIPPING</div>
-                              </div>
-                            </div>
-                          </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
                         </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                        <div os-slot="label" class="os-card__label-slot"></div>
                       </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                      <div os-slot="label" class="os-card__label-slot"></div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder">
-                <div os-id="QS26" os-component="selector" os-variant="quantity" class="os-option">
-                  <div class="os-cards__vertical os--gap-m">
-                    <div os-value="4" role="button" os-element="card" class="os-card next-selected">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content os--align-top">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
+              <div class="comp-showcase">
+                <div class="showcase-holder">
+                  <div os-id="QS26" os-component="selector" os-variant="quantity" class="os-option">
+                    <div class="os-cards__vertical os--gap-m">
+                      <div os-value="4" role="button" os-element="card" class="os-card next-selected">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content os--align-top">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
                             </div>
-                          </div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">3 Month Supply</div>
-                                <div os-component="badge" class="os-card__title-badge pb--bestseller">
-                                  <div>BEST SELLER</div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">3 Month Supply</div>
+                                  <div os-component="badge" class="os-card__title-badge pb--bestseller">
+                                    <div>BEST SELLER</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__subtitle-wrapper">
+                                  <div class="os-card__subtitle-text">6 BOTTLES</div>
+                                  <div class="os-card__subtitle-text os--last">CHOOSE 6 FLAVORS</div>
                                 </div>
                               </div>
-                              <div class="os-card__subtitle-wrapper">
-                                <div class="os-card__subtitle-text">6 BOTTLES</div>
-                                <div class="os-card__subtitle-text os--last">CHOOSE 6 FLAVORS</div>
+                            </div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container">
+                                  <div class="os-card__price os--compare">$16.95</div>
+                                  <div class="os-card__price os--current">$16.95</div>
+                                </div>
+                                <div os-component="custom-content" class="os-card__custom-price">
+                                  <div class="os-card__custom-price-row">$33/month</div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container">
-                                <div class="os-card__price os--compare">$16.95</div>
-                                <div class="os-card__price os--current">$16.95</div>
-                              </div>
-                              <div os-component="custom-content" class="os-card__custom-price">
-                                <div class="os-card__custom-price-row">$33/month</div>
-                              </div>
-                            </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
+                        </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                        <div os-slot="label" class="os-card__label-slot">
+                          <div os-label-position="top-right" class="os-card__label os-card__label--top-right">
+                            <div class="os-card__label-text">BEST DEAL</div>
                           </div>
                         </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
                       </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                      <div os-slot="label" class="os-card__label-slot">
-                        <div os-label-position="top-right" class="os-card__label os-card__label--top-right">
-                          <div class="os-card__label-text">BEST DEAL</div>
+                      <div os-value="4" role="button" os-element="card" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content os--align-top">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="false" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                            </div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">3 Month Supply</div>
+                                </div>
+                                <div class="os-card__subtitle-wrapper">
+                                  <div class="os-card__subtitle-text">6 BOTTLES</div>
+                                  <div class="os-card__subtitle-text os--last">CHOOSE 6 FLAVORS</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container">
+                                  <div class="os-card__price os--compare">$16.95</div>
+                                  <div class="os-card__price os--current">$16.95</div>
+                                </div>
+                                <div os-component="custom-content" class="os-card__custom-price">
+                                  <div class="os-card__custom-price-row">$33/month</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
                         </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                        <div os-slot="label" class="os-card__label-slot"></div>
                       </div>
-                    </div>
-                    <div os-value="4" role="button" os-element="card" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content os--align-top">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="false" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">3 Month Supply</div>
-                              </div>
-                              <div class="os-card__subtitle-wrapper">
-                                <div class="os-card__subtitle-text">6 BOTTLES</div>
-                                <div class="os-card__subtitle-text os--last">CHOOSE 6 FLAVORS</div>
+                      <div os-value="4" role="button" os-element="card" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content os--align-top">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="false" class="radio-style-1">
+                                <div class="radio-inner"></div>
                               </div>
                             </div>
-                          </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container">
-                                <div class="os-card__price os--compare">$16.95</div>
-                                <div class="os-card__price os--current">$16.95</div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">3 Month Supply</div>
+                                </div>
+                                <div class="os-card__subtitle-wrapper">
+                                  <div class="os-card__subtitle-text">6 BOTTLES</div>
+                                  <div class="os-card__subtitle-text os--last">CHOOSE 6 FLAVORS</div>
+                                </div>
                               </div>
-                              <div os-component="custom-content" class="os-card__custom-price">
-                                <div class="os-card__custom-price-row">$33/month</div>
+                            </div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container">
+                                  <div class="os-card__price os--compare">$16.95</div>
+                                  <div class="os-card__price os--current">$16.95</div>
+                                </div>
+                                <div os-component="custom-content" class="os-card__custom-price">
+                                  <div class="os-card__custom-price-row">$33/month</div>
+                                </div>
                               </div>
                             </div>
                           </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
                         </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                        <div os-slot="label" class="os-card__label-slot"></div>
                       </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                      <div os-slot="label" class="os-card__label-slot"></div>
-                    </div>
-                    <div os-value="4" role="button" os-element="card" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content os--align-top">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="false" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">3 Month Supply</div>
-                              </div>
-                              <div class="os-card__subtitle-wrapper">
-                                <div class="os-card__subtitle-text">6 BOTTLES</div>
-                                <div class="os-card__subtitle-text os--last">CHOOSE 6 FLAVORS</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container">
-                                <div class="os-card__price os--compare">$16.95</div>
-                                <div class="os-card__price os--current">$16.95</div>
-                              </div>
-                              <div os-component="custom-content" class="os-card__custom-price">
-                                <div class="os-card__custom-price-row">$33/month</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
-                      </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                      <div os-slot="label" class="os-card__label-slot"></div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder">
-                <div os-id="QS26" os-component="selector" os-variant="quantity" class="os-option">
-                  <div class="os-cards__vertical os--gap-m">
-                    <div os-value="4" role="button" os-element="card" class="os-card next-selected">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content os--align-middle">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
+              <div class="comp-showcase">
+                <div class="showcase-holder">
+                  <div os-id="QS26" os-component="selector" os-variant="quantity" class="os-option">
+                    <div class="os-cards__vertical os--gap-m">
+                      <div os-value="4" role="button" os-element="card" class="os-card next-selected">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content os--align-middle">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
                             </div>
-                          </div>
-                          <div data-action="open-product-facts" class="os-card__media"><img width="280" loading="eager" alt="" src="../images/icon.svg" class="os-card__image"></div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">1 Pack</div>
-                                <div class="os-card__price-badge">
-                                  <div>SAVE $16</div>
+                            <div data-action="open-product-facts" class="os-card__media"><img width="280" loading="eager" alt="" src="../images/icon.svg" class="os-card__image"></div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">1 Pack</div>
+                                  <div class="os-card__price-badge">
+                                    <div>SAVE $16</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container os--stacked">
+                                  <div class="os-card__price os--current">$29</div>
+                                  <div class="os-card__price os--compare">$47</div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container os--stacked">
-                                <div class="os-card__price os--current">$29</div>
-                                <div class="os-card__price os--compare">$47</div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
+                        </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                        <div os-slot="label" class="os-card__label-slot"></div>
+                      </div>
+                      <div os-value="4" role="button" os-element="card" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content os--align-middle">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
-                      </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                      <div os-slot="label" class="os-card__label-slot"></div>
-                    </div>
-                    <div os-value="4" role="button" os-element="card" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content os--align-middle">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div data-action="open-product-facts" class="os-card__media"><img width="280" loading="eager" alt="" src="../images/icon.svg" class="os-card__image"></div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">1 Pack</div>
-                                <div class="os-card__price-badge">
-                                  <div>SAVE $16</div>
+                            <div data-action="open-product-facts" class="os-card__media"><img width="280" loading="eager" alt="" src="../images/icon.svg" class="os-card__image"></div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">1 Pack</div>
+                                  <div class="os-card__price-badge">
+                                    <div>SAVE $16</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__subtitle-wrapper">
+                                  <div class="os-card__subtitle-text">Free Priority Shipping</div>
                                 </div>
                               </div>
-                              <div class="os-card__subtitle-wrapper">
-                                <div class="os-card__subtitle-text">Free Priority Shipping</div>
+                            </div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container os--stacked">
+                                  <div class="os-card__price os--current">$29</div>
+                                  <div class="os-card__price os--compare">$47</div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container os--stacked">
-                                <div class="os-card__price os--current">$29</div>
-                                <div class="os-card__price os--compare">$47</div>
-                              </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
+                        </div>
+                        <div os-slot="footer" class="os-card__footer-slot">
+                          <div os-component="banner" class="os-card__footer-banner">
+                            <div class="os-card__banner-image"><img loading="lazy" src="../images/icon.svg" alt="" class="os_card__banner-image_item"></div>
+                            <div class="os-card__banner-cont os--align-center">
+                              <div><strong>Description about footer element.</strong></div>
                             </div>
                           </div>
                         </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide"></div>
+                        <div os-slot="label" class="os-card__label-slot"></div>
                       </div>
-                      <div os-slot="footer" class="os-card__footer-slot">
-                        <div os-component="banner" class="os-card__footer-banner">
-                          <div class="os-card__banner-image"><img loading="lazy" src="../images/icon.svg" alt="" class="os_card__banner-image_item"></div>
-                          <div class="os-card__banner-cont os--align-center">
-                            <div><strong>Description about footer element.</strong></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div os-slot="label" class="os-card__label-slot"></div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder">
-                <div os-id="QS26" os-component="selector" os-variant="quantity" class="os-option">
-                  <div class="os-cards__vertical os--gap-m">
-                    <div os-value="4" role="button" os-element="card" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">Buy once</div>
+              <div class="comp-showcase">
+                <div class="showcase-holder">
+                  <div os-id="QS26" os-component="selector" os-variant="quantity" class="os-option">
+                    <div class="os-cards__vertical os--gap-m">
+                      <div os-value="4" role="button" os-element="card" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
                               </div>
                             </div>
-                          </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container">
-                                <div class="os-card__price os--current">$16.95</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide">
-                          <div os-component="product-list" class="os-card__products-section">
-                            <div class="os-card__product-item">
-                              <div class="os-card__product-detals">
-                                <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
-                                <div class="os-card__product-info">
-                                  <div>4</div>
-                                  <div>×</div>
-                                  <div>Premium Face Cream</div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">Buy once</div>
                                 </div>
                               </div>
-                              <div class="os-card__product-price">
-                                <div class="os-card__product-price--current">$89.96</div>
-                                <div class="os-card__product-price--regular">$119.96<br></div>
-                              </div>
                             </div>
-                            <div class="os-card__product-item">
-                              <div class="os-card__product-detals">
-                                <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
-                                <div class="os-card__product-info">
-                                  <div>4</div>
-                                  <div>×</div>
-                                  <div>Premium Face Cream</div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container">
+                                  <div class="os-card__price os--current">$16.95</div>
                                 </div>
                               </div>
-                              <div class="os-card__product-price">
-                                <div class="os-card__product-price--current">$89.96</div>
-                                <div class="os-card__product-price--regular">$119.96<br></div>
-                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                      <div os-slot="label" class="os-card__label-slot"></div>
-                    </div>
-                    <div os-value="4" role="button" os-element="card" class="os-card next-selected">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">Monthly delivery</div>
-                              </div>
-                              <div class="os-card__subtitle-wrapper">
-                                <div class="os-card__subtitle-text">Subscribe and Save 20%</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container">
-                                <div class="os-card__price os--compare">$16.95</div>
-                                <div class="os-card__price os--current">$16.95</div>
-                              </div>
-                              <div os-component="custom-content" class="os-card__custom-price">
-                                <div class="os-card__custom-price-row">$33/month</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide">
-                          <div os-component="product-list" class="os-card__products-section">
-                            <div class="os-card__product-item">
-                              <div class="os-card__product-detals">
-                                <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
-                                <div class="os-card__product-info">
-                                  <div>4</div>
-                                  <div>×</div>
-                                  <div>Premium Face Cream</div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide">
+                            <div os-component="product-list" class="os-card__products-section">
+                              <div class="os-card__product-item">
+                                <div class="os-card__product-detals">
+                                  <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
+                                  <div class="os-card__product-info">
+                                    <div>4</div>
+                                    <div>×</div>
+                                    <div>Premium Face Cream</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__product-price">
+                                  <div class="os-card__product-price--current">$89.96</div>
+                                  <div class="os-card__product-price--regular">$119.96<br></div>
                                 </div>
                               </div>
-                              <div class="os-card__product-price">
-                                <div class="os-card__product-price--current">$89.96</div>
-                                <div class="os-card__product-price--regular">$119.96<br></div>
-                              </div>
-                            </div>
-                            <div class="os-card__product-item">
-                              <div class="os-card__product-detals">
-                                <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
-                                <div class="os-card__product-info">
-                                  <div>4</div>
-                                  <div>×</div>
-                                  <div>Premium Face Cream</div>
+                              <div class="os-card__product-item">
+                                <div class="os-card__product-detals">
+                                  <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
+                                  <div class="os-card__product-info">
+                                    <div>4</div>
+                                    <div>×</div>
+                                    <div>Premium Face Cream</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__product-price">
+                                  <div class="os-card__product-price--current">$89.96</div>
+                                  <div class="os-card__product-price--regular">$119.96<br></div>
                                 </div>
                               </div>
-                              <div class="os-card__product-price">
-                                <div class="os-card__product-price--current">$89.96</div>
-                                <div class="os-card__product-price--regular">$119.96<br></div>
-                              </div>
                             </div>
                           </div>
                         </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                        <div os-slot="label" class="os-card__label-slot"></div>
                       </div>
-                      <div os-slot="footer" class="os-card__footer-slot">
-                        <div os-component="benefits-list" class="os-card__footer-benefits">
-                          <ul role="list" class="os-card__benefits-list w-list-unstyled">
-                            <li class="os-card__benefit-item">
-                              <div class="os-card__benefit-icon">
-                                <div class="os-card__benefit-icon-item w-embed"><svg width="100%" height="100%" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="Paths">
-                                      <path id="Vector" d="M20.6 11.1C15.056 9.93531 14 4.11178 14 1.20001C14 4.11178 12.9441 9.93531 7.40002 11.1C12.9441 12.2647 14 18.0882 14 21C14 18.0882 15.056 12.2647 20.6 11.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                      <path id="Vector_2" d="M7.40002 18.6C4.88 18.1059 4.40002 15.6353 4.40002 14.4C4.40002 15.6353 3.92005 18.1059 1.40002 18.6C3.92005 19.0941 4.40002 21.5647 4.40002 22.8C4.40002 21.5647 4.88 19.0941 7.40002 18.6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                      <path id="Vector_3" d="M2.29999 8.99999H4.69999M3.49999 10.2V7.79999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                      <path id="Vector_4" d="M5.90002 4.8H9.50002M7.70002 6.6V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                  </svg></div>
-                              </div>
-                              <div class="os-card__benefit-text">Save 10% on every future order</div>
-                            </li>
-                            <li class="os-card__benefit-item">
-                              <div class="os-card__benefit-icon">
-                                <div class="os-card__benefit-icon-item w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="Paths">
-                                      <path id="Ellipse 35" d="M21.1743 8.30357C19.6897 4.4129 15.9298 1.64999 11.5262 1.64999C5.82315 1.64999 1.19995 6.28385 1.19995 12C1.19995 17.7161 5.82315 22.35 11.5262 22.35C14.3398 22.35 16.8905 21.2221 18.753 19.3929M21.1743 8.30357L22.59 4.60714M21.1743 8.30357L17.0581 7.56428" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                      <path id="Vector 37" d="M11.4 6.29999V12.6L15.6 14.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                  </svg></div>
-                              </div>
-                              <div class="os-card__benefit-text">1 month supply, delivered monthly</div>
-                            </li>
-                            <li class="os-card__benefit-item">
-                              <div class="os-card__benefit-icon">
-                                <div class="os-card__benefit-icon-item w-embed"><svg width="100%" height="100%" viewBox="0 0 14 16" fill="none">
-                                    <g id="Paths">
-                                      <path id="Vector" d="M5 2.40005C6.2 1.80005 6.6 1.20005 7 0.800049C7.4 1.20005 7.8 1.80005 9 2.40005C10.2 3.00005 10.8 2.80005 11.8 3.20005C12.8 3.60005 13 4.20005 13 5.40005C13 6.60005 12.8 9.60005 12.4 10.8C12 12 9.4 14.4 7 15.2C4.6 14.4 2 12 1.6 10.8C1.2 9.60005 1 6.60005 1 5.40005C1 4.20005 1.2 3.60005 2.2 3.20005C3.2 2.80005 3.8 3.00005 5 2.40005Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                      <path id="Vector_2" d="M5 8.25549L6.35207 9.5L9 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                  </svg></div>
-                              </div>
-                              <div class="os-card__benefit-text">Free shipping, always. Cancel anytime. Money back guarantee.</div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div os-slot="label" class="os-card__label-slot"></div>
-                    </div>
-                    <div os-value="4" role="button" os-element="card" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot">
-                        <div os-component="banner" class="os-card__banner">
-                          <div class="os-card__banner-content os--align-center">
-                            <div>SUBSCRIBE &amp; SAVE 15% OFF</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">3-month delivery</div>
-                              </div>
-                              <div class="os-card__subtitle-wrapper">
-                                <div class="os-card__subtitle-text">Subscribe and Save 20%</div>
+                      <div os-value="4" role="button" os-element="card" class="os-card next-selected">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
                               </div>
                             </div>
-                          </div>
-                          <div os-slot="right" class="os-card__secondary-slot">
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container">
-                                <div class="os-card__price os--compare">$16.95</div>
-                                <div class="os-card__price os--current">$16.95</div>
-                              </div>
-                              <div os-component="custom-content" class="os-card__custom-price">
-                                <div class="os-card__custom-price-row">$33/month</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot hide">
-                          <div os-component="product-list" class="os-card__products-section">
-                            <div class="os-card__product-item">
-                              <div class="os-card__product-detals">
-                                <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
-                                <div class="os-card__product-info">
-                                  <div>4</div>
-                                  <div>×</div>
-                                  <div>Premium Face Cream</div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">Monthly delivery</div>
+                                </div>
+                                <div class="os-card__subtitle-wrapper">
+                                  <div class="os-card__subtitle-text">Subscribe and Save 20%</div>
                                 </div>
                               </div>
-                              <div class="os-card__product-price">
-                                <div class="os-card__product-price--current">$89.96</div>
-                                <div class="os-card__product-price--regular">$119.96<br></div>
-                              </div>
                             </div>
-                            <div class="os-card__product-item">
-                              <div class="os-card__product-detals">
-                                <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
-                                <div class="os-card__product-info">
-                                  <div>4</div>
-                                  <div>×</div>
-                                  <div>Premium Face Cream</div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container">
+                                  <div class="os-card__price os--compare">$16.95</div>
+                                  <div class="os-card__price os--current">$16.95</div>
+                                </div>
+                                <div os-component="custom-content" class="os-card__custom-price">
+                                  <div class="os-card__custom-price-row">$33/month</div>
                                 </div>
                               </div>
-                              <div class="os-card__product-price">
-                                <div class="os-card__product-price--current">$89.96</div>
-                                <div class="os-card__product-price--regular">$119.96<br></div>
+                            </div>
+                          </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide">
+                            <div os-component="product-list" class="os-card__products-section">
+                              <div class="os-card__product-item">
+                                <div class="os-card__product-detals">
+                                  <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
+                                  <div class="os-card__product-info">
+                                    <div>4</div>
+                                    <div>×</div>
+                                    <div>Premium Face Cream</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__product-price">
+                                  <div class="os-card__product-price--current">$89.96</div>
+                                  <div class="os-card__product-price--regular">$119.96<br></div>
+                                </div>
+                              </div>
+                              <div class="os-card__product-item">
+                                <div class="os-card__product-detals">
+                                  <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
+                                  <div class="os-card__product-info">
+                                    <div>4</div>
+                                    <div>×</div>
+                                    <div>Premium Face Cream</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__product-price">
+                                  <div class="os-card__product-price--current">$89.96</div>
+                                  <div class="os-card__product-price--regular">$119.96<br></div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                      <div os-slot="label" class="os-card__label-slot"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder">
-                <div os-id="QS26" os-component="selector" os-variant="quantity" class="os-option">
-                  <div class="os-cards__grid">
-                    <div pb-value="4" role="button" pb-element="card" class="os-card next-selected">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper os--sm">
-                        <div class="os-card__content os--align-middle">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div os-slot="left" class="os-card__main-slot os--center">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">4 Bottles</div>
-                              </div>
-                            </div>
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container os--stacked">
-                                <div class="os-card__price ts-xs">$48.99/each</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                    </div>
-                    <div pb-value="4" role="button" pb-element="card" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper os--sm">
-                        <div class="os-card__content os--align-middle">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div os-slot="left" class="os-card__main-slot os--center">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">3 Bottles</div>
-                              </div>
-                            </div>
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container os--stacked">
-                                <div class="os-card__price ts-xs">$48.99/each</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                    </div>
-                    <div pb-value="4" role="button" pb-element="card" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper os--sm">
-                        <div class="os-card__content os--align-middle">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div os-slot="left" class="os-card__main-slot os--center">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">2 Bottles</div>
-                              </div>
-                            </div>
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container os--stacked">
-                                <div class="os-card__price ts-xs">$48.99/each</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                    </div>
-                    <div pb-value="4" role="button" pb-element="card" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper os--sm">
-                        <div class="os-card__content os--align-middle">
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                          <div os-slot="left" class="os-card__main-slot os--center">
-                            <div os-component="title-section" class="os-card__title-section">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">1 Bottle</div>
-                              </div>
-                            </div>
-                            <div class="os-card__pricing">
-                              <div os-component="price-container" class="os-card__price-container os--stacked">
-                                <div class="os-card__price ts-xs">$48.99/each</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder">
-                <div os-id="QS26" os-component="selector" os-variant="quantity" class="os-option">
-                  <div class="os-cards__grid">
-                    <div pb-value="4" role="button" pb-element="card" class="os-card next-selected">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content os--align-top">
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section os--min-2">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">Nectar Classic</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot">
-                          <div data-action="open-product-facts" class="os-card__media os-full"><img width="280" loading="eager" alt="" src="../images/icon.svg" class="os-card__image"></div>
-                          <div os-component="features-list" class="os-card__features">
-                            <ul role="list" class="os-card__features-list w-list-unstyled">
-                              <li class="os-card__feature-item">
-                                <div>
-                                  <div class="os-card__benefit-icon-svg w-embed"><svg width="13" height="10" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="CurrentColor" class="tw-mr-2">
-                                      <path d="M12.265 0.182296C12.0219 -0.0607654 11.6279 -0.0607654 11.3848 0.182296L3.92853 7.63866L1.06245 4.77258C0.819416 4.52952 0.425382 4.52955 0.182296 4.77258C-0.0607654 5.01562 -0.0607654 5.40966 0.182296 5.65272L3.48845 8.95882C3.73142 9.20186 4.12574 9.20169 4.36861 8.95882L12.265 1.06245C12.508 0.819416 12.508 0.425358 12.265 0.182296Z" fill="inherit"></path>
+                        <div os-slot="footer" class="os-card__footer-slot">
+                          <div os-component="benefits-list" class="os-card__footer-benefits">
+                            <ul role="list" class="os-card__benefits-list w-list-unstyled">
+                              <li class="os-card__benefit-item">
+                                <div class="os-card__benefit-icon">
+                                  <div class="os-card__benefit-icon-item w-embed"><svg width="100%" height="100%" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <g id="Paths">
+                                        <path id="Vector" d="M20.6 11.1C15.056 9.93531 14 4.11178 14 1.20001C14 4.11178 12.9441 9.93531 7.40002 11.1C12.9441 12.2647 14 18.0882 14 21C14 18.0882 15.056 12.2647 20.6 11.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path id="Vector_2" d="M7.40002 18.6C4.88 18.1059 4.40002 15.6353 4.40002 14.4C4.40002 15.6353 3.92005 18.1059 1.40002 18.6C3.92005 19.0941 4.40002 21.5647 4.40002 22.8C4.40002 21.5647 4.88 19.0941 7.40002 18.6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path id="Vector_3" d="M2.29999 8.99999H4.69999M3.49999 10.2V7.79999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path id="Vector_4" d="M5.90002 4.8H9.50002M7.70002 6.6V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                      </g>
                                     </svg></div>
                                 </div>
-                                <div class="os-card__feature-text">PRESSURE-RELIEVING</div>
+                                <div class="os-card__benefit-text">Save 10% on every future order</div>
                               </li>
-                              <li class="os-card__feature-item">
-                                <div>
-                                  <div class="os-card__benefit-icon-svg w-embed"><svg width="13" height="10" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="CurrentColor" class="tw-mr-2">
-                                      <path d="M12.265 0.182296C12.0219 -0.0607654 11.6279 -0.0607654 11.3848 0.182296L3.92853 7.63866L1.06245 4.77258C0.819416 4.52952 0.425382 4.52955 0.182296 4.77258C-0.0607654 5.01562 -0.0607654 5.40966 0.182296 5.65272L3.48845 8.95882C3.73142 9.20186 4.12574 9.20169 4.36861 8.95882L12.265 1.06245C12.508 0.819416 12.508 0.425358 12.265 0.182296Z" fill="inherit"></path>
+                              <li class="os-card__benefit-item">
+                                <div class="os-card__benefit-icon">
+                                  <div class="os-card__benefit-icon-item w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <g id="Paths">
+                                        <path id="Ellipse 35" d="M21.1743 8.30357C19.6897 4.4129 15.9298 1.64999 11.5262 1.64999C5.82315 1.64999 1.19995 6.28385 1.19995 12C1.19995 17.7161 5.82315 22.35 11.5262 22.35C14.3398 22.35 16.8905 21.2221 18.753 19.3929M21.1743 8.30357L22.59 4.60714M21.1743 8.30357L17.0581 7.56428" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path id="Vector 37" d="M11.4 6.29999V12.6L15.6 14.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                      </g>
                                     </svg></div>
                                 </div>
-                                <div class="os-card__feature-text">OTHER BENEFIT</div>
+                                <div class="os-card__benefit-text">1 month supply, delivered monthly</div>
+                              </li>
+                              <li class="os-card__benefit-item">
+                                <div class="os-card__benefit-icon">
+                                  <div class="os-card__benefit-icon-item w-embed"><svg width="100%" height="100%" viewBox="0 0 14 16" fill="none">
+                                      <g id="Paths">
+                                        <path id="Vector" d="M5 2.40005C6.2 1.80005 6.6 1.20005 7 0.800049C7.4 1.20005 7.8 1.80005 9 2.40005C10.2 3.00005 10.8 2.80005 11.8 3.20005C12.8 3.60005 13 4.20005 13 5.40005C13 6.60005 12.8 9.60005 12.4 10.8C12 12 9.4 14.4 7 15.2C4.6 14.4 2 12 1.6 10.8C1.2 9.60005 1 6.60005 1 5.40005C1 4.20005 1.2 3.60005 2.2 3.20005C3.2 2.80005 3.8 3.00005 5 2.40005Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path id="Vector_2" d="M5 8.25549L6.35207 9.5L9 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                      </g>
+                                    </svg></div>
+                                </div>
+                                <div class="os-card__benefit-text">Free shipping, always. Cancel anytime. Money back guarantee.</div>
                               </li>
                             </ul>
                           </div>
                         </div>
+                        <div os-slot="label" class="os-card__label-slot"></div>
                       </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
-                    </div>
-                    <div pb-value="4" role="button" pb-element="card" class="os-card">
-                      <div os-slot="header" class="os-card__header-slot"></div>
-                      <div class="os-card__wrapper">
-                        <div class="os-card__content os--align-top">
-                          <div os-slot="left" class="os-card__main-slot">
-                            <div os-component="title-section" class="os-card__title-section os--min-2">
-                              <div class="os-card__title-wrapper">
-                                <div class="os-card__title">Nectar Premier</div>
-                              </div>
-                              <div class="os-card__subtitle-wrapper">
-                                <div class="os-card__subtitle-text">+$300</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div os-component="radio" class="os-card__radio">
-                            <div data-selected="true" class="radio-style-1">
-                              <div class="radio-inner"></div>
+                      <div os-value="4" role="button" os-element="card" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot">
+                          <div os-component="banner" class="os-card__banner">
+                            <div class="os-card__banner-content os--align-center">
+                              <div>SUBSCRIBE &amp; SAVE 15% OFF</div>
                             </div>
                           </div>
                         </div>
-                        <div os-slot="bottom" class="os-card__bottom-slot">
-                          <div data-action="open-product-facts" class="os-card__media os-full"><img width="280" loading="eager" alt="" src="../images/icon.svg" class="os-card__image"></div>
-                          <div os-component="features-list" class="os-card__features">
-                            <ul role="list" class="os-card__features-list w-list-unstyled">
-                              <li class="os-card__feature-item">
-                                <div>
-                                  <div class="os-card__benefit-icon-svg w-embed"><svg width="13" height="10" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="CurrentColor" class="tw-mr-2">
-                                      <path d="M12.265 0.182296C12.0219 -0.0607654 11.6279 -0.0607654 11.3848 0.182296L3.92853 7.63866L1.06245 4.77258C0.819416 4.52952 0.425382 4.52955 0.182296 4.77258C-0.0607654 5.01562 -0.0607654 5.40966 0.182296 5.65272L3.48845 8.95882C3.73142 9.20186 4.12574 9.20169 4.36861 8.95882L12.265 1.06245C12.508 0.819416 12.508 0.425358 12.265 0.182296Z" fill="inherit"></path>
-                                    </svg></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                            </div>
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">3-month delivery</div>
                                 </div>
-                                <div class="os-card__feature-text">PRESSURE-RELIEVING</div>
-                              </li>
-                              <li class="os-card__feature-item">
-                                <div>
-                                  <div class="os-card__benefit-icon-svg w-embed"><svg width="13" height="10" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="CurrentColor" class="tw-mr-2">
-                                      <path d="M12.265 0.182296C12.0219 -0.0607654 11.6279 -0.0607654 11.3848 0.182296L3.92853 7.63866L1.06245 4.77258C0.819416 4.52952 0.425382 4.52955 0.182296 4.77258C-0.0607654 5.01562 -0.0607654 5.40966 0.182296 5.65272L3.48845 8.95882C3.73142 9.20186 4.12574 9.20169 4.36861 8.95882L12.265 1.06245C12.508 0.819416 12.508 0.425358 12.265 0.182296Z" fill="inherit"></path>
-                                    </svg></div>
+                                <div class="os-card__subtitle-wrapper">
+                                  <div class="os-card__subtitle-text">Subscribe and Save 20%</div>
                                 </div>
-                                <div class="os-card__feature-text">OTHER BENEFIT</div>
-                              </li>
-                            </ul>
+                              </div>
+                            </div>
+                            <div os-slot="right" class="os-card__secondary-slot">
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container">
+                                  <div class="os-card__price os--compare">$16.95</div>
+                                  <div class="os-card__price os--current">$16.95</div>
+                                </div>
+                                <div os-component="custom-content" class="os-card__custom-price">
+                                  <div class="os-card__custom-price-row">$33/month</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot hide">
+                            <div os-component="product-list" class="os-card__products-section">
+                              <div class="os-card__product-item">
+                                <div class="os-card__product-detals">
+                                  <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
+                                  <div class="os-card__product-info">
+                                    <div>4</div>
+                                    <div>×</div>
+                                    <div>Premium Face Cream</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__product-price">
+                                  <div class="os-card__product-price--current">$89.96</div>
+                                  <div class="os-card__product-price--regular">$119.96<br></div>
+                                </div>
+                              </div>
+                              <div class="os-card__product-item">
+                                <div class="os-card__product-detals">
+                                  <div class="os-card__product-image--wrapper"><img loading="lazy" src="../images/placeholderSquare.svg" alt="" class="os-card__product-image"></div>
+                                  <div class="os-card__product-info">
+                                    <div>4</div>
+                                    <div>×</div>
+                                    <div>Premium Face Cream</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__product-price">
+                                  <div class="os-card__product-price--current">$89.96</div>
+                                  <div class="os-card__product-price--regular">$119.96<br></div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                        <div os-slot="label" class="os-card__label-slot"></div>
                       </div>
-                      <div os-slot="footer" class="os-card__footer-slot"></div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder"></div>
+              <div class="comp-showcase">
+                <div class="showcase-holder">
+                  <div os-id="QS26" os-component="selector" os-variant="quantity" class="os-option">
+                    <div class="os-cards__grid">
+                      <div pb-value="4" role="button" pb-element="card" class="os-card next-selected">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper os--sm">
+                          <div class="os-card__content os--align-middle">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                            </div>
+                            <div os-slot="left" class="os-card__main-slot os--center">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">4 Bottles</div>
+                                </div>
+                              </div>
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container os--stacked">
+                                  <div class="os-card__price ts-xs">$48.99/each</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                      </div>
+                      <div pb-value="4" role="button" pb-element="card" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper os--sm">
+                          <div class="os-card__content os--align-middle">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                            </div>
+                            <div os-slot="left" class="os-card__main-slot os--center">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">3 Bottles</div>
+                                </div>
+                              </div>
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container os--stacked">
+                                  <div class="os-card__price ts-xs">$48.99/each</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                      </div>
+                      <div pb-value="4" role="button" pb-element="card" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper os--sm">
+                          <div class="os-card__content os--align-middle">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                            </div>
+                            <div os-slot="left" class="os-card__main-slot os--center">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">2 Bottles</div>
+                                </div>
+                              </div>
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container os--stacked">
+                                  <div class="os-card__price ts-xs">$48.99/each</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                      </div>
+                      <div pb-value="4" role="button" pb-element="card" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper os--sm">
+                          <div class="os-card__content os--align-middle">
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                            </div>
+                            <div os-slot="left" class="os-card__main-slot os--center">
+                              <div os-component="title-section" class="os-card__title-section">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">1 Bottle</div>
+                                </div>
+                              </div>
+                              <div class="os-card__pricing">
+                                <div os-component="price-container" class="os-card__price-container os--stacked">
+                                  <div class="os-card__price ts-xs">$48.99/each</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comp-showcase">
+                <div class="showcase-holder">
+                  <div os-id="QS26" os-component="selector" os-variant="quantity" class="os-option">
+                    <div class="os-cards__grid">
+                      <div pb-value="4" role="button" pb-element="card" class="os-card next-selected">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content os--align-top">
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section os--min-2">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">Nectar Classic</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot">
+                            <div data-action="open-product-facts" class="os-card__media os-full"><img width="280" loading="eager" alt="" src="../images/icon.svg" class="os-card__image"></div>
+                            <div os-component="features-list" class="os-card__features">
+                              <ul role="list" class="os-card__features-list w-list-unstyled">
+                                <li class="os-card__feature-item">
+                                  <div>
+                                    <div class="os-card__benefit-icon-svg w-embed"><svg width="13" height="10" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="CurrentColor" class="tw-mr-2">
+                                        <path d="M12.265 0.182296C12.0219 -0.0607654 11.6279 -0.0607654 11.3848 0.182296L3.92853 7.63866L1.06245 4.77258C0.819416 4.52952 0.425382 4.52955 0.182296 4.77258C-0.0607654 5.01562 -0.0607654 5.40966 0.182296 5.65272L3.48845 8.95882C3.73142 9.20186 4.12574 9.20169 4.36861 8.95882L12.265 1.06245C12.508 0.819416 12.508 0.425358 12.265 0.182296Z" fill="inherit"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="os-card__feature-text">PRESSURE-RELIEVING</div>
+                                </li>
+                                <li class="os-card__feature-item">
+                                  <div>
+                                    <div class="os-card__benefit-icon-svg w-embed"><svg width="13" height="10" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="CurrentColor" class="tw-mr-2">
+                                        <path d="M12.265 0.182296C12.0219 -0.0607654 11.6279 -0.0607654 11.3848 0.182296L3.92853 7.63866L1.06245 4.77258C0.819416 4.52952 0.425382 4.52955 0.182296 4.77258C-0.0607654 5.01562 -0.0607654 5.40966 0.182296 5.65272L3.48845 8.95882C3.73142 9.20186 4.12574 9.20169 4.36861 8.95882L12.265 1.06245C12.508 0.819416 12.508 0.425358 12.265 0.182296Z" fill="inherit"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="os-card__feature-text">OTHER BENEFIT</div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                      </div>
+                      <div pb-value="4" role="button" pb-element="card" class="os-card">
+                        <div os-slot="header" class="os-card__header-slot"></div>
+                        <div class="os-card__wrapper">
+                          <div class="os-card__content os--align-top">
+                            <div os-slot="left" class="os-card__main-slot">
+                              <div os-component="title-section" class="os-card__title-section os--min-2">
+                                <div class="os-card__title-wrapper">
+                                  <div class="os-card__title">Nectar Premier</div>
+                                </div>
+                                <div class="os-card__subtitle-wrapper">
+                                  <div class="os-card__subtitle-text">+$300</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-component="radio" class="os-card__radio">
+                              <div data-selected="true" class="radio-style-1">
+                                <div class="radio-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div os-slot="bottom" class="os-card__bottom-slot">
+                            <div data-action="open-product-facts" class="os-card__media os-full"><img width="280" loading="eager" alt="" src="../images/icon.svg" class="os-card__image"></div>
+                            <div os-component="features-list" class="os-card__features">
+                              <ul role="list" class="os-card__features-list w-list-unstyled">
+                                <li class="os-card__feature-item">
+                                  <div>
+                                    <div class="os-card__benefit-icon-svg w-embed"><svg width="13" height="10" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="CurrentColor" class="tw-mr-2">
+                                        <path d="M12.265 0.182296C12.0219 -0.0607654 11.6279 -0.0607654 11.3848 0.182296L3.92853 7.63866L1.06245 4.77258C0.819416 4.52952 0.425382 4.52955 0.182296 4.77258C-0.0607654 5.01562 -0.0607654 5.40966 0.182296 5.65272L3.48845 8.95882C3.73142 9.20186 4.12574 9.20169 4.36861 8.95882L12.265 1.06245C12.508 0.819416 12.508 0.425358 12.265 0.182296Z" fill="inherit"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="os-card__feature-text">PRESSURE-RELIEVING</div>
+                                </li>
+                                <li class="os-card__feature-item">
+                                  <div>
+                                    <div class="os-card__benefit-icon-svg w-embed"><svg width="13" height="10" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" fill="CurrentColor" class="tw-mr-2">
+                                        <path d="M12.265 0.182296C12.0219 -0.0607654 11.6279 -0.0607654 11.3848 0.182296L3.92853 7.63866L1.06245 4.77258C0.819416 4.52952 0.425382 4.52955 0.182296 4.77258C-0.0607654 5.01562 -0.0607654 5.40966 0.182296 5.65272L3.48845 8.95882C3.73142 9.20186 4.12574 9.20169 4.36861 8.95882L12.265 1.06245C12.508 0.819416 12.508 0.425358 12.265 0.182296Z" fill="inherit"></path>
+                                      </svg></div>
+                                  </div>
+                                  <div class="os-card__feature-text">OTHER BENEFIT</div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div os-slot="footer" class="os-card__footer-slot"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comp-showcase">
+                <div class="showcase-holder"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-  </div>
+      </main>
+    </div>
 
 
-</body>
+  </body>
 </html>

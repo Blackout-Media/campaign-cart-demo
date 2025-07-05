@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Variant Selectors</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <head>
+    <meta charset="utf-8">
+    <title>Variant Selectors</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
-  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+    <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+    <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
 
-  <!-- Campaign Configuration -->
-  <script src="../config.js"></script>
-  <!-- Campaign Loader Script -->
-  <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
-
-
-  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="../css/components.css" rel="stylesheet" type="text/css">
-  <link href="../css/next-staging-core.css" rel="stylesheet" type="text/css">
-  <link href="../css/custom.css" rel="stylesheet" type="text/css">
+    <!-- Campaign Configuration -->
+    <script src="../config.js"></script>
+    <!-- Campaign Loader Script -->
+    <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
 
 
-  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="../images/webclip.png" rel="apple-touch-icon">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../css/components.css" rel="stylesheet" type="text/css">
+    <link href="../css/next-staging-core.css" rel="stylesheet" type="text/css">
+    <link href="../css/custom.css" rel="stylesheet" type="text/css">
 
 
-  <style>
+    <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../images/webclip.png" rel="apple-touch-icon">
+
+
+    <style>
       html:not(.next-display-ready) [data-next-await] {
         position: relative;
         overflow: hidden;
         border-color: transparent !important;
         box-shadow: none !important;
       }
+
       [data-next-await] * {
         opacity: 0;
         transition: opacity 0.2s ease;
       }
+
       [data-next-await]::before {
         content: '';
         position: absolute;
@@ -47,41 +49,48 @@
         z-index: 1;
         pointer-events: none;
       }
+
       @keyframes pulse-gray {
+
         0%,
         100% {
           background-color: #e0e0e0;
           opacity: 0.6;
         }
+
         50% {
           background-color: #f5f5f5;
           opacity: 0.8;
         }
       }
+
       html.next-display-ready [data-next-await] * {
         opacity: 1;
       }
+
       html.next-display-ready [data-next-await]::before {
         display: none;
       }
+
     </style>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</head>
-<body>
-  <div class="page-wrapper">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
 
-    <div>
-      <div class="slot-override w-embed">
-        <style>
+      <div>
+        <div class="slot-override w-embed">
+          <style>
             [os-slot]:empty {
               display: none;
             }
+
           </style>
-      </div>
-      <div class="form-main w-embed">
-        <style>
+        </div>
+        <div class="form-main w-embed">
+          <style>
             /* ========================================
    FORM ELEMENTS
 ======================================== */
@@ -98,10 +107,11 @@
               padding-right: 1em;
               /* ensure there's space if you replace with a custom icon */
             }
+
           </style>
-      </div>
-      <div class="card-conditional-system w-embed">
-        <style>
+        </div>
+        <div class="card-conditional-system w-embed">
+          <style>
             /* ========================================
    CARD CONDITIONAL DISPLAY SYSTEM
 ======================================== */
@@ -109,95 +119,117 @@
             [os-element="card"]:not(.os--selected) [os-display="show-when-active"] {
               display: none !important;
             }
+
             [os-element="card"].os--selected [os-display="show-when-active"] {
               display: block !important;
             }
+
             [os-element="card"].os--selected [os-display="hide-when-active"] {
               display: none !important;
             }
+
             [os-element="card"]:not(.os--selected) [os-display="hide-when-active"] {
               display: block !important;
             }
+
             /* Flex Display Variants */
             [os-element="card"]:not(.os--selected) [os-display="show-when-active-flex"] {
               display: none !important;
             }
+
             [os-element="card"].os--selected [os-display="show-when-active-flex"] {
               display: flex !important;
             }
+
             [os-element="card"].os--selected [os-display="hide-when-active-flex"] {
               display: none !important;
             }
+
             [os-element="card"]:not(.os--selected) [os-display="hide-when-active-flex"] {
               display: flex !important;
             }
+
             /* Inline Display Variants */
             [os-element="card"]:not(.os--selected) [os-display="show-when-active-inline"] {
               display: none !important;
             }
+
             [os-element="card"].os--selected [os-display="show-when-active-inline"] {
               display: inline !important;
             }
+
             /* Inline-Block Display Variants */
             [os-element="card"]:not(.os--selected) [os-display="show-when-active-inline-block"] {
               display: none !important;
             }
+
             [os-element="card"].os--selected [os-display="show-when-active-inline-block"] {
               display: inline-block !important;
             }
+
             /* Grid Display Variants */
             [os-element="card"]:not(.os--selected) [os-display="show-when-active-grid"] {
               display: none !important;
             }
+
             [os-element="card"].os--selected [os-display="show-when-active-grid"] {
               display: grid !important;
             }
+
             /* Opacity-Based Conditional Display */
             [os-element="card"]:not(.os--selected) [os-display="fade-when-inactive"] {
               opacity: 0.3;
               pointer-events: none;
               transition: opacity 0.2s ease;
             }
+
             [os-element="card"].os--selected [os-display="fade-when-inactive"] {
               opacity: 1;
               pointer-events: auto;
               transition: opacity 0.2s ease;
             }
+
             /* Visibility-Based Conditional Display */
             [os-element="card"]:not(.os--selected) [os-display="hide-when-inactive-visibility"] {
               visibility: hidden;
               transition: visibility 0.2s ease;
             }
+
             [os-element="card"].os--selected [os-display="hide-when-inactive-visibility"] {
               visibility: visible;
               transition: visibility 0.2s ease;
             }
+
             /* Scale-Based Conditional Display */
             [os-element="card"]:not(.os--selected) [os-display="scale-when-inactive"] {
               transform: scale(0.95);
               opacity: 0.7;
               transition: transform 0.2s ease, opacity 0.2s ease;
             }
+
             [os-element="card"].os--selected [os-display="scale-when-inactive"] {
               transform: scale(1);
               opacity: 1;
               transition: transform 0.2s ease, opacity 0.2s ease;
             }
+
             /* Height-Based Conditional Display */
             [os-element="card"]:not(.os--selected) [os-display="collapse-when-inactive"] {
               max-height: 0;
               overflow: hidden;
               transition: max-height 0.3s ease;
             }
+
             [os-element="card"].os--selected [os-display="collapse-when-inactive"] {
               max-height: 500px;
               /* Adjust based on your content */
               transition: max-height 0.3s ease;
             }
+
           </style>
-      </div>
-      <div class="tooltips w-embed">
-        <style>
+        </div>
+        <div class="tooltips w-embed">
+          <style>
             /* ========================================
    TOOLTIP COMPONENTS
 ======================================== */
@@ -219,6 +251,7 @@
               box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
               animation: floatAnimation 3s ease-in-out infinite;
             }
+
             /* Tooltip Arrow */
             .os-tooltip::after {
               content: "";
@@ -233,20 +266,24 @@
               border-right: 8px solid transparent;
               border-top: 8px solid #2d3748;
             }
+
             /* Tooltip Animation */
             @keyframes floatAnimation {
+
               0%,
               100% {
                 transform: translateY(0);
               }
+
               50% {
                 transform: translateY(-5px);
               }
             }
+
           </style>
-      </div>
-      <div class="switches w-embed">
-        <style>
+        </div>
+        <div class="switches w-embed">
+          <style>
             /* ========================================
    SWITCH TOGGLE COMPONENTS
 ======================================== */
@@ -257,11 +294,13 @@
               width: 44px;
               height: 24px;
             }
+
             .os-switch input {
               opacity: 0;
               width: 0;
               height: 0;
             }
+
             /* Switch Slider */
             .os-slider {
               position: absolute;
@@ -275,6 +314,7 @@
               transition: .3s;
               border-radius: 24px;
             }
+
             .os-slider:before {
               position: absolute;
               content: "";
@@ -290,46 +330,55 @@
               background-position: center;
               background-size: 10px 10px;
             }
+
             /* Switch Active State */
             input:checked+.os-slider {
               background-color: transparent;
               border-color: #586280;
             }
+
             input:checked+.os-slider:before {
               transform: translateY(-50%) translateX(20px);
               background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12l5 5L20 7' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             }
+
             /* Switch Size Variants */
             .os-switch.small {
               width: 36px;
               height: 20px;
             }
+
             .os-switch.small .os-slider:before {
               height: 12px;
               width: 12px;
               left: 4px;
               background-size: 8px 8px;
             }
+
             .os-switch.small input:checked+.os-slider:before {
               transform: translateY(-50%) translateX(16px);
             }
+
             .os-switch.xs {
               width: 28px;
               height: 16px;
             }
+
             .os-switch.xs .os-slider:before {
               height: 10px;
               width: 10px;
               left: 3px;
               background-size: 6px 6px;
             }
+
             .os-switch.xs input:checked+.os-slider:before {
               transform: translateY(-50%) translateX(12px);
             }
+
           </style>
-      </div>
-      <div class="variant-swatches w-embed">
-        <style>
+        </div>
+        <div class="variant-swatches w-embed">
+          <style>
             /* ========================================
    VARIANT COMPONENTS - SWATCHES
 ======================================== */
@@ -337,13 +386,16 @@
             .os-card__variant-swatch {
               position: relative;
             }
+
             .os-card__variant-swatch:hover {
               transform: scale(1.1);
             }
+
             .os-card__variant-swatch--selected {
               border-color: #333;
               box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1);
             }
+
             .os-card__variant-swatch::after {
               content: '';
               position: absolute;
@@ -352,37 +404,48 @@
               border-radius: 50%;
               z-index: -1;
             }
+
             /* Swatch Color Definitions */
             [os-swatch="red"] {
               background-color: #E63946;
             }
+
             [os-swatch="cream"] {
               background-color: #F1FAEE;
             }
+
             [os-swatch="teal"] {
               background-color: #A8DADC;
             }
+
             [os-swatch="blue"] {
               background-color: #457B9D;
             }
+
             [os-swatch="navy"] {
               background-color: #1D3557;
             }
+
             [os-swatch="light-blue"] {
               background-color: #dbeafe;
             }
+
             [os-swatch="light-green"] {
               background-color: #d1fae5;
             }
+
             [os-swatch="light-purple"] {
               background-color: #e9d5ff;
             }
+
             [os-swatch="light-pink"] {
               background-color: #fce7f3;
             }
+
             [os-swatch="light-yellow"] {
               background-color: #fef3c7;
             }
+
             /* ========================================
    VARIANT COMPONENTS - SIZE BUTTONS
 ======================================== */
@@ -391,16 +454,19 @@
               background: #222;
               border-color: #222;
             }
+
             /* Size Button Unavailable State */
             .os-card__variant-size--unavailable {
               opacity: 0.4;
               cursor: not-allowed;
               text-decoration: line-through;
             }
+
             .os-card__variant-size--unavailable:hover {
               background: #fff;
               border-color: #ddd;
             }
+
             /* ========================================
    VARIANT COMPONENTS - IMAGES
 ======================================== */
@@ -410,17 +476,20 @@
               height: 100%;
               object-fit: cover;
             }
+
             .os-card__variant-image:hover {
               transform: scale(1.05);
             }
+
             .os-card__variant-image--selected {
               border-color: #333;
               box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1);
             }
+
           </style>
-      </div>
-      <div class="variant-dropdowns w-embed">
-        <style>
+        </div>
+        <div class="variant-dropdowns w-embed">
+          <style>
             /* ========================================
    VARIANT COMPONENTS - DROPDOWNS
 ======================================== */
@@ -429,19 +498,23 @@
               position: relative;
               width: 100%;
             }
+
             /* Dropdown Toggle */
             .os-card__variant-dropdown-toggle {
               cursor: pointer;
               transition: all 0.3s ease;
               user-select: none;
             }
+
             .os-card__variant-dropdown-toggle:hover {
               border-color: #999;
             }
+
             .os-card__variant-dropdown-toggle.active {
               border-color: #333;
               box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1);
             }
+
             /* Dropdown Icon */
             .os-card__variant-dropdown-icon {
               width: 20px;
@@ -449,9 +522,11 @@
               color: #6b7280;
               transition: transform 0.15s ease;
             }
+
             .os-card__variant-dropdown-toggle.active .os-card__variant-dropdown-icon {
               transform: rotate(180deg);
             }
+
             /* Dropdown Menu */
             .os-card__variant-dropdown-menu {
               position: absolute;
@@ -469,40 +544,48 @@
               z-index: 100;
               overflow: hidden;
             }
+
             .os-card__variant-dropdown-menu.show {
               opacity: 1;
               visibility: visible;
               transform: translateY(0) scale(1);
             }
+
             /* Dropdown List */
             .os-card__variant-dropdown-list {
               list-style: none;
               padding: 8px;
             }
+
             /* Dropdown Items */
             .os-card__variant-dropdown-item {
               border-radius: var(--radius--selector);
               transition: background-color 0.2s ease;
               cursor: pointer;
             }
+
             .os-card__variant-dropdown-item:hover {
               background-color: #f9f9f9;
             }
+
             .os-card__variant-dropdown-wrapper:has(.os-card__variant-dropdown-menu.show) {
               z-index: 999;
               position: relative;
             }
+
             .os-card__variant-dropdown-item .os-card__toggle-option {
               padding: 0.5rem 0.75rem;
               min-height: 2.5rem;
             }
+
             .os-card__variant-dropdown-item.selected .os-card__variant-toggle-name {
               font-weight: 600;
             }
+
           </style>
-      </div>
-      <div class="radio-styles w-embed">
-        <style>
+        </div>
+        <div class="radio-styles w-embed">
+          <style>
             /* ── Base (unchanged) ────────────────────────────── */
             .radio-style-1,
             .radio-style-2,
@@ -517,9 +600,11 @@
               box-sizing: border-box;
               transition: all .2s ease;
             }
+
             .radio-style-none {
               display: none;
             }
+
             .radio-inner {
               position: absolute;
               width: 0;
@@ -528,6 +613,7 @@
               left: 50%;
               transform: translate(-50%, -50%);
             }
+
             /* ── “Selected” state driven by .os--active ─────── */
             /* Style 1 – filled dot with border */
             .os--selected .radio-style-1 {
@@ -535,12 +621,14 @@
               background: var(--radio-color, #000);
               box-shadow: 0 0 0 .125rem var(--os--color--radio, #000);
             }
+
             .os--selected .radio-style-1 .radio-inner {
               width: .5rem;
               height: .5rem;
               border-radius: 50%;
               background: var(--os--color--radio, #000);
             }
+
             /* Style 2 – hollow circle */
             .os--selected .radio-style-2 {
               border-width: .3125rem;
@@ -548,6 +636,7 @@
               background: #fff;
               box-shadow: 0 0 0 .0625rem var(--os--color--radio, #000);
             }
+
             .os--selected .radio-style-2 .radio-inner {
               width: .3rem;
               height: .3rem;
@@ -555,25 +644,29 @@
               background: #fff;
               /* keeps the hollow look */
             }
+
             /* Fallback / default style */
             .os--selected .radio-default {
               border: .1875rem solid #fff;
               background: var(--os--color--radio, #000);
               box-shadow: 0 0 0 .125rem var(--os--color--radio, #000);
             }
+
             .os--selected .radio-default .radio-inner {
               width: .5rem;
               height: .5rem;
               border-radius: 50%;
               background: var(--os--color--radio, #000);
             }
+
           </style>
-      </div>
-      <div class="buttons-spinners w-embed">
-        <style>
+        </div>
+        <div class="buttons-spinners w-embed">
+          <style>
             [data-action="submit"] {
               position: relative;
             }
+
             [os-component="spinner"] {
               width: 1.6em;
               display: block;
@@ -586,235 +679,158 @@
               transform-origin: center;
               pointer-events: none;
             }
+
             [os-component="spinner"] .os-button__spinner-path {
               stroke: currentColor;
               stroke-linecap: round;
               animation: spinner-dash 1.5s ease-in-out infinite;
             }
+
             [data-action="submit"].os--submitting [os-slot="content"] {
               opacity: 0;
               transition: opacity 0.2s ease;
             }
+
             [data-action="submit"].os--submitting [os-component="spinner"] {
               opacity: 1;
               transition: opacity 0.2s ease;
               animation: spinner-rotate 2s linear infinite;
             }
+
             @keyframes spinner-rotate {
               100% {
                 transform: translate(-50%, -50%) rotate(360deg);
               }
             }
+
             @keyframes spinner-dash {
               0% {
                 stroke-dasharray: 1, 150;
                 stroke-dashoffset: 0;
               }
+
               50% {
                 stroke-dasharray: 90, 150;
                 stroke-dashoffset: -35;
               }
+
               100% {
                 stroke-dasharray: 90, 150;
                 stroke-dashoffset: -124;
               }
             }
+
           </style>
+        </div>
       </div>
-    </div>
-    <main class="main-wrapper">
-      <div class="section">
-        <div class="container">
-          <div class="headline-component">
-            <h1>Variant Selectors</h1>
-            <div>This is some text inside of a div block.</div>
-          </div>
-          <div class="showcase_components">
-            <div class="comp-showcase">
-              <div class="showcase-holder os-full">
-                <div class="os-variant__content">
-                  <div class="pair-numbersss">
-                    <div os-slot-step="container" class="pair-circle is-active">
-                      <div os-slot-step="number" class="step-number">1</div>
-                      <div os-slot-step="icon" class="step-check w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M4 12.5 9.5 18 20 6"></path>
-                        </svg></div>
-                    </div>
-                  </div>
-                  <div class="pb-qunatity__information">
-                    <div class="grid_shoes">
-                      <div id="w-node-_5249f644-3879-f744-2cd6-38345a2d22c0-5dd703e4" class="selector_wrap">
-                        <div class="selector-label">Select Color: Black Orca</div>
-                        <div os-component="variant-dropdown" class="os-card__variant-dropdown-wrapper">
-                          <div class="os-card__variant-dropdown-component">
-                            <div os-element="dropdown-toggle" aria-expanded="false" class="os-card__variant-dropdown-toggle">
-                              <div class="os-card__toggle-option"><img sizes="(max-width: 770px) 100vw, 770px" srcset="../images/black_product-1-p-500.png 500w, ../images/black_product-1.png 770w" alt="" src="../images/black_product-1.png" loading="lazy" class="variant-product-color">
-                                <div class="os-card__variant-toggle-info">
-                                  <div class="os-card__variant-toggle-name">Black Orca</div>
-                                </div>
-                              </div>
-                              <div class="os-card__variant-dropdown-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                  <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
-                                </svg></div>
-                            </div>
-                            <div os-element="dropdown-menu" class="os-card__variant-dropdown-menu">
-                              <div class="os-card__variant-dropdown-list">
-                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item selected">
-                                  <div class="os-card__toggle-option">
-                                    <div class="os-card__variant-toggle-info"><img sizes="(max-width: 479px) 87vw, (max-width: 991px) 90vw, 731.5px" srcset="../images/black_product-1-p-500.png 500w, ../images/black_product-1.png 770w" alt="" src="../images/black_product-1.png" loading="lazy" class="variant-product-color">
-                                      <div class="os-card__variant-toggle-name">Black Orca</div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
-                                  <div class="os-card__toggle-option">
-                                    <div class="os-card__variant-toggle-info"><img sizes="(max-width: 479px) 87vw, (max-width: 991px) 90vw, 734.3499755859375px" srcset="../images/white_product-p-500.png 500w, ../images/white_product.png 773w" alt="" src="../images/white_product.png" loading="lazy" class="variant-product-color">
-                                      <div class="os-card__variant-toggle-name">White Citrus</div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="selector_wrap">
-                        <div class="selector-label">Select Size</div>
-                        <div os-component="variant-dropdown" class="os-card__variant-dropdown-wrapper">
-                          <div class="os-card__variant-dropdown-component">
-                            <div os-element="dropdown-toggle" aria-expanded="false" class="os-card__variant-dropdown-toggle">
-                              <div class="os-card__toggle-option">
-                                <div class="os-card__variant-toggle-info">
-                                  <div class="os-card__variant-toggle-name">MEN 5 / WOMEN 6.5</div>
-                                </div>
-                              </div>
-                              <div class="os-card__variant-dropdown-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                  <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
-                                </svg></div>
-                            </div>
-                            <div os-element="dropdown-menu" class="os-card__variant-dropdown-menu">
-                              <div class="os-card__variant-dropdown-list">
-                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item selected">
-                                  <div class="os-card__toggle-option">
-                                    <div class="os-card__variant-toggle-info">
-                                      <div class="os-card__variant-toggle-name">MEN 4.5 / WOMEN 6</div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
-                                  <div class="os-card__toggle-option">
-                                    <div class="os-card__variant-toggle-info">
-                                      <div class="os-card__variant-toggle-name">MEN 5 / WOMEN 6.5</div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
-                                  <div class="os-card__toggle-option">
-                                    <div class="os-card__variant-toggle-info">
-                                      <div class="os-card__variant-toggle-name">MEN 6 / WOMEN 7.5</div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
-                                  <div class="os-card__toggle-option">
-                                    <div class="os-card__variant-toggle-info">
-                                      <div class="os-card__variant-toggle-name">MEN 6.5 / WOMEN 8</div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
-                                  <div class="os-card__toggle-option">
-                                    <div class="os-card__variant-toggle-info">
-                                      <div class="os-card__variant-toggle-name">MEN 7.5 / WOMEN 9</div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <main class="main-wrapper">
+        <div class="section">
+          <div class="container">
+            <div class="headline-component">
+              <h1>Variant Selectors</h1>
+              <div>This is some text inside of a div block.</div>
             </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder os-full">
-                <div class="variant_group">
-                  <div class="os-card__variant-label-item">
-                    <div>Custom Select</div>
-                  </div>
-                  <div os-component="variant-dropdown" class="os-card__variant-dropdown-wrapper">
-                    <div class="os-card__variant-dropdown-component">
-                      <div os-element="dropdown-toggle" aria-expanded="false" class="os-card__variant-dropdown-toggle">
-                        <div class="os-card__toggle-option os--distribute">
-                          <div class="os-card__variant-toggle-info">
-                            <div class="os-card__variant-toggle-name">Twin</div>
-                          </div>
-                          <div class="os-card__variant-toggle-price">
-                            <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
-                            <div class="os-card__variant-toggle-price--sale">$649</div>
-                          </div>
-                        </div>
-                        <div class="os-card__variant-dropdown-icon w-embed"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined mui-1dngmot" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
-                            <path d="M7 10l5 5 5-5z"></path>
+            <div class="showcase_components">
+              <div class="comp-showcase">
+                <div class="showcase-holder os-full">
+                  <div class="os-variant__content">
+                    <div class="pair-numbersss">
+                      <div os-slot-step="container" class="pair-circle is-active">
+                        <div os-slot-step="number" class="step-number">1</div>
+                        <div os-slot-step="icon" class="step-check w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12.5 9.5 18 20 6"></path>
                           </svg></div>
                       </div>
-                      <div os-element="dropdown-menu" class="os-card__variant-dropdown-menu">
-                        <div class="os-card__variant-dropdown-list">
-                          <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item selected">
-                            <div class="os-card__toggle-option os--distribute">
-                              <div class="os-card__variant-toggle-info">
-                                <div class="os-card__variant-toggle-name os--font-bold">Twin</div>
+                    </div>
+                    <div class="pb-qunatity__information">
+                      <div class="grid_shoes">
+                        <div id="w-node-_5249f644-3879-f744-2cd6-38345a2d22c0-5dd703e4" class="selector_wrap">
+                          <div class="selector-label">Select Color: Black Orca</div>
+                          <div os-component="variant-dropdown" class="os-card__variant-dropdown-wrapper">
+                            <div class="os-card__variant-dropdown-component">
+                              <div os-element="dropdown-toggle" aria-expanded="false" class="os-card__variant-dropdown-toggle">
+                                <div class="os-card__toggle-option"><img sizes="(max-width: 770px) 100vw, 770px" srcset="../images/black_product-1-p-500.png 500w, ../images/black_product-1.png 770w" alt="" src="../images/black_product-1.png" loading="lazy" class="variant-product-color">
+                                  <div class="os-card__variant-toggle-info">
+                                    <div class="os-card__variant-toggle-name">Black Orca</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__variant-dropdown-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                                  </svg></div>
                               </div>
-                              <div class="os-card__variant-toggle-price">
-                                <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
-                                <div class="os-card__variant-toggle-price--sale">$649</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
-                            <div class="os-card__toggle-option os--distribute">
-                              <div class="os-card__variant-toggle-info">
-                                <div class="os-card__variant-toggle-name os--font-bold">Twin XL</div>
-                              </div>
-                              <div class="os-card__variant-toggle-price">
-                                <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
-                                <div class="os-card__variant-toggle-price--sale">$649</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
-                            <div class="os-card__toggle-option os--distribute">
-                              <div class="os-card__variant-toggle-info">
-                                <div class="os-card__variant-toggle-name os--font-bold">Full</div>
-                              </div>
-                              <div class="os-card__variant-toggle-price">
-                                <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
-                                <div class="os-card__variant-toggle-price--sale">$649</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
-                            <div class="os-card__toggle-option os--distribute">
-                              <div class="os-card__variant-toggle-info">
-                                <div class="os-card__variant-toggle-name os--font-bold">Queen</div>
-                              </div>
-                              <div class="os-card__variant-toggle-price">
-                                <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
-                                <div class="os-card__variant-toggle-price--sale">$649</div>
+                              <div os-element="dropdown-menu" class="os-card__variant-dropdown-menu">
+                                <div class="os-card__variant-dropdown-list">
+                                  <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item selected">
+                                    <div class="os-card__toggle-option">
+                                      <div class="os-card__variant-toggle-info"><img sizes="(max-width: 479px) 87vw, (max-width: 991px) 90vw, 731.5px" srcset="../images/black_product-1-p-500.png 500w, ../images/black_product-1.png 770w" alt="" src="../images/black_product-1.png" loading="lazy" class="variant-product-color">
+                                        <div class="os-card__variant-toggle-name">Black Orca</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                                    <div class="os-card__toggle-option">
+                                      <div class="os-card__variant-toggle-info"><img sizes="(max-width: 479px) 87vw, (max-width: 991px) 90vw, 734.3499755859375px" srcset="../images/white_product-p-500.png 500w, ../images/white_product.png 773w" alt="" src="../images/white_product.png" loading="lazy" class="variant-product-color">
+                                        <div class="os-card__variant-toggle-name">White Citrus</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
-                            <div class="os-card__toggle-option os--distribute">
-                              <div class="os-card__variant-toggle-info">
-                                <div class="os-card__variant-toggle-name os--font-bold">King</div>
+                        </div>
+                        <div class="selector_wrap">
+                          <div class="selector-label">Select Size</div>
+                          <div os-component="variant-dropdown" class="os-card__variant-dropdown-wrapper">
+                            <div class="os-card__variant-dropdown-component">
+                              <div os-element="dropdown-toggle" aria-expanded="false" class="os-card__variant-dropdown-toggle">
+                                <div class="os-card__toggle-option">
+                                  <div class="os-card__variant-toggle-info">
+                                    <div class="os-card__variant-toggle-name">MEN 5 / WOMEN 6.5</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__variant-dropdown-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                                  </svg></div>
                               </div>
-                              <div class="os-card__variant-toggle-price">
-                                <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
-                                <div class="os-card__variant-toggle-price--sale">$649</div>
+                              <div os-element="dropdown-menu" class="os-card__variant-dropdown-menu">
+                                <div class="os-card__variant-dropdown-list">
+                                  <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item selected">
+                                    <div class="os-card__toggle-option">
+                                      <div class="os-card__variant-toggle-info">
+                                        <div class="os-card__variant-toggle-name">MEN 4.5 / WOMEN 6</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                                    <div class="os-card__toggle-option">
+                                      <div class="os-card__variant-toggle-info">
+                                        <div class="os-card__variant-toggle-name">MEN 5 / WOMEN 6.5</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                                    <div class="os-card__toggle-option">
+                                      <div class="os-card__variant-toggle-info">
+                                        <div class="os-card__variant-toggle-name">MEN 6 / WOMEN 7.5</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                                    <div class="os-card__toggle-option">
+                                      <div class="os-card__variant-toggle-info">
+                                        <div class="os-card__variant-toggle-name">MEN 6.5 / WOMEN 8</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                                    <div class="os-card__toggle-option">
+                                      <div class="os-card__variant-toggle-info">
+                                        <div class="os-card__variant-toggle-name">MEN 7.5 / WOMEN 9</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -824,71 +840,156 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder os-full">
-                <div class="variant_group">
-                  <div class="os-card__variant-label-item">
-                    <div>Color Swatch</div>
-                  </div>
-                  <div os-component="variant-swatches" class="os-card__variant-swatches">
-                    <div os-element="swatch-item" os-swatch="red" class="os-card__variant-swatch os-card__variant-swatch--selected"></div>
-                    <div os-element="swatch-item" os-swatch="cream" class="os-card__variant-swatch"></div>
-                    <div os-element="swatch-item" os-swatch="teal" class="os-card__variant-swatch"></div>
-                    <div os-element="swatch-item" os-swatch="blue" class="os-card__variant-swatch"></div>
+              <div class="comp-showcase">
+                <div class="showcase-holder os-full">
+                  <div class="variant_group">
+                    <div class="os-card__variant-label-item">
+                      <div>Custom Select</div>
+                    </div>
+                    <div os-component="variant-dropdown" class="os-card__variant-dropdown-wrapper">
+                      <div class="os-card__variant-dropdown-component">
+                        <div os-element="dropdown-toggle" aria-expanded="false" class="os-card__variant-dropdown-toggle">
+                          <div class="os-card__toggle-option os--distribute">
+                            <div class="os-card__variant-toggle-info">
+                              <div class="os-card__variant-toggle-name">Twin</div>
+                            </div>
+                            <div class="os-card__variant-toggle-price">
+                              <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                              <div class="os-card__variant-toggle-price--sale">$649</div>
+                            </div>
+                          </div>
+                          <div class="os-card__variant-dropdown-icon w-embed"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined mui-1dngmot" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
+                              <path d="M7 10l5 5 5-5z"></path>
+                            </svg></div>
+                        </div>
+                        <div os-element="dropdown-menu" class="os-card__variant-dropdown-menu">
+                          <div class="os-card__variant-dropdown-list">
+                            <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item selected">
+                              <div class="os-card__toggle-option os--distribute">
+                                <div class="os-card__variant-toggle-info">
+                                  <div class="os-card__variant-toggle-name os--font-bold">Twin</div>
+                                </div>
+                                <div class="os-card__variant-toggle-price">
+                                  <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                                  <div class="os-card__variant-toggle-price--sale">$649</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                              <div class="os-card__toggle-option os--distribute">
+                                <div class="os-card__variant-toggle-info">
+                                  <div class="os-card__variant-toggle-name os--font-bold">Twin XL</div>
+                                </div>
+                                <div class="os-card__variant-toggle-price">
+                                  <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                                  <div class="os-card__variant-toggle-price--sale">$649</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                              <div class="os-card__toggle-option os--distribute">
+                                <div class="os-card__variant-toggle-info">
+                                  <div class="os-card__variant-toggle-name os--font-bold">Full</div>
+                                </div>
+                                <div class="os-card__variant-toggle-price">
+                                  <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                                  <div class="os-card__variant-toggle-price--sale">$649</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                              <div class="os-card__toggle-option os--distribute">
+                                <div class="os-card__variant-toggle-info">
+                                  <div class="os-card__variant-toggle-name os--font-bold">Queen</div>
+                                </div>
+                                <div class="os-card__variant-toggle-price">
+                                  <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                                  <div class="os-card__variant-toggle-price--sale">$649</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div os-element="dropdown-item" data-value="navy" data-color="navy" class="os-card__variant-dropdown-item">
+                              <div class="os-card__toggle-option os--distribute">
+                                <div class="os-card__variant-toggle-info">
+                                  <div class="os-card__variant-toggle-name os--font-bold">King</div>
+                                </div>
+                                <div class="os-card__variant-toggle-price">
+                                  <div class="os-card__variant-toggle-price--compare">(Total Value $1,598)</div>
+                                  <div class="os-card__variant-toggle-price--sale">$649</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder os-full">
-                <div class="variant_group">
-                  <div class="os-card__variant-label-item">
-                    <div>Card Select</div>
-                  </div>
-                  <div os-component="variant-buttons" class="os-card__variant-sizes">
-                    <div os-element="button-item" class="os-card__variant-size os-card__variant-size--selected">
-                      <div>S</div>
+              <div class="comp-showcase">
+                <div class="showcase-holder os-full">
+                  <div class="variant_group">
+                    <div class="os-card__variant-label-item">
+                      <div>Color Swatch</div>
                     </div>
-                    <div os-element="button-item" class="os-card__variant-size">
-                      <div>M</div>
-                    </div>
-                    <div os-element="button-item" class="os-card__variant-size">
-                      <div>L</div>
-                    </div>
-                    <div os-element="button-item" class="os-card__variant-size os-card__variant-size--unavailable">
-                      <div>XL</div>
+                    <div os-component="variant-swatches" class="os-card__variant-swatches">
+                      <div os-element="swatch-item" os-swatch="red" class="os-card__variant-swatch os-card__variant-swatch--selected"></div>
+                      <div os-element="swatch-item" os-swatch="cream" class="os-card__variant-swatch"></div>
+                      <div os-element="swatch-item" os-swatch="teal" class="os-card__variant-swatch"></div>
+                      <div os-element="swatch-item" os-swatch="blue" class="os-card__variant-swatch"></div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder os-full">
-                <div class="variant_group">
-                  <div class="os-card__variant-label-item">
-                    <div>Image Select</div>
-                  </div>
-                  <div os-component="variant-images" class="os-card__variant-sizes">
-                    <div os-element="image-item" class="os-card__variant-image os-card__variant-image--selected"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
-                    <div os-element="image-item" class="os-card__variant-image"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
-                    <div os-element="image-item" class="os-card__variant-image"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
-                    <div os-element="image-item" class="os-card__variant-image"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
+              <div class="comp-showcase">
+                <div class="showcase-holder os-full">
+                  <div class="variant_group">
+                    <div class="os-card__variant-label-item">
+                      <div>Card Select</div>
+                    </div>
+                    <div os-component="variant-buttons" class="os-card__variant-sizes">
+                      <div os-element="button-item" class="os-card__variant-size os-card__variant-size--selected">
+                        <div>S</div>
+                      </div>
+                      <div os-element="button-item" class="os-card__variant-size">
+                        <div>M</div>
+                      </div>
+                      <div os-element="button-item" class="os-card__variant-size">
+                        <div>L</div>
+                      </div>
+                      <div os-element="button-item" class="os-card__variant-size os-card__variant-size--unavailable">
+                        <div>XL</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="comp-showcase">
-              <div class="showcase-holder"></div>
+              <div class="comp-showcase">
+                <div class="showcase-holder os-full">
+                  <div class="variant_group">
+                    <div class="os-card__variant-label-item">
+                      <div>Image Select</div>
+                    </div>
+                    <div os-component="variant-images" class="os-card__variant-sizes">
+                      <div os-element="image-item" class="os-card__variant-image os-card__variant-image--selected"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
+                      <div os-element="image-item" class="os-card__variant-image"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
+                      <div os-element="image-item" class="os-card__variant-image"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
+                      <div os-element="image-item" class="os-card__variant-image"><img loading="lazy" src="../images/icon-transparent.svg" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comp-showcase">
+                <div class="showcase-holder"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-  </div>
+      </main>
+    </div>
 
 
-  <script>
+    <script>
       // Variant Dropdown Class
       class VariantDropdown {
         constructor(dropdownElement) {
@@ -1352,7 +1453,7 @@
         });
       });
     </script>
-  <script>
+    <script>
       // Card Selector Class
       class CardSelector {
         constructor(selectorElement) {
@@ -1506,5 +1607,5 @@
       });
     </script>
 
-</body>
+  </body>
 </html>

@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>LP04</title>
-  <meta content="LP04" property="og:title">
-  <meta content="LP04" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <head>
+    <meta charset="utf-8">
+    <title>LP04</title>
+    <meta content="LP04" property="og:title">
+    <meta content="LP04" property="twitter:title">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
-  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+    <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+    <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
 
-  <!-- Campaign Configuration -->
-  <script src="../../config.js"></script>
-  <!-- Campaign Loader Script -->
-  <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
-
-
-  <link href="../../css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="../../css/components.css" rel="stylesheet" type="text/css">
-  <link href="../../css/next-staging-core.css" rel="stylesheet" type="text/css">
-  <link href="../../css/custom.css" rel="stylesheet" type="text/css">
+    <!-- Campaign Configuration -->
+    <script src="../../config.js"></script>
+    <!-- Campaign Loader Script -->
+    <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
 
 
-  <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="../../images/webclip.png" rel="apple-touch-icon">
+    <link href="../../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../../css/components.css" rel="stylesheet" type="text/css">
+    <link href="../../css/next-staging-core.css" rel="stylesheet" type="text/css">
+    <link href="../../css/custom.css" rel="stylesheet" type="text/css">
 
 
-  <style>
+    <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../images/webclip.png" rel="apple-touch-icon">
+
+
+    <style>
       html:not(.next-display-ready) [data-next-await] {
         position: relative;
         overflow: hidden;
         border-color: transparent !important;
         box-shadow: none !important;
       }
+
       [data-next-await] * {
         opacity: 0;
         transition: opacity 0.2s ease;
       }
+
       [data-next-await]::before {
         content: '';
         position: absolute;
@@ -49,370 +51,376 @@
         z-index: 1;
         pointer-events: none;
       }
+
       @keyframes pulse-gray {
+
         0%,
         100% {
           background-color: #e0e0e0;
           opacity: 0.6;
         }
+
         50% {
           background-color: #f5f5f5;
           opacity: 0.8;
         }
       }
+
       html.next-display-ready [data-next-await] * {
         opacity: 1;
       }
+
       html.next-display-ready [data-next-await]::before {
         display: none;
       }
+
     </style>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</head>
-<body>
-  <div class="page-wrapper">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
 
-    <div class="main-wrapper">
-      <nav class="navbar_sticky">
-        <div class="banner7__section">
-          <div class="container-18">
-            <div class="banner7__wrapper">
-              <div class="banner7__left">
-                <p class="banner7__text">LAUNCH SPECIAL SALE </p>
-              </div>
-              <div class="banner7__right">
-                <div class="banner7__discount">
-                  <p>Up to 56% Off</p>
-                </div>
-                <p class="nav-timer hide">02:00:00</p>
-                <div class="banner7__countdown">
-                  <div id="js-clock" class="countdown2_wrapper new">
-                    <div class="box-5 hide">
-                      <div id="js-clock-days" class="countdown2_number">00</div>
-                      <div class="countdown2_label">Days</div>
-                    </div>
-                    <div class="text-block-346 hide">:</div>
-                    <div class="box-5 new">
-                      <div id="js-clock-hours" class="countdown2_number">00</div>
-                      <div class="countdown2_label">Hrs</div>
-                    </div>
-                    <div class="text-block-346 new">:</div>
-                    <div class="box-5 new">
-                      <div id="js-clock-minutes" class="countdown2_number">00</div>
-                      <div class="countdown2_label">Min</div>
-                    </div>
-                    <div class="text-block-346 new">:</div>
-                    <div class="box-5 new">
-                      <div id="js-clock-seconds" class="countdown2_number">00</div>
-                      <div class="countdown2_label">Sec</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="banner9__secondary hide">
+      <div class="main-wrapper">
+        <nav class="navbar_sticky">
+          <div class="banner7__section">
             <div class="container-18">
-              <div class="banner9__secondary-wrapper">
-                <div class="section_banner-container">
-                  <p class="banner9__secondary-text">✨ launch week access<span class="banner9__secondary-highlight"> </span>- BEST&nbsp;PRICE&nbsp;EVER 🔥</p>
+              <div class="banner7__wrapper">
+                <div class="banner7__left">
+                  <p class="banner7__text">LAUNCH SPECIAL SALE </p>
+                </div>
+                <div class="banner7__right">
+                  <div class="banner7__discount">
+                    <p>Up to 56% Off</p>
+                  </div>
+                  <p class="nav-timer hide">02:00:00</p>
+                  <div class="banner7__countdown">
+                    <div id="js-clock" class="countdown2_wrapper new">
+                      <div class="box-5 hide">
+                        <div id="js-clock-days" class="countdown2_number">00</div>
+                        <div class="countdown2_label">Days</div>
+                      </div>
+                      <div class="text-block-346 hide">:</div>
+                      <div class="box-5 new">
+                        <div id="js-clock-hours" class="countdown2_number">00</div>
+                        <div class="countdown2_label">Hrs</div>
+                      </div>
+                      <div class="text-block-346 new">:</div>
+                      <div class="box-5 new">
+                        <div id="js-clock-minutes" class="countdown2_number">00</div>
+                        <div class="countdown2_label">Min</div>
+                      </div>
+                      <div class="text-block-346 new">:</div>
+                      <div class="box-5 new">
+                        <div id="js-clock-seconds" class="countdown2_number">00</div>
+                        <div class="countdown2_label">Sec</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="banner9__secondary hide">
+              <div class="container-18">
+                <div class="banner9__secondary-wrapper">
+                  <div class="section_banner-container">
+                    <p class="banner9__secondary-text">✨ launch week access<span class="banner9__secondary-highlight"> </span>- BEST&nbsp;PRICE&nbsp;EVER 🔥</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </nav>
-      <section class="section cc-0">
-        <div>
-          <div class="hero__wrapper--full cc-hero-pdp-009">
-            <div class="hero__left--full cc-right">
-              <div class="hero__left-full_wrapper cc-hero-pdp-009 os4">
-                <div class="order-form__wrapper">
-                  <div class="order-form__review hide">
-                    <div class="review_component cc-sm">
-                      <div class="review_component-wrapper">
-                        <div class="review_stars-wrapper">
-                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                            </svg></div>
-                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                            </svg></div>
-                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                            </svg></div>
-                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                            </svg></div>
-                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                            </svg></div>
-                        </div>
-                        <div>Excellent</div>
-                        <div class="u-font-bold">4.8</div>
-                        <div class="review_divider">
-                          <div>19,579 reviews</div>
+        </nav>
+        <section class="section cc-0">
+          <div>
+            <div class="hero__wrapper--full cc-hero-pdp-009">
+              <div class="hero__left--full cc-right">
+                <div class="hero__left-full_wrapper cc-hero-pdp-009 os4">
+                  <div class="order-form__wrapper">
+                    <div class="order-form__review hide">
+                      <div class="review_component cc-sm">
+                        <div class="review_component-wrapper">
+                          <div class="review_stars-wrapper">
+                            <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                              </svg></div>
+                            <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                              </svg></div>
+                            <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                              </svg></div>
+                            <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                              </svg></div>
+                            <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                              </svg></div>
+                          </div>
+                          <div>Excellent</div>
+                          <div class="u-font-bold">4.8</div>
+                          <div class="review_divider">
+                            <div>19,579 reviews</div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="order-title-wrapper cc-padded">
-                    <h2 class="h-hero">Women’s Multivitamin 18+</h2>
-                    <div><em>Essential for Women</em></div>
-                  </div>
-                  <div class="order-form_description">
-                    <div><strong>The clinical-backed multivitamin for women 18-49 formulated to help fill nutrient gaps in their diet.*</strong><br></div>
-                  </div>
-                  <div class="order-form__selection">
-                    <div class="package-options">
-                      <div class="text-sm">Select Your Cadence</div>
-                      <div pb-id="QS06" pb-component="selector" pb-variant="quantity" class="pb-quantity">
-                        <div class="pb-quantity__wrapper">
-                          <div class="os-option__wrapper pb--gap-m">
-                            <div pb-quantity="1" role="button" pb-element="card" class="hero_pdp--009_card">
-                              <div class="os-card__wrapper pb--custom hero-pdp-009">
-                                <div class="pb-quantity__card-info">
-                                  <div class="os-card__content">
-                                    <div class="pb-quantity__details">
-                                      <div class="pb-quantity__header">
-                                        <div pb-element="radio" class="pb-quantity__radio pb--custom hero-pdp-009"></div>
-                                        <div class="pb-quantity__title cc-500">Buy once</div>
+                    <div class="order-title-wrapper cc-padded">
+                      <h2 class="h-hero">Women’s Multivitamin 18+</h2>
+                      <div><em>Essential for Women</em></div>
+                    </div>
+                    <div class="order-form_description">
+                      <div><strong>The clinical-backed multivitamin for women 18-49 formulated to help fill nutrient gaps in their diet.*</strong><br></div>
+                    </div>
+                    <div class="order-form__selection">
+                      <div class="package-options">
+                        <div class="text-sm">Select Your Cadence</div>
+                        <div pb-id="QS06" pb-component="selector" pb-variant="quantity" class="pb-quantity">
+                          <div class="pb-quantity__wrapper">
+                            <div class="os-option__wrapper pb--gap-m">
+                              <div pb-quantity="1" role="button" pb-element="card" class="hero_pdp--009_card">
+                                <div class="os-card__wrapper pb--custom hero-pdp-009">
+                                  <div class="pb-quantity__card-info">
+                                    <div class="os-card__content">
+                                      <div class="pb-quantity__details">
+                                        <div class="pb-quantity__header">
+                                          <div pb-element="radio" class="pb-quantity__radio pb--custom hero-pdp-009"></div>
+                                          <div class="pb-quantity__title cc-500">Buy once</div>
+                                        </div>
                                       </div>
-                                    </div>
-                                    <div class="pb-quantity__right">
-                                      <div class="pb-quantity__price-wrapper">
-                                        <div class="pb-quantity__price-container">
-                                          <div class="pb-quantity__price">$37</div>
+                                      <div class="pb-quantity__right">
+                                        <div class="pb-quantity__price-wrapper">
+                                          <div class="pb-quantity__price-container">
+                                            <div class="pb-quantity__price">$37</div>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div pb-element="benefit-list" class="os-card__footer-slot">
-                                <ul role="list" class="hero009_list w-list-unstyled">
-                                  <li class="pb-quantity__list-item">
-                                    <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 18" fill="none">
-                                        <g id="Paths">
-                                          <circle id="Ellipse 37" cx="6.3002" cy="14.7" r="2.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
-                                          <circle id="Ellipse 38" cx="17.7001" cy="14.775" r="2.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
-                                          <path id="Rectangle 7" d="M16.5002 12.9V1.20001H1.2002V14.7H4.2002M15.6002 14.7H8.4002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path id="Vector 41" d="M1.2002 5.40002L7.2002 5.40002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path id="Vector 42" d="M16.5 5.40002H19.425L22.8 10.05V14.7H19.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                      </svg></div>
-                                    <div data-bundle="refill-text" class="pb-quantity__list--text">Shipping calculated at checkout</div>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div pb-quantity="1" role="button" pb-element="card" class="hero_pdp--009_card pb--selected">
-                              <div class="os-card__wrapper pb--custom hero-pdp-009">
-                                <div class="pb-quantity__card-info">
-                                  <div class="os-card__content os--align-top">
-                                    <div class="pb-quantity__details">
-                                      <div class="pb-quantity__header">
-                                        <div pb-element="radio" class="pb-quantity__radio pb--custom hero-pdp-009"></div>
-                                        <div class="pb-quantity__title cc-500">Monthly delivery</div>
-                                      </div>
-                                      <div data-bundle="refill-text" class="her009_green">Subscribe and Save 20%</div>
-                                    </div>
-                                    <div class="pb-quantity__right">
-                                      <div class="pb-quantity__price-wrapper">
-                                        <div class="pb-quantity__price-container">
-                                          <div class="pb-quantity__price pb--compare">$33</div>
-                                          <div class="pb-quantity__price">$26.40</div>
-                                        </div>
-                                        <div data-bundle="refill-text" class="pb-quantity__sub">$33/month</div>
-                                      </div>
-                                    </div>
-                                  </div>
+                                <div pb-element="benefit-list" class="os-card__footer-slot">
+                                  <ul role="list" class="hero009_list w-list-unstyled">
+                                    <li class="pb-quantity__list-item">
+                                      <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 18" fill="none">
+                                          <g id="Paths">
+                                            <circle id="Ellipse 37" cx="6.3002" cy="14.7" r="2.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+                                            <circle id="Ellipse 38" cx="17.7001" cy="14.775" r="2.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
+                                            <path id="Rectangle 7" d="M16.5002 12.9V1.20001H1.2002V14.7H4.2002M15.6002 14.7H8.4002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path id="Vector 41" d="M1.2002 5.40002L7.2002 5.40002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path id="Vector 42" d="M16.5 5.40002H19.425L22.8 10.05V14.7H19.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          </g>
+                                        </svg></div>
+                                      <div data-bundle="refill-text" class="pb-quantity__list--text">Shipping calculated at checkout</div>
+                                    </li>
+                                  </ul>
                                 </div>
                               </div>
-                              <div pb-element="benefit-list" class="os-card__footer-slot">
-                                <div class="os-card__benefits">
-                                  <div class="list-container cc-xs">
-                                    <ul role="list" class="list w-list-unstyled">
-                                      <li class="list__item">
-                                        <div class="pb-quantity__list-image--wrapper">
-                                          <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <g id="Paths">
-                                                <path id="Vector" d="M20.6 11.1C15.056 9.93531 14 4.11178 14 1.20001C14 4.11178 12.9441 9.93531 7.40002 11.1C12.9441 12.2647 14 18.0882 14 21C14 18.0882 15.056 12.2647 20.6 11.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path id="Vector_2" d="M7.40002 18.6C4.88 18.1059 4.40002 15.6353 4.40002 14.4C4.40002 15.6353 3.92005 18.1059 1.40002 18.6C3.92005 19.0941 4.40002 21.5647 4.40002 22.8C4.40002 21.5647 4.88 19.0941 7.40002 18.6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path id="Vector_3" d="M2.29999 8.99999H4.69999M3.49999 10.2V7.79999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path id="Vector_4" d="M5.90002 4.8H9.50002M7.70002 6.6V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                              </g>
-                                            </svg></div>
+                              <div pb-quantity="1" role="button" pb-element="card" class="hero_pdp--009_card pb--selected">
+                                <div class="os-card__wrapper pb--custom hero-pdp-009">
+                                  <div class="pb-quantity__card-info">
+                                    <div class="os-card__content os--align-top">
+                                      <div class="pb-quantity__details">
+                                        <div class="pb-quantity__header">
+                                          <div pb-element="radio" class="pb-quantity__radio pb--custom hero-pdp-009"></div>
+                                          <div class="pb-quantity__title cc-500">Monthly delivery</div>
                                         </div>
-                                        <div>Save 10% on every future order</div>
-                                      </li>
-                                      <li class="list__item">
-                                        <div class="pb-quantity__list-image--wrapper">
-                                          <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                              <g id="Paths">
-                                                <path id="Ellipse 35" d="M21.1743 8.30357C19.6897 4.4129 15.9298 1.64999 11.5262 1.64999C5.82315 1.64999 1.19995 6.28385 1.19995 12C1.19995 17.7161 5.82315 22.35 11.5262 22.35C14.3398 22.35 16.8905 21.2221 18.753 19.3929M21.1743 8.30357L22.59 4.60714M21.1743 8.30357L17.0581 7.56428" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path id="Vector 37" d="M11.4 6.29999V12.6L15.6 14.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                              </g>
-                                            </svg></div>
-                                        </div>
-                                        <div>1 month supply, delivered monthly</div>
-                                      </li>
-                                      <li class="list__item">
-                                        <div class="pb-quantity__list-image--wrapper">
-                                          <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 16" fill="none">
-                                              <g id="Paths">
-                                                <path id="Vector" d="M5 2.40005C6.2 1.80005 6.6 1.20005 7 0.800049C7.4 1.20005 7.8 1.80005 9 2.40005C10.2 3.00005 10.8 2.80005 11.8 3.20005C12.8 3.60005 13 4.20005 13 5.40005C13 6.60005 12.8 9.60005 12.4 10.8C12 12 9.4 14.4 7 15.2C4.6 14.4 2 12 1.6 10.8C1.2 9.60005 1 6.60005 1 5.40005C1 4.20005 1.2 3.60005 2.2 3.20005C3.2 2.80005 3.8 3.00005 5 2.40005Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path id="Vector_2" d="M5 8.25549L6.35207 9.5L9 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                              </g>
-                                            </svg></div>
-                                        </div>
-                                        <div>Free shipping, always. Cancel anytime. Money back guarantee.</div>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div pb-quantity="1" role="button" pb-element="card" class="hero_pdp--009_card">
-                              <div class="pb-quantity__banner">
-                                <div class="pb-quantity__banner-content pb--align-center">
-                                  <div>Best value</div>
-                                </div>
-                              </div>
-                              <div class="os-card__wrapper pb--custom hero-pdp-009">
-                                <div class="pb-quantity__card-info">
-                                  <div class="os-card__content os--align-top">
-                                    <div class="pb-quantity__details">
-                                      <div class="pb-quantity__header">
-                                        <div pb-element="radio" class="pb-quantity__radio pb--custom hero-pdp-009"></div>
-                                        <div class="pb-quantity__title cc-500">3-month delivery</div>
+                                        <div data-bundle="refill-text" class="her009_green">Subscribe and Save 20%</div>
                                       </div>
-                                      <div data-bundle="refill-text" class="her009_green">Subscribe and Save 20%</div>
-                                    </div>
-                                    <div class="pb-quantity__right">
-                                      <div class="pb-quantity__price-wrapper">
-                                        <div class="pb-quantity__price-container">
-                                          <div class="pb-quantity__price pb--compare">$93</div>
-                                          <div class="pb-quantity__price">$74.40</div>
+                                      <div class="pb-quantity__right">
+                                        <div class="pb-quantity__price-wrapper">
+                                          <div class="pb-quantity__price-container">
+                                            <div class="pb-quantity__price pb--compare">$33</div>
+                                            <div class="pb-quantity__price">$26.40</div>
+                                          </div>
+                                          <div data-bundle="refill-text" class="pb-quantity__sub">$33/month</div>
                                         </div>
-                                        <div data-bundle="refill-text" class="pb-quantity__sub">$31/month</div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
+                                <div pb-element="benefit-list" class="os-card__footer-slot">
+                                  <div class="os-card__benefits">
+                                    <div class="list-container cc-xs">
+                                      <ul role="list" class="list w-list-unstyled">
+                                        <li class="list__item">
+                                          <div class="pb-quantity__list-image--wrapper">
+                                            <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="Paths">
+                                                  <path id="Vector" d="M20.6 11.1C15.056 9.93531 14 4.11178 14 1.20001C14 4.11178 12.9441 9.93531 7.40002 11.1C12.9441 12.2647 14 18.0882 14 21C14 18.0882 15.056 12.2647 20.6 11.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                  <path id="Vector_2" d="M7.40002 18.6C4.88 18.1059 4.40002 15.6353 4.40002 14.4C4.40002 15.6353 3.92005 18.1059 1.40002 18.6C3.92005 19.0941 4.40002 21.5647 4.40002 22.8C4.40002 21.5647 4.88 19.0941 7.40002 18.6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                  <path id="Vector_3" d="M2.29999 8.99999H4.69999M3.49999 10.2V7.79999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                  <path id="Vector_4" d="M5.90002 4.8H9.50002M7.70002 6.6V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                              </svg></div>
+                                          </div>
+                                          <div>Save 10% on every future order</div>
+                                        </li>
+                                        <li class="list__item">
+                                          <div class="pb-quantity__list-image--wrapper">
+                                            <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="Paths">
+                                                  <path id="Ellipse 35" d="M21.1743 8.30357C19.6897 4.4129 15.9298 1.64999 11.5262 1.64999C5.82315 1.64999 1.19995 6.28385 1.19995 12C1.19995 17.7161 5.82315 22.35 11.5262 22.35C14.3398 22.35 16.8905 21.2221 18.753 19.3929M21.1743 8.30357L22.59 4.60714M21.1743 8.30357L17.0581 7.56428" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                  <path id="Vector 37" d="M11.4 6.29999V12.6L15.6 14.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                              </svg></div>
+                                          </div>
+                                          <div>1 month supply, delivered monthly</div>
+                                        </li>
+                                        <li class="list__item">
+                                          <div class="pb-quantity__list-image--wrapper">
+                                            <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 16" fill="none">
+                                                <g id="Paths">
+                                                  <path id="Vector" d="M5 2.40005C6.2 1.80005 6.6 1.20005 7 0.800049C7.4 1.20005 7.8 1.80005 9 2.40005C10.2 3.00005 10.8 2.80005 11.8 3.20005C12.8 3.60005 13 4.20005 13 5.40005C13 6.60005 12.8 9.60005 12.4 10.8C12 12 9.4 14.4 7 15.2C4.6 14.4 2 12 1.6 10.8C1.2 9.60005 1 6.60005 1 5.40005C1 4.20005 1.2 3.60005 2.2 3.20005C3.2 2.80005 3.8 3.00005 5 2.40005Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                  <path id="Vector_2" d="M5 8.25549L6.35207 9.5L9 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                              </svg></div>
+                                          </div>
+                                          <div>Free shipping, always. Cancel anytime. Money back guarantee.</div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                              <div pb-element="benefit-list" class="os-card__footer-slot">
-                                <ul role="list" class="hero009_list w-list-unstyled">
-                                  <li class="pb-quantity__list-item">
-                                    <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="Paths">
-                                          <path id="Vector" d="M20.6 11.1C15.056 9.93531 14 4.11178 14 1.20001C14 4.11178 12.9441 9.93531 7.40002 11.1C12.9441 12.2647 14 18.0882 14 21C14 18.0882 15.056 12.2647 20.6 11.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path id="Vector_2" d="M7.40002 18.6C4.88 18.1059 4.40002 15.6353 4.40002 14.4C4.40002 15.6353 3.92005 18.1059 1.40002 18.6C3.92005 19.0941 4.40002 21.5647 4.40002 22.8C4.40002 21.5647 4.88 19.0941 7.40002 18.6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path id="Vector_3" d="M2.29999 8.99999H4.69999M3.49999 10.2V7.79999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path id="Vector_4" d="M5.90002 4.8H9.50002M7.70002 6.6V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                      </svg></div>
-                                    <div data-bundle="refill-text" class="pb-quantity__list--text">Save 16% on every future order</div>
-                                  </li>
-                                  <li class="pb-quantity__list-item">
-                                    <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="Paths">
-                                          <path id="Ellipse 35" d="M21.1743 8.30357C19.6897 4.4129 15.9298 1.64999 11.5262 1.64999C5.82315 1.64999 1.19995 6.28385 1.19995 12C1.19995 17.7161 5.82315 22.35 11.5262 22.35C14.3398 22.35 16.8905 21.2221 18.753 19.3929M21.1743 8.30357L22.59 4.60714M21.1743 8.30357L17.0581 7.56428" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path id="Vector 37" d="M11.4 6.29999V12.6L15.6 14.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                      </svg></div>
-                                    <div data-bundle="refill-text" class="pb-quantity__list--text">3 month supply, delivered monthly</div>
-                                  </li>
-                                  <li class="pb-quantity__list-item">
-                                    <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 16" fill="none">
-                                        <g id="Paths">
-                                          <path id="Vector" d="M5 2.40005C6.2 1.80005 6.6 1.20005 7 0.800049C7.4 1.20005 7.8 1.80005 9 2.40005C10.2 3.00005 10.8 2.80005 11.8 3.20005C12.8 3.60005 13 4.20005 13 5.40005C13 6.60005 12.8 9.60005 12.4 10.8C12 12 9.4 14.4 7 15.2C4.6 14.4 2 12 1.6 10.8C1.2 9.60005 1 6.60005 1 5.40005C1 4.20005 1.2 3.60005 2.2 3.20005C3.2 2.80005 3.8 3.00005 5 2.40005Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                          <path id="Vector_2" d="M5 8.25549L6.35207 9.5L9 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </g>
-                                      </svg></div>
-                                    <div data-bundle="refill-text" class="pb-quantity__list--text">Free shipping, always. Cancel anytime. Money back guarantee.</div>
-                                  </li>
-                                </ul>
+                              <div pb-quantity="1" role="button" pb-element="card" class="hero_pdp--009_card">
+                                <div class="pb-quantity__banner">
+                                  <div class="pb-quantity__banner-content pb--align-center">
+                                    <div>Best value</div>
+                                  </div>
+                                </div>
+                                <div class="os-card__wrapper pb--custom hero-pdp-009">
+                                  <div class="pb-quantity__card-info">
+                                    <div class="os-card__content os--align-top">
+                                      <div class="pb-quantity__details">
+                                        <div class="pb-quantity__header">
+                                          <div pb-element="radio" class="pb-quantity__radio pb--custom hero-pdp-009"></div>
+                                          <div class="pb-quantity__title cc-500">3-month delivery</div>
+                                        </div>
+                                        <div data-bundle="refill-text" class="her009_green">Subscribe and Save 20%</div>
+                                      </div>
+                                      <div class="pb-quantity__right">
+                                        <div class="pb-quantity__price-wrapper">
+                                          <div class="pb-quantity__price-container">
+                                            <div class="pb-quantity__price pb--compare">$93</div>
+                                            <div class="pb-quantity__price">$74.40</div>
+                                          </div>
+                                          <div data-bundle="refill-text" class="pb-quantity__sub">$31/month</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div pb-element="benefit-list" class="os-card__footer-slot">
+                                  <ul role="list" class="hero009_list w-list-unstyled">
+                                    <li class="pb-quantity__list-item">
+                                      <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <g id="Paths">
+                                            <path id="Vector" d="M20.6 11.1C15.056 9.93531 14 4.11178 14 1.20001C14 4.11178 12.9441 9.93531 7.40002 11.1C12.9441 12.2647 14 18.0882 14 21C14 18.0882 15.056 12.2647 20.6 11.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path id="Vector_2" d="M7.40002 18.6C4.88 18.1059 4.40002 15.6353 4.40002 14.4C4.40002 15.6353 3.92005 18.1059 1.40002 18.6C3.92005 19.0941 4.40002 21.5647 4.40002 22.8C4.40002 21.5647 4.88 19.0941 7.40002 18.6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path id="Vector_3" d="M2.29999 8.99999H4.69999M3.49999 10.2V7.79999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path id="Vector_4" d="M5.90002 4.8H9.50002M7.70002 6.6V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          </g>
+                                        </svg></div>
+                                      <div data-bundle="refill-text" class="pb-quantity__list--text">Save 16% on every future order</div>
+                                    </li>
+                                    <li class="pb-quantity__list-item">
+                                      <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <g id="Paths">
+                                            <path id="Ellipse 35" d="M21.1743 8.30357C19.6897 4.4129 15.9298 1.64999 11.5262 1.64999C5.82315 1.64999 1.19995 6.28385 1.19995 12C1.19995 17.7161 5.82315 22.35 11.5262 22.35C14.3398 22.35 16.8905 21.2221 18.753 19.3929M21.1743 8.30357L22.59 4.60714M21.1743 8.30357L17.0581 7.56428" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path id="Vector 37" d="M11.4 6.29999V12.6L15.6 14.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          </g>
+                                        </svg></div>
+                                      <div data-bundle="refill-text" class="pb-quantity__list--text">3 month supply, delivered monthly</div>
+                                    </li>
+                                    <li class="pb-quantity__list-item">
+                                      <div class="pb-quantity__list--icon w-embed"><svg width="100%" height="100%" viewBox="0 0 14 16" fill="none">
+                                          <g id="Paths">
+                                            <path id="Vector" d="M5 2.40005C6.2 1.80005 6.6 1.20005 7 0.800049C7.4 1.20005 7.8 1.80005 9 2.40005C10.2 3.00005 10.8 2.80005 11.8 3.20005C12.8 3.60005 13 4.20005 13 5.40005C13 6.60005 12.8 9.60005 12.4 10.8C12 12 9.4 14.4 7 15.2C4.6 14.4 2 12 1.6 10.8C1.2 9.60005 1 6.60005 1 5.40005C1 4.20005 1.2 3.60005 2.2 3.20005C3.2 2.80005 3.8 3.00005 5 2.40005Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path id="Vector_2" d="M5 8.25549L6.35207 9.5L9 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          </g>
+                                        </svg></div>
+                                      <div data-bundle="refill-text" class="pb-quantity__list--text">Free shipping, always. Cancel anytime. Money back guarantee.</div>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
 
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="order-form__cta">
-                    <div class="product-button-copy"><button data-action="submit" data-button-type="primary" pb-action="checkout" class="button-15">
-                        <div data-button="content" class="button_content">
-                          <div id="cta_text">Start Building Today</div>
-                          <div data-button="icon" class="button_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20">
-                              <path fill="currentColor" fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" width="100%" height="100%"></path>
-                            </svg></div>
-                        </div><svg viewBox="0 0 50 50" data-button="spinner" class="button_spinner button_spinner">
-                          <circle cx="25" cy="25" r="20" fill="none" stroke-width="5" class="path path"></circle>
-                        </svg>
+                    <div class="order-form__cta">
+                      <div class="product-button-copy"><button data-action="submit" data-button-type="primary" pb-action="checkout" class="button-15">
+                          <div data-button="content" class="button_content">
+                            <div id="cta_text">Start Building Today</div>
+                            <div data-button="icon" class="button_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20">
+                                <path fill="currentColor" fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" width="100%" height="100%"></path>
+                              </svg></div>
+                          </div><svg viewBox="0 0 50 50" data-button="spinner" class="button_spinner button_spinner">
+                            <circle cx="25" cy="25" r="20" fill="none" stroke-width="5" class="path path"></circle>
+                          </svg>
 
-                      </button></div>
+                        </button></div>
+                    </div>
+                    <div class="order-form__footer hide"></div>
                   </div>
-                  <div class="order-form__footer hide"></div>
                 </div>
               </div>
-            </div>
-            <div class="hero__right-full cc-clip">
-              <div class="u-sticky cc-hero-pdp-009">
-                <div class="hero__right-full_wrapper hero-pdp09">
-                  <div class="hero__right-wrapper">
-                    <div pb-component="swiper" class="component">
+              <div class="hero__right-full cc-clip">
+                <div class="u-sticky cc-hero-pdp-009">
+                  <div class="hero__right-full_wrapper hero-pdp09">
+                    <div class="hero__right-wrapper">
+                      <div pb-component="swiper" class="component">
 
-                      <div class="swiper8_component">
-                        <div swiper="HERO-PDP-009" class="slider_component is-v6">
-                          <div class="u-negative-margin-tm">
-                            <div swiper="slider" class="swiper cc-hero-pdp-009">
-                              <div class="swiper-wrapper">
-                                <div class="swiper-slide cc-hero-pdp-009">
-                                  <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../../images/icon.svg" alt="" class="swiper__image"></div>
+                        <div class="swiper8_component">
+                          <div swiper="HERO-PDP-009" class="slider_component is-v6">
+                            <div class="u-negative-margin-tm">
+                              <div swiper="slider" class="swiper cc-hero-pdp-009">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide cc-hero-pdp-009">
+                                    <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../../images/icon.svg" alt="" class="swiper__image"></div>
+                                  </div>
+                                  <div class="swiper-slide cc-hero-pdp-009">
+                                    <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../../images/icon.svg" alt="" class="swiper__image"></div>
+                                  </div>
+                                  <div class="swiper-slide cc-hero-pdp-009">
+                                    <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../../images/icon.svg" alt="" class="swiper__image"></div>
+                                  </div>
+                                  <div class="swiper-slide cc-hero-pdp-009">
+                                    <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../../images/icon.svg" alt="" class="swiper__image"></div>
+                                  </div>
+                                  <div class="swiper-slide cc-hero-pdp-009">
+                                    <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../../images/icon.svg" alt="" class="swiper__image"></div>
+                                  </div>
                                 </div>
-                                <div class="swiper-slide cc-hero-pdp-009">
-                                  <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../../images/icon.svg" alt="" class="swiper__image"></div>
+                                <div class="swiper-button_wrapper cc-hero-pdp-009"><button swiper="prev-button" class="swiper__button-static cc-hero-pdp-009">
+                                    <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                                      </svg></div>
+                                  </button><button swiper="next-button" class="swiper__button-static cc-hero-pdp-009">
+                                    <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                                      </svg></div>
+                                  </button></div>
+                                <div class="swiper__navigation is-v4 hide">
+                                  <div swiper="pagination" class="swiper-pagination-6 is-product_hero"></div>
+                                  <div swiper="scrollbar" class="swiper-scrollbar is-hero"></div>
                                 </div>
-                                <div class="swiper-slide cc-hero-pdp-009">
-                                  <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../../images/icon.svg" alt="" class="swiper__image"></div>
-                                </div>
-                                <div class="swiper-slide cc-hero-pdp-009">
-                                  <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../../images/icon.svg" alt="" class="swiper__image"></div>
-                                </div>
-                                <div class="swiper-slide cc-hero-pdp-009">
-                                  <div class="swiper-slide__image-wrap cc-square"><img loading="eager" src="../../images/icon.svg" alt="" class="swiper__image"></div>
-                                </div>
-                              </div>
-                              <div class="swiper-button_wrapper cc-hero-pdp-009"><button swiper="prev-button" class="swiper__button-static cc-hero-pdp-009">
-                                  <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
-                                    </svg></div>
-                                </button><button swiper="next-button" class="swiper__button-static cc-hero-pdp-009">
-                                  <div class="swiper-button_icon-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
-                                    </svg></div>
-                                </button></div>
-                              <div class="swiper__navigation is-v4 hide">
-                                <div swiper="pagination" class="swiper-pagination-6 is-product_hero"></div>
-                                <div swiper="scrollbar" class="swiper-scrollbar is-hero"></div>
                               </div>
                             </div>
                           </div>
+                          <div swiper="thumbnails-holder" class="product-thumbnails-holder hide">
+                            <div swiper="gallery-thumbnail" class="swiper-thumbnail_square is-current"><img sizes="100vw" srcset="../../images/3x2_jar-p-500.webp 500w, ../../images/3x2_jar-p-800.webp 800w, ../../images/3x2_jar-p-1080.webp 1080w, ../../images/3x2_jar.webp 1200w" alt="" src="../../images/3x2_jar.webp" loading="eager" class="swiper8__thumbnail-image"></div>
+                            <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../../images/3x2_quote_benefit-p-500.webp 500w, ../../images/3x2_quote_benefit-p-800.webp 800w, ../../images/3x2_quote_benefit-p-1080.webp 1080w, ../../images/3x2_quote_benefit.webp 1200w" alt="" src="../../images/3x2_quote_benefit.webp" loading="eager" class="swiper8__thumbnail-image"></div>
+                            <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../../images/3x2_cap-text-p-500.webp 500w, ../../images/3x2_cap-text-p-800.webp 800w, ../../images/3x2_cap-text-p-1080.webp 1080w, ../../images/3x2_cap-text.webp 1200w" alt="" src="../../images/3x2_cap-text.webp" loading="eager" class="swiper8__thumbnail-image"></div>
+                            <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../../images/3x2_person-p-500.webp 500w, ../../images/3x2_person-p-800.webp 800w, ../../images/3x2_person-p-1080.webp 1080w, ../../images/3x2_person.webp 1200w" alt="" src="../../images/3x2_person.webp" loading="eager" class="swiper8__thumbnail-image"></div>
+                            <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../../images/3x2_nutrition-p-500.webp 500w, ../../images/3x2_nutrition-p-800.webp 800w, ../../images/3x2_nutrition-p-1080.webp 1080w, ../../images/3x2_nutrition.webp 1200w" alt="" src="../../images/3x2_nutrition.webp" loading="eager" class="swiper8__thumbnail-image"></div>
+                          </div>
                         </div>
-                        <div swiper="thumbnails-holder" class="product-thumbnails-holder hide">
-                          <div swiper="gallery-thumbnail" class="swiper-thumbnail_square is-current"><img sizes="100vw" srcset="../../images/3x2_jar-p-500.webp 500w, ../../images/3x2_jar-p-800.webp 800w, ../../images/3x2_jar-p-1080.webp 1080w, ../../images/3x2_jar.webp 1200w" alt="" src="../../images/3x2_jar.webp" loading="eager" class="swiper8__thumbnail-image"></div>
-                          <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../../images/3x2_quote_benefit-p-500.webp 500w, ../../images/3x2_quote_benefit-p-800.webp 800w, ../../images/3x2_quote_benefit-p-1080.webp 1080w, ../../images/3x2_quote_benefit.webp 1200w" alt="" src="../../images/3x2_quote_benefit.webp" loading="eager" class="swiper8__thumbnail-image"></div>
-                          <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../../images/3x2_cap-text-p-500.webp 500w, ../../images/3x2_cap-text-p-800.webp 800w, ../../images/3x2_cap-text-p-1080.webp 1080w, ../../images/3x2_cap-text.webp 1200w" alt="" src="../../images/3x2_cap-text.webp" loading="eager" class="swiper8__thumbnail-image"></div>
-                          <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../../images/3x2_person-p-500.webp 500w, ../../images/3x2_person-p-800.webp 800w, ../../images/3x2_person-p-1080.webp 1080w, ../../images/3x2_person.webp 1200w" alt="" src="../../images/3x2_person.webp" loading="eager" class="swiper8__thumbnail-image"></div>
-                          <div swiper="gallery-thumbnail" class="swiper-thumbnail_square"><img sizes="100vw" srcset="../../images/3x2_nutrition-p-500.webp 500w, ../../images/3x2_nutrition-p-800.webp 800w, ../../images/3x2_nutrition-p-1080.webp 1080w, ../../images/3x2_nutrition.webp 1200w" alt="" src="../../images/3x2_nutrition.webp" loading="eager" class="swiper8__thumbnail-image"></div>
-                        </div>
-                      </div>
-                      <div class="custom-code w-embed w-script">
-                        <script>
+                        <div class="custom-code w-embed w-script">
+                          <script>
                             function initiateSlider() {
                               document.querySelectorAll('[swiper="HERO-PDP-009"]').forEach((sliderComponent) => {
                                 let currentSlide = 0;
@@ -502,6 +510,7 @@
                             }
                             initiateSlider();
                           </script>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -509,59 +518,58 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container-18">
-          <div class="u-grid-cust cc-2col">
-            <div class="feature4_left">
-              <div class="u-sticky feature10">
-                <div class="image-wrapper"><img width="500" height="500" alt="" src="../../images/icon.svg" loading="eager" data-pb-element="image" class="image"></div>
+        </section>
+        <section class="section">
+          <div class="container-18">
+            <div class="u-grid-cust cc-2col">
+              <div class="feature4_left">
+                <div class="u-sticky feature10">
+                  <div class="image-wrapper"><img width="500" height="500" alt="" src="../../images/icon.svg" loading="eager" data-pb-element="image" class="image"></div>
+                </div>
               </div>
-            </div>
-            <div class="feature4_right">
-              <div class="headline-component cc-left">
-                <h2 class="display-xl">Bring Your Foundational Health Into Focus</h2>
-                <p>You're more than what's on the outside. Help support foundational health.*<br></p>
-              </div>
-              <div pb-element="timeline-container" class="feature27_progress">
+              <div class="feature4_right">
+                <div class="headline-component cc-left">
+                  <h2 class="display-xl">Bring Your Foundational Health Into Focus</h2>
+                  <p>You're more than what's on the outside. Help support foundational health.*<br></p>
+                </div>
+                <div pb-element="timeline-container" class="feature27_progress">
 
-                <div pb-element="timeline-line" class="feature27_line"></div>
-                <div pb-element="timeline-item" class="feature27_item cc-active">
-                  <div pb-element="timeline-dot" class="feature27_progress-circle"></div>
-                  <div pb-element="timeline-active-dot" class="feature27_progress-circle cc-active"></div>
-                  <div pb-element="timeline-content" class="feature27_item-inner">
-                    <div data-pw-var="Timeline Row 2 Title" class="display-sm">Brain Health</div>
-                    <div data-pw-var="Timeline Row 2 Subtitle">Combination of Omega-3 DHA from microalgae and methylated B12 to support brain health.*<br></div>
+                  <div pb-element="timeline-line" class="feature27_line"></div>
+                  <div pb-element="timeline-item" class="feature27_item cc-active">
+                    <div pb-element="timeline-dot" class="feature27_progress-circle"></div>
+                    <div pb-element="timeline-active-dot" class="feature27_progress-circle cc-active"></div>
+                    <div pb-element="timeline-content" class="feature27_item-inner">
+                      <div data-pw-var="Timeline Row 2 Title" class="display-sm">Brain Health</div>
+                      <div data-pw-var="Timeline Row 2 Subtitle">Combination of Omega-3 DHA from microalgae and methylated B12 to support brain health.*<br></div>
+                    </div>
                   </div>
-                </div>
-                <div pb-element="timeline-item" class="feature27_item cc-active">
-                  <div pb-element="timeline-dot" class="feature27_progress-circle"></div>
-                  <div pb-element="timeline-active-dot" class="feature27_progress-circle cc-active"></div>
-                  <div class="feature27_item-inner">
-                    <div data-pw-var="Timeline Row 2 Title" class="display-sm">Bone Health</div>
-                    <div data-pw-var="Timeline Row 2 Subtitle">Calcium-helper nutrients Vitamin D, Magnesium and Boron to help maintain bone health.*<br></div>
+                  <div pb-element="timeline-item" class="feature27_item cc-active">
+                    <div pb-element="timeline-dot" class="feature27_progress-circle"></div>
+                    <div pb-element="timeline-active-dot" class="feature27_progress-circle cc-active"></div>
+                    <div class="feature27_item-inner">
+                      <div data-pw-var="Timeline Row 2 Title" class="display-sm">Bone Health</div>
+                      <div data-pw-var="Timeline Row 2 Subtitle">Calcium-helper nutrients Vitamin D, Magnesium and Boron to help maintain bone health.*<br></div>
+                    </div>
                   </div>
-                </div>
-                <div pb-element="timeline-item" class="feature27_item cc-active">
-                  <div pb-element="timeline-dot" class="feature27_progress-circle"></div>
-                  <div pb-element="timeline-active-dot" class="feature27_progress-circle cc-active"></div>
-                  <div class="feature27_item-inner">
-                    <div data-pw-var="Timeline Row 2 Title" class="display-sm">Blood-Building</div>
-                    <div data-pw-var="Timeline Row 2 Subtitle">Gentle, chelated Iron and methylated Folate to promote red blood cell formation.*<br></div>
+                  <div pb-element="timeline-item" class="feature27_item cc-active">
+                    <div pb-element="timeline-dot" class="feature27_progress-circle"></div>
+                    <div pb-element="timeline-active-dot" class="feature27_progress-circle cc-active"></div>
+                    <div class="feature27_item-inner">
+                      <div data-pw-var="Timeline Row 2 Title" class="display-sm">Blood-Building</div>
+                      <div data-pw-var="Timeline Row 2 Subtitle">Gentle, chelated Iron and methylated Folate to promote red blood cell formation.*<br></div>
+                    </div>
                   </div>
-                </div>
-                <div pb-element="timeline-item" class="feature27_item cc-active">
-                  <div pb-element="timeline-dot" class="feature27_progress-circle"></div>
-                  <div pb-element="timeline-active-dot" class="feature27_progress-circle cc-active"></div>
-                  <div class="feature27_item-inner">
-                    <div data-pw-var="Timeline Row 2 Title" class="display-sm">Antioxidant Support</div>
-                    <div data-pw-var="Timeline Row 2 Subtitle">Vitamin E, from mixed tocopherols, provides antioxidant support to fight free radicals.*<br></div>
+                  <div pb-element="timeline-item" class="feature27_item cc-active">
+                    <div pb-element="timeline-dot" class="feature27_progress-circle"></div>
+                    <div pb-element="timeline-active-dot" class="feature27_progress-circle cc-active"></div>
+                    <div class="feature27_item-inner">
+                      <div data-pw-var="Timeline Row 2 Title" class="display-sm">Antioxidant Support</div>
+                      <div data-pw-var="Timeline Row 2 Subtitle">Vitamin E, from mixed tocopherols, provides antioxidant support to fight free radicals.*<br></div>
+                    </div>
                   </div>
-                </div>
-                <div pb-element="timeline-last-dot" class="feature27_circle-last"></div>
-                <div class="custom-code w-embed w-script">
-                  <script>
+                  <div pb-element="timeline-last-dot" class="feature27_circle-last"></div>
+                  <div class="custom-code w-embed w-script">
+                    <script>
                       const timelineContainer = document.querySelector('[pb-element="timeline-container"]');
                       const timelineItems = timelineContainer.querySelectorAll('[pb-element="timeline-item"]');
                       const timelineLine = timelineContainer.querySelector('[pb-element="timeline-line"]');
@@ -689,173 +697,173 @@
                       // Initial check
                       updateTimeline();
                     </script>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container-18">
-          <div class="headline-component">
-            <h2 class="display-xl">9 Traceable Ingredients</h2>
-            <p>100% of ingredients Made Traceable® showcasing each supplier and final place of manufacturing for all active and other ingredients, because not all ingredients are created equal.<br></p>
-          </div>
-          <div pb-element="te08-grid" class="ingredients8_grid">
-            <div pb-element="te08-card" class="ingredients8_card">
-              <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-Folate.webp" alt="" class="ingredient8_image">
-                <div class="ingred8_button">
-                  <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
-                    </svg></div>
-                </div>
-              </div>
-              <div class="ingred8_card-content">
-                <div class="ingred8_card-header">
-                  <div class="ingred8_title">Folate<br></div>
-                  <div class="text-sm">Methylated Folate</div>
-                </div>
-                <div class="ingred8_source">Pisticci, Italy</div>
-              </div>
+        </section>
+        <section class="section">
+          <div class="container-18">
+            <div class="headline-component">
+              <h2 class="display-xl">9 Traceable Ingredients</h2>
+              <p>100% of ingredients Made Traceable® showcasing each supplier and final place of manufacturing for all active and other ingredients, because not all ingredients are created equal.<br></p>
             </div>
-            <div pb-element="te08-card" class="ingredients8_card">
-              <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-Omega3.webp" alt="" class="ingredient8_image">
-                <div class="ingred8_button">
-                  <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
-                    </svg></div>
+            <div pb-element="te08-grid" class="ingredients8_grid">
+              <div pb-element="te08-card" class="ingredients8_card">
+                <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-Folate.webp" alt="" class="ingredient8_image">
+                  <div class="ingred8_button">
+                    <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
+                      </svg></div>
+                  </div>
+                </div>
+                <div class="ingred8_card-content">
+                  <div class="ingred8_card-header">
+                    <div class="ingred8_title">Folate<br></div>
+                    <div class="text-sm">Methylated Folate</div>
+                  </div>
+                  <div class="ingred8_source">Pisticci, Italy</div>
                 </div>
               </div>
-              <div class="ingred8_card-content">
-                <div class="ingred8_card-header">
-                  <div class="ingred8_title">Omega-3 DHA<br></div>
-                  <div class="text-sm">Vegan DHA from microalgae</div>
+              <div pb-element="te08-card" class="ingredients8_card">
+                <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-Omega3.webp" alt="" class="ingredient8_image">
+                  <div class="ingred8_button">
+                    <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
+                      </svg></div>
+                  </div>
                 </div>
-                <div class="ingred8_source">Saskatoon, Canada</div>
-              </div>
-            </div>
-            <div pb-element="te08-card" class="ingredients8_card">
-              <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-B12.webp" alt="" class="ingredient8_image">
-                <div class="ingred8_button">
-                  <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
-                    </svg></div>
-                </div>
-              </div>
-              <div class="ingred8_card-content">
-                <div class="ingred8_card-header">
-                  <div class="ingred8_title">Vitamin B12<br></div>
-                  <div class="text-sm">Methylated B12</div>
-                </div>
-                <div class="ingred8_source">Naugatuck, Connecticut / North Brunswick, New Jersey</div>
-              </div>
-            </div>
-            <div pb-element="te08-card" class="ingredients8_card">
-              <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-D3.webp" alt="" class="ingredient8_image">
-                <div class="ingred8_button">
-                  <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
-                    </svg></div>
+                <div class="ingred8_card-content">
+                  <div class="ingred8_card-header">
+                    <div class="ingred8_title">Omega-3 DHA<br></div>
+                    <div class="text-sm">Vegan DHA from microalgae</div>
+                  </div>
+                  <div class="ingred8_source">Saskatoon, Canada</div>
                 </div>
               </div>
-              <div class="ingred8_card-content">
-                <div class="ingred8_card-header">
-                  <div class="ingred8_title">Vitamin D<br></div>
-                  <div class="text-sm">Vegan-certified D3 from lichen</div>
+              <div pb-element="te08-card" class="ingredients8_card">
+                <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-B12.webp" alt="" class="ingredient8_image">
+                  <div class="ingred8_button">
+                    <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
+                      </svg></div>
+                  </div>
                 </div>
-                <div class="ingred8_source">Nottingham, Uk</div>
-              </div>
-            </div>
-            <div pb-element="te08-card" class="ingredients8_card">
-              <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-Iron.webp" alt="" class="ingredient8_image">
-                <div class="ingred8_button">
-                  <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
-                    </svg></div>
-                </div>
-              </div>
-              <div class="ingred8_card-content">
-                <div class="ingred8_card-header">
-                  <div class="ingred8_title">Iron<br></div>
-                  <div class="text-sm">Gentle, ferrous bisglycinate chelate</div>
-                </div>
-                <div class="ingred8_source">Odgen, Utah</div>
-              </div>
-            </div>
-            <div pb-element="te08-card" class="ingredients8_card">
-              <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-K.webp" alt="" class="ingredient8_image">
-                <div class="ingred8_button">
-                  <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
-                    </svg></div>
+                <div class="ingred8_card-content">
+                  <div class="ingred8_card-header">
+                    <div class="ingred8_title">Vitamin B12<br></div>
+                    <div class="text-sm">Methylated B12</div>
+                  </div>
+                  <div class="ingred8_source">Naugatuck, Connecticut / North Brunswick, New Jersey</div>
                 </div>
               </div>
-              <div class="ingred8_card-content">
-                <div class="ingred8_card-header">
-                  <div class="ingred8_title">Vitamin K2<br></div>
-                  <div class="text-sm">Pure, non-soy form of K2MK7</div>
+              <div pb-element="te08-card" class="ingredients8_card">
+                <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-D3.webp" alt="" class="ingredient8_image">
+                  <div class="ingred8_button">
+                    <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
+                      </svg></div>
+                  </div>
                 </div>
-                <div class="ingred8_source">Oslo, Norway</div>
-              </div>
-            </div>
-            <div data-expanded-card="true" pb-element="te08-card" class="ingredients8_card cc-hidden">
-              <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-Boron.webp" alt="" class="ingredient8_image">
-                <div class="ingred8_button">
-                  <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
-                    </svg></div>
-                </div>
-              </div>
-              <div class="ingred8_card-content">
-                <div class="ingred8_card-header">
-                  <div class="ingred8_title">Boron<br></div>
-                  <div class="text-sm">Food-form Boron</div>
-                </div>
-                <div class="ingred8_source"><strong>Momence, Illinois</strong></div>
-              </div>
-            </div>
-            <div data-expanded-card="true" pb-element="te08-card" class="ingredients8_card cc-hidden">
-              <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-E.webp" alt="" class="ingredient8_image">
-                <div class="ingred8_button">
-                  <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
-                    </svg></div>
+                <div class="ingred8_card-content">
+                  <div class="ingred8_card-header">
+                    <div class="ingred8_title">Vitamin D<br></div>
+                    <div class="text-sm">Vegan-certified D3 from lichen</div>
+                  </div>
+                  <div class="ingred8_source">Nottingham, Uk</div>
                 </div>
               </div>
-              <div class="ingred8_card-content">
-                <div class="ingred8_card-header">
-                  <div class="ingred8_title">Vitamin E<br></div>
-                  <div class="text-sm">From mixed tocopherols</div>
+              <div pb-element="te08-card" class="ingredients8_card">
+                <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-Iron.webp" alt="" class="ingredient8_image">
+                  <div class="ingred8_button">
+                    <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
+                      </svg></div>
+                  </div>
                 </div>
-                <div class="ingred8_source"><strong>Buenos Aires, Argentina</strong></div>
-              </div>
-            </div>
-            <div data-expanded-card="true" pb-element="te08-card" class="ingredients8_card cc-hidden">
-              <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-K.webp" alt="" class="ingredient8_image">
-                <div class="ingred8_button">
-                  <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
-                    </svg></div>
+                <div class="ingred8_card-content">
+                  <div class="ingred8_card-header">
+                    <div class="ingred8_title">Iron<br></div>
+                    <div class="text-sm">Gentle, ferrous bisglycinate chelate</div>
+                  </div>
+                  <div class="ingred8_source">Odgen, Utah</div>
                 </div>
               </div>
-              <div class="ingred8_card-content">
-                <div class="ingred8_card-header">
-                  <div class="ingred8_title">Magnesium<br></div>
-                  <div class="text-sm">Chelated form of Magnesium</div>
+              <div pb-element="te08-card" class="ingredients8_card">
+                <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-K.webp" alt="" class="ingredient8_image">
+                  <div class="ingred8_button">
+                    <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
+                      </svg></div>
+                  </div>
                 </div>
-                <div class="ingred8_source">Ogden, Utah<strong>Ogden, Utah</strong>rway</div>
+                <div class="ingred8_card-content">
+                  <div class="ingred8_card-header">
+                    <div class="ingred8_title">Vitamin K2<br></div>
+                    <div class="text-sm">Pure, non-soy form of K2MK7</div>
+                  </div>
+                  <div class="ingred8_source">Oslo, Norway</div>
+                </div>
               </div>
-            </div>
-          </div><button pb-element="te08-button" data-expanded="false" class="ingredient8_see-more">
-            <div pb-element="te08-text">See All 9</div>
-            <div pb-element="te08-arrow" class="ingred8_icon-wrapper">
-              <div class="next-icon cc-1-25em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0"></path>
-                </svg></div>
-            </div>
-          </button>
-          <div class="custom-code w-embed w-script">
-            <script>
+              <div data-expanded-card="true" pb-element="te08-card" class="ingredients8_card cc-hidden">
+                <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-Boron.webp" alt="" class="ingredient8_image">
+                  <div class="ingred8_button">
+                    <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
+                      </svg></div>
+                  </div>
+                </div>
+                <div class="ingred8_card-content">
+                  <div class="ingred8_card-header">
+                    <div class="ingred8_title">Boron<br></div>
+                    <div class="text-sm">Food-form Boron</div>
+                  </div>
+                  <div class="ingred8_source"><strong>Momence, Illinois</strong></div>
+                </div>
+              </div>
+              <div data-expanded-card="true" pb-element="te08-card" class="ingredients8_card cc-hidden">
+                <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-E.webp" alt="" class="ingredient8_image">
+                  <div class="ingred8_button">
+                    <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
+                      </svg></div>
+                  </div>
+                </div>
+                <div class="ingred8_card-content">
+                  <div class="ingred8_card-header">
+                    <div class="ingred8_title">Vitamin E<br></div>
+                    <div class="text-sm">From mixed tocopherols</div>
+                  </div>
+                  <div class="ingred8_source"><strong>Buenos Aires, Argentina</strong></div>
+                </div>
+              </div>
+              <div data-expanded-card="true" pb-element="te08-card" class="ingredients8_card cc-hidden">
+                <div class="ingred8_image-holder"><img loading="lazy" src="../../images/Ritual-Ingredients-PDP-K.webp" alt="" class="ingredient8_image">
+                  <div class="ingred8_button">
+                    <div class="next-icon cc-1-5em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"></path>
+                      </svg></div>
+                  </div>
+                </div>
+                <div class="ingred8_card-content">
+                  <div class="ingred8_card-header">
+                    <div class="ingred8_title">Magnesium<br></div>
+                    <div class="text-sm">Chelated form of Magnesium</div>
+                  </div>
+                  <div class="ingred8_source">Ogden, Utah<strong>Ogden, Utah</strong>rway</div>
+                </div>
+              </div>
+            </div><button pb-element="te08-button" data-expanded="false" class="ingredient8_see-more">
+              <div pb-element="te08-text">See All 9</div>
+              <div pb-element="te08-arrow" class="ingred8_icon-wrapper">
+                <div class="next-icon cc-1-25em w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0"></path>
+                  </svg></div>
+              </div>
+            </button>
+            <div class="custom-code w-embed w-script">
+              <script>
                 const seeMoreBtn = document.querySelector('[pb-element="te08-button"]');
                 const btnText = document.querySelector('[pb-element="te08-text"]');
                 const arrow = document.querySelector('[pb-element="te08-arrow"]');
@@ -874,164 +882,179 @@
                   arrow.style.transition = 'transform 0.3s ease';
                 });
               </script>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container-18">
-          <div data-pb-slot="content" class="u-grid-2col-wide">
-            <div data-pb-element="features-column" id="w-node-_68026fd4-8efa-c025-829e-bb18e5a636d8-5dd703c8" class="feature_col">
-              <div data-pb-slot="header" class="headline-component cc-left-desktop">
-                <h2 data-pb-element="heading" class="display-xl">Our Patented Nutrient Delivery Technology</h2>
-              </div>
-              <div class="u-hide_desktop">
-                <div class="image-wrapper cc-1x1"><img width="500" height="500" alt="" src="../../images/1x1_pill.webp" loading="eager" data-pb-element="image" class="image"></div>
-                <div class="spacer-m"></div>
-              </div>
-              <div>
-                <div data-pb-element="feature-list" class="feature_list">
-                  <div class="u-hflex-left-stretch">
-                    <div class="fe26_icon-wrapper">
-                      <div class="fe26_number-list">
-                        <div>1</div>
+        </section>
+        <section class="section">
+          <div class="container-18">
+            <div data-pb-slot="content" class="u-grid-2col-wide">
+              <div data-pb-element="features-column" id="w-node-_68026fd4-8efa-c025-829e-bb18e5a636d8-5dd703c8" class="feature_col">
+                <div data-pb-slot="header" class="headline-component cc-left-desktop">
+                  <h2 data-pb-element="heading" class="display-xl">Our Patented Nutrient Delivery Technology</h2>
+                </div>
+                <div class="u-hide_desktop">
+                  <div class="image-wrapper cc-1x1"><img width="500" height="500" alt="" src="../../images/1x1_pill.webp" loading="eager" data-pb-element="image" class="image"></div>
+                  <div class="spacer-m"></div>
+                </div>
+                <div>
+                  <div data-pb-element="feature-list" class="feature_list">
+                    <div class="u-hflex-left-stretch">
+                      <div class="fe26_icon-wrapper">
+                        <div class="fe26_number-list">
+                          <div>1</div>
+                        </div>
+                      </div>
+                      <div class="u-vertical-wrap cc-xs">
+                        <h3 class="display-xs">Designed for Optimal Absorption</h3>
+                        <p class="text-sm">Delayed-release capsules are designed to dissolve in the small intestine, an optimal place to absorb nutrients.<a href="https://ritual.com/products/essential-for-women-multivitamin#disclaimer-footnote">*</a><br></p>
                       </div>
                     </div>
-                    <div class="u-vertical-wrap cc-xs">
-                      <h3 class="display-xs">Designed for Optimal Absorption</h3>
-                      <p class="text-sm">Delayed-release capsules are designed to dissolve in the small intestine, an optimal place to absorb nutrients.<a href="https://ritual.com/products/essential-for-women-multivitamin#disclaimer-footnote">*</a><br></p>
-                    </div>
-                  </div>
-                  <div class="u-hflex-left-stretch">
-                    <div class="fe26_icon-wrapper">
-                      <div class="fe26_number-list">
-                        <div>2</div>
+                    <div class="u-hflex-left-stretch">
+                      <div class="fe26_icon-wrapper">
+                        <div class="fe26_number-list">
+                          <div>2</div>
+                        </div>
+                      </div>
+                      <div class="u-vertical-wrap cc-xs">
+                        <h3 class="display-xs">Beadlet in Oil</h3>
+                        <p class="text-sm">Our patented beadlet in oil technology combines oily and dry ingredients in one capsule. Get key nutrients in 2 pills daily.<a href="https://ritual.com/products/essential-for-women-multivitamin#disclaimer-footnote">*</a><br></p>
                       </div>
                     </div>
-                    <div class="u-vertical-wrap cc-xs">
-                      <h3 class="display-xs">Beadlet in Oil</h3>
-                      <p class="text-sm">Our patented beadlet in oil technology combines oily and dry ingredients in one capsule. Get key nutrients in 2 pills daily.<a href="https://ritual.com/products/essential-for-women-multivitamin#disclaimer-footnote">*</a><br></p>
-                    </div>
-                  </div>
-                  <div class="u-hflex-left-stretch">
-                    <div class="fe26_icon-wrapper">
-                      <div class="fe26_number-list">
-                        <div>3</div>
+                    <div class="u-hflex-left-stretch">
+                      <div class="fe26_icon-wrapper">
+                        <div class="fe26_number-list">
+                          <div>3</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="u-vertical-wrap cc-xs">
-                      <h3 class="display-xs">Essenced with Mint</h3>
-                      <p class="text-sm">The mint tab in every bottle keeps things fresh, so taking your vitamins daily can be a more enjoyable experience.<br></p>
+                      <div class="u-vertical-wrap cc-xs">
+                        <h3 class="display-xs">Essenced with Mint</h3>
+                        <p class="text-sm">The mint tab in every bottle keeps things fresh, so taking your vitamins daily can be a more enjoyable experience.<br></p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="u-hide_tablet">
-              <div data-pb-element="image-column" class="feature_col">
-                <div class="image-wrapper cc-1x1"><img width="500" height="500" alt="" src="../../images/icon.svg" loading="eager" data-pb-element="image" class="image"></div>
+              <div class="u-hide_tablet">
+                <div data-pb-element="image-column" class="feature_col">
+                  <div class="image-wrapper cc-1x1"><img width="500" height="500" alt="" src="../../images/icon.svg" loading="eager" data-pb-element="image" class="image"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
-  </div>
 
 
-  <!-- Consolidated Custom CSS -->
-  <style>
-    [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"].pb--selected [pb-element="radio"] {
-    border: 4px solid var(--component--color--radio);
-    background-color: #fff;
-    box-shadow: 0 0 0 1px var(--component--color--radio);
-    }
-    /* Hide by default */
-    [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"] [pb-element="benefit-list"] {
-    display: none;
-    }
-    /* Show when parent has pb--selected class */
-    [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"].pb--selected [pb-element="benefit-list"] {
-    display: block;
-    }
+    <!-- Consolidated Custom CSS -->
+    <style>
+      [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"].pb--selected [pb-element="radio"] {
+        border: 4px solid var(--component--color--radio);
+        background-color: #fff;
+        box-shadow: 0 0 0 1px var(--component--color--radio);
+      }
 
-    [data-action="submit"] {
-    position: relative;
-    }
-    [data-button="spinner"] {
-    width: 1.2em;
-    display: block;
-    height: 1.2em;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: center;
-    pointer-events: none;
-    }
-    [data-button="spinner"] .path {
-    stroke: currentColor;
-    stroke-linecap: round;
-    animation: spinner-dash 1.5s ease-in-out infinite;
-    }
-    [data-action="submit"].is-submitting [data-button="content"] {
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    }
-    [data-action="submit"].is-submitting [data-button="spinner"] {
-    opacity: 1;
-    transition: opacity 0.2s ease;
-    animation: spinner-rotate 2s linear infinite;
-    }
-    @keyframes spinner-rotate {
-    100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-    }
-    }
-    @keyframes spinner-dash {
-    0% {
-    stroke-dasharray: 1, 150;
-    stroke-dashoffset: 0;
-    }
-    50% {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: -35;
-    }
-    100% {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: -124;
-    }
-    }
+      /* Hide by default */
+      [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"] [pb-element="benefit-list"] {
+        display: none;
+      }
 
-    [swiper="HERO-PDP-009"] .swiper-slide_image-wrap {
-    aspect-ratio: 16 / 9;
-    }
-    [swiper="HERO-PDP-009"] [swiper="slider-nav"] .swiper-slide {
-    width: auto;
-    }
-    [swiper="HERO-PDP-009"] [swiper="slider-nav"] .swiper-slide.swiper-slide-active {
-    color: #000;
-    }
+      /* Show when parent has pb--selected class */
+      [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"].pb--selected [pb-element="benefit-list"] {
+        display: block;
+      }
 
-    [pb-element="timeline-item"].cc-active [pb-element="timeline-content"] {
-    opacity: 1;
-    }
-    [pb-element="timeline-line"] {
-    transition: height 0.3s ease-out;
-    }
-    [pb-element="timeline-dot"] {
-    transition: opacity 0.3s ease-out;
-    opacity: 0;
-    }
-    [pb-element="timeline-active-dot"] {
-    transition: opacity 0.3s ease-out;
-    }
-    [pb-element="timeline-last-dot"] {
-    transition: opacity 0.3s ease-out;
-    display: none;
-    }
+      [data-action="submit"] {
+        position: relative;
+      }
 
-  </style>
+      [data-button="spinner"] {
+        width: 1.2em;
+        display: block;
+        height: 1.2em;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: center;
+        pointer-events: none;
+      }
 
-</body>
+      [data-button="spinner"] .path {
+        stroke: currentColor;
+        stroke-linecap: round;
+        animation: spinner-dash 1.5s ease-in-out infinite;
+      }
+
+      [data-action="submit"].is-submitting [data-button="content"] {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+
+      [data-action="submit"].is-submitting [data-button="spinner"] {
+        opacity: 1;
+        transition: opacity 0.2s ease;
+        animation: spinner-rotate 2s linear infinite;
+      }
+
+      @keyframes spinner-rotate {
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
+      @keyframes spinner-dash {
+        0% {
+          stroke-dasharray: 1, 150;
+          stroke-dashoffset: 0;
+        }
+
+        50% {
+          stroke-dasharray: 90, 150;
+          stroke-dashoffset: -35;
+        }
+
+        100% {
+          stroke-dasharray: 90, 150;
+          stroke-dashoffset: -124;
+        }
+      }
+
+      [swiper="HERO-PDP-009"] .swiper-slide_image-wrap {
+        aspect-ratio: 16 / 9;
+      }
+
+      [swiper="HERO-PDP-009"] [swiper="slider-nav"] .swiper-slide {
+        width: auto;
+      }
+
+      [swiper="HERO-PDP-009"] [swiper="slider-nav"] .swiper-slide.swiper-slide-active {
+        color: #000;
+      }
+
+      [pb-element="timeline-item"].cc-active [pb-element="timeline-content"] {
+        opacity: 1;
+      }
+
+      [pb-element="timeline-line"] {
+        transition: height 0.3s ease-out;
+      }
+
+      [pb-element="timeline-dot"] {
+        transition: opacity 0.3s ease-out;
+        opacity: 0;
+      }
+
+      [pb-element="timeline-active-dot"] {
+        transition: opacity 0.3s ease-out;
+      }
+
+      [pb-element="timeline-last-dot"] {
+        transition: opacity 0.3s ease-out;
+        display: none;
+      }
+
+    </style>
+  </body>
 </html>

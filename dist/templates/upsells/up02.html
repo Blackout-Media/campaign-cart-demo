@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>UP02</title>
-  <meta content="UP02" property="og:title">
-  <meta content="UP02" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <head>
+    <meta charset="utf-8">
+    <title>UP02</title>
+    <meta content="UP02" property="og:title">
+    <meta content="UP02" property="twitter:title">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
-  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+    <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+    <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
 
-  <!-- Campaign Configuration -->
-  <script src="../../config.js"></script>
-  <!-- Campaign Loader Script -->
-  <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
-
-
-  <link href="../../css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="../../css/components.css" rel="stylesheet" type="text/css">
-  <link href="../../css/next-staging-core.css" rel="stylesheet" type="text/css">
-  <link href="../../css/custom.css" rel="stylesheet" type="text/css">
+    <!-- Campaign Configuration -->
+    <script src="../../config.js"></script>
+    <!-- Campaign Loader Script -->
+    <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
 
 
-  <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="../../images/webclip.png" rel="apple-touch-icon">
+    <link href="../../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../../css/components.css" rel="stylesheet" type="text/css">
+    <link href="../../css/next-staging-core.css" rel="stylesheet" type="text/css">
+    <link href="../../css/custom.css" rel="stylesheet" type="text/css">
 
 
-  <style>
+    <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../images/webclip.png" rel="apple-touch-icon">
+
+
+    <style>
       html:not(.next-display-ready) [data-next-await] {
         position: relative;
         overflow: hidden;
         border-color: transparent !important;
         box-shadow: none !important;
       }
+
       [data-next-await] * {
         opacity: 0;
         transition: opacity 0.2s ease;
       }
+
       [data-next-await]::before {
         content: '';
         position: absolute;
@@ -49,268 +51,274 @@
         z-index: 1;
         pointer-events: none;
       }
+
       @keyframes pulse-gray {
+
         0%,
         100% {
           background-color: #e0e0e0;
           opacity: 0.6;
         }
+
         50% {
           background-color: #f5f5f5;
           opacity: 0.8;
         }
       }
+
       html.next-display-ready [data-next-await] * {
         opacity: 1;
       }
+
       html.next-display-ready [data-next-await]::before {
         display: none;
       }
+
     </style>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-</head>
-<body>
-  <div class="page-wrapper">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
 
-    <div class="main-wrapper">
-      <section class="section cc-0">
-        <div class="container cc-0">
-          <div class="upsell-navbar">
-            <div class="upsell-navbar__wrapper">
-              <div class="upsell-navbar__wrapper--content">
-                <div class="progress-contain">
-                  <div class="progress-bar1">
-                    <div class="progress-pct">
-                      <div class="progress-progress"></div>
-                    </div>
-                    <div class="progress-wrapper">
-                      <div class="progress-item">
-                        <div>1</div>
+      <div class="main-wrapper">
+        <section class="section cc-0">
+          <div class="container cc-0">
+            <div class="upsell-navbar">
+              <div class="upsell-navbar__wrapper">
+                <div class="upsell-navbar__wrapper--content">
+                  <div class="progress-contain">
+                    <div class="progress-bar1">
+                      <div class="progress-pct">
+                        <div class="progress-progress"></div>
+                      </div>
+                      <div class="progress-wrapper">
+                        <div class="progress-item">
+                          <div>1</div>
+                        </div>
+                      </div>
+                      <div class="progress-wrapper">
+                        <div class="progress-item">
+                          <div>2</div>
+                        </div>
+                      </div>
+                      <div class="progress-wrapper">
+                        <div class="progress-item cc-inactive">
+                          <div>3</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="progress-wrapper">
-                      <div class="progress-item">
-                        <div>2</div>
+                    <div class="progress-bar1">
+                      <div class="progress-wrapper">
+                        <div class="progress-text">Checkout</div>
+                      </div>
+                      <div class="progress-wrapper">
+                        <div class="progress-text">Bonus Deals</div>
+                      </div>
+                      <div class="progress-wrapper">
+                        <div class="progress-text cc-inactive">Summary</div>
                       </div>
                     </div>
-                    <div class="progress-wrapper">
-                      <div class="progress-item cc-inactive">
-                        <div>3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section cc-custom upsell-header">
+          <div class="container">
+            <div class="content-wrapper cc-upsell-header">
+              <h1 class="upsell-heading">WAIT!</h1>
+              <div class="upsell-sub">Your Order is NOT Complete...</div>
+              <div class="upsell-extrasub">Before You <strong>Supercharge the Effects</strong> with This...</div>
+              <h1 class="upsell-heading">EXCLUSIVE DEAL</h1>
+            </div>
+          </div>
+        </section>
+        <section class="section cc-custom upsell-note">
+          <div class="container cc-0">
+            <div class="content-wrapper cc-upsell-header">
+              <div class="upsell-note-heading">Navigating backward may double charge you.</div>
+              <div class="upsell-note-text">To continue, select an option below.</div>
+            </div>
+          </div>
+        </section>
+        <section class="section cc-custom upsell-features">
+          <div class="container">
+            <div class="content-wrapper">
+              <div class="u-grid-3col-standard">
+                <div id="w-node-_24b048cf-c103-2aea-0146-ce1882c75172-cfc04fa0" class="feature_grid-item">
+                  <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
+                  <div class="feature-grid__item-content">
+                    <div class="feature_icon-bubble"><img loading="lazy" src="../../images/1x1.svg" alt="" class="feature_icon"></div>
+                    <h3 class="display-sm">Product Feature</h3>
+                    <p class="p-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+                <div id="w-node-db58f292-155b-131d-5c3c-e12582073753-cfc04fa0" class="feature_grid-item">
+                  <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
+                  <div class="feature-grid__item-content">
+                    <div class="feature_icon-bubble"><img loading="lazy" src="../../images/1x1.svg" alt="" class="feature_icon"></div>
+                    <h3 class="display-sm">Product Feature</h3>
+                    <p class="p-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+                <div id="w-node-_3141afa3-0a8a-6495-6689-086eae11880b-cfc04fa0" class="feature_grid-item">
+                  <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
+                  <div class="feature-grid__item-content">
+                    <div class="feature_icon-bubble"><img loading="lazy" src="../../images/1x1.svg" alt="" class="feature_icon"></div>
+                    <h3 class="display-sm">Product Feature</h3>
+                    <p class="p-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section cc-custom upsell-features">
+          <div class="container">
+            <div class="content-wrapper">
+              <div class="u-grid-3col-standard">
+                <div id="w-node-c0cdff0f-6795-7d43-0303-de2d4e560793-cfc04fa0" class="feature_grid-item">
+                  <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
+                  <div class="feature-grid__item-content cc-empty">
+                    <div class="upsell-feature__stats">
+                      <div class="upsell-feature__stats-number">
+                        <div class="feature-stats__number">97%</div>
+                      </div>
+                      <div class="upsell-feature__stats-text">
+                        <div class="feature-stats__text">of participants felt their skin was <strong>tigher, firmer, and more lifted</strong></div>
                       </div>
                     </div>
                   </div>
-                  <div class="progress-bar1">
-                    <div class="progress-wrapper">
-                      <div class="progress-text">Checkout</div>
+                </div>
+                <div id="w-node-_9d6d4740-837a-9866-174e-6f85568bfc17-cfc04fa0" class="feature_grid-item">
+                  <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
+                  <div class="feature-grid__item-content cc-empty">
+                    <div class="upsell-feature__stats">
+                      <div class="upsell-feature__stats-number">
+                        <div class="feature-stats__number">97%</div>
+                      </div>
+                      <div class="upsell-feature__stats-text">
+                        <div class="feature-stats__text">of participants felt their skin was <strong>tigher, firmer, and more lifted</strong></div>
+                      </div>
                     </div>
-                    <div class="progress-wrapper">
-                      <div class="progress-text">Bonus Deals</div>
-                    </div>
-                    <div class="progress-wrapper">
-                      <div class="progress-text cc-inactive">Summary</div>
+                  </div>
+                </div>
+                <div id="w-node-_108f3027-3caf-b3e7-ee8c-d381323bd705-cfc04fa0" class="feature_grid-item">
+                  <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
+                  <div class="feature-grid__item-content cc-empty">
+                    <div class="upsell-feature__stats">
+                      <div class="upsell-feature__stats-number">
+                        <div class="feature-stats__number">97%</div>
+                      </div>
+                      <div class="upsell-feature__stats-text">
+                        <div class="feature-stats__text">of participants felt their skin was <strong>tigher, firmer, and more lifted</strong></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section cc-custom upsell-header">
-        <div class="container">
-          <div class="content-wrapper cc-upsell-header">
-            <h1 class="upsell-heading">WAIT!</h1>
-            <div class="upsell-sub">Your Order is NOT Complete...</div>
-            <div class="upsell-extrasub">Before You <strong>Supercharge the Effects</strong> with This...</div>
-            <h1 class="upsell-heading">EXCLUSIVE DEAL</h1>
-          </div>
-        </div>
-      </section>
-      <section class="section cc-custom upsell-note">
-        <div class="container cc-0">
-          <div class="content-wrapper cc-upsell-header">
-            <div class="upsell-note-heading">Navigating backward may double charge you.</div>
-            <div class="upsell-note-text">To continue, select an option below.</div>
-          </div>
-        </div>
-      </section>
-      <section class="section cc-custom upsell-features">
-        <div class="container">
-          <div class="content-wrapper">
-            <div class="u-grid-3col-standard">
-              <div id="w-node-_24b048cf-c103-2aea-0146-ce1882c75172-cfc04fa0" class="feature_grid-item">
-                <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
-                <div class="feature-grid__item-content">
-                  <div class="feature_icon-bubble"><img loading="lazy" src="../../images/1x1.svg" alt="" class="feature_icon"></div>
-                  <h3 class="display-sm">Product Feature</h3>
-                  <p class="p-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
+        </section>
+        <section class="section">
+          <div class="container cc-full">
+            <div class="upsell-content">
+              <div class="headline-component cc-0">
+                <h2 class="display-sm">11+ Awards in All the Biggest and Best Beauty Publications</h2>
               </div>
-              <div id="w-node-db58f292-155b-131d-5c3c-e12582073753-cfc04fa0" class="feature_grid-item">
-                <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
-                <div class="feature-grid__item-content">
-                  <div class="feature_icon-bubble"><img loading="lazy" src="../../images/1x1.svg" alt="" class="feature_icon"></div>
-                  <h3 class="display-sm">Product Feature</h3>
-                  <p class="p-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-              </div>
-              <div id="w-node-_3141afa3-0a8a-6495-6689-086eae11880b-cfc04fa0" class="feature_grid-item">
-                <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
-                <div class="feature-grid__item-content">
-                  <div class="feature_icon-bubble"><img loading="lazy" src="../../images/1x1.svg" alt="" class="feature_icon"></div>
-                  <h3 class="display-sm">Product Feature</h3>
-                  <p class="p-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <div>
+                <div class="u-grid-custom u-grid-11">
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                  <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section cc-custom upsell-features">
-        <div class="container">
-          <div class="content-wrapper">
-            <div class="u-grid-3col-standard">
-              <div id="w-node-c0cdff0f-6795-7d43-0303-de2d4e560793-cfc04fa0" class="feature_grid-item">
-                <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
-                <div class="feature-grid__item-content cc-empty">
-                  <div class="upsell-feature__stats">
-                    <div class="upsell-feature__stats-number">
-                      <div class="feature-stats__number">97%</div>
-                    </div>
-                    <div class="upsell-feature__stats-text">
-                      <div class="feature-stats__text">of participants felt their skin was <strong>tigher, firmer, and more lifted</strong></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="w-node-_9d6d4740-837a-9866-174e-6f85568bfc17-cfc04fa0" class="feature_grid-item">
-                <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
-                <div class="feature-grid__item-content cc-empty">
-                  <div class="upsell-feature__stats">
-                    <div class="upsell-feature__stats-number">
-                      <div class="feature-stats__number">97%</div>
-                    </div>
-                    <div class="upsell-feature__stats-text">
-                      <div class="feature-stats__text">of participants felt their skin was <strong>tigher, firmer, and more lifted</strong></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="w-node-_108f3027-3caf-b3e7-ee8c-d381323bd705-cfc04fa0" class="feature_grid-item">
-                <div class="feature_grid-item--image"><img loading="lazy" src="../../images/3x2.svg" alt="" class="feature_image"></div>
-                <div class="feature-grid__item-content cc-empty">
-                  <div class="upsell-feature__stats">
-                    <div class="upsell-feature__stats-number">
-                      <div class="feature-stats__number">97%</div>
-                    </div>
-                    <div class="upsell-feature__stats-text">
-                      <div class="feature-stats__text">of participants felt their skin was <strong>tigher, firmer, and more lifted</strong></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container cc-full">
-          <div class="upsell-content">
-            <div class="headline-component cc-0">
-              <h2 class="display-sm">11+ Awards in All the Biggest and Best Beauty Publications</h2>
-            </div>
-            <div>
-              <div class="u-grid-custom u-grid-11">
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                <div class="seenon__icon-wrapper"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section cc-custom upsell-features">
-        <div class="container">
-          <div class="content-wrapper">
-            <div class="u-grid-custom u-grid-2col-upsell">
-              <div class="hero-wrappers">
-                <div pb-component="swiper" class="slider2_component">
-                  <div swiper="sw12" class="slider_component is-v9">
+        </section>
+        <section class="section cc-custom upsell-features">
+          <div class="container">
+            <div class="content-wrapper">
+              <div class="u-grid-custom u-grid-2col-upsell">
+                <div class="hero-wrappers">
+                  <div pb-component="swiper" class="slider2_component">
+                    <div swiper="sw12" class="slider_component is-v9">
 
-                    <div class="slider2_component-wrapper">
-                      <div swiper="slider-main" class="swiper is-v9-main">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide cc-color">
-                            <div class="swiper-slide_inner">
-                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                      <div class="slider2_component-wrapper">
+                        <div swiper="slider-main" class="swiper is-v9-main">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide cc-color">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="swiper-slide cc-color">
-                            <div class="swiper-slide_inner">
-                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                            <div class="swiper-slide cc-color">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="swiper-slide cc-color">
-                            <div class="swiper-slide_inner">
-                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                            <div class="swiper-slide cc-color">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="swiper-slide cc-color">
-                            <div class="swiper-slide_inner">
-                              <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                            <div class="swiper-slide cc-color">
+                              <div class="swiper-slide_inner">
+                                <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="swiper-thumbs-arrow"><button swiper="prev-button" class="swiper__button-static is-sw22">
-                          <div class="swiper__button-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
-                            </svg></div>
-                        </button>
-                        <div class="slider2_thumbs-wrap is-sw22">
-                          <div thumbsslider="" swiper="slider-thumbs" class="swiper is-v9-thumbs">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide is-thumb swiper-slide-thumb-active">
-                                <div class="swiper-slide_inner">
-                                  <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                        <div class="swiper-thumbs-arrow"><button swiper="prev-button" class="swiper__button-static is-sw22">
+                            <div class="swiper__button-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.91316 12.9545L0 12.0028L0.91316 11.0511L9.16383 2.45175L10.077 1.5L11.8979 3.39789L10.9848 4.34964L4.93644 10.6592H22.7108H24V13.3464H22.7108H4.93644L10.9902 19.6504L11.9033 20.6021L10.0824 22.5L9.1692 21.5483L0.91316 12.9545Z" fill="currentColor"></path>
+                              </svg></div>
+                          </button>
+                          <div class="slider2_thumbs-wrap is-sw22">
+                            <div thumbsslider="" swiper="slider-thumbs" class="swiper is-v9-thumbs">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide is-thumb swiper-slide-thumb-active">
+                                  <div class="swiper-slide_inner">
+                                    <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="swiper-slide is-thumb swiper-slide-thumb-active">
-                                <div class="swiper-slide_inner">
-                                  <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                                <div class="swiper-slide is-thumb swiper-slide-thumb-active">
+                                  <div class="swiper-slide_inner">
+                                    <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="swiper-slide is-thumb swiper-slide-thumb-active">
-                                <div class="swiper-slide_inner">
-                                  <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                                <div class="swiper-slide is-thumb swiper-slide-thumb-active">
+                                  <div class="swiper-slide_inner">
+                                    <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="swiper-slide is-thumb swiper-slide-thumb-active">
-                                <div class="swiper-slide_inner">
-                                  <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                                <div class="swiper-slide is-thumb swiper-slide-thumb-active">
+                                  <div class="swiper-slide_inner">
+                                    <div class="swiper-slide_image-wrap is-square"><img loading="eager" src="../../images/1x1.svg" alt="" class="cover"></div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </div><button swiper="next-button" class="swiper__button-static is-sw22">
-                          <div class="swiper__button-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
-                            </svg></div>
-                        </button>
+                          </div><button swiper="next-button" class="swiper__button-static is-sw22">
+                            <div class="swiper__button-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.0868 12.9545L24 12.0028L23.0868 11.0511L14.8362 2.45175L13.923 1.5L12.1021 3.39789L13.0152 4.34964L19.0636 10.6592H1.28917H0V13.3464H1.28917H19.0582L13.0098 19.6504L12.0967 20.6021L13.9176 22.5L14.8308 21.5483L23.0868 12.9545Z" fill="currentColor"></path>
+                              </svg></div>
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                    <div class="custom-code w-embed w-script">
-                      <script>
+                      <div class="custom-code w-embed w-script">
+                        <script>
                           document.querySelectorAll('[swiper="sw12"]').forEach((sliderComponent) => {
                             const sliderMain = sliderComponent.querySelector('[swiper="slider-main"]');
                             const sliderThumbs = sliderComponent.querySelector('[swiper="slider-thumbs"]');
@@ -360,287 +368,287 @@
                             }
                           });
                         </script>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="u-vertical-wrap">
-                <div class="review_component cc-sm">
-                  <div class="review_component-wrapper">
-                    <div class="review_stars-wrapper">
-                      <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                          <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                        </svg></div>
-                      <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                          <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                        </svg></div>
-                      <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                          <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                        </svg></div>
-                      <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                          <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                        </svg></div>
-                      <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                          <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                        </svg></div>
+                <div class="u-vertical-wrap">
+                  <div class="review_component cc-sm">
+                    <div class="review_component-wrapper">
+                      <div class="review_stars-wrapper">
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                          </svg></div>
+                      </div>
+                      <div class="u-font-bold">Rated 4.9 out of 5</div>
                     </div>
-                    <div class="u-font-bold">Rated 4.9 out of 5</div>
                   </div>
-                </div>
-                <h2 class="display-lg">All-In-One Facial® Set (4 Facials + Brush)</h2>
-                <div class="div-block-1618">
-                  <div class="cc-compare">$118</div>
-                  <div>$99</div>
-                  <div class="exclusive-deal-badge">
-                    <div>EXCLUSIVE DEAL</div>
+                  <h2 class="display-lg">All-In-One Facial® Set (4 Facials + Brush)</h2>
+                  <div class="div-block-1618">
+                    <div class="cc-compare">$118</div>
+                    <div>$99</div>
+                    <div class="exclusive-deal-badge">
+                      <div>EXCLUSIVE DEAL</div>
+                    </div>
                   </div>
-                </div>
-                <div class="text-md">The All-In-One Facial addresses all of the most common skin concerns at the same time. </div>
-                <div class="text-md"><strong>Octolift® Technology creates an intense and instant tightening and lifting effect on the skin for a firmer, brighter, more youthful-looking complexion.</strong></div>
-                <div class="list-container cc-lg">
-                  <ul role="list" class="list w-list-unstyled">
-                    <li class="list__item cc-gap cc-md">
-                      <div class="list-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_95_1591)">
-                            <path d="M8.62352 16.267L5.29873 12.9422C4.92505 12.5685 4.32142 12.5685 3.94774 12.9422C3.57406 13.3159 3.57406 13.9195 3.94774 14.2932L7.95281 18.2983C8.32649 18.672 8.93013 18.672 9.30381 18.2983L19.441 8.16104C19.8147 7.78736 19.8147 7.18372 19.441 6.81004C19.0674 6.43637 18.4637 6.43637 18.0901 6.81004L8.62352 16.267Z" fill="CURRENTcOLOR"></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_95_1591">
-                              <rect width="22.9956" height="22.9956" fill="white" transform="translate(0 0.773682)"></rect>
-                            </clipPath>
-                          </defs>
-                        </svg></div>
-                      <div>Includes 4 facials + reusable brush</div>
-                    </li>
-                    <li class="list__item cc-gap cc-md">
-                      <div class="list-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_95_1591)">
-                            <path d="M8.62352 16.267L5.29873 12.9422C4.92505 12.5685 4.32142 12.5685 3.94774 12.9422C3.57406 13.3159 3.57406 13.9195 3.94774 14.2932L7.95281 18.2983C8.32649 18.672 8.93013 18.672 9.30381 18.2983L19.441 8.16104C19.8147 7.78736 19.8147 7.18372 19.441 6.81004C19.0674 6.43637 18.4637 6.43637 18.0901 6.81004L8.62352 16.267Z" fill="CURRENTcOLOR"></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_95_1591">
-                              <rect width="22.9956" height="22.9956" fill="white" transform="translate(0 0.773682)"></rect>
-                            </clipPath>
-                          </defs>
-                        </svg></div>
-                      <div>Hypoallergenic</div>
-                    </li>
-                    <li class="list__item cc-gap cc-md">
-                      <div class="list-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_95_1591)">
-                            <path d="M8.62352 16.267L5.29873 12.9422C4.92505 12.5685 4.32142 12.5685 3.94774 12.9422C3.57406 13.3159 3.57406 13.9195 3.94774 14.2932L7.95281 18.2983C8.32649 18.672 8.93013 18.672 9.30381 18.2983L19.441 8.16104C19.8147 7.78736 19.8147 7.18372 19.441 6.81004C19.0674 6.43637 18.4637 6.43637 18.0901 6.81004L8.62352 16.267Z" fill="CURRENTcOLOR"></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_95_1591">
-                              <rect width="22.9956" height="22.9956" fill="white" transform="translate(0 0.773682)"></rect>
-                            </clipPath>
-                          </defs>
-                        </svg></div>
-                      <div>Non-Comedogenic</div>
-                    </li>
-                    <li class="list__item cc-gap cc-md">
-                      <div class="list-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_95_1591)">
-                            <path d="M8.62352 16.267L5.29873 12.9422C4.92505 12.5685 4.32142 12.5685 3.94774 12.9422C3.57406 13.3159 3.57406 13.9195 3.94774 14.2932L7.95281 18.2983C8.32649 18.672 8.93013 18.672 9.30381 18.2983L19.441 8.16104C19.8147 7.78736 19.8147 7.18372 19.441 6.81004C19.0674 6.43637 18.4637 6.43637 18.0901 6.81004L8.62352 16.267Z" fill="CURRENTcOLOR"></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_95_1591">
-                              <rect width="22.9956" height="22.9956" fill="white" transform="translate(0 0.773682)"></rect>
-                            </clipPath>
-                          </defs>
-                        </svg></div>
-                      <div>Safe for sensitive skin</div>
-                    </li>
-                    <li class="list__item cc-gap cc-md">
-                      <div class="list-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_95_1591)">
-                            <path d="M8.62352 16.267L5.29873 12.9422C4.92505 12.5685 4.32142 12.5685 3.94774 12.9422C3.57406 13.3159 3.57406 13.9195 3.94774 14.2932L7.95281 18.2983C8.32649 18.672 8.93013 18.672 9.30381 18.2983L19.441 8.16104C19.8147 7.78736 19.8147 7.18372 19.441 6.81004C19.0674 6.43637 18.4637 6.43637 18.0901 6.81004L8.62352 16.267Z" fill="CURRENTcOLOR"></path>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_95_1591">
-                              <rect width="22.9956" height="22.9956" fill="white" transform="translate(0 0.773682)"></rect>
-                            </clipPath>
-                          </defs>
-                        </svg></div>
-                      <div>Formulated without harmful chemicals or even fragrance</div>
-                    </li>
-                  </ul>
+                  <div class="text-md">The All-In-One Facial addresses all of the most common skin concerns at the same time. </div>
+                  <div class="text-md"><strong>Octolift® Technology creates an intense and instant tightening and lifting effect on the skin for a firmer, brighter, more youthful-looking complexion.</strong></div>
+                  <div class="list-container cc-lg">
+                    <ul role="list" class="list w-list-unstyled">
+                      <li class="list__item cc-gap cc-md">
+                        <div class="list-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_95_1591)">
+                              <path d="M8.62352 16.267L5.29873 12.9422C4.92505 12.5685 4.32142 12.5685 3.94774 12.9422C3.57406 13.3159 3.57406 13.9195 3.94774 14.2932L7.95281 18.2983C8.32649 18.672 8.93013 18.672 9.30381 18.2983L19.441 8.16104C19.8147 7.78736 19.8147 7.18372 19.441 6.81004C19.0674 6.43637 18.4637 6.43637 18.0901 6.81004L8.62352 16.267Z" fill="CURRENTcOLOR"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_95_1591">
+                                <rect width="22.9956" height="22.9956" fill="white" transform="translate(0 0.773682)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg></div>
+                        <div>Includes 4 facials + reusable brush</div>
+                      </li>
+                      <li class="list__item cc-gap cc-md">
+                        <div class="list-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_95_1591)">
+                              <path d="M8.62352 16.267L5.29873 12.9422C4.92505 12.5685 4.32142 12.5685 3.94774 12.9422C3.57406 13.3159 3.57406 13.9195 3.94774 14.2932L7.95281 18.2983C8.32649 18.672 8.93013 18.672 9.30381 18.2983L19.441 8.16104C19.8147 7.78736 19.8147 7.18372 19.441 6.81004C19.0674 6.43637 18.4637 6.43637 18.0901 6.81004L8.62352 16.267Z" fill="CURRENTcOLOR"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_95_1591">
+                                <rect width="22.9956" height="22.9956" fill="white" transform="translate(0 0.773682)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg></div>
+                        <div>Hypoallergenic</div>
+                      </li>
+                      <li class="list__item cc-gap cc-md">
+                        <div class="list-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_95_1591)">
+                              <path d="M8.62352 16.267L5.29873 12.9422C4.92505 12.5685 4.32142 12.5685 3.94774 12.9422C3.57406 13.3159 3.57406 13.9195 3.94774 14.2932L7.95281 18.2983C8.32649 18.672 8.93013 18.672 9.30381 18.2983L19.441 8.16104C19.8147 7.78736 19.8147 7.18372 19.441 6.81004C19.0674 6.43637 18.4637 6.43637 18.0901 6.81004L8.62352 16.267Z" fill="CURRENTcOLOR"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_95_1591">
+                                <rect width="22.9956" height="22.9956" fill="white" transform="translate(0 0.773682)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg></div>
+                        <div>Non-Comedogenic</div>
+                      </li>
+                      <li class="list__item cc-gap cc-md">
+                        <div class="list-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_95_1591)">
+                              <path d="M8.62352 16.267L5.29873 12.9422C4.92505 12.5685 4.32142 12.5685 3.94774 12.9422C3.57406 13.3159 3.57406 13.9195 3.94774 14.2932L7.95281 18.2983C8.32649 18.672 8.93013 18.672 9.30381 18.2983L19.441 8.16104C19.8147 7.78736 19.8147 7.18372 19.441 6.81004C19.0674 6.43637 18.4637 6.43637 18.0901 6.81004L8.62352 16.267Z" fill="CURRENTcOLOR"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_95_1591">
+                                <rect width="22.9956" height="22.9956" fill="white" transform="translate(0 0.773682)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg></div>
+                        <div>Safe for sensitive skin</div>
+                      </li>
+                      <li class="list__item cc-gap cc-md">
+                        <div class="list-icon w-embed"><svg width="100%" height="100%" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_95_1591)">
+                              <path d="M8.62352 16.267L5.29873 12.9422C4.92505 12.5685 4.32142 12.5685 3.94774 12.9422C3.57406 13.3159 3.57406 13.9195 3.94774 14.2932L7.95281 18.2983C8.32649 18.672 8.93013 18.672 9.30381 18.2983L19.441 8.16104C19.8147 7.78736 19.8147 7.18372 19.441 6.81004C19.0674 6.43637 18.4637 6.43637 18.0901 6.81004L8.62352 16.267Z" fill="CURRENTcOLOR"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_95_1591">
+                                <rect width="22.9956" height="22.9956" fill="white" transform="translate(0 0.773682)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg></div>
+                        <div>Formulated without harmful chemicals or even fragrance</div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="cta-blank">
-              <div class="cta-message">This is a one-time offer. Available on this page ONLY.</div><button data-action="submit" data-button-type="primary" class="button cc-2xl">
-                <div data-button="content" class="button_content">
-                  <div id="cta_text">YES! ADD TO MY ORDER</div>
-                </div><svg viewBox="0 0 50 50" data-button="spinner" class="button_spinner">
-                  <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
-                  <circle cx="25" cy="25" r="22.5" class="line"></circle>
-                </svg>
+              <div class="cta-blank">
+                <div class="cta-message">This is a one-time offer. Available on this page ONLY.</div><button data-action="submit" data-button-type="primary" class="button cc-2xl">
+                  <div data-button="content" class="button_content">
+                    <div id="cta_text">YES! ADD TO MY ORDER</div>
+                  </div><svg viewBox="0 0 50 50" data-button="spinner" class="button_spinner">
+                    <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
+                    <circle cx="25" cy="25" r="22.5" class="line"></circle>
+                  </svg>
 
-              </button>
-              <div>By adding this product to your order, you will be billed instantly.</div>
-              <a data-os-next-url="/lem/receipt" data-os-upsell="decline" href="#" class="upsell-link w-inline-block">
-                <div>No thank you, I don't want the best results.</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section cc-custom">
-        <div class="container cc-medium">
-          <div class="content-wrapper sm">
-            <div class="headline-component">
-              <h2 class="display-xl">Pain-Free &amp; Easy to Use</h2>
-            </div>
-            <div class="feature-flex">
-              <div class="feature_grid-item cc-stacked">
-                <div class="feature_grid-item--image cc-stack"><img src="../../images/1x1.svg" loading="lazy" alt="" class="image-cover"></div>
-                <div class="feature-grid__item-content cc-stack">
-                  <div class="step-text">STEP 3</div>
-                  <div class="display-sm">Step Title</div>
-                  <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-              </div>
-              <div class="feature_grid-item cc-stacked">
-                <div class="feature_grid-item--image cc-stack"><img src="../../images/1x1.svg" loading="lazy" alt="" class="image-cover"></div>
-                <div class="feature-grid__item-content cc-stack">
-                  <div class="step-text">STEP 3</div>
-                  <div class="display-sm">Step Title</div>
-                  <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-              </div>
-              <div class="feature_grid-item cc-stacked">
-                <div class="feature_grid-item--image cc-stack"><img src="../../images/1x1.svg" loading="lazy" alt="" class="image-cover"></div>
-                <div class="feature-grid__item-content cc-stack">
-                  <div class="step-text">STEP 3</div>
-                  <div class="display-sm">Step Title</div>
-                  <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-              </div>
-              <div class="feature_grid-item cc-stacked">
-                <div class="feature_grid-item--image cc-stack"><img src="../../images/1x1.svg" loading="lazy" alt="" class="image-cover"></div>
-                <div class="feature-grid__item-content cc-stack">
-                  <div class="step-text">STEP 3</div>
-                  <div class="display-sm">Step Title</div>
-                  <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-              </div>
-              <div class="feature_grid-item cc-stacked">
-                <div class="feature_grid-item--image cc-stack"><img src="../../images/1x1.svg" loading="lazy" alt="" class="image-cover"></div>
-                <div class="feature-grid__item-content cc-stack">
-                  <div class="step-text">STEP 3</div>
-                  <div class="display-sm">Step Title</div>
-                  <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
+                </button>
+                <div>By adding this product to your order, you will be billed instantly.</div>
+                <a data-os-next-url="/lem/receipt" data-os-upsell="decline" href="#" class="upsell-link w-inline-block">
+                  <div>No thank you, I don't want the best results.</div>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section cc-custom color-surface">
-        <div class="container cc-medium">
-          <div class="content-wrapper sm">
-            <div class="headline-component">
-              <h2 class="display-xl">Ingredients You Can Trust</h2>
-            </div>
-            <div data-pb-slot="content" class="u-grid-2col-standard">
-              <div data-pb-element="image-column" class="feature_col">
-                <div class="cc-sticky">
-                  <div class="image-wrapper cc-3x4"><img width="500" height="500" alt="" src="../../images/1x1.svg" loading="eager" data-pb-element="image" class="image"></div>
+        </section>
+        <section class="section cc-custom">
+          <div class="container cc-medium">
+            <div class="content-wrapper sm">
+              <div class="headline-component">
+                <h2 class="display-xl">Pain-Free &amp; Easy to Use</h2>
+              </div>
+              <div class="feature-flex">
+                <div class="feature_grid-item cc-stacked">
+                  <div class="feature_grid-item--image cc-stack"><img src="../../images/1x1.svg" loading="lazy" alt="" class="image-cover"></div>
+                  <div class="feature-grid__item-content cc-stack">
+                    <div class="step-text">STEP 3</div>
+                    <div class="display-sm">Step Title</div>
+                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+                <div class="feature_grid-item cc-stacked">
+                  <div class="feature_grid-item--image cc-stack"><img src="../../images/1x1.svg" loading="lazy" alt="" class="image-cover"></div>
+                  <div class="feature-grid__item-content cc-stack">
+                    <div class="step-text">STEP 3</div>
+                    <div class="display-sm">Step Title</div>
+                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+                <div class="feature_grid-item cc-stacked">
+                  <div class="feature_grid-item--image cc-stack"><img src="../../images/1x1.svg" loading="lazy" alt="" class="image-cover"></div>
+                  <div class="feature-grid__item-content cc-stack">
+                    <div class="step-text">STEP 3</div>
+                    <div class="display-sm">Step Title</div>
+                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+                <div class="feature_grid-item cc-stacked">
+                  <div class="feature_grid-item--image cc-stack"><img src="../../images/1x1.svg" loading="lazy" alt="" class="image-cover"></div>
+                  <div class="feature-grid__item-content cc-stack">
+                    <div class="step-text">STEP 3</div>
+                    <div class="display-sm">Step Title</div>
+                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+                <div class="feature_grid-item cc-stacked">
+                  <div class="feature_grid-item--image cc-stack"><img src="../../images/1x1.svg" loading="lazy" alt="" class="image-cover"></div>
+                  <div class="feature-grid__item-content cc-stack">
+                    <div class="step-text">STEP 3</div>
+                    <div class="display-sm">Step Title</div>
+                    <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
                 </div>
               </div>
-              <div data-pb-element="features-column" id="w-node-_672614df-089f-434b-4bf0-abef6a48c62d-cfc04fa0" class="feature_col">
-                <div pb-id="AC05" pb-component="accordion" class="accordion">
-
-                  <div pb-accordion-initial="none" pb-accordion-element="group" pb-accordion-single="true" class="accordion__wrapper cc-huge">
-                    <div pb-accordion-element="accordion" class="accordion__item"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
-                        <div class="accordion__title-wrapper cc-huge">
-                          <div class="accordion-icon"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                          <div class="accordion_title">Beta-Glucan</div>
-                        </div>
-                        <div pb-accordion-element="arrow" class="accordion_icon-wrapper">
-                          <div class="accordion_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 opacity-60 transition-transform duration-200" aria-hidden="true">
-                              <path d="m6 9 6 6 6-6"></path>
-                            </svg></div>
-                        </div>
-                      </button>
-                      <div id="accordion-2-content-1" pb-accordion-element="content" class="accordion__item-wrapper is-active-accordion">
-                        <div class="accordion__item-body">
-                          <div class="accordion__text">Text about the ingredient<br></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div pb-accordion-element="accordion" class="accordion__item is-active-accordion"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
-                        <div class="accordion__title-wrapper cc-huge">
-                          <div class="accordion-icon"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                          <div class="accordion_title">Palmitoyl, Tripeptide &amp; Tetrapeptide</div>
-                        </div>
-                        <div pb-accordion-element="arrow" class="accordion_icon-wrapper">
-                          <div class="accordion_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 opacity-60 transition-transform duration-200" aria-hidden="true">
-                              <path d="m6 9 6 6 6-6"></path>
-                            </svg></div>
-                        </div>
-                      </button>
-                      <div id="accordion-2-content-1" pb-accordion-element="content" class="accordion__item-wrapper is-active-accordion">
-                        <div class="accordion__item-body">
-                          <div class="accordion__text">Text about the ingredient<br></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div pb-accordion-element="accordion" class="accordion__item is-active-accordion"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
-                        <div class="accordion__title-wrapper cc-huge">
-                          <div class="accordion-icon"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                          <div class="accordion_title">Nicotinoyl Dipeptide 22+23</div>
-                        </div>
-                        <div pb-accordion-element="arrow" class="accordion_icon-wrapper">
-                          <div class="accordion_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 opacity-60 transition-transform duration-200" aria-hidden="true">
-                              <path d="m6 9 6 6 6-6"></path>
-                            </svg></div>
-                        </div>
-                      </button>
-                      <div id="accordion-2-content-1" pb-accordion-element="content" class="accordion__item-wrapper is-active-accordion">
-                        <div class="accordion__item-body">
-                          <div class="accordion__text">Text about the ingredient<br></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div pb-accordion-element="accordion" class="accordion__item is-active-accordion"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
-                        <div class="accordion__title-wrapper cc-huge">
-                          <div class="accordion-icon"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                          <div class="accordion_title">Acetyl Hexapeptide-8</div>
-                        </div>
-                        <div pb-accordion-element="arrow" class="accordion_icon-wrapper">
-                          <div class="accordion_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 opacity-60 transition-transform duration-200" aria-hidden="true">
-                              <path d="m6 9 6 6 6-6"></path>
-                            </svg></div>
-                        </div>
-                      </button>
-                      <div id="accordion-2-content-1" pb-accordion-element="content" class="accordion__item-wrapper is-active-accordion">
-                        <div class="accordion__item-body">
-                          <div class="accordion__text">Text about the ingredient<br></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div pb-accordion-element="accordion" class="accordion__item is-active-accordion"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
-                        <div class="accordion__title-wrapper cc-huge">
-                          <div class="accordion-icon"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
-                          <div class="accordion_title">Dipeptide 10+15</div>
-                        </div>
-                        <div pb-accordion-element="arrow" class="accordion_icon-wrapper">
-                          <div class="accordion_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 opacity-60 transition-transform duration-200" aria-hidden="true">
-                              <path d="m6 9 6 6 6-6"></path>
-                            </svg></div>
-                        </div>
-                      </button>
-                      <div id="accordion-2-content-1" pb-accordion-element="content" class="accordion__item-wrapper is-active-accordion">
-                        <div class="accordion__item-body">
-                          <div class="accordion__text">Text about the ingredient<br></div>
-                        </div>
-                      </div>
-                    </div>
+            </div>
+          </div>
+        </section>
+        <section class="section cc-custom color-surface">
+          <div class="container cc-medium">
+            <div class="content-wrapper sm">
+              <div class="headline-component">
+                <h2 class="display-xl">Ingredients You Can Trust</h2>
+              </div>
+              <div data-pb-slot="content" class="u-grid-2col-standard">
+                <div data-pb-element="image-column" class="feature_col">
+                  <div class="cc-sticky">
+                    <div class="image-wrapper cc-3x4"><img width="500" height="500" alt="" src="../../images/1x1.svg" loading="eager" data-pb-element="image" class="image"></div>
                   </div>
-                  <div class="custom-code w-embed w-script">
-                    <script>
+                </div>
+                <div data-pb-element="features-column" id="w-node-_672614df-089f-434b-4bf0-abef6a48c62d-cfc04fa0" class="feature_col">
+                  <div pb-id="AC05" pb-component="accordion" class="accordion">
+
+                    <div pb-accordion-initial="none" pb-accordion-element="group" pb-accordion-single="true" class="accordion__wrapper cc-huge">
+                      <div pb-accordion-element="accordion" class="accordion__item"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
+                          <div class="accordion__title-wrapper cc-huge">
+                            <div class="accordion-icon"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                            <div class="accordion_title">Beta-Glucan</div>
+                          </div>
+                          <div pb-accordion-element="arrow" class="accordion_icon-wrapper">
+                            <div class="accordion_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 opacity-60 transition-transform duration-200" aria-hidden="true">
+                                <path d="m6 9 6 6 6-6"></path>
+                              </svg></div>
+                          </div>
+                        </button>
+                        <div id="accordion-2-content-1" pb-accordion-element="content" class="accordion__item-wrapper is-active-accordion">
+                          <div class="accordion__item-body">
+                            <div class="accordion__text">Text about the ingredient<br></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div pb-accordion-element="accordion" class="accordion__item is-active-accordion"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
+                          <div class="accordion__title-wrapper cc-huge">
+                            <div class="accordion-icon"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                            <div class="accordion_title">Palmitoyl, Tripeptide &amp; Tetrapeptide</div>
+                          </div>
+                          <div pb-accordion-element="arrow" class="accordion_icon-wrapper">
+                            <div class="accordion_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 opacity-60 transition-transform duration-200" aria-hidden="true">
+                                <path d="m6 9 6 6 6-6"></path>
+                              </svg></div>
+                          </div>
+                        </button>
+                        <div id="accordion-2-content-1" pb-accordion-element="content" class="accordion__item-wrapper is-active-accordion">
+                          <div class="accordion__item-body">
+                            <div class="accordion__text">Text about the ingredient<br></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div pb-accordion-element="accordion" class="accordion__item is-active-accordion"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
+                          <div class="accordion__title-wrapper cc-huge">
+                            <div class="accordion-icon"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                            <div class="accordion_title">Nicotinoyl Dipeptide 22+23</div>
+                          </div>
+                          <div pb-accordion-element="arrow" class="accordion_icon-wrapper">
+                            <div class="accordion_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 opacity-60 transition-transform duration-200" aria-hidden="true">
+                                <path d="m6 9 6 6 6-6"></path>
+                              </svg></div>
+                          </div>
+                        </button>
+                        <div id="accordion-2-content-1" pb-accordion-element="content" class="accordion__item-wrapper is-active-accordion">
+                          <div class="accordion__item-body">
+                            <div class="accordion__text">Text about the ingredient<br></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div pb-accordion-element="accordion" class="accordion__item is-active-accordion"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
+                          <div class="accordion__title-wrapper cc-huge">
+                            <div class="accordion-icon"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                            <div class="accordion_title">Acetyl Hexapeptide-8</div>
+                          </div>
+                          <div pb-accordion-element="arrow" class="accordion_icon-wrapper">
+                            <div class="accordion_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 opacity-60 transition-transform duration-200" aria-hidden="true">
+                                <path d="m6 9 6 6 6-6"></path>
+                              </svg></div>
+                          </div>
+                        </button>
+                        <div id="accordion-2-content-1" pb-accordion-element="content" class="accordion__item-wrapper is-active-accordion">
+                          <div class="accordion__item-body">
+                            <div class="accordion__text">Text about the ingredient<br></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div pb-accordion-element="accordion" class="accordion__item is-active-accordion"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
+                          <div class="accordion__title-wrapper cc-huge">
+                            <div class="accordion-icon"><img src="../../images/1x1.svg" loading="lazy" alt="" class="seenon-icon"></div>
+                            <div class="accordion_title">Dipeptide 10+15</div>
+                          </div>
+                          <div pb-accordion-element="arrow" class="accordion_icon-wrapper">
+                            <div class="accordion_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 opacity-60 transition-transform duration-200" aria-hidden="true">
+                                <path d="m6 9 6 6 6-6"></path>
+                              </svg></div>
+                          </div>
+                        </button>
+                        <div id="accordion-2-content-1" pb-accordion-element="content" class="accordion__item-wrapper is-active-accordion">
+                          <div class="accordion__item-body">
+                            <div class="accordion__text">Text about the ingredient<br></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-code w-embed w-script">
+                      <script>
                         class PBAccordion {
                           constructor() {
                             this.cleanupInitialState();
@@ -758,532 +766,557 @@
                         // Initialize
                         new PBAccordion();
                       </script>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container cc-medium">
-          <div class="content-wrapper sm">
-            <div class="headline-component">
-              <h2 class="display-xl">The Unmatched Standard for Everything We Make</h2>
-            </div>
-            <div class="u-grid-4col-wide">
-              <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
-                <div>Feature Text</div>
+        </section>
+        <section class="section">
+          <div class="container cc-medium">
+            <div class="content-wrapper sm">
+              <div class="headline-component">
+                <h2 class="display-xl">The Unmatched Standard for Everything We Make</h2>
               </div>
-              <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
-                <div>Feature Text</div>
-              </div>
-              <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
-                <div>Feature Text</div>
-              </div>
-              <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
-                <div>Feature Text</div>
-              </div>
-              <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
-                <div>Feature Text</div>
-              </div>
-              <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
-                <div>Feature Text</div>
-              </div>
-              <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
-                <div>Feature Text</div>
-              </div>
-              <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
-                <div>Feature Text</div>
+              <div class="u-grid-4col-wide">
+                <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
+                  <div>Feature Text</div>
+                </div>
+                <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
+                  <div>Feature Text</div>
+                </div>
+                <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
+                  <div>Feature Text</div>
+                </div>
+                <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
+                  <div>Feature Text</div>
+                </div>
+                <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
+                  <div>Feature Text</div>
+                </div>
+                <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
+                  <div>Feature Text</div>
+                </div>
+                <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
+                  <div>Feature Text</div>
+                </div>
+                <div class="feature_card"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="next-icon cc-5em">
+                  <div>Feature Text</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container cc-medium">
-          <div class="cta-wrap">
-            <div class="cta-col">
-              <div class="cta-image__wrapper"><img loading="lazy" src="../../images/1x1.svg" alt="" class="image-wrap"></div>
-              <div class="cta-right">
-                <div class="u-vertical-wrap cc-center">
-                  <div class="review_component cc-sm">
-                    <div class="review_component-wrapper">
-                      <div class="review_stars-wrapper">
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
+        </section>
+        <section class="section">
+          <div class="container cc-medium">
+            <div class="cta-wrap">
+              <div class="cta-col">
+                <div class="cta-image__wrapper"><img loading="lazy" src="../../images/1x1.svg" alt="" class="image-wrap"></div>
+                <div class="cta-right">
+                  <div class="u-vertical-wrap cc-center">
+                    <div class="review_component cc-sm">
+                      <div class="review_component-wrapper">
+                        <div class="review_stars-wrapper">
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                        </div>
+                        <div class="u-font-bold">Rated 4.9 out of 5</div>
                       </div>
-                      <div class="u-font-bold">Rated 4.9 out of 5</div>
                     </div>
-                  </div>
-                  <h2 class="display-lg">All-In-One Facial® Set (4 Facials + Brush)</h2>
-                  <div class="div-block-1618">
-                    <div class="cc-compare">$118</div>
-                    <div>$99</div>
-                    <div class="exclusive-deal-badge">
-                      <div>EXCLUSIVE DEAL</div>
+                    <h2 class="display-lg">All-In-One Facial® Set (4 Facials + Brush)</h2>
+                    <div class="div-block-1618">
+                      <div class="cc-compare">$118</div>
+                      <div>$99</div>
+                      <div class="exclusive-deal-badge">
+                        <div>EXCLUSIVE DEAL</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="cta-blank">
-              <div class="cta-message">This is a one-time offer. Available on this page ONLY.</div><button data-action="submit" data-button-type="primary" class="button cc-2xl">
-                <div data-button="content" class="button_content">
-                  <div id="cta_text">YES! ADD TO MY ORDER</div>
-                </div><svg viewBox="0 0 50 50" data-button="spinner" class="button_spinner">
-                  <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
-                  <circle cx="25" cy="25" r="22.5" class="line"></circle>
-                </svg>
+              <div class="cta-blank">
+                <div class="cta-message">This is a one-time offer. Available on this page ONLY.</div><button data-action="submit" data-button-type="primary" class="button cc-2xl">
+                  <div data-button="content" class="button_content">
+                    <div id="cta_text">YES! ADD TO MY ORDER</div>
+                  </div><svg viewBox="0 0 50 50" data-button="spinner" class="button_spinner">
+                    <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
+                    <circle cx="25" cy="25" r="22.5" class="line"></circle>
+                  </svg>
 
-              </button>
-              <div>By adding this product to your order, you will be billed instantly.</div>
-              <a data-os-next-url="/lem/receipt" data-os-upsell="decline" href="#" class="upsell-link w-inline-block">
-                <div>No thank you, I don't want the best results.</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container cc-medium">
-          <div class="content-wrapper sm">
-            <div class="reviews-list">
-              <div class="reviews-list__item">
-                <div class="reviews-list__item-left">
-                  <div class="reviews-list__left-imgwrapper"><img loading="lazy" src="../../images/1x1.svg" alt=""></div>
-                  <div>
-                    <div class="review-label">Review for:</div>
-                    <div>Product Name</div>
-                  </div>
-                </div>
-                <div class="reviews-list__item-right">
-                  <div class="review-content">
-                    <div class="raging-srap">
-                      <div class="review_stars-wrapper">
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                      </div>
-                    </div>
-                    <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
-                    <div class="reviews-list__author">
-                      <div class="review-author">Lien V.</div>
-                      <div class="testimonial1_veified">
-                        <div class="testimonial1_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
-                            <g data-name="Grupo 9174">
-                              <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" style="fill: currentColor"></path>
-                              <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" style="fill: white"></path>
-                            </g>
-                          </svg></div>
-                        <div>VERIFIED BUYER</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="reviews-list__item">
-                <div class="reviews-list__item-left">
-                  <div class="reviews-list__left-imgwrapper"><img loading="lazy" src="../../images/1x1.svg" alt=""></div>
-                  <div>
-                    <div class="review-label">Review for:</div>
-                    <div>Product Name</div>
-                  </div>
-                </div>
-                <div class="reviews-list__item-right">
-                  <div class="review-content">
-                    <div class="raging-srap">
-                      <div class="review_stars-wrapper">
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                      </div>
-                    </div>
-                    <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
-                    <div class="reviews-list__author">
-                      <div class="review-author">Lien V.</div>
-                      <div class="testimonial1_veified">
-                        <div class="testimonial1_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
-                            <g data-name="Grupo 9174">
-                              <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" style="fill: currentColor"></path>
-                              <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" style="fill: white"></path>
-                            </g>
-                          </svg></div>
-                        <div>VERIFIED BUYER</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="reviews-list__item">
-                <div class="reviews-list__item-left">
-                  <div class="reviews-list__left-imgwrapper"><img loading="lazy" src="../../images/1x1.svg" alt=""></div>
-                  <div>
-                    <div class="review-label">Review for:</div>
-                    <div>Product Name</div>
-                  </div>
-                </div>
-                <div class="reviews-list__item-right">
-                  <div class="review-content">
-                    <div class="raging-srap">
-                      <div class="review_stars-wrapper">
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                      </div>
-                    </div>
-                    <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
-                    <div class="reviews-list__author">
-                      <div class="review-author">Lien V.</div>
-                      <div class="testimonial1_veified">
-                        <div class="testimonial1_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
-                            <g data-name="Grupo 9174">
-                              <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" style="fill: currentColor"></path>
-                              <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" style="fill: white"></path>
-                            </g>
-                          </svg></div>
-                        <div>VERIFIED BUYER</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="reviews-list__item">
-                <div class="reviews-list__item-left">
-                  <div class="reviews-list__left-imgwrapper"><img loading="lazy" src="../../images/1x1.svg" alt=""></div>
-                  <div>
-                    <div class="review-label">Review for:</div>
-                    <div>Product Name</div>
-                  </div>
-                </div>
-                <div class="reviews-list__item-right">
-                  <div class="review-content">
-                    <div class="raging-srap">
-                      <div class="review_stars-wrapper">
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                      </div>
-                    </div>
-                    <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
-                    <div class="reviews-list__author">
-                      <div class="review-author">Lien V.</div>
-                      <div class="testimonial1_veified">
-                        <div class="testimonial1_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
-                            <g data-name="Grupo 9174">
-                              <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" style="fill: currentColor"></path>
-                              <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" style="fill: white"></path>
-                            </g>
-                          </svg></div>
-                        <div>VERIFIED BUYER</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="reviews-list__item">
-                <div class="reviews-list__item-left">
-                  <div class="reviews-list__left-imgwrapper"><img loading="lazy" src="../../images/1x1.svg" alt=""></div>
-                  <div>
-                    <div class="review-label">Review for:</div>
-                    <div>Product Name</div>
-                  </div>
-                </div>
-                <div class="reviews-list__item-right">
-                  <div class="review-content">
-                    <div class="raging-srap">
-                      <div class="review_stars-wrapper">
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                        <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                            <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
-                          </svg></div>
-                      </div>
-                    </div>
-                    <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
-                    <div class="reviews-list__author">
-                      <div class="review-author">Lien V.</div>
-                      <div class="testimonial1_veified">
-                        <div class="testimonial1_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
-                            <g data-name="Grupo 9174">
-                              <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" style="fill: currentColor"></path>
-                              <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" style="fill: white"></path>
-                            </g>
-                          </svg></div>
-                        <div>VERIFIED BUYER</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </button>
+                <div>By adding this product to your order, you will be billed instantly.</div>
+                <a data-os-next-url="/lem/receipt" data-os-upsell="decline" href="#" class="upsell-link w-inline-block">
+                  <div>No thank you, I don't want the best results.</div>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <footer class="footer_section">
-        <div class="container">
-          <div class="footer_layout">
-            <div class="footer_copy-info">
-              <div class="footer_link-wrapper">
-                <a href="#" class="footer_legal-link">Shipping Policy</a>
-                <a href="#" class="footer_legal-link">Refund Policy</a>
-                <a href="#" class="footer_legal-link">Privacy Policy</a>
-                <a href="#" class="footer_legal-link">Terms of Service</a>
+        </section>
+        <section class="section">
+          <div class="container cc-medium">
+            <div class="content-wrapper sm">
+              <div class="reviews-list">
+                <div class="reviews-list__item">
+                  <div class="reviews-list__item-left">
+                    <div class="reviews-list__left-imgwrapper"><img loading="lazy" src="../../images/1x1.svg" alt=""></div>
+                    <div>
+                      <div class="review-label">Review for:</div>
+                      <div>Product Name</div>
+                    </div>
+                  </div>
+                  <div class="reviews-list__item-right">
+                    <div class="review-content">
+                      <div class="raging-srap">
+                        <div class="review_stars-wrapper">
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                        </div>
+                      </div>
+                      <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                      <div class="reviews-list__author">
+                        <div class="review-author">Lien V.</div>
+                        <div class="testimonial1_veified">
+                          <div class="testimonial1_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                              <g data-name="Grupo 9174">
+                                <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" style="fill: currentColor"></path>
+                                <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" style="fill: white"></path>
+                              </g>
+                            </svg></div>
+                          <div>VERIFIED BUYER</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-list__item">
+                  <div class="reviews-list__item-left">
+                    <div class="reviews-list__left-imgwrapper"><img loading="lazy" src="../../images/1x1.svg" alt=""></div>
+                    <div>
+                      <div class="review-label">Review for:</div>
+                      <div>Product Name</div>
+                    </div>
+                  </div>
+                  <div class="reviews-list__item-right">
+                    <div class="review-content">
+                      <div class="raging-srap">
+                        <div class="review_stars-wrapper">
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                        </div>
+                      </div>
+                      <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                      <div class="reviews-list__author">
+                        <div class="review-author">Lien V.</div>
+                        <div class="testimonial1_veified">
+                          <div class="testimonial1_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                              <g data-name="Grupo 9174">
+                                <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" style="fill: currentColor"></path>
+                                <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" style="fill: white"></path>
+                              </g>
+                            </svg></div>
+                          <div>VERIFIED BUYER</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-list__item">
+                  <div class="reviews-list__item-left">
+                    <div class="reviews-list__left-imgwrapper"><img loading="lazy" src="../../images/1x1.svg" alt=""></div>
+                    <div>
+                      <div class="review-label">Review for:</div>
+                      <div>Product Name</div>
+                    </div>
+                  </div>
+                  <div class="reviews-list__item-right">
+                    <div class="review-content">
+                      <div class="raging-srap">
+                        <div class="review_stars-wrapper">
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                        </div>
+                      </div>
+                      <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                      <div class="reviews-list__author">
+                        <div class="review-author">Lien V.</div>
+                        <div class="testimonial1_veified">
+                          <div class="testimonial1_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                              <g data-name="Grupo 9174">
+                                <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" style="fill: currentColor"></path>
+                                <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" style="fill: white"></path>
+                              </g>
+                            </svg></div>
+                          <div>VERIFIED BUYER</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-list__item">
+                  <div class="reviews-list__item-left">
+                    <div class="reviews-list__left-imgwrapper"><img loading="lazy" src="../../images/1x1.svg" alt=""></div>
+                    <div>
+                      <div class="review-label">Review for:</div>
+                      <div>Product Name</div>
+                    </div>
+                  </div>
+                  <div class="reviews-list__item-right">
+                    <div class="review-content">
+                      <div class="raging-srap">
+                        <div class="review_stars-wrapper">
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                        </div>
+                      </div>
+                      <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                      <div class="reviews-list__author">
+                        <div class="review-author">Lien V.</div>
+                        <div class="testimonial1_veified">
+                          <div class="testimonial1_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                              <g data-name="Grupo 9174">
+                                <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" style="fill: currentColor"></path>
+                                <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" style="fill: white"></path>
+                              </g>
+                            </svg></div>
+                          <div>VERIFIED BUYER</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews-list__item">
+                  <div class="reviews-list__item-left">
+                    <div class="reviews-list__left-imgwrapper"><img loading="lazy" src="../../images/1x1.svg" alt=""></div>
+                    <div>
+                      <div class="review-label">Review for:</div>
+                      <div>Product Name</div>
+                    </div>
+                  </div>
+                  <div class="reviews-list__item-right">
+                    <div class="review-content">
+                      <div class="raging-srap">
+                        <div class="review_stars-wrapper">
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                          <div class="review_component-star w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                              <path fill="currentColor" fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007l5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527l1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354L7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273l-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433l2.082-5.006Z" clip-rule="evenodd"></path>
+                            </svg></div>
+                        </div>
+                      </div>
+                      <div>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                      <div class="reviews-list__author">
+                        <div class="review-author">Lien V.</div>
+                        <div class="testimonial1_veified">
+                          <div class="testimonial1_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="16.566" height="16.566" viewBox="0 0 16.566 16.566">
+                              <g data-name="Grupo 9174">
+                                <path data-name="Trazado 113450" d="M10.5 0 8.283 1.423 6.063 0l-1.21 2.342-2.634-.123.123 2.633L0 6.063l1.423 2.22L0 10.5l2.342 1.211-.123 2.633 2.633-.123 1.21 2.342 2.219-1.423 2.219 1.425 1.211-2.342 2.633.123-.122-2.633 2.343-1.213-1.422-2.217 1.423-2.219-2.342-1.21.122-2.633-2.633.122z" style="fill: currentColor"></path>
+                                <path data-name="Icon awesome-check" d="M2.567 10.1.111 7.646a.378.378 0 0 1 0-.534l.534-.534a.378.378 0 0 1 .534 0l1.655 1.654 3.544-3.544a.378.378 0 0 1 .534 0l.534.534a.378.378 0 0 1 0 .534L3.1 10.1a.378.378 0 0 1-.533 0z" transform="translate(4.381 .966)" style="fill: white"></path>
+                              </g>
+                            </svg></div>
+                          <div>VERIFIED BUYER</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="text-xs">Copyright © 2025 Next Commerce</div>
             </div>
           </div>
-        </div>
-      </footer>
+        </section>
+        <footer class="footer_section">
+          <div class="container">
+            <div class="footer_layout">
+              <div class="footer_copy-info">
+                <div class="footer_link-wrapper">
+                  <a href="#" class="footer_legal-link">Shipping Policy</a>
+                  <a href="#" class="footer_legal-link">Refund Policy</a>
+                  <a href="#" class="footer_legal-link">Privacy Policy</a>
+                  <a href="#" class="footer_legal-link">Terms of Service</a>
+                </div>
+                <div class="text-xs">Copyright © 2025 Next Commerce</div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
-  </div>
 
 
-  <!-- Consolidated Custom CSS -->
-  <style>
-    [swiper="sw12"] .swiper-slide_image-wrap {
-    aspect-ratio: 1 / 1;
-    }
-    [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide {
-    filter: grayscale(100%);
-    transition: filter 0.4s ease;
-    cursor: pointer;
-    }
-    [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide:focus-visible {
-    border: 2px solid #000;
-    }
-    [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide.swiper-slide-thumb-active {
-    filter: grayscale(0);
-    }
-    [swiper="sw12"] [swiper="prev-button"].swiper-button-disabled,
-    [swiper="sw12"] [swiper="next-button"].swiper-button-disabled {
-    opacity: 0.5;
-    /* Reduce opacity to indicate it's inactive */
-    pointer-events: none;
-    /* Disable pointer events so it cannot be clicked */
-    cursor: default;
-    /* Change cursor to default */
-    filter: grayscale(100%);
-    /* Optional: Make it grayscale to reinforce inactive state */
-    transition: opacity 0.3s ease, filter 0.3s ease;
-    }
+    <!-- Consolidated Custom CSS -->
+    <style>
+      [swiper="sw12"] .swiper-slide_image-wrap {
+        aspect-ratio: 1 / 1;
+      }
 
-    /* Button base state */
-    [data-action="submit"] {
-    position: relative;
-    /* Prevent layout shifts */
-    min-width: 100px;
-    /* Adjust based on your needs */
-    min-height: 40px;
-    /* Adjust based on your needs */
-    }
-    /* Spinner container */
-    [data-button="spinner"] {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    pointer-events: none;
-    font-size: calc(2 * 1em);
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    color: inherit;
-    transition: opacity 0.2s ease;
-    }
-    /* Button content and icon */
-    [data-button="content"],
-    [data-button="icon"] {
-    transition: opacity 0.2s ease;
-    }
-    /* Loading state */
-    [data-action="submit"].is-submitting {
-    cursor: not-allowed;
-    }
-    [data-action="submit"].is-submitting [data-button="spinner"] {
-    opacity: 1;
-    }
-    [data-action="submit"].is-submitting [data-button="content"],
-    [data-action="submit"].is-submitting [data-button="icon"] {
-    opacity: 0;
-    }
-    /* Spinner elements */
-    [data-button="spinner"] .line {
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 6px;
-    stroke-linecap: round;
-    transform-origin: 50% 50%;
-    animation: spinner-arc 2156ms ease-in-out infinite,
-    spinner-rotate 1829ms linear infinite;
-    }
-    [data-button="spinner"] .ring {
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 6px;
-    opacity: 0.15;
-    }
-    /* Animations */
-    @keyframes spinner-rotate {
-    to {
-    transform: rotate(360deg);
-    }
-    }
-    @keyframes spinner-arc {
-    0% {
-    stroke-dasharray: 0 150;
-    stroke-dashoffset: 0;
-    }
-    100% {
-    stroke-dasharray: 100 150;
-    stroke-dashoffset: -140;
-    }
-    }
+      [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide {
+        filter: grayscale(100%);
+        transition: filter 0.4s ease;
+        cursor: pointer;
+      }
 
-    [pb-accordion-element="content"] {
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-    display: none;
-    /* Faster transitions */
-    transition:
-    max-height 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.15s ease-out,
-    visibility 0s linear 0.2s;
-    /* Optimize rendering */
-    will-change: max-height, opacity;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    }
-    [pb-accordion-element="content"].is-active-accordion {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-    transition:
-    max-height 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.15s ease-out,
-    visibility 0s linear 0s;
-    }
-    [pb-accordion-element="arrow"] {
-    transition: transform 0.15s ease-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate3d(0, 0, 0);
-    }
-    [pb-accordion-element="arrow"].is-active-accordion {
-    transform: rotate(180deg) translate3d(0, 0, 0);
-    }
-    [pb-accordion-element="plus"] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-    [pb-accordion-element="plus"] svg {
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translate3d(0, 0, 0);
-    }
-    [pb-accordion-element="plus"] .vertical {
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
-    }
-    [pb-accordion-element="plus"].is-active-accordion .vertical {
-    transform: scaleY(0);
-    }
-    [pb-accordion-element="plus"]:hover {
-    opacity: 0.8;
-    }
-    [pb-accordion-element="trigger"]:focus {
-    outline: 2px solid #fff;
-    outline-offset: 2px;
-    border-radius: 4px;
-    }
-    [pb-accordion-element="trigger"]:focus:not(:focus-visible) {
-    outline: none;
-    }
-    @media (prefers-reduced-motion: reduce) {
-    [pb-accordion-element="content"],
-    [pb-accordion-element="arrow"],
-    [pb-accordion-element="plus"] svg,
-    [pb-accordion-element="plus"] .vertical {
-    transition: none;
-    }
-    }
+      [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide:focus-visible {
+        border: 2px solid #000;
+      }
 
-  </style>
+      [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide.swiper-slide-thumb-active {
+        filter: grayscale(0);
+      }
 
-</body>
+      [swiper="sw12"] [swiper="prev-button"].swiper-button-disabled,
+      [swiper="sw12"] [swiper="next-button"].swiper-button-disabled {
+        opacity: 0.5;
+        /* Reduce opacity to indicate it's inactive */
+        pointer-events: none;
+        /* Disable pointer events so it cannot be clicked */
+        cursor: default;
+        /* Change cursor to default */
+        filter: grayscale(100%);
+        /* Optional: Make it grayscale to reinforce inactive state */
+        transition: opacity 0.3s ease, filter 0.3s ease;
+      }
+
+      /* Button base state */
+      [data-action="submit"] {
+        position: relative;
+        /* Prevent layout shifts */
+        min-width: 100px;
+        /* Adjust based on your needs */
+        min-height: 40px;
+        /* Adjust based on your needs */
+      }
+
+      /* Spinner container */
+      [data-button="spinner"] {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        pointer-events: none;
+        font-size: calc(2 * 1em);
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        color: inherit;
+        transition: opacity 0.2s ease;
+      }
+
+      /* Button content and icon */
+      [data-button="content"],
+      [data-button="icon"] {
+        transition: opacity 0.2s ease;
+      }
+
+      /* Loading state */
+      [data-action="submit"].is-submitting {
+        cursor: not-allowed;
+      }
+
+      [data-action="submit"].is-submitting [data-button="spinner"] {
+        opacity: 1;
+      }
+
+      [data-action="submit"].is-submitting [data-button="content"],
+      [data-action="submit"].is-submitting [data-button="icon"] {
+        opacity: 0;
+      }
+
+      /* Spinner elements */
+      [data-button="spinner"] .line {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 6px;
+        stroke-linecap: round;
+        transform-origin: 50% 50%;
+        animation: spinner-arc 2156ms ease-in-out infinite,
+          spinner-rotate 1829ms linear infinite;
+      }
+
+      [data-button="spinner"] .ring {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 6px;
+        opacity: 0.15;
+      }
+
+      /* Animations */
+      @keyframes spinner-rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spinner-arc {
+        0% {
+          stroke-dasharray: 0 150;
+          stroke-dashoffset: 0;
+        }
+
+        100% {
+          stroke-dasharray: 100 150;
+          stroke-dashoffset: -140;
+        }
+      }
+
+      [pb-accordion-element="content"] {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        /* Faster transitions */
+        transition:
+          max-height 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.15s ease-out,
+          visibility 0s linear 0.2s;
+        /* Optimize rendering */
+        will-change: max-height, opacity;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+      }
+
+      [pb-accordion-element="content"].is-active-accordion {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        transition:
+          max-height 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.15s ease-out,
+          visibility 0s linear 0s;
+      }
+
+      [pb-accordion-element="arrow"] {
+        transition: transform 0.15s ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate3d(0, 0, 0);
+      }
+
+      [pb-accordion-element="arrow"].is-active-accordion {
+        transform: rotate(180deg) translate3d(0, 0, 0);
+      }
+
+      [pb-accordion-element="plus"] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      [pb-accordion-element="plus"] svg {
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translate3d(0, 0, 0);
+      }
+
+      [pb-accordion-element="plus"] .vertical {
+        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-origin: center;
+      }
+
+      [pb-accordion-element="plus"].is-active-accordion .vertical {
+        transform: scaleY(0);
+      }
+
+      [pb-accordion-element="plus"]:hover {
+        opacity: 0.8;
+      }
+
+      [pb-accordion-element="trigger"]:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+
+      [pb-accordion-element="trigger"]:focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+
+        [pb-accordion-element="content"],
+        [pb-accordion-element="arrow"],
+        [pb-accordion-element="plus"] svg,
+        [pb-accordion-element="plus"] .vertical {
+          transition: none;
+        }
+      }
+
+    </style>
+  </body>
 </html>

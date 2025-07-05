@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Modal</title>
-  <meta content="Modal" property="og:title">
-  <meta content="Modal" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <head>
+    <meta charset="utf-8">
+    <title>Modal</title>
+    <meta content="Modal" property="og:title">
+    <meta content="Modal" property="twitter:title">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
-  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+    <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+    <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
 
-  <!-- Campaign Configuration -->
-  <script src="../../config.js"></script>
-  <!-- Campaign Loader Script -->
-  <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
-
-
-  <link href="../../css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="../../css/components.css" rel="stylesheet" type="text/css">
-  <link href="../../css/next-staging-core.css" rel="stylesheet" type="text/css">
-  <link href="../../css/custom.css" rel="stylesheet" type="text/css">
+    <!-- Campaign Configuration -->
+    <script src="../../config.js"></script>
+    <!-- Campaign Loader Script -->
+    <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
 
 
-  <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="../../images/webclip.png" rel="apple-touch-icon">
+    <link href="../../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../../css/components.css" rel="stylesheet" type="text/css">
+    <link href="../../css/next-staging-core.css" rel="stylesheet" type="text/css">
+    <link href="../../css/custom.css" rel="stylesheet" type="text/css">
 
 
-  <style>
+    <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../images/webclip.png" rel="apple-touch-icon">
+
+
+    <style>
       html:not(.next-display-ready) [data-next-await] {
         position: relative;
         overflow: hidden;
         border-color: transparent !important;
         box-shadow: none !important;
       }
+
       [data-next-await] * {
         opacity: 0;
         transition: opacity 0.2s ease;
       }
+
       [data-next-await]::before {
         content: '';
         position: absolute;
@@ -49,58 +51,70 @@
         z-index: 1;
         pointer-events: none;
       }
+
       @keyframes pulse-gray {
+
         0%,
         100% {
           background-color: #e0e0e0;
           opacity: 0.6;
         }
+
         50% {
           background-color: #f5f5f5;
           opacity: 0.8;
         }
       }
+
       html.next-display-ready [data-next-await] * {
         opacity: 1;
       }
+
       html.next-display-ready [data-next-await]::before {
         display: none;
       }
+
     </style>
 
-</head>
-<body>
-  <div class="w-embed">
-    <style>
+  </head>
+  <body>
+    <div class="w-embed">
+      <style>
         /* Base styling for the toggle system */
         html.wf-design-mode pageblock-modal[preview-modal="true"] [data-pb-modal="overlay"] {
           opacity: 1 !important;
           visibility: visible !important;
         }
+
         html.wf-design-mode pageblock-modal[preview-modal="true"] [data-pb-modal="sheet"] {
           opacity: 1 !important;
           visibility: visible !important;
         }
+
         /* Standard centered modal preview positioning */
         html.wf-design-mode pageblock-modal[preview-modal="true"]:not([data-variant="bottom-sheet"]):not([data-variant="side-panel"]):not([data-variant="left-panel"]) [data-pb-modal="sheet"] {
           transform: translate(-50%, -50%) !important;
         }
+
         /* Bottom sheet positioning */
         html.wf-design-mode pageblock-modal[preview-modal="true"][data-variant="bottom-sheet"] [data-pb-modal="sheet"] {
           transform: translateY(0) !important;
         }
+
         /* Side panel positioning */
         html.wf-design-mode pageblock-modal[preview-modal="true"][data-variant="side-panel"] [data-pb-modal="sheet"] {
           transform: translateX(0) !important;
         }
+
         /* Left panel positioning */
         html.wf-design-mode pageblock-modal[preview-modal="true"][data-variant="left-panel"] [data-pb-modal="sheet"] {
           transform: translateX(0) !important;
         }
+
       </style>
-  </div>
-  <div class="custom-code w-embed w-script">
-    <script>
+    </div>
+    <div class="custom-code w-embed w-script">
+      <script>
         /**
          * Enhanced Modal Utility
          * 
@@ -402,243 +416,243 @@
           });
         })();
       </script>
-  </div>
-  <div class="page-wrapper">
+    </div>
+    <div class="page-wrapper">
 
-    <main class="main-wrapper">
-      <div class="modal-wrapper">
-        <div class="modal_buttons-style">
-          <div>Animation Types</div>
-          <div class="modal-setup"><button data-pb-modal-trigger="demo-fade" class="button-modals">
-              <div>Fade</div>
-            </button><button data-pb-modal-trigger="demo-slide-up" class="button-modals">
-              <div>Slide Up</div>
-            </button><button data-pb-modal-trigger="demo-slide-down" class="button-modals">
-              <div>Slide Down</div>
-            </button><button data-pb-modal-trigger="demo-zoom" class="button-modals">
-              <div>Zoom</div>
-            </button><button data-pb-modal-trigger="demo-slide-right" class="button-modals">
-              <div>Slide Right</div>
-            </button><button data-pb-modal-trigger="demo-slide-left" class="button-modals">
-              <div>Slide Left</div>
-            </button></div>
-        </div>
-        <div class="modal_buttons-style">
-          <div>Variant Styles</div>
-          <div class="modal-setup"><button data-pb-modal-trigger="demo-bottom-sheet" class="button-modals">
-              <div>Bottom Sheet</div>
-            </button><button data-pb-modal-trigger="demo-side-panel" class="button-modals">
-              <div>Side Panel</div>
-            </button><button data-pb-modal-trigger="demo-left-panel" class="button-modals">
-              <div>Left Panel</div>
-            </button><button data-pb-modal-trigger="demo-mobile-full" class="button-modals">
-              <div>Mobile Fullscreen</div>
-            </button></div>
-        </div>
-      </div><pageblock-modal data-modal-id="demo-fade" data-animation="fade" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
-        <div data-pb-modal="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
-          <div class="pb-modal_content">
-            <div class="pb-modal_header">
-              <div class="pb-modal_header-content">
-                <div class="pb-modal_title">Your Modal Title</div>
-              </div><button data-pb-modal="close" role="button" class="pb-modal_button">
-                <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                  </svg></div>
-              </button>
-            </div>
-            <div class="pb-modal_info">
-              <div class="pb_styleguide-wrapper-ui cc-auto">
-                <div>Pageblock:Modal</div>
+      <main class="main-wrapper">
+        <div class="modal-wrapper">
+          <div class="modal_buttons-style">
+            <div>Animation Types</div>
+            <div class="modal-setup"><button data-pb-modal-trigger="demo-fade" class="button-modals">
+                <div>Fade</div>
+              </button><button data-pb-modal-trigger="demo-slide-up" class="button-modals">
+                <div>Slide Up</div>
+              </button><button data-pb-modal-trigger="demo-slide-down" class="button-modals">
+                <div>Slide Down</div>
+              </button><button data-pb-modal-trigger="demo-zoom" class="button-modals">
+                <div>Zoom</div>
+              </button><button data-pb-modal-trigger="demo-slide-right" class="button-modals">
+                <div>Slide Right</div>
+              </button><button data-pb-modal-trigger="demo-slide-left" class="button-modals">
+                <div>Slide Left</div>
+              </button></div>
+          </div>
+          <div class="modal_buttons-style">
+            <div>Variant Styles</div>
+            <div class="modal-setup"><button data-pb-modal-trigger="demo-bottom-sheet" class="button-modals">
+                <div>Bottom Sheet</div>
+              </button><button data-pb-modal-trigger="demo-side-panel" class="button-modals">
+                <div>Side Panel</div>
+              </button><button data-pb-modal-trigger="demo-left-panel" class="button-modals">
+                <div>Left Panel</div>
+              </button><button data-pb-modal-trigger="demo-mobile-full" class="button-modals">
+                <div>Mobile Fullscreen</div>
+              </button></div>
+          </div>
+        </div><pageblock-modal data-modal-id="demo-fade" data-animation="fade" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
+          <div data-pb-modal="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
+            <div class="pb-modal_content">
+              <div class="pb-modal_header">
+                <div class="pb-modal_header-content">
+                  <div class="pb-modal_title">Your Modal Title</div>
+                </div><button data-pb-modal="close" role="button" class="pb-modal_button">
+                  <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                    </svg></div>
+                </button>
+              </div>
+              <div class="pb-modal_info">
+                <div class="pb_styleguide-wrapper-ui cc-auto">
+                  <div>Pageblock:Modal</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </pageblock-modal><pageblock-modal data-modal-id="demo-slide-up" data-animation="slide-up" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
-        <div data-pb-modal="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
-          <div class="pb-modal_content">
-            <div class="pb-modal_header">
-              <div class="pb-modal_header-content">
-                <div class="pb-modal_title">Your Modal Title</div>
-              </div><button data-pb-modal="close" role="button" class="pb-modal_button">
-                <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                  </svg></div>
-              </button>
-            </div>
-            <div class="pb-modal_info">
-              <div class="pb_styleguide-wrapper-ui cc-auto">
-                <div>Pageblock:Modal</div>
+        </pageblock-modal><pageblock-modal data-modal-id="demo-slide-up" data-animation="slide-up" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
+          <div data-pb-modal="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
+            <div class="pb-modal_content">
+              <div class="pb-modal_header">
+                <div class="pb-modal_header-content">
+                  <div class="pb-modal_title">Your Modal Title</div>
+                </div><button data-pb-modal="close" role="button" class="pb-modal_button">
+                  <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                    </svg></div>
+                </button>
+              </div>
+              <div class="pb-modal_info">
+                <div class="pb_styleguide-wrapper-ui cc-auto">
+                  <div>Pageblock:Modal</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </pageblock-modal><pageblock-modal data-modal-id="demo-slide-down" data-animation="slide-down" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
-        <div data-pb-modal="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
-          <div class="pb-modal_content">
-            <div class="pb-modal_header">
-              <div class="pb-modal_header-content">
-                <div class="pb-modal_title">Your Modal Title</div>
-              </div><button data-pb-modal="close" role="button" class="pb-modal_button">
-                <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                  </svg></div>
-              </button>
-            </div>
-            <div class="pb-modal_info">
-              <div class="pb_styleguide-wrapper-ui cc-auto">
-                <div>Pageblock:Modal</div>
+        </pageblock-modal><pageblock-modal data-modal-id="demo-slide-down" data-animation="slide-down" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
+          <div data-pb-modal="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
+            <div class="pb-modal_content">
+              <div class="pb-modal_header">
+                <div class="pb-modal_header-content">
+                  <div class="pb-modal_title">Your Modal Title</div>
+                </div><button data-pb-modal="close" role="button" class="pb-modal_button">
+                  <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                    </svg></div>
+                </button>
+              </div>
+              <div class="pb-modal_info">
+                <div class="pb_styleguide-wrapper-ui cc-auto">
+                  <div>Pageblock:Modal</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </pageblock-modal><pageblock-modal data-modal-id="demo-zoom" data-animation="zoom" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
-        <div data-pb-modal="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
-          <div class="pb-modal_content">
-            <div class="pb-modal_header">
-              <div class="pb-modal_header-content">
-                <div class="pb-modal_title">Your Modal Title</div>
-              </div><button data-pb-modal="close" role="button" class="pb-modal_button">
-                <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                  </svg></div>
-              </button>
-            </div>
-            <div class="pb-modal_info">
-              <div class="pb_styleguide-wrapper-ui cc-auto">
-                <div>Pageblock:Modal</div>
+        </pageblock-modal><pageblock-modal data-modal-id="demo-zoom" data-animation="zoom" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
+          <div data-pb-modal="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
+            <div class="pb-modal_content">
+              <div class="pb-modal_header">
+                <div class="pb-modal_header-content">
+                  <div class="pb-modal_title">Your Modal Title</div>
+                </div><button data-pb-modal="close" role="button" class="pb-modal_button">
+                  <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                    </svg></div>
+                </button>
+              </div>
+              <div class="pb-modal_info">
+                <div class="pb_styleguide-wrapper-ui cc-auto">
+                  <div>Pageblock:Modal</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </pageblock-modal><pageblock-modal data-modal-id="demo-slide-right" data-animation="slide-right" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
-        <div data-pb-modal="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
-          <div class="pb-modal_content">
-            <div class="pb-modal_header">
-              <div class="pb-modal_header-content">
-                <div class="pb-modal_title">Your Modal Title</div>
-              </div><button data-pb-modal="close" role="button" class="pb-modal_button">
-                <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                  </svg></div>
-              </button>
-            </div>
-            <div class="pb-modal_info">
-              <div class="pb_styleguide-wrapper-ui cc-auto">
-                <div>Pageblock:Modal</div>
+        </pageblock-modal><pageblock-modal data-modal-id="demo-slide-right" data-animation="slide-right" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
+          <div data-pb-modal="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
+            <div class="pb-modal_content">
+              <div class="pb-modal_header">
+                <div class="pb-modal_header-content">
+                  <div class="pb-modal_title">Your Modal Title</div>
+                </div><button data-pb-modal="close" role="button" class="pb-modal_button">
+                  <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                    </svg></div>
+                </button>
+              </div>
+              <div class="pb-modal_info">
+                <div class="pb_styleguide-wrapper-ui cc-auto">
+                  <div>Pageblock:Modal</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </pageblock-modal><pageblock-modal data-modal-id="demo-slide-left" data-animation="slide-left" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
-        <div data-pb-modal="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
-          <div class="pb-modal_content">
-            <div class="pb-modal_header">
-              <div class="pb-modal_header-content">
-                <div class="pb-modal_title">Your Modal Title</div>
-              </div><button data-pb-modal="close" role="button" class="pb-modal_button">
-                <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                  </svg></div>
-              </button>
-            </div>
-            <div class="pb-modal_info">
-              <div class="pb_styleguide-wrapper-ui cc-auto">
-                <div>Pageblock:Modal</div>
+        </pageblock-modal><pageblock-modal data-modal-id="demo-slide-left" data-animation="slide-left" data-variant="" preview-modal="false" class="pageblock-component-wrapper">
+          <div data-pb-modal="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
+            <div class="pb-modal_content">
+              <div class="pb-modal_header">
+                <div class="pb-modal_header-content">
+                  <div class="pb-modal_title">Your Modal Title</div>
+                </div><button data-pb-modal="close" role="button" class="pb-modal_button">
+                  <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                    </svg></div>
+                </button>
+              </div>
+              <div class="pb-modal_info">
+                <div class="pb_styleguide-wrapper-ui cc-auto">
+                  <div>Pageblock:Modal</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </pageblock-modal><pageblock-modal data-modal-id="demo-bottom-sheet" data-animation="" data-variant="bottom-sheet" preview-modal="false" class="pageblock-component-wrapper">
-        <div data-pb-modal="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
-          <div class="pb-modal_content">
-            <div class="pb-modal_header">
-              <div class="pb-modal_header-content">
-                <div class="pb-modal_title">Your Modal Title</div>
-              </div><button data-pb-modal="close" role="button" class="pb-modal_button">
-                <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                  </svg></div>
-              </button>
-            </div>
-            <div class="pb-modal_info">
-              <div class="pb_styleguide-wrapper-ui cc-auto">
-                <div>Pageblock:Modal</div>
+        </pageblock-modal><pageblock-modal data-modal-id="demo-bottom-sheet" data-animation="" data-variant="bottom-sheet" preview-modal="false" class="pageblock-component-wrapper">
+          <div data-pb-modal="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
+            <div class="pb-modal_content">
+              <div class="pb-modal_header">
+                <div class="pb-modal_header-content">
+                  <div class="pb-modal_title">Your Modal Title</div>
+                </div><button data-pb-modal="close" role="button" class="pb-modal_button">
+                  <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                    </svg></div>
+                </button>
+              </div>
+              <div class="pb-modal_info">
+                <div class="pb_styleguide-wrapper-ui cc-auto">
+                  <div>Pageblock:Modal</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </pageblock-modal><pageblock-modal data-modal-id="demo-side-panel" data-animation="" data-variant="side-panel" preview-modal="false" class="pageblock-component-wrapper">
-        <div data-pb-modal="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
-          <div class="pb-modal_content">
-            <div class="pb-modal_header">
-              <div class="pb-modal_header-content">
-                <div class="pb-modal_title">Your Modal Title</div>
-              </div><button data-pb-modal="close" role="button" class="pb-modal_button">
-                <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                  </svg></div>
-              </button>
-            </div>
-            <div class="pb-modal_info">
-              <div class="pb_styleguide-wrapper-ui cc-auto">
-                <div>Pageblock:Modal</div>
+        </pageblock-modal><pageblock-modal data-modal-id="demo-side-panel" data-animation="" data-variant="side-panel" preview-modal="false" class="pageblock-component-wrapper">
+          <div data-pb-modal="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
+            <div class="pb-modal_content">
+              <div class="pb-modal_header">
+                <div class="pb-modal_header-content">
+                  <div class="pb-modal_title">Your Modal Title</div>
+                </div><button data-pb-modal="close" role="button" class="pb-modal_button">
+                  <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                    </svg></div>
+                </button>
+              </div>
+              <div class="pb-modal_info">
+                <div class="pb_styleguide-wrapper-ui cc-auto">
+                  <div>Pageblock:Modal</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </pageblock-modal><pageblock-modal data-modal-id="demo-left-panel" data-animation="" data-variant="left-panel" preview-modal="false" class="pageblock-component-wrapper">
-        <div data-pb-modal="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
-          <div class="pb-modal_content">
-            <div class="pb-modal_header">
-              <div class="pb-modal_header-content">
-                <div class="pb-modal_title">Your Modal Title</div>
-              </div><button data-pb-modal="close" role="button" class="pb-modal_button">
-                <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                  </svg></div>
-              </button>
-            </div>
-            <div class="pb-modal_info">
-              <div class="pb_styleguide-wrapper-ui cc-auto">
-                <div>Pageblock:Modal</div>
+        </pageblock-modal><pageblock-modal data-modal-id="demo-left-panel" data-animation="" data-variant="left-panel" preview-modal="false" class="pageblock-component-wrapper">
+          <div data-pb-modal="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
+            <div class="pb-modal_content">
+              <div class="pb-modal_header">
+                <div class="pb-modal_header-content">
+                  <div class="pb-modal_title">Your Modal Title</div>
+                </div><button data-pb-modal="close" role="button" class="pb-modal_button">
+                  <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                    </svg></div>
+                </button>
+              </div>
+              <div class="pb-modal_info">
+                <div class="pb_styleguide-wrapper-ui cc-auto">
+                  <div>Pageblock:Modal</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </pageblock-modal><pageblock-modal data-modal-id="demo-mobile-full" data-animation="" data-variant="mobile-full" preview-modal="false" class="pageblock-component-wrapper">
-        <div data-pb-modal="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
-          <div class="pb-modal_content">
-            <div class="pb-modal_header">
-              <div class="pb-modal_header-content">
-                <div class="pb-modal_title">Your Modal Title</div>
-              </div><button data-pb-modal="close" role="button" class="pb-modal_button">
-                <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
-                  </svg></div>
-              </button>
-            </div>
-            <div class="pb-modal_info">
-              <div class="pb_styleguide-wrapper-ui cc-auto">
-                <div>Pageblock:Modal</div>
+        </pageblock-modal><pageblock-modal data-modal-id="demo-mobile-full" data-animation="" data-variant="mobile-full" preview-modal="false" class="pageblock-component-wrapper">
+          <div data-pb-modal="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-modal="sheet" class="pb-modal">
+            <div class="pb-modal_content">
+              <div class="pb-modal_header">
+                <div class="pb-modal_header-content">
+                  <div class="pb-modal_title">Your Modal Title</div>
+                </div><button data-pb-modal="close" role="button" class="pb-modal_button">
+                  <div class="pb-modal__close w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path>
+                    </svg></div>
+                </button>
+              </div>
+              <div class="pb-modal_info">
+                <div class="pb_styleguide-wrapper-ui cc-auto">
+                  <div>Pageblock:Modal</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </pageblock-modal>
-    </main>
-  </div>
+        </pageblock-modal>
+      </main>
+    </div>
 
 
-</body>
+  </body>
 </html>

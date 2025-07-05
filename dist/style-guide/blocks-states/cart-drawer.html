@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Cart Drawers</title>
-  <meta content="Cart Drawers" property="og:title">
-  <meta content="Cart Drawers" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <head>
+    <meta charset="utf-8">
+    <title>Cart Drawers</title>
+    <meta content="Cart Drawers" property="og:title">
+    <meta content="Cart Drawers" property="twitter:title">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
-  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
-  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+    <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+    <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
 
-  <!-- Campaign Configuration -->
-  <script src="../../config.js"></script>
-  <!-- Campaign Loader Script -->
-  <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
-
-
-  <link href="../../css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="../../css/components.css" rel="stylesheet" type="text/css">
-  <link href="../../css/next-staging-core.css" rel="stylesheet" type="text/css">
-  <link href="../../css/custom.css" rel="stylesheet" type="text/css">
+    <!-- Campaign Configuration -->
+    <script src="../../config.js"></script>
+    <!-- Campaign Loader Script -->
+    <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
 
 
-  <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
-  <link href="../../images/webclip.png" rel="apple-touch-icon">
+    <link href="../../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../../css/components.css" rel="stylesheet" type="text/css">
+    <link href="../../css/next-staging-core.css" rel="stylesheet" type="text/css">
+    <link href="../../css/custom.css" rel="stylesheet" type="text/css">
 
 
-  <style>
+    <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="../../images/webclip.png" rel="apple-touch-icon">
+
+
+    <style>
       html:not(.next-display-ready) [data-next-await] {
         position: relative;
         overflow: hidden;
         border-color: transparent !important;
         box-shadow: none !important;
       }
+
       [data-next-await] * {
         opacity: 0;
         transition: opacity 0.2s ease;
       }
+
       [data-next-await]::before {
         content: '';
         position: absolute;
@@ -49,68 +51,82 @@
         z-index: 1;
         pointer-events: none;
       }
+
       @keyframes pulse-gray {
+
         0%,
         100% {
           background-color: #e0e0e0;
           opacity: 0.6;
         }
+
         50% {
           background-color: #f5f5f5;
           opacity: 0.8;
         }
       }
+
       html.next-display-ready [data-next-await] * {
         opacity: 1;
       }
+
       html.next-display-ready [data-next-await]::before {
         display: none;
       }
+
     </style>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-</head>
-<body>
-  <div class="w-embed">
-    <style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="w-embed">
+      <style>
         /* Additional design mode specific styles */
         html.wf-design-mode pageblock-cart {
           pointer-events: all !important;
         }
+
         html.wf-design-mode [data-pb-cart="drawer"] {
           transform: translateX(0) !important;
           visibility: visible !important;
         }
+
         html.wf-design-mode [data-pb-cart="overlay"] {
           opacity: 1 !important;
           visibility: visible !important;
         }
+
       </style>
-  </div>
-  <div class="page-wrapper">
-    <div class="styleguide_guide_wrap">
-      <div class="component-counter w-embed">
-        <style>
+    </div>
+    <div class="page-wrapper">
+      <div class="styleguide_guide_wrap">
+        <div class="component-counter w-embed">
+          <style>
             html:not(.wf-design-mode) .styleguide_guide_wrap {
               display: none;
             }
+
             .styleguide_guide_layout {
               counter-reset: gridguides;
             }
+
             .styleguide_guide_layout>div::before {
               counter-increment: gridguides;
               content: counter(gridguides);
             }
+
             /* Set up the counter */
             .main-wrapper {
               counter-reset: component-counter;
             }
+
             /* Style for component-wrapper */
             .component-wrapper {
               position: relative;
             }
+
             /* Add numbering to component-wrapper elements only in design mode */
             html.wf-design-mode .main-wrapper .component-wrapper::before {
               counter-increment: component-counter;
@@ -127,15 +143,17 @@
               font-size: 12px;
               z-index: 1;
             }
+
             /* Optional: Additional styling for component-wrapper in design mode */
             html.wf-design-mode .main-wrapper .component-wrapper {
               padding: 2rem 1.25rem;
               margin-bottom: 0px;
             }
+
           </style>
-      </div>
-      <div class="bz-grids w-embed">
-        <style>
+        </div>
+        <div class="bz-grids w-embed">
+          <style>
             .bz-vertical {
               position: absolute;
               left: 0%;
@@ -152,6 +170,7 @@
               pointer-events: none;
               cursor: auto;
             }
+
             .bz-horizontal {
               position: absolute;
               left: auto;
@@ -169,18 +188,21 @@
               pointer-events: none;
               cursor: auto;
             }
+
             .frame__corner {
               position: absolute;
               width: 24px;
               height: 24px;
               z-index: 10;
             }
+
             .frame__corner::before,
             .frame__corner::after {
               content: '';
               position: absolute;
               background-color: #000;
             }
+
             .frame__corner::before {
               left: 0;
               right: 0;
@@ -188,6 +210,7 @@
               top: 50%;
               transform: translateY(-50%);
             }
+
             .frame__corner::after {
               top: 0;
               bottom: 0;
@@ -195,79 +218,88 @@
               left: 50%;
               transform: translateX(-50%);
             }
+
             .frame__corner--top-left {
               top: 0;
               left: 0;
               transform: translate(-50%, -50%);
             }
+
             .frame__corner--bottom-right {
               bottom: 0;
               right: 0;
               transform: translate(50%, 50%);
             }
+
           </style>
-      </div>
-      <div class="bz-components w-embed">
-        <style>
+        </div>
+        <div class="bz-components w-embed">
+          <style>
             .bz-component {
               display: none !important;
             }
+
             .component-holders {
               padding: none !important;
             }
-          </style>
-      </div>
-    </div>
 
-    <main class="main-wrapper"><pageblock-cart>
-        <div data-pb-cart="overlay" class="pb-overlay"></div>
-        <div aria-modal="true" role="dialog" data-pb-cart="drawer" class="pb-drawer">
-          <div class="pb-drawer__header">
-            <div class="pb_styleguide-wrapper-ui cc-auto">
-              <div>Pageblock:Cart:Header</div>
+          </style>
+        </div>
+      </div>
+
+      <main class="main-wrapper"><pageblock-cart>
+          <div data-pb-cart="overlay" class="pb-overlay"></div>
+          <div aria-modal="true" role="dialog" data-pb-cart="drawer" class="pb-drawer">
+            <div class="pb-drawer__header">
+              <div class="pb_styleguide-wrapper-ui cc-auto">
+                <div>Pageblock:Cart:Header</div>
+              </div>
             </div>
-          </div>
-          <div class="pb-drawer__content">
-            <div class="pb_styleguide-wrapper-ui">
-              <div class="text-block-366">Pageblock:Cart:Content</div>
-              <div class="pb-styuleguide_wrapper-new">
-                <div class="pb_styleguide-wrapper-ui cc-auto">
-                  <div>Pageblock:Cart:Group</div>
-                </div>
-                <div class="pb_styleguide-wrapper-ui cc-auto">
-                  <div>Pageblock:Cart:Group</div>
+            <div class="pb-drawer__content">
+              <div class="pb_styleguide-wrapper-ui">
+                <div class="text-block-366">Pageblock:Cart:Content</div>
+                <div class="pb-styuleguide_wrapper-new">
+                  <div class="pb_styleguide-wrapper-ui cc-auto">
+                    <div>Pageblock:Cart:Group</div>
+                  </div>
+                  <div class="pb_styleguide-wrapper-ui cc-auto">
+                    <div>Pageblock:Cart:Group</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="pb-drawer_footer">
-            <div class="pb_styleguide-wrapper-ui cc-auto">
-              <div>Pageblock:Cart:Footer</div>
+            <div class="pb-drawer_footer">
+              <div class="pb_styleguide-wrapper-ui cc-auto">
+                <div>Pageblock:Cart:Footer</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div data-pb-cart="trigger" class="styleguide-drawer">
-          <div>Open Drawer</div>
-        </div>
-        <div class="custom-code w-embed w-script">
-          <style>
+          <div data-pb-cart="trigger" class="styleguide-drawer">
+            <div>Open Drawer</div>
+          </div>
+          <div class="custom-code w-embed w-script">
+            <style>
               [data-pb-cart="item"]:last-child {
                 border-bottom: none;
               }
+
               [data-pb-cart="overlay"].cc-active {
                 opacity: 1;
                 visibility: visible;
                 cursor: pointer;
               }
+
               [data-pb-cart="drawer"] {
                 box-shadow: -5px 0 30px rgba(0, 0, 0, 0);
               }
+
               [data-pb-cart="drawer"].cc-active {
                 transform: translateX(0);
                 box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
               }
+
             </style>
-          <script>
+            <script>
               document.addEventListener('DOMContentLoaded', function() {
                 // Initialize cart functionality
                 initializeCart();
@@ -327,10 +359,10 @@
                 });
               }
             </script>
-        </div>
-      </pageblock-cart></main>
-  </div>
+          </div>
+        </pageblock-cart></main>
+    </div>
 
 
-</body>
+  </body>
 </html>
