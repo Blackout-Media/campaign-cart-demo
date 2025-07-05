@@ -1,4 +1,5 @@
 import * as cheerio from 'cheerio';
+import beautify from 'js-beautify';
 
 export class HtmlProcessor {
   constructor(config) {
@@ -14,6 +15,9 @@ export class HtmlProcessor {
     if (this.config.processors.removeGoogleFontsAndWebflowJS?.enabled) {
       this.processors.push(this.removeGoogleFontsAndWebflowJS.bind(this));
     }
+    if (this.config.processors.injectCustomCSS?.enabled) {
+      this.processors.push(this.injectCustomCSS.bind(this));
+    }
   }
 
   async process(html) {
@@ -26,7 +30,26 @@ export class HtmlProcessor {
       $ = await processor($);
     }
 
-    return $.html();
+    const processedHtml = $.html();
+    
+    // Beautify the HTML if enabled
+    if (this.config.beautify?.enabled !== false) {
+      return beautify.html(processedHtml, {
+        indent_size: 2,
+        indent_char: ' ',
+        preserve_newlines: true,
+        max_preserve_newlines: 2,
+        wrap_line_length: 0,
+        wrap_attributes: 'auto',
+        wrap_attributes_indent_size: 2,
+        end_with_newline: true,
+        unformatted: ['script', 'style'],
+        content_unformatted: [],
+        extra_liners: []
+      });
+    }
+
+    return processedHtml;
   }
 
   removeWebflowAttributes($) {
@@ -66,8 +89,29 @@ export class HtmlProcessor {
     // Remove jQuery script from Cloudfront
     $('script[src*="d3e54v103j8qbb.cloudfront.net"][src*="jquery"]').remove();
     
-    // Remove next-staging-core.js script
-    $('script[src="js/next-staging-core.js"]').remove();
+    // Remove next-staging-core.js script (handles relative paths)
+    $('script[src$="next-staging-core.js"]').remove();
+
+    return $;
+  }
+
+  injectCustomCSS($) {
+    // Find the next-staging-core.css link (handles both relative and absolute paths)
+    const nextStagingCoreLinks = $('link[href$="next-staging-core.css"]');
+    
+    nextStagingCoreLinks.each((i, elem) => {
+      const $link = $(elem);
+      const href = $link.attr('href');
+      
+      // Extract the path prefix (e.g., '../css/', 'css/', '../../css/')
+      const pathPrefix = href.substring(0, href.lastIndexOf('next-staging-core.css'));
+      
+      // Create the custom.css link with the same path prefix
+      const customCSSLink = `<link href="${pathPrefix}custom.css" rel="stylesheet" type="text/css">`;
+      
+      // Insert it after next-staging-core.css
+      $link.after('\n  ' + customCSSLink);
+    });
 
     return $;
   }

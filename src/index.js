@@ -2,9 +2,10 @@ import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fs from 'fs/promises';
 import { config as defaultConfig } from './config.js';
 import { HtmlProcessor } from './processors/htmlProcessor.js';
-import { findFiles, readFile, writeFile, getOutputPath } from './utils/fileUtils.js';
+import { findFiles, readFile, writeFile, getOutputPath, ensureDirectoryExists } from './utils/fileUtils.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,6 +26,11 @@ class WebflowProcessor {
       
       console.log(`📁 Input directory: ${inputPath}`);
       console.log(`📁 Output directory: ${outputPath}`);
+      
+      // Copy assets if enabled
+      if (this.config.copyAssets?.enabled) {
+        await this.copyAssets(inputPath, outputPath);
+      }
       
       const htmlFiles = await findFiles(this.config.filePatterns.html, inputPath);
       console.log(`📄 Found ${htmlFiles.length} HTML files to process`);
@@ -75,6 +81,61 @@ class WebflowProcessor {
     const processedContent = await this.htmlProcessor.process(content);
     const outputPath = getOutputPath(filePath, inputDir, outputDir);
     await writeFile(outputPath, processedContent);
+  }
+
+  async copyAssets(inputDir, outputDir) {
+    console.log('\n📦 Copying assets...');
+    
+    try {
+      // Copy folders from import to dist
+      for (const folder of this.config.copyAssets.folders) {
+        const sourcePath = path.join(inputDir, folder);
+        const destPath = path.join(outputDir, folder);
+        
+        try {
+          const stats = await fs.stat(sourcePath);
+          if (stats.isDirectory()) {
+            await this.copyDirectory(sourcePath, destPath);
+            console.log(`✅ Copied ${folder} folder`);
+          }
+        } catch (error) {
+          console.log(`⚠️  Skipping ${folder} folder (not found)`);
+        }
+      }
+      
+      // Copy custom files
+      for (const customFile of this.config.copyAssets.customFiles) {
+        const sourcePath = path.resolve(customFile.from);
+        const destPath = path.join(outputDir, customFile.to);
+        
+        try {
+          await ensureDirectoryExists(path.dirname(destPath));
+          await fs.copyFile(sourcePath, destPath);
+          console.log(`✅ Copied ${customFile.to}`);
+        } catch (error) {
+          console.error(`❌ Failed to copy ${customFile.from}: ${error.message}`);
+        }
+      }
+    } catch (error) {
+      console.error(`❌ Asset copying error: ${error.message}`);
+    }
+  }
+
+  async copyDirectory(source, destination) {
+    await ensureDirectoryExists(destination);
+    
+    const entries = await fs.readdir(source, { withFileTypes: true });
+    
+    for (const entry of entries) {
+      const sourcePath = path.join(source, entry.name);
+      const destPath = path.join(destination, entry.name);
+      
+      if (entry.isDirectory()) {
+        await this.copyDirectory(sourcePath, destPath);
+      } else {
+        await fs.copyFile(sourcePath, destPath);
+      }
+    }
   }
 }
 

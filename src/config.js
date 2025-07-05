@@ -8,10 +8,23 @@ export const config = {
     },
     removeGoogleFontsAndWebflowJS: {
       enabled: true
+    },
+    injectCustomCSS: {
+      enabled: true
     }
+  },
+  beautify: {
+    enabled: true
   },
   filePatterns: {
     html: '**/*.html'
+  },
+  copyAssets: {
+    enabled: true,
+    folders: ['css', 'js', 'images'],
+    customFiles: [
+      { from: 'src/static/custom.css', to: 'css/custom.css' }
+    ]
   }
 };
 
