@@ -62,6 +62,12 @@ export class HtmlProcessor {
         $(elem).remove();
       }
     });
+    
+    // Remove jQuery script from Cloudfront
+    $('script[src*="d3e54v103j8qbb.cloudfront.net"][src*="jquery"]').remove();
+    
+    // Remove next-staging-core.js script
+    $('script[src="js/next-staging-core.js"]').remove();
 
     return $;
   }
