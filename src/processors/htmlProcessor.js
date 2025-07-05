@@ -18,6 +18,9 @@ export class HtmlProcessor {
     if (this.config.processors.injectCustomCSS?.enabled) {
       this.processors.push(this.injectCustomCSS.bind(this));
     }
+    if (this.config.processors.relocateCampaignScripts?.enabled) {
+      this.processors.push(this.relocateCampaignScripts.bind(this));
+    }
   }
 
   async process(html) {
@@ -112,6 +115,54 @@ export class HtmlProcessor {
       // Insert it after next-staging-core.css
       $link.after('\n  ' + customCSSLink);
     });
+
+    return $;
+  }
+
+  relocateCampaignScripts($) {
+    const config = this.config.processors.relocateCampaignScripts;
+    
+    // First, remove existing campaign-related elements
+    $('link[rel="dns-prefetch"][href*="campaigns.apps.29next.com"]').remove();
+    $('link[rel="dns-prefetch"][href*="cdn-countries.muddy-wind-c7ca.workers.dev"]').remove();
+    $('script[src*="campaign-cart"][src*="config.js"]').remove();
+    $('script[src*="campaign-cart"][src*="loader.js"]').remove();
+    
+    // Find the viewport meta tag
+    const viewportMeta = $('meta[name="viewport"]');
+    
+    if (viewportMeta.length > 0) {
+      // Build the campaign scripts block
+      let campaignBlock = '\n\n';
+      
+      // Add DNS prefetch links
+      config.dnsPrefetch.forEach(href => {
+        campaignBlock += `  <link rel="dns-prefetch" href="${href}">\n`;
+      });
+      
+      // Add script tags
+      config.scripts.forEach(script => {
+        if (script.external) {
+          campaignBlock += `  <script src="${script.src}"></script>\n`;
+        } else {
+          // For local config.js, calculate relative path
+          const htmlDepth = $('link[href*="/css/"]').first().attr('href');
+          let relativePath = '';
+          
+          if (htmlDepth) {
+            const depth = (htmlDepth.match(/\.\.\//g) || []).length;
+            relativePath = '../'.repeat(depth);
+          }
+          
+          campaignBlock += `  <script src="${relativePath}${script.src}"></script>\n`;
+        }
+      });
+      
+      campaignBlock += '\n';
+      
+      // Insert after viewport meta with 2 blank lines
+      viewportMeta.after(campaignBlock);
+    }
 
     return $;
   }
