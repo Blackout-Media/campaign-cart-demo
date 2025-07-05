@@ -40,9 +40,18 @@ class WebflowProcessor {
 
       for (const file of htmlFiles) {
         try {
+          // Check if file is in root and should be filtered
+          const relativePath = path.relative(inputPath, file);
+          const isRootFile = !relativePath.includes(path.sep);
+          
+          if (isRootFile && relativePath !== 'index.html' && relativePath !== 'playground.html') {
+            console.log(`⏭️  Skipping root file: ${relativePath}`);
+            continue;
+          }
+          
           await this.processFile(file, inputPath, outputPath);
           processedCount++;
-          console.log(`✅ Processed: ${path.relative(inputPath, file)}`);
+          console.log(`✅ Processed: ${relativePath}`);
         } catch (error) {
           errors.push({ file, error: error.message });
           console.error(`❌ Failed to process ${file}: ${error.message}`);

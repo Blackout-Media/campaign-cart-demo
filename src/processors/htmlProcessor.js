@@ -9,6 +9,9 @@ export class HtmlProcessor {
   }
 
   initializeProcessors() {
+    if (this.config.processors.removeWebflowComment?.enabled) {
+      this.processors.push(this.removeWebflowComment.bind(this));
+    }
     if (this.config.processors.removeWebflowAttributes?.enabled) {
       this.processors.push(this.removeWebflowAttributes.bind(this));
     }
@@ -24,6 +27,11 @@ export class HtmlProcessor {
   }
 
   async process(html) {
+    // Remove the Webflow comment before loading into cheerio
+    if (this.config.processors.removeWebflowComment?.enabled) {
+      html = html.replace(/<!--\s*Last Published:.*?-->\s*/i, '');
+    }
+    
     let $ = cheerio.load(html, {
       xmlMode: false,
       decodeEntities: false
@@ -53,6 +61,11 @@ export class HtmlProcessor {
     }
 
     return processedHtml;
+  }
+
+  removeWebflowComment($) {
+    // Comment removal is handled in the process method before cheerio loads
+    return $;
   }
 
   removeWebflowAttributes($) {
@@ -92,8 +105,12 @@ export class HtmlProcessor {
     // Remove jQuery script from Cloudfront
     $('script[src*="d3e54v103j8qbb.cloudfront.net"][src*="jquery"]').remove();
     
-    // Remove next-staging-core.js script (handles relative paths)
+    // Remove next-staging-core.js script (handles all path variations)
     $('script[src$="next-staging-core.js"]').remove();
+    $('script[src*="/next-staging-core.js"]').remove();
+    $('script[src="js/next-staging-core.js"]').remove();
+    $('script[src="../js/next-staging-core.js"]').remove();
+    $('script[src="../../js/next-staging-core.js"]').remove();
 
     return $;
   }
@@ -122,14 +139,21 @@ export class HtmlProcessor {
   relocateCampaignScripts($) {
     const config = this.config.processors.relocateCampaignScripts;
     
-    // First, remove existing campaign-related elements
+    // First, remove ALL existing campaign-related elements
     $('link[rel="dns-prefetch"][href*="campaigns.apps.29next.com"]').remove();
     $('link[rel="dns-prefetch"][href*="cdn-countries.muddy-wind-c7ca.workers.dev"]').remove();
-    $('script[src*="campaign-cart"][src*="config.js"]').remove();
-    $('script[src*="campaign-cart"][src*="loader.js"]').remove();
     
-    // Find the viewport meta tag
-    const viewportMeta = $('meta[name="viewport"]');
+    // Remove various forms of campaign scripts
+    $('script[src*="campaign-cart"]').remove();
+    $('script[src*="config.js"]').remove();
+    $('script[src*="loader.js"]').remove();
+    
+    // Also remove the specific URLs from the original files
+    $('script[src="https://campaign-cart-v2.pages.dev/config.js"]').remove();
+    $('script[src="https://campaign-cart-v2.pages.dev/loader.js"]').remove();
+    
+    // Find the FIRST viewport meta tag only
+    const viewportMeta = $('meta[name="viewport"]').first();
     
     if (viewportMeta.length > 0) {
       // Build the campaign scripts block
@@ -160,7 +184,7 @@ export class HtmlProcessor {
       
       campaignBlock += '\n';
       
-      // Insert after viewport meta with 2 blank lines
+      // Insert after FIRST viewport meta only
       viewportMeta.after(campaignBlock);
     }
 

@@ -22,6 +22,9 @@ export const config = {
         { src: 'config.js', external: false },
         { src: 'https://campaign-cart-v2.pages.dev/loader.js', external: true }
       ]
+    },
+    removeWebflowComment: {
+      enabled: true
     }
   },
   beautify: {
