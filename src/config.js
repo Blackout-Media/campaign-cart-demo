@@ -32,6 +32,9 @@ export const config = {
     relocateNextMetaTags: {
       enabled: true
     },
+    consolidateInlineCSS: {
+      enabled: true
+    },
     removeWebflowComment: {
       enabled: true
     }

@@ -94,24 +94,7 @@
               <div class="hero-wrappers">
                 <div pb-component="swiper" class="slider2_component">
                   <div swiper="sw12" class="slider_component is-v9">
-                    <div class="custom-css w-embed">
-                      <style>
-                          [swiper="sw12"] .swiper-slide_image-wrap {
-                            aspect-ratio: 1 / 1;
-                          }
-                          [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide {
-                            filter: grayscale(100%);
-                            transition: filter 0.4s ease;
-                            cursor: pointer;
-                          }
-                          [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide:focus-visible {
-                            border: 2px solid #000;
-                          }
-                          [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide.swiper-slide-thumb-active {
-                            filter: grayscale(0);
-                          }
-                        </style>
-                    </div>
+
                     <div class="slider2_component-wrapper">
                       <div swiper="slider-main" class="swiper is-v9-main">
                         <div class="swiper-wrapper">
@@ -326,82 +309,7 @@
                       <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                       <circle cx="25" cy="25" r="22.5" class="line"></circle>
                     </svg>
-                    <div class="custom-css w-embed">
-                      <style>
-                          /* Button base state */
-                          [data-action="submit"] {
-                            position: relative;
-                            /* Prevent layout shifts */
-                            min-width: 100px;
-                            /* Adjust based on your needs */
-                            min-height: 40px;
-                            /* Adjust based on your needs */
-                          }
-                          /* Spinner container */
-                          [data-button="spinner"] {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            opacity: 0;
-                            pointer-events: none;
-                            font-size: calc(2 * 1em);
-                            width: 1em;
-                            height: 1em;
-                            border-radius: 50%;
-                            color: inherit;
-                            transition: opacity 0.2s ease;
-                          }
-                          /* Button content and icon */
-                          [data-button="content"],
-                          [data-button="icon"] {
-                            transition: opacity 0.2s ease;
-                          }
-                          /* Loading state */
-                          [data-action="submit"].is-submitting {
-                            cursor: not-allowed;
-                          }
-                          [data-action="submit"].is-submitting [data-button="spinner"] {
-                            opacity: 1;
-                          }
-                          [data-action="submit"].is-submitting [data-button="content"],
-                          [data-action="submit"].is-submitting [data-button="icon"] {
-                            opacity: 0;
-                          }
-                          /* Spinner elements */
-                          [data-button="spinner"] .line {
-                            fill: none;
-                            stroke: currentColor;
-                            stroke-width: 6px;
-                            stroke-linecap: round;
-                            transform-origin: 50% 50%;
-                            animation: spinner-arc 2156ms ease-in-out infinite,
-                              spinner-rotate 1829ms linear infinite;
-                          }
-                          [data-button="spinner"] .ring {
-                            fill: none;
-                            stroke: currentColor;
-                            stroke-width: 6px;
-                            opacity: 0.15;
-                          }
-                          /* Animations */
-                          @keyframes spinner-rotate {
-                            to {
-                              transform: rotate(360deg);
-                            }
-                          }
-                          @keyframes spinner-arc {
-                            0% {
-                              stroke-dasharray: 0 150;
-                              stroke-dashoffset: 0;
-                            }
-                            100% {
-                              stroke-dasharray: 100 150;
-                              stroke-dashoffset: -140;
-                            }
-                          }
-                        </style>
-                    </div>
+
                   </button>
                   <div pb-component="ba25" class="next-booster cc-blank">
                     <div>
@@ -723,23 +631,7 @@
             </div>
           </div>
           <div pb-component="swiper" class="component">
-            <div class="custom-css w-embed w-script">
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-              <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-              <style>
-                  [swiper="TEST-013"] .span.swiper-pagination-bullet {
-                    border: 1px solid #000;
-                    background-color: transparent;
-                    opacity: 1;
-                  }
-                  [swiper="TEST-013"] span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-                    background-color: #000 !important;
-                  }
-                  [swiper="TEST-013"] span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-                    background-color: #000 !important;
-                  }
-                </style>
-            </div>
+
             <div swiper="TEST-013" class="slider_component">
               <div class="u-negative-margin-tm">
                 <div swiper="slider" class="swiper">
@@ -978,82 +870,7 @@
                               <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                               <circle cx="25" cy="25" r="22.5" class="line"></circle>
                             </svg>
-                            <div class="custom-css w-embed">
-                              <style>
-                                  /* Button base state */
-                                  [data-action="submit"] {
-                                    position: relative;
-                                    /* Prevent layout shifts */
-                                    min-width: 100px;
-                                    /* Adjust based on your needs */
-                                    min-height: 40px;
-                                    /* Adjust based on your needs */
-                                  }
-                                  /* Spinner container */
-                                  [data-button="spinner"] {
-                                    position: absolute;
-                                    top: 50%;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-                                    opacity: 0;
-                                    pointer-events: none;
-                                    font-size: calc(2 * 1em);
-                                    width: 1em;
-                                    height: 1em;
-                                    border-radius: 50%;
-                                    color: inherit;
-                                    transition: opacity 0.2s ease;
-                                  }
-                                  /* Button content and icon */
-                                  [data-button="content"],
-                                  [data-button="icon"] {
-                                    transition: opacity 0.2s ease;
-                                  }
-                                  /* Loading state */
-                                  [data-action="submit"].is-submitting {
-                                    cursor: not-allowed;
-                                  }
-                                  [data-action="submit"].is-submitting [data-button="spinner"] {
-                                    opacity: 1;
-                                  }
-                                  [data-action="submit"].is-submitting [data-button="content"],
-                                  [data-action="submit"].is-submitting [data-button="icon"] {
-                                    opacity: 0;
-                                  }
-                                  /* Spinner elements */
-                                  [data-button="spinner"] .line {
-                                    fill: none;
-                                    stroke: currentColor;
-                                    stroke-width: 6px;
-                                    stroke-linecap: round;
-                                    transform-origin: 50% 50%;
-                                    animation: spinner-arc 2156ms ease-in-out infinite,
-                                      spinner-rotate 1829ms linear infinite;
-                                  }
-                                  [data-button="spinner"] .ring {
-                                    fill: none;
-                                    stroke: currentColor;
-                                    stroke-width: 6px;
-                                    opacity: 0.15;
-                                  }
-                                  /* Animations */
-                                  @keyframes spinner-rotate {
-                                    to {
-                                      transform: rotate(360deg);
-                                    }
-                                  }
-                                  @keyframes spinner-arc {
-                                    0% {
-                                      stroke-dasharray: 0 150;
-                                      stroke-dashoffset: 0;
-                                    }
-                                    100% {
-                                      stroke-dasharray: 100 150;
-                                      stroke-dashoffset: -140;
-                                    }
-                                  }
-                                </style>
-                            </div>
+
                           </button>
                           <div pb-component="ba25" class="next-booster cc-blank">
                             <div>
@@ -1092,23 +909,7 @@
               <h2 class="display-xl">Your Best Skin Starts Here</h2>
             </div>
             <div pb-component="swiper" class="component">
-              <div class="custom-css w-embed w-script">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-                <style>
-                    [swiper="TEST-013"] .span.swiper-pagination-bullet {
-                      border: 1px solid #000;
-                      background-color: transparent;
-                      opacity: 1;
-                    }
-                    [swiper="TEST-013"] span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-                      background-color: #000 !important;
-                    }
-                    [swiper="TEST-013"] span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-                      background-color: #000 !important;
-                    }
-                  </style>
-              </div>
+
               <div swiper="TEST-013" class="slider_component">
                 <div class="u-negative-margin-tm">
                   <div swiper="slider" class="swiper">
@@ -1645,80 +1446,7 @@
             </div>
             <div data-pb-element="features-column" id="w-node-ed854101-59f7-f14f-6b84-5c3ec8914d00-5dd70387" class="feature_col">
               <div pb-id="AC05" pb-component="accordion" class="accordion">
-                <div class="custom-css w-embed">
-                  <style>
-                      [pb-accordion-element="content"] {
-                        overflow: hidden;
-                        max-height: 0;
-                        opacity: 0;
-                        visibility: hidden;
-                        display: none;
-                        /* Faster transitions */
-                        transition:
-                          max-height 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-                          opacity 0.15s ease-out,
-                          visibility 0s linear 0.2s;
-                        /* Optimize rendering */
-                        will-change: max-height, opacity;
-                        transform: translate3d(0, 0, 0);
-                        backface-visibility: hidden;
-                      }
-                      [pb-accordion-element="content"].is-active-accordion {
-                        display: block;
-                        visibility: visible;
-                        opacity: 1;
-                        transition:
-                          max-height 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-                          opacity 0.15s ease-out,
-                          visibility 0s linear 0s;
-                      }
-                      [pb-accordion-element="arrow"] {
-                        transition: transform 0.15s ease-out;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        transform: translate3d(0, 0, 0);
-                      }
-                      [pb-accordion-element="arrow"].is-active-accordion {
-                        transform: rotate(180deg) translate3d(0, 0, 0);
-                      }
-                      [pb-accordion-element="plus"] {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                      }
-                      [pb-accordion-element="plus"] svg {
-                        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                        transform: translate3d(0, 0, 0);
-                      }
-                      [pb-accordion-element="plus"] .vertical {
-                        transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                        transform-origin: center;
-                      }
-                      [pb-accordion-element="plus"].is-active-accordion .vertical {
-                        transform: scaleY(0);
-                      }
-                      [pb-accordion-element="plus"]:hover {
-                        opacity: 0.8;
-                      }
-                      [pb-accordion-element="trigger"]:focus {
-                        outline: 2px solid #fff;
-                        outline-offset: 2px;
-                        border-radius: 4px;
-                      }
-                      [pb-accordion-element="trigger"]:focus:not(:focus-visible) {
-                        outline: none;
-                      }
-                      @media (prefers-reduced-motion: reduce) {
-                        [pb-accordion-element="content"],
-                        [pb-accordion-element="arrow"],
-                        [pb-accordion-element="plus"] svg,
-                        [pb-accordion-element="plus"] .vertical {
-                          transition: none;
-                        }
-                      }
-                    </style>
-                </div>
+
                 <div pb-accordion-initial="none" pb-accordion-element="group" pb-accordion-single="true" class="accordion__wrapper cc-huge">
                   <div pb-accordion-element="accordion" class="accordion__item"><button tabindex="0" aria-expanded="false" pb-accordion-element="trigger" role="button" class="accordion__item-header">
                       <div class="accordion__title-wrapper cc-huge">
@@ -2088,23 +1816,7 @@
             <h2 class="display-xl">Join 1 MILION+ othersloving the skin they’re in</h2>
           </div>
           <div pb-component="swiper" class="component">
-            <div class="custom-css w-embed">
-              <style>
-                  [swiper="sw08"] .swiper-slide_image-wrap {
-                    aspect-ratio: 16 / 9;
-                  }
-                  [swiper="sw08"] [swiper="slider-nav"] .swiper-slide {
-                    width: auto;
-                  }
-                  [swiper="sw08"] [swiper="slider-nav"] .swiper-slide.swiper-slide-active {
-                    color: #000;
-                  }
-                  /* Add the button disabled style here instead of in JS */
-                  .swiper-button-disabled {
-                    opacity: 30% !important;
-                  }
-                </style>
-            </div>
+
             <div class="swiper_story">
               <div swiper="thumbnails-holder" class="product-thumbnails-holder"><button swiper="prev-button" class="swiper__button cc-inline">
                   <div class="swiper-button_icon-2 w-embed"><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2509,82 +2221,7 @@
                               <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                               <circle cx="25" cy="25" r="22.5" class="line"></circle>
                             </svg>
-                            <div class="custom-css w-embed">
-                              <style>
-                                  /* Button base state */
-                                  [data-action="submit"] {
-                                    position: relative;
-                                    /* Prevent layout shifts */
-                                    min-width: 100px;
-                                    /* Adjust based on your needs */
-                                    min-height: 40px;
-                                    /* Adjust based on your needs */
-                                  }
-                                  /* Spinner container */
-                                  [data-button="spinner"] {
-                                    position: absolute;
-                                    top: 50%;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-                                    opacity: 0;
-                                    pointer-events: none;
-                                    font-size: calc(2 * 1em);
-                                    width: 1em;
-                                    height: 1em;
-                                    border-radius: 50%;
-                                    color: inherit;
-                                    transition: opacity 0.2s ease;
-                                  }
-                                  /* Button content and icon */
-                                  [data-button="content"],
-                                  [data-button="icon"] {
-                                    transition: opacity 0.2s ease;
-                                  }
-                                  /* Loading state */
-                                  [data-action="submit"].is-submitting {
-                                    cursor: not-allowed;
-                                  }
-                                  [data-action="submit"].is-submitting [data-button="spinner"] {
-                                    opacity: 1;
-                                  }
-                                  [data-action="submit"].is-submitting [data-button="content"],
-                                  [data-action="submit"].is-submitting [data-button="icon"] {
-                                    opacity: 0;
-                                  }
-                                  /* Spinner elements */
-                                  [data-button="spinner"] .line {
-                                    fill: none;
-                                    stroke: currentColor;
-                                    stroke-width: 6px;
-                                    stroke-linecap: round;
-                                    transform-origin: 50% 50%;
-                                    animation: spinner-arc 2156ms ease-in-out infinite,
-                                      spinner-rotate 1829ms linear infinite;
-                                  }
-                                  [data-button="spinner"] .ring {
-                                    fill: none;
-                                    stroke: currentColor;
-                                    stroke-width: 6px;
-                                    opacity: 0.15;
-                                  }
-                                  /* Animations */
-                                  @keyframes spinner-rotate {
-                                    to {
-                                      transform: rotate(360deg);
-                                    }
-                                  }
-                                  @keyframes spinner-arc {
-                                    0% {
-                                      stroke-dasharray: 0 150;
-                                      stroke-dashoffset: 0;
-                                    }
-                                    100% {
-                                      stroke-dasharray: 100 150;
-                                      stroke-dashoffset: -140;
-                                    }
-                                  }
-                                </style>
-                            </div>
+
                           </button>
                           <div pb-component="ba25" class="next-booster cc-blank">
                             <div>
@@ -3036,82 +2673,7 @@
                   <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                   <circle cx="25" cy="25" r="22.5" class="line"></circle>
                 </svg>
-                <div class="custom-css w-embed">
-                  <style>
-                      /* Button base state */
-                      [data-action="submit"] {
-                        position: relative;
-                        /* Prevent layout shifts */
-                        min-width: 100px;
-                        /* Adjust based on your needs */
-                        min-height: 40px;
-                        /* Adjust based on your needs */
-                      }
-                      /* Spinner container */
-                      [data-button="spinner"] {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        opacity: 0;
-                        pointer-events: none;
-                        font-size: calc(2 * 1em);
-                        width: 1em;
-                        height: 1em;
-                        border-radius: 50%;
-                        color: inherit;
-                        transition: opacity 0.2s ease;
-                      }
-                      /* Button content and icon */
-                      [data-button="content"],
-                      [data-button="icon"] {
-                        transition: opacity 0.2s ease;
-                      }
-                      /* Loading state */
-                      [data-action="submit"].is-submitting {
-                        cursor: not-allowed;
-                      }
-                      [data-action="submit"].is-submitting [data-button="spinner"] {
-                        opacity: 1;
-                      }
-                      [data-action="submit"].is-submitting [data-button="content"],
-                      [data-action="submit"].is-submitting [data-button="icon"] {
-                        opacity: 0;
-                      }
-                      /* Spinner elements */
-                      [data-button="spinner"] .line {
-                        fill: none;
-                        stroke: currentColor;
-                        stroke-width: 6px;
-                        stroke-linecap: round;
-                        transform-origin: 50% 50%;
-                        animation: spinner-arc 2156ms ease-in-out infinite,
-                          spinner-rotate 1829ms linear infinite;
-                      }
-                      [data-button="spinner"] .ring {
-                        fill: none;
-                        stroke: currentColor;
-                        stroke-width: 6px;
-                        opacity: 0.15;
-                      }
-                      /* Animations */
-                      @keyframes spinner-rotate {
-                        to {
-                          transform: rotate(360deg);
-                        }
-                      }
-                      @keyframes spinner-arc {
-                        0% {
-                          stroke-dasharray: 0 150;
-                          stroke-dashoffset: 0;
-                        }
-                        100% {
-                          stroke-dasharray: 100 150;
-                          stroke-dashoffset: -140;
-                        }
-                      }
-                    </style>
-                </div>
+
               </button>
               <div pb-component="ba25" class="next-booster cc-blank">
                 <div>
@@ -3155,6 +2717,353 @@
     </div>
   </div>
 
+
+  <!-- Consolidated Custom CSS -->
+  <style>
+    [swiper="sw12"] .swiper-slide_image-wrap {
+    aspect-ratio: 1 / 1;
+    }
+    [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide {
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+    cursor: pointer;
+    }
+    [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide:focus-visible {
+    border: 2px solid #000;
+    }
+    [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide.swiper-slide-thumb-active {
+    filter: grayscale(0);
+    }
+
+    /* Button base state */
+    [data-action="submit"] {
+    position: relative;
+    /* Prevent layout shifts */
+    min-width: 100px;
+    /* Adjust based on your needs */
+    min-height: 40px;
+    /* Adjust based on your needs */
+    }
+    /* Spinner container */
+    [data-button="spinner"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    font-size: calc(2 * 1em);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    color: inherit;
+    transition: opacity 0.2s ease;
+    }
+    /* Button content and icon */
+    [data-button="content"],
+    [data-button="icon"] {
+    transition: opacity 0.2s ease;
+    }
+    /* Loading state */
+    [data-action="submit"].is-submitting {
+    cursor: not-allowed;
+    }
+    [data-action="submit"].is-submitting [data-button="spinner"] {
+    opacity: 1;
+    }
+    [data-action="submit"].is-submitting [data-button="content"],
+    [data-action="submit"].is-submitting [data-button="icon"] {
+    opacity: 0;
+    }
+    /* Spinner elements */
+    [data-button="spinner"] .line {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    transform-origin: 50% 50%;
+    animation: spinner-arc 2156ms ease-in-out infinite,
+    spinner-rotate 1829ms linear infinite;
+    }
+    [data-button="spinner"] .ring {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    opacity: 0.15;
+    }
+    /* Animations */
+    @keyframes spinner-rotate {
+    to {
+    transform: rotate(360deg);
+    }
+    }
+    @keyframes spinner-arc {
+    0% {
+    stroke-dasharray: 0 150;
+    stroke-dashoffset: 0;
+    }
+    100% {
+    stroke-dasharray: 100 150;
+    stroke-dashoffset: -140;
+    }
+    }
+
+    [swiper="TEST-013"] .span.swiper-pagination-bullet {
+    border: 1px solid #000;
+    background-color: transparent;
+    opacity: 1;
+    }
+    [swiper="TEST-013"] span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #000 !important;
+    }
+    [swiper="TEST-013"] span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #000 !important;
+    }
+
+    /* Button base state */
+    [data-action="submit"] {
+    position: relative;
+    /* Prevent layout shifts */
+    min-width: 100px;
+    /* Adjust based on your needs */
+    min-height: 40px;
+    /* Adjust based on your needs */
+    }
+    /* Spinner container */
+    [data-button="spinner"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    font-size: calc(2 * 1em);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    color: inherit;
+    transition: opacity 0.2s ease;
+    }
+    /* Button content and icon */
+    [data-button="content"],
+    [data-button="icon"] {
+    transition: opacity 0.2s ease;
+    }
+    /* Loading state */
+    [data-action="submit"].is-submitting {
+    cursor: not-allowed;
+    }
+    [data-action="submit"].is-submitting [data-button="spinner"] {
+    opacity: 1;
+    }
+    [data-action="submit"].is-submitting [data-button="content"],
+    [data-action="submit"].is-submitting [data-button="icon"] {
+    opacity: 0;
+    }
+    /* Spinner elements */
+    [data-button="spinner"] .line {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    transform-origin: 50% 50%;
+    animation: spinner-arc 2156ms ease-in-out infinite,
+    spinner-rotate 1829ms linear infinite;
+    }
+    [data-button="spinner"] .ring {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    opacity: 0.15;
+    }
+    /* Animations */
+    @keyframes spinner-rotate {
+    to {
+    transform: rotate(360deg);
+    }
+    }
+    @keyframes spinner-arc {
+    0% {
+    stroke-dasharray: 0 150;
+    stroke-dashoffset: 0;
+    }
+    100% {
+    stroke-dasharray: 100 150;
+    stroke-dashoffset: -140;
+    }
+    }
+
+    [swiper="TEST-013"] .span.swiper-pagination-bullet {
+    border: 1px solid #000;
+    background-color: transparent;
+    opacity: 1;
+    }
+    [swiper="TEST-013"] span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #000 !important;
+    }
+    [swiper="TEST-013"] span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #000 !important;
+    }
+
+    [pb-accordion-element="content"] {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    /* Faster transitions */
+    transition:
+    max-height 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.15s ease-out,
+    visibility 0s linear 0.2s;
+    /* Optimize rendering */
+    will-change: max-height, opacity;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    }
+    [pb-accordion-element="content"].is-active-accordion {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition:
+    max-height 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.15s ease-out,
+    visibility 0s linear 0s;
+    }
+    [pb-accordion-element="arrow"] {
+    transition: transform 0.15s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate3d(0, 0, 0);
+    }
+    [pb-accordion-element="arrow"].is-active-accordion {
+    transform: rotate(180deg) translate3d(0, 0, 0);
+    }
+    [pb-accordion-element="plus"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    [pb-accordion-element="plus"] svg {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate3d(0, 0, 0);
+    }
+    [pb-accordion-element="plus"] .vertical {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+    }
+    [pb-accordion-element="plus"].is-active-accordion .vertical {
+    transform: scaleY(0);
+    }
+    [pb-accordion-element="plus"]:hover {
+    opacity: 0.8;
+    }
+    [pb-accordion-element="trigger"]:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    border-radius: 4px;
+    }
+    [pb-accordion-element="trigger"]:focus:not(:focus-visible) {
+    outline: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+    [pb-accordion-element="content"],
+    [pb-accordion-element="arrow"],
+    [pb-accordion-element="plus"] svg,
+    [pb-accordion-element="plus"] .vertical {
+    transition: none;
+    }
+    }
+
+    [swiper="sw08"] .swiper-slide_image-wrap {
+    aspect-ratio: 16 / 9;
+    }
+    [swiper="sw08"] [swiper="slider-nav"] .swiper-slide {
+    width: auto;
+    }
+    [swiper="sw08"] [swiper="slider-nav"] .swiper-slide.swiper-slide-active {
+    color: #000;
+    }
+    /* Add the button disabled style here instead of in JS */
+    .swiper-button-disabled {
+    opacity: 30% !important;
+    }
+
+    /* Button base state */
+    [data-action="submit"] {
+    position: relative;
+    /* Prevent layout shifts */
+    min-width: 100px;
+    /* Adjust based on your needs */
+    min-height: 40px;
+    /* Adjust based on your needs */
+    }
+    /* Spinner container */
+    [data-button="spinner"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    font-size: calc(2 * 1em);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    color: inherit;
+    transition: opacity 0.2s ease;
+    }
+    /* Button content and icon */
+    [data-button="content"],
+    [data-button="icon"] {
+    transition: opacity 0.2s ease;
+    }
+    /* Loading state */
+    [data-action="submit"].is-submitting {
+    cursor: not-allowed;
+    }
+    [data-action="submit"].is-submitting [data-button="spinner"] {
+    opacity: 1;
+    }
+    [data-action="submit"].is-submitting [data-button="content"],
+    [data-action="submit"].is-submitting [data-button="icon"] {
+    opacity: 0;
+    }
+    /* Spinner elements */
+    [data-button="spinner"] .line {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    transform-origin: 50% 50%;
+    animation: spinner-arc 2156ms ease-in-out infinite,
+    spinner-rotate 1829ms linear infinite;
+    }
+    [data-button="spinner"] .ring {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    opacity: 0.15;
+    }
+    /* Animations */
+    @keyframes spinner-rotate {
+    to {
+    transform: rotate(360deg);
+    }
+    }
+    @keyframes spinner-arc {
+    0% {
+    stroke-dasharray: 0 150;
+    stroke-dashoffset: 0;
+    }
+    100% {
+    stroke-dasharray: 100 150;
+    stroke-dashoffset: -140;
+    }
+    }
+
+  </style>
 
 </body>
 </html>

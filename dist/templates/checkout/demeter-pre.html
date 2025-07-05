@@ -676,29 +676,7 @@
               <div class="step">
                 <div class="step-label">Summary</div>
               </div>
-              <div class="custom-css w-embed">
-                <style>
-                    /* Arrows */
-                    .arrow-active::after,
-                    .arrow-inactive::after {
-                      content: "";
-                      position: absolute;
-                      right: 0;
-                      top: 50%;
-                      width: 7px;
-                      height: 7px;
-                      border-top: 1px solid;
-                      border-right: 1px solid;
-                      transform: translateY(-50%) rotate(45deg);
-                    }
-                    .arrow-active::after {
-                      border-color: #000;
-                    }
-                    .arrow-inactive::after {
-                      border-color: #dadada;
-                    }
-                  </style>
-              </div>
+
             </div>
             <div class="checkout-wrapper">
               <div class="checkout-left">
@@ -2038,6 +2016,31 @@
         window.cardSelectorInstances = componentInstances.filter(instance => instance instanceof CardSelector);
       });
     </script>
+
+
+  <!-- Consolidated Custom CSS -->
+  <style>
+    /* Arrows */
+    .arrow-active::after,
+    .arrow-inactive::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    transform: translateY(-50%) rotate(45deg);
+    }
+    .arrow-active::after {
+    border-color: #000;
+    }
+    .arrow-inactive::after {
+    border-color: #dadada;
+    }
+
+  </style>
 
 </body>
 </html>

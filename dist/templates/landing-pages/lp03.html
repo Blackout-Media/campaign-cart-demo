@@ -137,19 +137,7 @@
                 </div>
                 <div class="hero__left-gallery-2">
                   <div pb-component="swiper" class="component">
-                    <div class="custom-css w-embed">
-                      <style>
-                          [swiper="sw08"] .swiper-slide_image-wrap {
-                            aspect-ratio: 16 / 9;
-                          }
-                          [swiper="sw08"] [swiper="slider-nav"] .swiper-slide {
-                            width: auto;
-                          }
-                          [swiper="sw08"] [swiper="slider-nav"] .swiper-slide.swiper-slide-active {
-                            color: #000;
-                          }
-                        </style>
-                    </div>
+
                     <div class="swiper8_component">
                       <div swiper="sw08" class="slider_component is-v6">
                         <div class="u-negative-margin-tm">
@@ -452,18 +440,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="custom-css w-embed">
-                          <style>
-                              [pb-component="selector"][pb-variant="quantity"][pb-id="QS01"] [pb-element="card"].pb--selected [pb-element="radio"] {
-                                border: 3px solid white;
-                                background-color: var(--component--color--radio);
-                                box-shadow: 0 0 0 2px var(--component--color--radio);
-                              }
-                              [pb-component="selector"][pb-variant="quantity"][pb-id="QS01"]:has(.pb-quantity__label-middle) {
-                                padding-top: 0.55rem;
-                              }
-                            </style>
-                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -489,58 +466,7 @@
                         </div><svg viewBox="0 0 50 50" data-button="spinner" class="button_spinner button_spinner">
                           <circle cx="25" cy="25" r="20" fill="none" stroke-width="5" class="path path"></circle>
                         </svg>
-                        <div class="custom-css w-embed">
-                          <style>
-                              [data-action="submit"] {
-                                position: relative;
-                              }
-                              [data-button="spinner"] {
-                                width: 1.2em;
-                                display: block;
-                                height: 1.2em;
-                                opacity: 0;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                transform-origin: center;
-                                pointer-events: none;
-                              }
-                              [data-button="spinner"] .path {
-                                stroke: currentColor;
-                                stroke-linecap: round;
-                                animation: spinner-dash 1.5s ease-in-out infinite;
-                              }
-                              [data-action="submit"].is-submitting [data-button="content"] {
-                                opacity: 0;
-                                transition: opacity 0.2s ease;
-                              }
-                              [data-action="submit"].is-submitting [data-button="spinner"] {
-                                opacity: 1;
-                                transition: opacity 0.2s ease;
-                                animation: spinner-rotate 2s linear infinite;
-                              }
-                              @keyframes spinner-rotate {
-                                100% {
-                                  transform: translate(-50%, -50%) rotate(360deg);
-                                }
-                              }
-                              @keyframes spinner-dash {
-                                0% {
-                                  stroke-dasharray: 1, 150;
-                                  stroke-dashoffset: 0;
-                                }
-                                50% {
-                                  stroke-dasharray: 90, 150;
-                                  stroke-dashoffset: -35;
-                                }
-                                100% {
-                                  stroke-dasharray: 90, 150;
-                                  stroke-dashoffset: -124;
-                                }
-                              }
-                            </style>
-                        </div>
+
                       </button></div>
                   </div>
                   <div class="order-form__footer">
@@ -1505,6 +1431,78 @@
     </div>
   </div>
 
+
+  <!-- Consolidated Custom CSS -->
+  <style>
+    [swiper="sw08"] .swiper-slide_image-wrap {
+    aspect-ratio: 16 / 9;
+    }
+    [swiper="sw08"] [swiper="slider-nav"] .swiper-slide {
+    width: auto;
+    }
+    [swiper="sw08"] [swiper="slider-nav"] .swiper-slide.swiper-slide-active {
+    color: #000;
+    }
+
+    [pb-component="selector"][pb-variant="quantity"][pb-id="QS01"] [pb-element="card"].pb--selected [pb-element="radio"] {
+    border: 3px solid white;
+    background-color: var(--component--color--radio);
+    box-shadow: 0 0 0 2px var(--component--color--radio);
+    }
+    [pb-component="selector"][pb-variant="quantity"][pb-id="QS01"]:has(.pb-quantity__label-middle) {
+    padding-top: 0.55rem;
+    }
+
+    [data-action="submit"] {
+    position: relative;
+    }
+    [data-button="spinner"] {
+    width: 1.2em;
+    display: block;
+    height: 1.2em;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    pointer-events: none;
+    }
+    [data-button="spinner"] .path {
+    stroke: currentColor;
+    stroke-linecap: round;
+    animation: spinner-dash 1.5s ease-in-out infinite;
+    }
+    [data-action="submit"].is-submitting [data-button="content"] {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    }
+    [data-action="submit"].is-submitting [data-button="spinner"] {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    animation: spinner-rotate 2s linear infinite;
+    }
+    @keyframes spinner-rotate {
+    100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    }
+    }
+    @keyframes spinner-dash {
+    0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+    }
+    50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+    }
+    100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+    }
+    }
+
+  </style>
 
 </body>
 </html>

@@ -33,6 +33,9 @@ export class HtmlProcessor {
     if (this.config.processors.relocateNextMetaTags?.enabled) {
       this.processors.push(this.relocateNextMetaTags.bind(this));
     }
+    if (this.config.processors.consolidateInlineCSS?.enabled) {
+      this.processors.push(this.consolidateInlineCSS.bind(this));
+    }
   }
 
   async process(html) {
@@ -265,6 +268,61 @@ export class HtmlProcessor {
       }
     }
 
+    return $;
+  }
+
+  consolidateInlineCSS($) {
+    // Find all custom-css w-embed divs
+    const customCssDivs = $('.custom-css.w-embed');
+    
+    if (customCssDivs.length > 0) {
+      const cssBlocks = new Map(); // Use Map to track unique CSS blocks
+      
+      // Collect all CSS content
+      customCssDivs.each((i, elem) => {
+        const $div = $(elem);
+        const $style = $div.find('style');
+        
+        if ($style.length > 0) {
+          const cssContent = $style.html().trim();
+          if (cssContent) {
+            // Use the CSS content as key to avoid duplicates
+            cssBlocks.set(cssContent, cssContent);
+          }
+        }
+        
+        // Remove the original div
+        $div.remove();
+      });
+      
+      // If we have CSS to consolidate
+      if (cssBlocks.size > 0) {
+        // Create consolidated style tag
+        let consolidatedCSS = '\n  <!-- Consolidated Custom CSS -->\n';
+        consolidatedCSS += '  <style>\n';
+        
+        // Add all unique CSS blocks with proper indentation
+        cssBlocks.forEach(css => {
+          // Split CSS into lines and re-indent properly
+          const lines = css.split('\n');
+          lines.forEach(line => {
+            const trimmedLine = line.trim();
+            if (trimmedLine) {
+              // Add consistent 4-space indentation
+              consolidatedCSS += '    ' + trimmedLine + '\n';
+            }
+          });
+          // Add a blank line between CSS blocks for readability
+          consolidatedCSS += '\n';
+        });
+        
+        consolidatedCSS += '  </style>\n\n';
+        
+        // Insert before closing body tag
+        $('body').append(consolidatedCSS);
+      }
+    }
+    
     return $;
   }
 

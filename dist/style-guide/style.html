@@ -447,21 +447,7 @@
                     </g>
                   </svg>
                 </div>
-                <div class="custom-css w-embed">
-                  <style>
-                      [pb-animate="rotate-02"] {
-                        animation: 2.5s ease-in-out infinite forwards rotate02;
-                      }
-                      @keyframes rotate02 {
-                        0% {
-                          transform: rotate(00deg)
-                        }
-                        100% {
-                          transform: rotate(360deg)
-                        }
-                      }
-                    </style>
-                </div>
+
               </div>
               <div class="sidebar_link-text">
                 <div>Free Components</div>
@@ -1179,82 +1165,7 @@
                             <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                             <circle cx="25" cy="25" r="22.5" class="line"></circle>
                           </svg>
-                          <div class="custom-css w-embed">
-                            <style>
-                                /* Button base state */
-                                [data-action="submit"] {
-                                  position: relative;
-                                  /* Prevent layout shifts */
-                                  min-width: 100px;
-                                  /* Adjust based on your needs */
-                                  min-height: 40px;
-                                  /* Adjust based on your needs */
-                                }
-                                /* Spinner container */
-                                [data-button="spinner"] {
-                                  position: absolute;
-                                  top: 50%;
-                                  left: 50%;
-                                  transform: translate(-50%, -50%);
-                                  opacity: 0;
-                                  pointer-events: none;
-                                  font-size: calc(2 * 1em);
-                                  width: 1em;
-                                  height: 1em;
-                                  border-radius: 50%;
-                                  color: inherit;
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Button content and icon */
-                                [data-button="content"],
-                                [data-button="icon"] {
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Loading state */
-                                [data-action="submit"].is-submitting {
-                                  cursor: not-allowed;
-                                }
-                                [data-action="submit"].is-submitting [data-button="spinner"] {
-                                  opacity: 1;
-                                }
-                                [data-action="submit"].is-submitting [data-button="content"],
-                                [data-action="submit"].is-submitting [data-button="icon"] {
-                                  opacity: 0;
-                                }
-                                /* Spinner elements */
-                                [data-button="spinner"] .line {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  stroke-linecap: round;
-                                  transform-origin: 50% 50%;
-                                  animation: spinner-arc 2156ms ease-in-out infinite,
-                                    spinner-rotate 1829ms linear infinite;
-                                }
-                                [data-button="spinner"] .ring {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  opacity: 0.15;
-                                }
-                                /* Animations */
-                                @keyframes spinner-rotate {
-                                  to {
-                                    transform: rotate(360deg);
-                                  }
-                                }
-                                @keyframes spinner-arc {
-                                  0% {
-                                    stroke-dasharray: 0 150;
-                                    stroke-dashoffset: 0;
-                                  }
-                                  100% {
-                                    stroke-dasharray: 100 150;
-                                    stroke-dashoffset: -140;
-                                  }
-                                }
-                              </style>
-                          </div>
+
                         </button>
                       </div>
                       <div class="pb_sg-item">
@@ -1268,82 +1179,7 @@
                             <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                             <circle cx="25" cy="25" r="22.5" class="line"></circle>
                           </svg>
-                          <div class="custom-css w-embed">
-                            <style>
-                                /* Button base state */
-                                [data-action="submit"] {
-                                  position: relative;
-                                  /* Prevent layout shifts */
-                                  min-width: 100px;
-                                  /* Adjust based on your needs */
-                                  min-height: 40px;
-                                  /* Adjust based on your needs */
-                                }
-                                /* Spinner container */
-                                [data-button="spinner"] {
-                                  position: absolute;
-                                  top: 50%;
-                                  left: 50%;
-                                  transform: translate(-50%, -50%);
-                                  opacity: 0;
-                                  pointer-events: none;
-                                  font-size: calc(2 * 1em);
-                                  width: 1em;
-                                  height: 1em;
-                                  border-radius: 50%;
-                                  color: inherit;
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Button content and icon */
-                                [data-button="content"],
-                                [data-button="icon"] {
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Loading state */
-                                [data-action="submit"].is-submitting {
-                                  cursor: not-allowed;
-                                }
-                                [data-action="submit"].is-submitting [data-button="spinner"] {
-                                  opacity: 1;
-                                }
-                                [data-action="submit"].is-submitting [data-button="content"],
-                                [data-action="submit"].is-submitting [data-button="icon"] {
-                                  opacity: 0;
-                                }
-                                /* Spinner elements */
-                                [data-button="spinner"] .line {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  stroke-linecap: round;
-                                  transform-origin: 50% 50%;
-                                  animation: spinner-arc 2156ms ease-in-out infinite,
-                                    spinner-rotate 1829ms linear infinite;
-                                }
-                                [data-button="spinner"] .ring {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  opacity: 0.15;
-                                }
-                                /* Animations */
-                                @keyframes spinner-rotate {
-                                  to {
-                                    transform: rotate(360deg);
-                                  }
-                                }
-                                @keyframes spinner-arc {
-                                  0% {
-                                    stroke-dasharray: 0 150;
-                                    stroke-dashoffset: 0;
-                                  }
-                                  100% {
-                                    stroke-dasharray: 100 150;
-                                    stroke-dashoffset: -140;
-                                  }
-                                }
-                              </style>
-                          </div>
+
                         </button>
                       </div>
                       <div class="pb_sg-item">
@@ -1357,82 +1193,7 @@
                             <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                             <circle cx="25" cy="25" r="22.5" class="line"></circle>
                           </svg>
-                          <div class="custom-css w-embed">
-                            <style>
-                                /* Button base state */
-                                [data-action="submit"] {
-                                  position: relative;
-                                  /* Prevent layout shifts */
-                                  min-width: 100px;
-                                  /* Adjust based on your needs */
-                                  min-height: 40px;
-                                  /* Adjust based on your needs */
-                                }
-                                /* Spinner container */
-                                [data-button="spinner"] {
-                                  position: absolute;
-                                  top: 50%;
-                                  left: 50%;
-                                  transform: translate(-50%, -50%);
-                                  opacity: 0;
-                                  pointer-events: none;
-                                  font-size: calc(2 * 1em);
-                                  width: 1em;
-                                  height: 1em;
-                                  border-radius: 50%;
-                                  color: inherit;
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Button content and icon */
-                                [data-button="content"],
-                                [data-button="icon"] {
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Loading state */
-                                [data-action="submit"].is-submitting {
-                                  cursor: not-allowed;
-                                }
-                                [data-action="submit"].is-submitting [data-button="spinner"] {
-                                  opacity: 1;
-                                }
-                                [data-action="submit"].is-submitting [data-button="content"],
-                                [data-action="submit"].is-submitting [data-button="icon"] {
-                                  opacity: 0;
-                                }
-                                /* Spinner elements */
-                                [data-button="spinner"] .line {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  stroke-linecap: round;
-                                  transform-origin: 50% 50%;
-                                  animation: spinner-arc 2156ms ease-in-out infinite,
-                                    spinner-rotate 1829ms linear infinite;
-                                }
-                                [data-button="spinner"] .ring {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  opacity: 0.15;
-                                }
-                                /* Animations */
-                                @keyframes spinner-rotate {
-                                  to {
-                                    transform: rotate(360deg);
-                                  }
-                                }
-                                @keyframes spinner-arc {
-                                  0% {
-                                    stroke-dasharray: 0 150;
-                                    stroke-dashoffset: 0;
-                                  }
-                                  100% {
-                                    stroke-dasharray: 100 150;
-                                    stroke-dashoffset: -140;
-                                  }
-                                }
-                              </style>
-                          </div>
+
                         </button>
                       </div>
                     </div>
@@ -1461,82 +1222,7 @@
                             <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                             <circle cx="25" cy="25" r="22.5" class="line"></circle>
                           </svg>
-                          <div class="custom-css w-embed">
-                            <style>
-                                /* Button base state */
-                                [data-action="submit"] {
-                                  position: relative;
-                                  /* Prevent layout shifts */
-                                  min-width: 100px;
-                                  /* Adjust based on your needs */
-                                  min-height: 40px;
-                                  /* Adjust based on your needs */
-                                }
-                                /* Spinner container */
-                                [data-button="spinner"] {
-                                  position: absolute;
-                                  top: 50%;
-                                  left: 50%;
-                                  transform: translate(-50%, -50%);
-                                  opacity: 0;
-                                  pointer-events: none;
-                                  font-size: calc(2 * 1em);
-                                  width: 1em;
-                                  height: 1em;
-                                  border-radius: 50%;
-                                  color: inherit;
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Button content and icon */
-                                [data-button="content"],
-                                [data-button="icon"] {
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Loading state */
-                                [data-action="submit"].is-submitting {
-                                  cursor: not-allowed;
-                                }
-                                [data-action="submit"].is-submitting [data-button="spinner"] {
-                                  opacity: 1;
-                                }
-                                [data-action="submit"].is-submitting [data-button="content"],
-                                [data-action="submit"].is-submitting [data-button="icon"] {
-                                  opacity: 0;
-                                }
-                                /* Spinner elements */
-                                [data-button="spinner"] .line {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  stroke-linecap: round;
-                                  transform-origin: 50% 50%;
-                                  animation: spinner-arc 2156ms ease-in-out infinite,
-                                    spinner-rotate 1829ms linear infinite;
-                                }
-                                [data-button="spinner"] .ring {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  opacity: 0.15;
-                                }
-                                /* Animations */
-                                @keyframes spinner-rotate {
-                                  to {
-                                    transform: rotate(360deg);
-                                  }
-                                }
-                                @keyframes spinner-arc {
-                                  0% {
-                                    stroke-dasharray: 0 150;
-                                    stroke-dashoffset: 0;
-                                  }
-                                  100% {
-                                    stroke-dasharray: 100 150;
-                                    stroke-dashoffset: -140;
-                                  }
-                                }
-                              </style>
-                          </div>
+
                         </button>
                       </div>
                       <div class="pb_sg-item">
@@ -1550,82 +1236,7 @@
                             <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                             <circle cx="25" cy="25" r="22.5" class="line"></circle>
                           </svg>
-                          <div class="custom-css w-embed">
-                            <style>
-                                /* Button base state */
-                                [data-action="submit"] {
-                                  position: relative;
-                                  /* Prevent layout shifts */
-                                  min-width: 100px;
-                                  /* Adjust based on your needs */
-                                  min-height: 40px;
-                                  /* Adjust based on your needs */
-                                }
-                                /* Spinner container */
-                                [data-button="spinner"] {
-                                  position: absolute;
-                                  top: 50%;
-                                  left: 50%;
-                                  transform: translate(-50%, -50%);
-                                  opacity: 0;
-                                  pointer-events: none;
-                                  font-size: calc(2 * 1em);
-                                  width: 1em;
-                                  height: 1em;
-                                  border-radius: 50%;
-                                  color: inherit;
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Button content and icon */
-                                [data-button="content"],
-                                [data-button="icon"] {
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Loading state */
-                                [data-action="submit"].is-submitting {
-                                  cursor: not-allowed;
-                                }
-                                [data-action="submit"].is-submitting [data-button="spinner"] {
-                                  opacity: 1;
-                                }
-                                [data-action="submit"].is-submitting [data-button="content"],
-                                [data-action="submit"].is-submitting [data-button="icon"] {
-                                  opacity: 0;
-                                }
-                                /* Spinner elements */
-                                [data-button="spinner"] .line {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  stroke-linecap: round;
-                                  transform-origin: 50% 50%;
-                                  animation: spinner-arc 2156ms ease-in-out infinite,
-                                    spinner-rotate 1829ms linear infinite;
-                                }
-                                [data-button="spinner"] .ring {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  opacity: 0.15;
-                                }
-                                /* Animations */
-                                @keyframes spinner-rotate {
-                                  to {
-                                    transform: rotate(360deg);
-                                  }
-                                }
-                                @keyframes spinner-arc {
-                                  0% {
-                                    stroke-dasharray: 0 150;
-                                    stroke-dashoffset: 0;
-                                  }
-                                  100% {
-                                    stroke-dasharray: 100 150;
-                                    stroke-dashoffset: -140;
-                                  }
-                                }
-                              </style>
-                          </div>
+
                         </button>
                       </div>
                       <div class="pb_sg-item">
@@ -1639,82 +1250,7 @@
                             <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                             <circle cx="25" cy="25" r="22.5" class="line"></circle>
                           </svg>
-                          <div class="custom-css w-embed">
-                            <style>
-                                /* Button base state */
-                                [data-action="submit"] {
-                                  position: relative;
-                                  /* Prevent layout shifts */
-                                  min-width: 100px;
-                                  /* Adjust based on your needs */
-                                  min-height: 40px;
-                                  /* Adjust based on your needs */
-                                }
-                                /* Spinner container */
-                                [data-button="spinner"] {
-                                  position: absolute;
-                                  top: 50%;
-                                  left: 50%;
-                                  transform: translate(-50%, -50%);
-                                  opacity: 0;
-                                  pointer-events: none;
-                                  font-size: calc(2 * 1em);
-                                  width: 1em;
-                                  height: 1em;
-                                  border-radius: 50%;
-                                  color: inherit;
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Button content and icon */
-                                [data-button="content"],
-                                [data-button="icon"] {
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Loading state */
-                                [data-action="submit"].is-submitting {
-                                  cursor: not-allowed;
-                                }
-                                [data-action="submit"].is-submitting [data-button="spinner"] {
-                                  opacity: 1;
-                                }
-                                [data-action="submit"].is-submitting [data-button="content"],
-                                [data-action="submit"].is-submitting [data-button="icon"] {
-                                  opacity: 0;
-                                }
-                                /* Spinner elements */
-                                [data-button="spinner"] .line {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  stroke-linecap: round;
-                                  transform-origin: 50% 50%;
-                                  animation: spinner-arc 2156ms ease-in-out infinite,
-                                    spinner-rotate 1829ms linear infinite;
-                                }
-                                [data-button="spinner"] .ring {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  opacity: 0.15;
-                                }
-                                /* Animations */
-                                @keyframes spinner-rotate {
-                                  to {
-                                    transform: rotate(360deg);
-                                  }
-                                }
-                                @keyframes spinner-arc {
-                                  0% {
-                                    stroke-dasharray: 0 150;
-                                    stroke-dashoffset: 0;
-                                  }
-                                  100% {
-                                    stroke-dasharray: 100 150;
-                                    stroke-dashoffset: -140;
-                                  }
-                                }
-                              </style>
-                          </div>
+
                         </button>
                       </div>
                     </div>
@@ -1744,82 +1280,7 @@
                             <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                             <circle cx="25" cy="25" r="22.5" class="line"></circle>
                           </svg>
-                          <div class="custom-css w-embed">
-                            <style>
-                                /* Button base state */
-                                [data-action="submit"] {
-                                  position: relative;
-                                  /* Prevent layout shifts */
-                                  min-width: 100px;
-                                  /* Adjust based on your needs */
-                                  min-height: 40px;
-                                  /* Adjust based on your needs */
-                                }
-                                /* Spinner container */
-                                [data-button="spinner"] {
-                                  position: absolute;
-                                  top: 50%;
-                                  left: 50%;
-                                  transform: translate(-50%, -50%);
-                                  opacity: 0;
-                                  pointer-events: none;
-                                  font-size: calc(2 * 1em);
-                                  width: 1em;
-                                  height: 1em;
-                                  border-radius: 50%;
-                                  color: inherit;
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Button content and icon */
-                                [data-button="content"],
-                                [data-button="icon"] {
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Loading state */
-                                [data-action="submit"].is-submitting {
-                                  cursor: not-allowed;
-                                }
-                                [data-action="submit"].is-submitting [data-button="spinner"] {
-                                  opacity: 1;
-                                }
-                                [data-action="submit"].is-submitting [data-button="content"],
-                                [data-action="submit"].is-submitting [data-button="icon"] {
-                                  opacity: 0;
-                                }
-                                /* Spinner elements */
-                                [data-button="spinner"] .line {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  stroke-linecap: round;
-                                  transform-origin: 50% 50%;
-                                  animation: spinner-arc 2156ms ease-in-out infinite,
-                                    spinner-rotate 1829ms linear infinite;
-                                }
-                                [data-button="spinner"] .ring {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  opacity: 0.15;
-                                }
-                                /* Animations */
-                                @keyframes spinner-rotate {
-                                  to {
-                                    transform: rotate(360deg);
-                                  }
-                                }
-                                @keyframes spinner-arc {
-                                  0% {
-                                    stroke-dasharray: 0 150;
-                                    stroke-dashoffset: 0;
-                                  }
-                                  100% {
-                                    stroke-dasharray: 100 150;
-                                    stroke-dashoffset: -140;
-                                  }
-                                }
-                              </style>
-                          </div>
+
                         </button>
                       </div>
                       <div class="pb_sg-item">
@@ -1834,82 +1295,7 @@
                             <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                             <circle cx="25" cy="25" r="22.5" class="line"></circle>
                           </svg>
-                          <div class="custom-css w-embed">
-                            <style>
-                                /* Button base state */
-                                [data-action="submit"] {
-                                  position: relative;
-                                  /* Prevent layout shifts */
-                                  min-width: 100px;
-                                  /* Adjust based on your needs */
-                                  min-height: 40px;
-                                  /* Adjust based on your needs */
-                                }
-                                /* Spinner container */
-                                [data-button="spinner"] {
-                                  position: absolute;
-                                  top: 50%;
-                                  left: 50%;
-                                  transform: translate(-50%, -50%);
-                                  opacity: 0;
-                                  pointer-events: none;
-                                  font-size: calc(2 * 1em);
-                                  width: 1em;
-                                  height: 1em;
-                                  border-radius: 50%;
-                                  color: inherit;
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Button content and icon */
-                                [data-button="content"],
-                                [data-button="icon"] {
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Loading state */
-                                [data-action="submit"].is-submitting {
-                                  cursor: not-allowed;
-                                }
-                                [data-action="submit"].is-submitting [data-button="spinner"] {
-                                  opacity: 1;
-                                }
-                                [data-action="submit"].is-submitting [data-button="content"],
-                                [data-action="submit"].is-submitting [data-button="icon"] {
-                                  opacity: 0;
-                                }
-                                /* Spinner elements */
-                                [data-button="spinner"] .line {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  stroke-linecap: round;
-                                  transform-origin: 50% 50%;
-                                  animation: spinner-arc 2156ms ease-in-out infinite,
-                                    spinner-rotate 1829ms linear infinite;
-                                }
-                                [data-button="spinner"] .ring {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  opacity: 0.15;
-                                }
-                                /* Animations */
-                                @keyframes spinner-rotate {
-                                  to {
-                                    transform: rotate(360deg);
-                                  }
-                                }
-                                @keyframes spinner-arc {
-                                  0% {
-                                    stroke-dasharray: 0 150;
-                                    stroke-dashoffset: 0;
-                                  }
-                                  100% {
-                                    stroke-dasharray: 100 150;
-                                    stroke-dashoffset: -140;
-                                  }
-                                }
-                              </style>
-                          </div>
+
                         </button>
                       </div>
                       <div class="pb_sg-item">
@@ -1924,82 +1310,7 @@
                             <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                             <circle cx="25" cy="25" r="22.5" class="line"></circle>
                           </svg>
-                          <div class="custom-css w-embed">
-                            <style>
-                                /* Button base state */
-                                [data-action="submit"] {
-                                  position: relative;
-                                  /* Prevent layout shifts */
-                                  min-width: 100px;
-                                  /* Adjust based on your needs */
-                                  min-height: 40px;
-                                  /* Adjust based on your needs */
-                                }
-                                /* Spinner container */
-                                [data-button="spinner"] {
-                                  position: absolute;
-                                  top: 50%;
-                                  left: 50%;
-                                  transform: translate(-50%, -50%);
-                                  opacity: 0;
-                                  pointer-events: none;
-                                  font-size: calc(2 * 1em);
-                                  width: 1em;
-                                  height: 1em;
-                                  border-radius: 50%;
-                                  color: inherit;
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Button content and icon */
-                                [data-button="content"],
-                                [data-button="icon"] {
-                                  transition: opacity 0.2s ease;
-                                }
-                                /* Loading state */
-                                [data-action="submit"].is-submitting {
-                                  cursor: not-allowed;
-                                }
-                                [data-action="submit"].is-submitting [data-button="spinner"] {
-                                  opacity: 1;
-                                }
-                                [data-action="submit"].is-submitting [data-button="content"],
-                                [data-action="submit"].is-submitting [data-button="icon"] {
-                                  opacity: 0;
-                                }
-                                /* Spinner elements */
-                                [data-button="spinner"] .line {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  stroke-linecap: round;
-                                  transform-origin: 50% 50%;
-                                  animation: spinner-arc 2156ms ease-in-out infinite,
-                                    spinner-rotate 1829ms linear infinite;
-                                }
-                                [data-button="spinner"] .ring {
-                                  fill: none;
-                                  stroke: currentColor;
-                                  stroke-width: 6px;
-                                  opacity: 0.15;
-                                }
-                                /* Animations */
-                                @keyframes spinner-rotate {
-                                  to {
-                                    transform: rotate(360deg);
-                                  }
-                                }
-                                @keyframes spinner-arc {
-                                  0% {
-                                    stroke-dasharray: 0 150;
-                                    stroke-dashoffset: 0;
-                                  }
-                                  100% {
-                                    stroke-dasharray: 100 150;
-                                    stroke-dashoffset: -140;
-                                  }
-                                }
-                              </style>
-                          </div>
+
                         </button>
                       </div>
                     </div>
@@ -4775,6 +4086,96 @@
         window.addEventListener('hashchange', handleActiveLink);
       });
     </script>
+
+
+  <!-- Consolidated Custom CSS -->
+  <style>
+    [pb-animate="rotate-02"] {
+    animation: 2.5s ease-in-out infinite forwards rotate02;
+    }
+    @keyframes rotate02 {
+    0% {
+    transform: rotate(00deg)
+    }
+    100% {
+    transform: rotate(360deg)
+    }
+    }
+
+    /* Button base state */
+    [data-action="submit"] {
+    position: relative;
+    /* Prevent layout shifts */
+    min-width: 100px;
+    /* Adjust based on your needs */
+    min-height: 40px;
+    /* Adjust based on your needs */
+    }
+    /* Spinner container */
+    [data-button="spinner"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    font-size: calc(2 * 1em);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    color: inherit;
+    transition: opacity 0.2s ease;
+    }
+    /* Button content and icon */
+    [data-button="content"],
+    [data-button="icon"] {
+    transition: opacity 0.2s ease;
+    }
+    /* Loading state */
+    [data-action="submit"].is-submitting {
+    cursor: not-allowed;
+    }
+    [data-action="submit"].is-submitting [data-button="spinner"] {
+    opacity: 1;
+    }
+    [data-action="submit"].is-submitting [data-button="content"],
+    [data-action="submit"].is-submitting [data-button="icon"] {
+    opacity: 0;
+    }
+    /* Spinner elements */
+    [data-button="spinner"] .line {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    transform-origin: 50% 50%;
+    animation: spinner-arc 2156ms ease-in-out infinite,
+    spinner-rotate 1829ms linear infinite;
+    }
+    [data-button="spinner"] .ring {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    opacity: 0.15;
+    }
+    /* Animations */
+    @keyframes spinner-rotate {
+    to {
+    transform: rotate(360deg);
+    }
+    }
+    @keyframes spinner-arc {
+    0% {
+    stroke-dasharray: 0 150;
+    stroke-dashoffset: 0;
+    }
+    100% {
+    stroke-dasharray: 100 150;
+    stroke-dashoffset: -140;
+    }
+    }
+
+  </style>
 
 </body>
 </html>

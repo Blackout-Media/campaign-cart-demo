@@ -642,36 +642,7 @@
                             <path d="M4.431 12.822l13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z" fill="currentColor"></path>
                           </svg></div>
                       </div>
-                      <div class="custom-css w-embed">
-                        <style>
-                            /* Define the animations */
-                            @keyframes moveRightLeft {
-                              0%,
-                              100% {
-                                transform: translateX(0);
-                              }
-                              50% {
-                                transform: translateX(10px);
-                              }
-                            }
-                            @keyframes moveLeftRight {
-                              0%,
-                              100% {
-                                transform: translateX(0);
-                              }
-                              50% {
-                                transform: translateX(-10px);
-                              }
-                            }
-                            /* Apply animations to the elements based on their data-animate attributes */
-                            [data-animate="right"] {
-                              animation: moveRightLeft 1.5s infinite ease-in-out;
-                            }
-                            [data-animate="left"] {
-                              animation: moveLeftRight 1.5s infinite ease-in-out;
-                            }
-                          </style>
-                      </div>
+
                     </div>
                     <div class="upsell__body">
                       <div class="upsell__content"><img data-next-display="package.6.image" loading="lazy" alt="" src="../images/icon.svg" class="upsell__image">
@@ -826,29 +797,7 @@
                               <div class="form-grid__row">
                                 <div class="form-group">
                                   <div class="form-input"><label for="phone" class="label-checkout">Phone</label><input autocomplete="tel-full" name="phone" data-name="Phone" type="tel" id="phone" placeholder="201-555-0123" os-checkout-validate="true" data-next-checkout-field="phone" class="input-flds">
-                                    <div class="custom-css w-embed">
-                                      <style>
-                                          .iti__flag-container {
-                                            position: absolute;
-                                            top: 0;
-                                            bottom: 0;
-                                            width: 3rem !important;
-                                            right: 0 !important;
-                                            left: auto !important;
-                                            padding: 1px;
-                                          }
-                                          .iti--allow-dropdown input,
-                                          .iti--allow-dropdown input[type=text],
-                                          .iti--allow-dropdown input[type=tel],
-                                          .iti--separate-dial-code input,
-                                          .iti--separate-dial-code input[type=text],
-                                          .iti--separate-dial-code input[type=tel] {
-                                            padding-right: 52px !important;
-                                            padding-left: 12px !important;
-                                            margin-left: 0 !important;
-                                          }
-                                        </style>
-                                    </div>
+
                                   </div>
                                 </div>
                               </div>
@@ -894,15 +843,7 @@
                           <div class="form-section__header">
                             <h1 class="form-section__title">Payment Details</h1>
                             <div class="form-section__subtitle">All transactions are secure and encrypted.<br></div>
-                            <div class="custom-css w-embed">
-                              <style>
-                                  /* Remove the divider on the very last payment-method block */
-                                  .payment-methods>.payment-method:last-child {
-                                    border-bottom: 0 !important;
-                                    /* kill the bottom border */
-                                  }
-                                </style>
-                            </div>
+
                           </div>
                           <div os-payment-mode="credit" class="payment-methods">
                             <div data-next-payment-method="credit" class="payment-method next-selected">
@@ -1265,6 +1206,64 @@
   <script defer="" src="https://core.spreedly.com/iframe/iframe-v1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+
+  <!-- Consolidated Custom CSS -->
+  <style>
+    /* Define the animations */
+    @keyframes moveRightLeft {
+    0%,
+    100% {
+    transform: translateX(0);
+    }
+    50% {
+    transform: translateX(10px);
+    }
+    }
+    @keyframes moveLeftRight {
+    0%,
+    100% {
+    transform: translateX(0);
+    }
+    50% {
+    transform: translateX(-10px);
+    }
+    }
+    /* Apply animations to the elements based on their data-animate attributes */
+    [data-animate="right"] {
+    animation: moveRightLeft 1.5s infinite ease-in-out;
+    }
+    [data-animate="left"] {
+    animation: moveLeftRight 1.5s infinite ease-in-out;
+    }
+
+    .iti__flag-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3rem !important;
+    right: 0 !important;
+    left: auto !important;
+    padding: 1px;
+    }
+    .iti--allow-dropdown input,
+    .iti--allow-dropdown input[type=text],
+    .iti--allow-dropdown input[type=tel],
+    .iti--separate-dial-code input,
+    .iti--separate-dial-code input[type=text],
+    .iti--separate-dial-code input[type=tel] {
+    padding-right: 52px !important;
+    padding-left: 12px !important;
+    margin-left: 0 !important;
+    }
+
+    /* Remove the divider on the very last payment-method block */
+    .payment-methods>.payment-method:last-child {
+    border-bottom: 0 !important;
+    /* kill the bottom border */
+    }
+
+  </style>
 
 </body>
 </html>

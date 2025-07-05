@@ -164,24 +164,7 @@
                   <div>
                     <div pb-component="swiper" class="slider2_component">
                       <div swiper="sw12" class="slider_component is-v9">
-                        <div class="custom-css w-embed">
-                          <style>
-                              [swiper="sw12"] .swiper-slide_image-wrap {
-                                aspect-ratio: 1 / 1;
-                              }
-                              [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide {
-                                filter: grayscale(100%);
-                                transition: filter 0.4s ease;
-                                cursor: pointer;
-                              }
-                              [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide:focus-visible {
-                                border: 2px solid #000;
-                              }
-                              [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide.swiper-slide-thumb-active {
-                                filter: grayscale(0);
-                              }
-                            </style>
-                        </div>
+
                         <div class="slider2_component-wrapper">
                           <div swiper="slider-main" class="swiper is-v9-main">
                             <div class="swiper-wrapper">
@@ -411,82 +394,7 @@
                           <circle class="ring ring" cx="25" cy="25" r="22.5"></circle>
                           <circle cx="25" cy="25" r="22.5" class="line"></circle>
                         </svg>
-                        <div class="custom-css w-embed">
-                          <style>
-                              /* Button base state */
-                              [data-action="submit"] {
-                                position: relative;
-                                /* Prevent layout shifts */
-                                min-width: 100px;
-                                /* Adjust based on your needs */
-                                min-height: 40px;
-                                /* Adjust based on your needs */
-                              }
-                              /* Spinner container */
-                              [data-button="spinner"] {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                opacity: 0;
-                                pointer-events: none;
-                                font-size: calc(2 * 1em);
-                                width: 1em;
-                                height: 1em;
-                                border-radius: 50%;
-                                color: inherit;
-                                transition: opacity 0.2s ease;
-                              }
-                              /* Button content and icon */
-                              [data-button="content"],
-                              [data-button="icon"] {
-                                transition: opacity 0.2s ease;
-                              }
-                              /* Loading state */
-                              [data-action="submit"].is-submitting {
-                                cursor: not-allowed;
-                              }
-                              [data-action="submit"].is-submitting [data-button="spinner"] {
-                                opacity: 1;
-                              }
-                              [data-action="submit"].is-submitting [data-button="content"],
-                              [data-action="submit"].is-submitting [data-button="icon"] {
-                                opacity: 0;
-                              }
-                              /* Spinner elements */
-                              [data-button="spinner"] .line {
-                                fill: none;
-                                stroke: currentColor;
-                                stroke-width: 6px;
-                                stroke-linecap: round;
-                                transform-origin: 50% 50%;
-                                animation: spinner-arc 2156ms ease-in-out infinite,
-                                  spinner-rotate 1829ms linear infinite;
-                              }
-                              [data-button="spinner"] .ring {
-                                fill: none;
-                                stroke: currentColor;
-                                stroke-width: 6px;
-                                opacity: 0.15;
-                              }
-                              /* Animations */
-                              @keyframes spinner-rotate {
-                                to {
-                                  transform: rotate(360deg);
-                                }
-                              }
-                              @keyframes spinner-arc {
-                                0% {
-                                  stroke-dasharray: 0 150;
-                                  stroke-dashoffset: 0;
-                                }
-                                100% {
-                                  stroke-dasharray: 100 150;
-                                  stroke-dashoffset: -140;
-                                }
-                              }
-                            </style>
-                        </div>
+
                       </a>
                       <a data-os-next-url="/lem/receipt" data-os-upsell="decline" href="#" class="upsell-link w-inline-block">
                         <div class="text-sm tw-600">No, thank you! I don't want to get this one-time-only offer.</div>
@@ -527,6 +435,98 @@
     </div>
   </div>
 
+
+  <!-- Consolidated Custom CSS -->
+  <style>
+    [swiper="sw12"] .swiper-slide_image-wrap {
+    aspect-ratio: 1 / 1;
+    }
+    [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide {
+    filter: grayscale(100%);
+    transition: filter 0.4s ease;
+    cursor: pointer;
+    }
+    [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide:focus-visible {
+    border: 2px solid #000;
+    }
+    [swiper="sw12"] [swiper="slider-thumbs"] .swiper-slide.swiper-slide-thumb-active {
+    filter: grayscale(0);
+    }
+
+    /* Button base state */
+    [data-action="submit"] {
+    position: relative;
+    /* Prevent layout shifts */
+    min-width: 100px;
+    /* Adjust based on your needs */
+    min-height: 40px;
+    /* Adjust based on your needs */
+    }
+    /* Spinner container */
+    [data-button="spinner"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    font-size: calc(2 * 1em);
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    color: inherit;
+    transition: opacity 0.2s ease;
+    }
+    /* Button content and icon */
+    [data-button="content"],
+    [data-button="icon"] {
+    transition: opacity 0.2s ease;
+    }
+    /* Loading state */
+    [data-action="submit"].is-submitting {
+    cursor: not-allowed;
+    }
+    [data-action="submit"].is-submitting [data-button="spinner"] {
+    opacity: 1;
+    }
+    [data-action="submit"].is-submitting [data-button="content"],
+    [data-action="submit"].is-submitting [data-button="icon"] {
+    opacity: 0;
+    }
+    /* Spinner elements */
+    [data-button="spinner"] .line {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    transform-origin: 50% 50%;
+    animation: spinner-arc 2156ms ease-in-out infinite,
+    spinner-rotate 1829ms linear infinite;
+    }
+    [data-button="spinner"] .ring {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 6px;
+    opacity: 0.15;
+    }
+    /* Animations */
+    @keyframes spinner-rotate {
+    to {
+    transform: rotate(360deg);
+    }
+    }
+    @keyframes spinner-arc {
+    0% {
+    stroke-dasharray: 0 150;
+    stroke-dashoffset: 0;
+    }
+    100% {
+    stroke-dasharray: 100 150;
+    stroke-dashoffset: -140;
+    }
+    }
+
+  </style>
 
 </body>
 </html>

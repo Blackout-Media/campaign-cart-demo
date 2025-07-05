@@ -1066,36 +1066,7 @@ a,
                           <path d="M4.431 12.822l13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z" fill="currentColor"></path>
                         </svg></div>
                     </div>
-                    <div class="custom-css w-embed">
-                      <style>
-                          /* Define the animations */
-                          @keyframes moveRightLeft {
-                            0%,
-                            100% {
-                              transform: translateX(0);
-                            }
-                            50% {
-                              transform: translateX(10px);
-                            }
-                          }
-                          @keyframes moveLeftRight {
-                            0%,
-                            100% {
-                              transform: translateX(0);
-                            }
-                            50% {
-                              transform: translateX(-10px);
-                            }
-                          }
-                          /* Apply animations to the elements based on their data-animate attributes */
-                          [data-animate="right"] {
-                            animation: moveRightLeft 1.5s infinite ease-in-out;
-                          }
-                          [data-animate="left"] {
-                            animation: moveLeftRight 1.5s infinite ease-in-out;
-                          }
-                        </style>
-                    </div>
+
                   </div>
                   <div class="upsell__body">
                     <div class="upsell__content"><img data-next-display="package.9.image" loading="lazy" alt="" src="../images/icon.svg" class="upsell__image">
@@ -1392,6 +1363,37 @@ a,
     </main>
   </div>
 
+
+  <!-- Consolidated Custom CSS -->
+  <style>
+    /* Define the animations */
+    @keyframes moveRightLeft {
+    0%,
+    100% {
+    transform: translateX(0);
+    }
+    50% {
+    transform: translateX(10px);
+    }
+    }
+    @keyframes moveLeftRight {
+    0%,
+    100% {
+    transform: translateX(0);
+    }
+    50% {
+    transform: translateX(-10px);
+    }
+    }
+    /* Apply animations to the elements based on their data-animate attributes */
+    [data-animate="right"] {
+    animation: moveRightLeft 1.5s infinite ease-in-out;
+    }
+    [data-animate="left"] {
+    animation: moveLeftRight 1.5s infinite ease-in-out;
+    }
+
+  </style>
 
 </body>
 </html>

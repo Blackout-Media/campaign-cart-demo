@@ -339,23 +339,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="custom-css w-embed">
-                          <style>
-                              [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"].pb--selected [pb-element="radio"] {
-                                border: 4px solid var(--component--color--radio);
-                                background-color: #fff;
-                                box-shadow: 0 0 0 1px var(--component--color--radio);
-                              }
-                              /* Hide by default */
-                              [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"] [pb-element="benefit-list"] {
-                                display: none;
-                              }
-                              /* Show when parent has pb--selected class */
-                              [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"].pb--selected [pb-element="benefit-list"] {
-                                display: block;
-                              }
-                            </style>
-                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -369,58 +353,7 @@
                         </div><svg viewBox="0 0 50 50" data-button="spinner" class="button_spinner button_spinner">
                           <circle cx="25" cy="25" r="20" fill="none" stroke-width="5" class="path path"></circle>
                         </svg>
-                        <div class="custom-css w-embed">
-                          <style>
-                              [data-action="submit"] {
-                                position: relative;
-                              }
-                              [data-button="spinner"] {
-                                width: 1.2em;
-                                display: block;
-                                height: 1.2em;
-                                opacity: 0;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                transform-origin: center;
-                                pointer-events: none;
-                              }
-                              [data-button="spinner"] .path {
-                                stroke: currentColor;
-                                stroke-linecap: round;
-                                animation: spinner-dash 1.5s ease-in-out infinite;
-                              }
-                              [data-action="submit"].is-submitting [data-button="content"] {
-                                opacity: 0;
-                                transition: opacity 0.2s ease;
-                              }
-                              [data-action="submit"].is-submitting [data-button="spinner"] {
-                                opacity: 1;
-                                transition: opacity 0.2s ease;
-                                animation: spinner-rotate 2s linear infinite;
-                              }
-                              @keyframes spinner-rotate {
-                                100% {
-                                  transform: translate(-50%, -50%) rotate(360deg);
-                                }
-                              }
-                              @keyframes spinner-dash {
-                                0% {
-                                  stroke-dasharray: 1, 150;
-                                  stroke-dashoffset: 0;
-                                }
-                                50% {
-                                  stroke-dasharray: 90, 150;
-                                  stroke-dashoffset: -35;
-                                }
-                                100% {
-                                  stroke-dasharray: 90, 150;
-                                  stroke-dashoffset: -124;
-                                }
-                              }
-                            </style>
-                        </div>
+
                       </button></div>
                   </div>
                   <div class="order-form__footer hide"></div>
@@ -432,19 +365,7 @@
                 <div class="hero__right-full_wrapper hero-pdp09">
                   <div class="hero__right-wrapper">
                     <div pb-component="swiper" class="component">
-                      <div class="custom-css w-embed">
-                        <style>
-                            [swiper="HERO-PDP-009"] .swiper-slide_image-wrap {
-                              aspect-ratio: 16 / 9;
-                            }
-                            [swiper="HERO-PDP-009"] [swiper="slider-nav"] .swiper-slide {
-                              width: auto;
-                            }
-                            [swiper="HERO-PDP-009"] [swiper="slider-nav"] .swiper-slide.swiper-slide-active {
-                              color: #000;
-                            }
-                          </style>
-                      </div>
+
                       <div class="swiper8_component">
                         <div swiper="HERO-PDP-009" class="slider_component is-v6">
                           <div class="u-negative-margin-tm">
@@ -604,27 +525,7 @@
                 <p>You're more than what's on the outside. Help support foundational health.*<br></p>
               </div>
               <div pb-element="timeline-container" class="feature27_progress">
-                <div class="custom-css w-embed">
-                  <style>
-                      [pb-element="timeline-item"].cc-active [pb-element="timeline-content"] {
-                        opacity: 1;
-                      }
-                      [pb-element="timeline-line"] {
-                        transition: height 0.3s ease-out;
-                      }
-                      [pb-element="timeline-dot"] {
-                        transition: opacity 0.3s ease-out;
-                        opacity: 0;
-                      }
-                      [pb-element="timeline-active-dot"] {
-                        transition: opacity 0.3s ease-out;
-                      }
-                      [pb-element="timeline-last-dot"] {
-                        transition: opacity 0.3s ease-out;
-                        display: none;
-                      }
-                    </style>
-                </div>
+
                 <div pb-element="timeline-line" class="feature27_line"></div>
                 <div pb-element="timeline-item" class="feature27_item cc-active">
                   <div pb-element="timeline-dot" class="feature27_progress-circle"></div>
@@ -1036,6 +937,101 @@
     </div>
   </div>
 
+
+  <!-- Consolidated Custom CSS -->
+  <style>
+    [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"].pb--selected [pb-element="radio"] {
+    border: 4px solid var(--component--color--radio);
+    background-color: #fff;
+    box-shadow: 0 0 0 1px var(--component--color--radio);
+    }
+    /* Hide by default */
+    [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"] [pb-element="benefit-list"] {
+    display: none;
+    }
+    /* Show when parent has pb--selected class */
+    [pb-component="selector"][pb-variant="quantity"][pb-id="QS06"] [pb-element="card"].pb--selected [pb-element="benefit-list"] {
+    display: block;
+    }
+
+    [data-action="submit"] {
+    position: relative;
+    }
+    [data-button="spinner"] {
+    width: 1.2em;
+    display: block;
+    height: 1.2em;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    pointer-events: none;
+    }
+    [data-button="spinner"] .path {
+    stroke: currentColor;
+    stroke-linecap: round;
+    animation: spinner-dash 1.5s ease-in-out infinite;
+    }
+    [data-action="submit"].is-submitting [data-button="content"] {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    }
+    [data-action="submit"].is-submitting [data-button="spinner"] {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    animation: spinner-rotate 2s linear infinite;
+    }
+    @keyframes spinner-rotate {
+    100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    }
+    }
+    @keyframes spinner-dash {
+    0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+    }
+    50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+    }
+    100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+    }
+    }
+
+    [swiper="HERO-PDP-009"] .swiper-slide_image-wrap {
+    aspect-ratio: 16 / 9;
+    }
+    [swiper="HERO-PDP-009"] [swiper="slider-nav"] .swiper-slide {
+    width: auto;
+    }
+    [swiper="HERO-PDP-009"] [swiper="slider-nav"] .swiper-slide.swiper-slide-active {
+    color: #000;
+    }
+
+    [pb-element="timeline-item"].cc-active [pb-element="timeline-content"] {
+    opacity: 1;
+    }
+    [pb-element="timeline-line"] {
+    transition: height 0.3s ease-out;
+    }
+    [pb-element="timeline-dot"] {
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+    }
+    [pb-element="timeline-active-dot"] {
+    transition: opacity 0.3s ease-out;
+    }
+    [pb-element="timeline-last-dot"] {
+    transition: opacity 0.3s ease-out;
+    display: none;
+    }
+
+  </style>
 
 </body>
 </html>
