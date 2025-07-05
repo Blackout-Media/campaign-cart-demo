@@ -18,6 +18,9 @@ export class HtmlProcessor {
     if (this.config.processors.removeGoogleFontsAndWebflowJS?.enabled) {
       this.processors.push(this.removeGoogleFontsAndWebflowJS.bind(this));
     }
+    if (this.config.processors.removePageblockStyles?.enabled) {
+      this.processors.push(this.removePageblockStyles.bind(this));
+    }
     if (this.config.processors.injectCustomCSS?.enabled) {
       this.processors.push(this.injectCustomCSS.bind(this));
     }
@@ -111,6 +114,19 @@ export class HtmlProcessor {
     $('script[src="js/next-staging-core.js"]').remove();
     $('script[src="../js/next-staging-core.js"]').remove();
     $('script[src="../../js/next-staging-core.js"]').remove();
+
+    return $;
+  }
+
+  removePageblockStyles($) {
+    // Remove the pageblock-styles div that contains the campaign-cart.css link
+    $('.pageblock-styles').each((i, elem) => {
+      const $elem = $(elem);
+      // Check if this contains the campaign-cart.css link
+      if ($elem.find('link[href*="campaign-cart.css"]').length > 0) {
+        $elem.remove();
+      }
+    });
 
     return $;
   }

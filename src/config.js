@@ -9,6 +9,9 @@ export const config = {
     removeGoogleFontsAndWebflowJS: {
       enabled: true
     },
+    removePageblockStyles: {
+      enabled: true
+    },
     injectCustomCSS: {
       enabled: true
     },
@@ -35,9 +38,10 @@ export const config = {
   },
   copyAssets: {
     enabled: true,
-    folders: ['css', 'js', 'images'],
+    folders: ['css', 'images'],
     customFiles: [
       { from: 'src/static/custom.css', to: 'css/custom.css' },
+      { from: 'src/static/components.css', to: 'css/components.css' },
       { from: 'src/static/config.js', to: 'config.js' }
     ]
   }
