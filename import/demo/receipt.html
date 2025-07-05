@@ -1,0 +1,731 @@
+<!DOCTYPE html><!--  Last Published: Sat Jul 05 2025 12:36:08 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="685d9d8981ea07d2da8e478a" data-wf-site="685996de362613655dd702b4">
+<head>
+  <meta charset="utf-8">
+  <title>Receipt</title>
+  <meta content="Receipt" property="og:title">
+  <meta content="Receipt" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/components.css" rel="stylesheet" type="text/css">
+  <link href="../css/next-staging-core.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]
+        }
+      });
+    </script>
+  <script type="text/javascript">
+      ! function(o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+      }(window, document);
+    </script>
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+  <script src="https://campaign-cart-v2.pages.dev/config.js"></script>
+  <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
+  <style>
+      html:not(.next-display-ready) [data-next-await] {
+        position: relative;
+        overflow: hidden;
+        border-color: transparent !important;
+        box-shadow: none !important;
+      }
+      [data-next-await] * {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+      [data-next-await]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #e0e0e0;
+        animation: pulse-gray 1.5s ease-in-out infinite;
+        z-index: 1;
+        pointer-events: none;
+      }
+      @keyframes pulse-gray {
+        0%,
+        100% {
+          background-color: #e0e0e0;
+          opacity: 0.6;
+        }
+        50% {
+          background-color: #f5f5f5;
+          opacity: 0.8;
+        }
+      }
+      html.next-display-ready [data-next-await] * {
+        opacity: 1;
+      }
+      html.next-display-ready [data-next-await]::before {
+        display: none;
+      }
+    </style>
+  <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+      }
+      /*Text Selection Color*/
+      ::selection {
+        background: #d14424;
+        color: #fff;
+      }
+      ::-moz-selection {
+        background: #d14424;
+        color: #fff;
+      }
+      .test-mode-indicator {
+        display: none !important;
+      }
+    </style>
+  <meta name="next-page-type" content="receipt">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="pageblock-styles">
+      <div class="next-styles w-embed"><!--  For development on webflow  -->
+        <link href="https://campaign-cart-v2.pages.dev/campaign-cart.css" rel="stylesheet" type="text/css">
+      </div>
+    </div>
+    <div class="main-wrapper">
+      <div data-next-skeleton="" class="skeleton-wrapper">
+        <div class="checkout-content">
+          <div class="checkout__content">
+            <div class="checkout__layout">
+              <div class="checkout__column checkout__column--left">
+                <div class="receipt__form-container">
+                  <div class="checkout__header">
+                    <div class="checkout__header-brand"><img src="../images/next-logo.png" loading="lazy" alt="" class="brand-logo"></div>
+                    <div class="order-summary-mobile">
+                      <div data-initial-state="closed" data-next-accordion="order-summary" data-open-text="Hide Order Summary" data-close-text="Show Order Summary" data-toggle-class="next-expanded" class="order-summary-mobile__accordion">
+                        <div data-next-accordion-trigger="order-summary" class="accordion__trigger">
+                          <div class="accordion__inner">
+                            <div class="accordion__left">
+                              <div class="summary-toggle">
+                                <div data-next-accordion-text="order-summary" class="summary-toggle__text show_text">Show Order Summary</div><img os-summary-icon="" loading="lazy" alt="" src="https://cdn.prod.website-files.com/68117d05d09b8f2101e76605/68117d05d09b8f2101e76edf_arrow-down.svg" class="summary-toggle__icon">
+                              </div>
+                            </div>
+                            <div class="accordion__right">
+                              <div class="skeleton skeleton-text skeleton-text--tiny"></div>
+                              <div class="skeleton skeleton-text skeleton-text--tiny"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div data-next-accordion-panel="order-summary" class="accordion__panel payment-method__form--expanded">
+                          <div class="order-summary">
+                            <h4 class="order-summary__title">Order Summary</h4>
+                            <div class="order-summary__content">
+                              <div class="cart-items">
+                                <div pb-checkout="summary-scroll" class="cart-items__scroll-hint cart-items__scroll-hint--active">
+                                  <div>Scroll for more items</div>
+                                  <div class="icon__view-more w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                                      <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6z"></path>
+                                    </svg></div>
+                                </div>
+                                <div data-next-content="">
+                                  <div data-next-order-items="" class="cart-items__list">
+                                    <div data-order-line-id="{item.id}" class="cart-item">
+                                      <div class="cart-item__wrapper">
+                                        <div class="cart-item__image-container">
+                                          <div class="cart-item__quantity-badge">
+                                            <div class="cart-item__quantity">{item.quantity}</div>
+                                          </div><img src="{item.image}" class="cart-item__image">
+                                        </div>
+                                        <div class="cart-item__details">
+                                          <div class="cart-item__content">
+                                            <div class="cart-item__description">
+                                              <div class="cart-item__header">
+                                                <div pb-cart="line_item-title" class="cart-item__title">{item.name}</div>
+                                              </div>
+                                              <div pb-cart="line_item-frequency" class="cart-item__frequency">One time purchase</div>
+                                            </div>
+                                            <div class="cart-item__pricing">
+                                              <div class="checkout__line-item__final-price">{item.lineTotal}</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div data-next-content="">
+                                <div class="order-totals">
+                                  <div class="order-totals__line">
+                                    <div class="order-totals__label">Subtotal · <span>4</span> items</div>
+                                    <div data-next-display="order.subtotal" class="order-totals__value">$138.30<br></div>
+                                  </div>
+                                  <div class="order-totals__section">
+                                    <div class="order-totals__line">
+                                      <div class="order-totals__label-group">
+                                        <div class="order-totals__label">Total Savings<br></div>
+                                        <div class="badge badge--small">
+                                          <div class="label__wrapper cc-sm">
+                                            <div class="badge__text"><span data-next-display="order.savingsPercentage">20%</span> OFF</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="order-totals__value-group">
+                                        <div data-next-display="order.savings" class="order-totals__value">- $28.34<br></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="order-totals__section">
+                                    <div class="order-totals__line">
+                                      <div class="order-totals__label-group">
+                                        <div class="order-totals__label">Shipping<br></div>
+                                        <div data-checkout-tooltip-position="top" data-checkout-tooltip="Shipping tooltip" class="info-icons w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 14" focusable="false" aria-hidden="true" class="a8x1wu10 a8x1wuz _1fragem1y _1fragemof _1fragemkk _1fragemka _1fragemnm" fill="none" stroke="currentColor">
+                                            <circle cx="7" cy="7" r="5.6" stroke="currentColor"></circle>
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.6 5.1c.2-1.3 2.6-1.3 2.8 0S6.95 6.4 6.95 7.45m.055 2.35H7v.005h.005z"></path>
+                                            <circle cx="7" cy="9.7" r="0.1" fill="currentColor"></circle>
+                                          </svg></div>
+                                      </div>
+                                      <div class="order-totals__value-group">
+                                        <div data-next-display="order.shipping" class="order-totals__value">FREE<br></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="order-totals__section cc-total">
+                                    <div class="order-totals__line order-totals__line--total">
+                                      <div class="order-totals__label order-totals__label--total">Total</div>
+                                      <div class="order-totals__value-group">
+                                        <div data-next-display="order.currency" class="summary-total__coin">USD<br></div>
+                                        <div data-next-display="order.total" class="order-totals__value order-totals__value--total">$109.96</div>
+                                      </div>
+                                    </div>
+                                    <div data-next-show="cart.hasSavings" class="order-totals__savings">
+                                      <div class="order-totals__savings-content">
+                                        <div class="order-totals__savings-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 18 18" focusable="false" aria-hidden="true" class="a8x1wu10 a8x1wuz _1fragem1y _1fragemof _1fragemkk _1fragemka _1fragemnm" fill="none" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m10.802 15.686 5.367-5.368a.15.15 0 0 0 .046-.109V4.144m-2.998-.95h-5.67a.16.16 0 0 0-.11.046L1.779 8.897a.154.154 0 0 0 0 .219l5.594 5.593c.06.06.158.06.218 0l5.658-5.657a.15.15 0 0 0 .045-.11v-5.67a.077.077 0 0 0-.077-.077Zm-3.06 3.749a.643.643 0 1 1-1.286 0 .643.643 0 0 1 1.286 0m-.648-.005h.01v.01h-.01z"></path>
+                                          </svg></div>
+                                        <div class="order-totals__savings-text">TOTAL SAVINGS <span data-next-display="cart.savings">$28.34</span><br></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="steps-inner">
+                    <div class="steps-text"><strong data-i18n="step_01" class="steps-bold">Checkout</strong><br></div><img loading="lazy" src="https://cdn.prod.website-files.com/68117d05d09b8f2101e76605/68117d05d09b8f2101e76ef1_Polygon%207.svg" alt="" class="steps-arrow">
+                    <div data-i18n="step_02" class="steps-text text-step_2">Special Offers<br></div><img loading="lazy" src="https://cdn.prod.website-files.com/68117d05d09b8f2101e76605/68117d05d09b8f2101e76ef1_Polygon%207.svg" alt="" class="steps-arrow">
+                    <div data-i18n="step_03" class="steps-text text-step_3">Order Receipt<br></div>
+                  </div>
+                  <div class="receipt_head">
+                    <div class="skeleton skeleton-avatar skeleton-avatar--lg skeleton-avatar--square"></div>
+                    <div>
+                      <div class="skeleton skeleton-text skeleton-text--short"></div>
+                      <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                    </div>
+                  </div>
+                  <div class="receipt_section">
+                    <div class="receipt_section-head">
+                      <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                      <div class="skeleton skeleton-text skeleton-text--large"></div>
+                    </div>
+                  </div>
+                  <div class="receipt_section">
+                    <div class="receipt_section-head">
+                      <div class="display-xs">Order details</div>
+                    </div>
+                    <div class="order_receipt-grid">
+                      <div class="order_receipt-col">
+                        <div class="order_receipt-sec">
+                          <div class="sec_title">Contact information</div>
+                          <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                        </div>
+                        <div class="order_receipt-sec">
+                          <div class="sec_title">Shipping address</div>
+                          <div class="order_receipt--group">
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                          </div>
+                        </div>
+                        <div class="order_receipt-sec">
+                          <div class="sec_title">Shipping method</div>
+                          <div class="order_receipt--group">
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order_receipt-col">
+                        <div class="order_receipt-sec">
+                          <div class="sec_title">Payment method</div>
+                          <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                        </div>
+                        <div class="order_receipt-sec">
+                          <div class="sec_title">Shipping address</div>
+                          <div class="order_receipt--group">
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                          </div>
+                          <div class="order_receipt--group">
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                          </div>
+                          <div class="order_receipt--group">
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                          </div>
+                          <div class="order_receipt--group">
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                          </div>
+                          <div class="order_receipt--group">
+                            <div class="skeleton skeleton-text skeleton-text--medium"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="receipt_info">
+                    <div class="receipt-flex">
+                      <div>Need help?</div>
+                      <a href="#" class="link w-inline-block">
+                        <div>Contact Us</div>
+                      </a>
+                    </div>
+                    <a href="#" class="button cc-auto w-inline-block">
+                      <div>Continue shopping</div>
+                    </a>
+                  </div>
+                  <div class="receipt-footer">
+                    <a href="#" class="link w-inline-block">
+                      <div>Return policy</div>
+                    </a>
+                    <a href="#" class="link w-inline-block">
+                      <div>Privacy policy</div>
+                    </a>
+                    <a href="#" class="link w-inline-block">
+                      <div>Terms of service</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout__column checkout__column--right">
+                <div class="rtc-right-container">
+                  <div class="summary-desktop">
+                    <div class="summary-wrap">
+                      <div class="summary-holder">
+                        <div class="order-summary">
+                          <h4 class="order-summary__title checkout">Order Summary</h4>
+                          <div class="order-summary__content">
+                            <div class="cart-items">
+                              <div pb-checkout="summary-scroll" class="cart-items__scroll-hint cart-items__scroll-hint--active">
+                                <div>Scroll for more items</div>
+                                <div class="icon__view-more w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                                    <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6z"></path>
+                                  </svg></div>
+                              </div>
+                              <div data-next-content="">
+                                <div data-next-order-items="" class="cart-items__list">
+                                  <div data-order-line-id="{item.id}" class="cart-item">
+                                    <div class="cart-item__wrapper">
+                                      <div class="skeleton skeleton-avatar skeleton-avatar--lg skeleton-avatar--square skeleton--darker"></div>
+                                      <div class="cart-item__details">
+                                        <div class="cart-item__content">
+                                          <div class="cart-item__description">
+                                            <div class="skeleton skeleton-text skeleton-text--short skeleton--darker"></div>
+                                            <div class="skeleton skeleton-text skeleton-text--medium skeleton--darker"></div>
+                                          </div>
+                                          <div class="cart-item__pricing">
+                                            <div class="skeleton skeleton-text skeleton-text--tiny skeleton--darker"></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-next-content="">
+                              <div class="order-totals">
+                                <div class="order-totals__line">
+                                  <div class="skeleton skeleton-text skeleton-text--medium skeleton--darker"></div>
+                                  <div class="skeleton skeleton-text skeleton-text--tiny skeleton--darker"></div>
+                                </div>
+                                <div class="order-totals__line">
+                                  <div class="skeleton skeleton-text skeleton-text--medium skeleton--darker"></div>
+                                  <div class="skeleton skeleton-text skeleton-text--tiny skeleton--darker"></div>
+                                </div>
+                                <div class="order-totals__line">
+                                  <div class="skeleton skeleton-text skeleton-text--medium skeleton--darker"></div>
+                                  <div class="skeleton skeleton-text skeleton-text--tiny skeleton--darker"></div>
+                                </div>
+                                <div class="order-totals__line">
+                                  <div class="skeleton skeleton-text skeleton-text--medium skeleton--darker"></div>
+                                  <div class="skeleton skeleton-text skeleton-text--tiny skeleton--darker"></div>
+                                </div>
+                                <div class="order-totals__line order-totals__line--total">
+                                  <div class="skeleton skeleton-text skeleton-text--medium skeleton--darker"></div>
+                                  <div class="skeleton skeleton-text-lg skeleton-text--tiny skeleton--darker"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-5 mobile hide">
+                    <div class="div-block-3">
+                      <div class="rtc-logo w-embed"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 98.2 113.4" width="100%" height="100%">
+                          <!--  Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)   -->
+                          <g>
+                            <g id="Layer_1">
+                              <path fill="currentColor" class="cls-1" d="M98.2,28.3v18.9l-16.4,9.4-32.7-18.9-32.7,18.9L0,47.2v-18.9L49.1,0l49.1,28.3ZM81.8,56.7l-20.4,11.8-12.3-7.1-12.3,7.1-20.4-11.8L0,66.1v18.9l49.1,28.3,49.1-28.3v-18.9l-16.4-9.4Z"></path>
+                            </g>
+                          </g>
+                        </svg></div>
+                      <div data-i18n="123" class="small-text">Powered by 29next<br></div>
+                    </div>
+                    <div class="div-block-4">
+                      <div class="terms-text">
+                        <a href="#" class="footer-link">Terms of Service</a><br>
+                      </div>
+                      <div class="terms-text">
+                        <a href="#" class="footer-link">Privacy Policy</a><br>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-content">
+        <div class="checkout__content">
+          <div class="checkout__layout">
+            <div class="checkout__column checkout__column--left">
+              <div class="receipt__form-container">
+                <div class="checkout__header">
+                  <div class="checkout__header-brand"><img src="../images/next-logo.png" loading="lazy" alt="" class="brand-logo"></div>
+                  <div class="order-summary-mobile">
+                    <div data-initial-state="closed" data-next-accordion="order-summary" data-open-text="Hide Order Summary" data-close-text="Show Order Summary" data-toggle-class="next-expanded" class="order-summary-mobile__accordion">
+                      <div data-next-accordion-trigger="order-summary" class="accordion__trigger">
+                        <div class="accordion__inner">
+                          <div class="accordion__left">
+                            <div class="summary-toggle">
+                              <div data-next-accordion-text="order-summary" class="summary-toggle__text show_text">Show Order Summary</div><img os-summary-icon="" loading="lazy" alt="" src="https://cdn.prod.website-files.com/68117d05d09b8f2101e76605/68117d05d09b8f2101e76edf_arrow-down.svg" class="summary-toggle__icon">
+                            </div>
+                          </div>
+                          <div class="accordion__right">
+                            <div data-next-display="order.total" class="summary_price price--total">$109.96<br></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div data-next-accordion-panel="order-summary" class="accordion__panel payment-method__form--expanded">
+                        <div class="order-summary">
+                          <h4 class="order-summary__title">Order Summary</h4>
+                          <div class="order-summary__content">
+                            <div class="cart-items">
+                              <div pb-checkout="summary-scroll" class="cart-items__scroll-hint cart-items__scroll-hint--active">
+                                <div>Scroll for more items</div>
+                                <div class="icon__view-more w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                                    <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6z"></path>
+                                  </svg></div>
+                              </div>
+                              <div data-next-content="">
+                                <div data-next-order-items="" class="cart-items__list">
+                                  <div data-order-line-id="{item.id}" class="cart-item">
+                                    <div class="cart-item__wrapper">
+                                      <div class="cart-item__image-container">
+                                        <div class="cart-item__quantity-badge">
+                                          <div class="cart-item__quantity">{item.quantity}</div>
+                                        </div><img src="{item.image}" class="cart-item__image">
+                                      </div>
+                                      <div class="cart-item__details">
+                                        <div class="cart-item__content">
+                                          <div class="cart-item__description">
+                                            <div class="cart-item__header">
+                                              <div pb-cart="line_item-title" class="cart-item__title">{item.name}</div>
+                                            </div>
+                                            <div pb-cart="line_item-frequency" class="cart-item__frequency">One time purchase</div>
+                                          </div>
+                                          <div class="cart-item__pricing">
+                                            <div class="checkout__line-item__final-price">{item.lineTotal}</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-next-content="">
+                              <div class="order-totals">
+                                <div class="order-totals__line">
+                                  <div class="order-totals__label">Subtotal · <span>4</span> items</div>
+                                  <div data-next-display="order.subtotal" class="order-totals__value">$138.30<br></div>
+                                </div>
+                                <div class="order-totals__section">
+                                  <div class="order-totals__line">
+                                    <div class="order-totals__label-group">
+                                      <div class="order-totals__label">Shipping<br></div>
+                                      <div data-checkout-tooltip-position="top" data-checkout-tooltip="Shipping tooltip" class="info-icons w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 14" focusable="false" aria-hidden="true" class="a8x1wu10 a8x1wuz _1fragem1y _1fragemof _1fragemkk _1fragemka _1fragemnm" fill="none" stroke="currentColor">
+                                          <circle cx="7" cy="7" r="5.6" stroke="currentColor"></circle>
+                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.6 5.1c.2-1.3 2.6-1.3 2.8 0S6.95 6.4 6.95 7.45m.055 2.35H7v.005h.005z"></path>
+                                          <circle cx="7" cy="9.7" r="0.1" fill="currentColor"></circle>
+                                        </svg></div>
+                                    </div>
+                                    <div class="order-totals__value-group">
+                                      <div data-next-display="order.shipping" class="order-totals__value">FREE<br></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div data-next-show="order.hasTax" class="order-totals__section">
+                                  <div class="order-totals__line">
+                                    <div class="order-totals__label-group">
+                                      <div class="order-totals__label">Tax<br></div>
+                                    </div>
+                                    <div class="order-totals__value-group">
+                                      <div data-next-display="order.tax" class="order-totals__value">$10<br></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="order-totals__section cc-total">
+                                  <div class="order-totals__line order-totals__line--total">
+                                    <div class="order-totals__label order-totals__label--total">Total</div>
+                                    <div class="order-totals__value-group">
+                                      <div data-next-display="order.currency" class="summary-total__coin">USD<br></div>
+                                      <div data-next-display="order.total" class="order-totals__value order-totals__value--total">$109.96</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="steps-inner">
+                  <div class="steps-text"><strong data-i18n="step_01" class="steps-bold">Checkout</strong><br></div><img loading="lazy" src="https://cdn.prod.website-files.com/68117d05d09b8f2101e76605/68117d05d09b8f2101e76ef1_Polygon%207.svg" alt="" class="steps-arrow">
+                  <div data-i18n="step_02" class="steps-text text-step_2">Special Offers<br></div><img loading="lazy" src="https://cdn.prod.website-files.com/68117d05d09b8f2101e76605/68117d05d09b8f2101e76ef1_Polygon%207.svg" alt="" class="steps-arrow">
+                  <div data-i18n="step_03" class="steps-text text-step_3">Order Receipt<br></div>
+                </div>
+                <div class="receipt_head">
+                  <div class="receipt-check w-embed"><svg width="100%" height="100%" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M49 25C49 38.2548 38.2548 49 25 49C11.7452 49 1 38.2548 1 25C1 11.7452 11.7452 1 25 1C38.2548 1 49 11.7452 49 25Z" stroke="currentColor" stroke-width="2"></path>
+                      <path d="M15 24.5113L22.3067 31.818L35.1247 19" stroke="currentColor" stroke-width="2"></path>
+                    </svg></div>
+                  <div class="receipt-heading">
+                    <div class="receipt-subtitle">Confirmation #<span data-next-display="order.number">DQFDHG5E0</span><br></div>
+                    <h2 class="receipt_order">Thank you, <span data-next-display="order.customer.name">Taylor!</span></h2>
+                  </div>
+                </div>
+                <div class="receipt_section">
+                  <div class="receipt_section-head">
+                    <div class="display-xs">Your order is confirmed</div>
+                    <div class="receipt_section-head--desc">You’ll get a confirmation email with your order number soon.</div>
+                  </div>
+                </div>
+                <div class="receipt_section">
+                  <div class="receipt_section-head">
+                    <div class="display-xs">Order details</div>
+                  </div>
+                  <div class="order_receipt-grid">
+                    <div class="order_receipt-col">
+                      <div class="order_receipt-sec">
+                        <div class="sec_title">Contact information</div>
+                        <div data-next-display="order.customer.email" class="sec_value">jordan.chen@domain.com</div>
+                      </div>
+                      <div class="order_receipt-sec">
+                        <div class="sec_title">Shipping address</div>
+                        <div class="order_receipt--group">
+                          <div data-next-display="order.customer.name" class="sec_value">Jordan Chen</div>
+                          <div data-next-display="order.shipping_address.line1" class="sec_value">151 O&#x27;Connor St</div>
+                          <div data-next-display="order.shipping_address.line2" class="sec_value">Apt 1011</div>
+                          <div class="sec_value"><span data-next-display="order.shipping_address.city">Ottawa</span>, <span data-next-display="order.shipping_address.state">ON</span>, <span data-next-display="order.shipping_address.postcode">K2P 2L8</span></div>
+                          <div data-next-display="order.shipping_address.country" class="sec_value">Canada</div>
+                        </div>
+                      </div>
+                      <div class="order_receipt-sec">
+                        <div class="sec_title">Shipping method</div>
+                        <div class="order_receipt--group">
+                          <div data-next-display="order.shipping_method" class="sec_value">FedEx Ground</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order_receipt-col">
+                      <div class="order_receipt-sec">
+                        <div class="sec_title">Payment method</div>
+                        <div data-next-display="order.payment_method" class="sec_value">Credit Card</div>
+                      </div>
+                      <div class="order_receipt-sec">
+                        <div class="sec_title">Shipping address</div>
+                        <div class="order_receipt--group">
+                          <div data-next-display="order.customer.name" class="sec_value">Jordan Chen</div>
+                          <div data-next-display="order.billing_address.line1" class="sec_value">151 O&#x27;Connor St</div>
+                          <div data-next-display="order.billing_address.line2" class="sec_value">Apt 1011</div>
+                          <div class="sec_value"><span data-next-display="order.billing_address.city">Ottawa</span>, <span data-next-display="order.billing_address.state">ON</span>, <span data-next-display="order.billing_address.postcode">K2P 2L8</span></div>
+                          <div data-next-display="order.billing_address.country" class="sec_value">Canada</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="receipt_info">
+                  <div class="receipt-flex">
+                    <div>Need help?</div>
+                    <a href="#" class="link w-inline-block">
+                      <div>Contact Us</div>
+                    </a>
+                  </div>
+                  <a href="#" class="button cc-auto w-inline-block">
+                    <div>Continue shopping</div>
+                  </a>
+                </div>
+                <div class="receipt-footer">
+                  <a href="#" class="link w-inline-block">
+                    <div>Return policy</div>
+                  </a>
+                  <a href="#" class="link w-inline-block">
+                    <div>Privacy policy</div>
+                  </a>
+                  <a href="#" class="link w-inline-block">
+                    <div>Terms of service</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="checkout__column checkout__column--right">
+              <div class="rtc-right-container">
+                <div class="summary-desktop">
+                  <div class="summary-wrap">
+                    <div class="summary-holder">
+                      <div class="order-summary">
+                        <h4 class="order-summary__title checkout">Order Summary</h4>
+                        <div class="order-summary__content">
+                          <div class="cart-items">
+                            <div pb-checkout="summary-scroll" class="cart-items__scroll-hint cart-items__scroll-hint--active">
+                              <div>Scroll for more items</div>
+                              <div class="icon__view-more w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                                  <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6z"></path>
+                                </svg></div>
+                            </div>
+                            <div data-next-content="">
+                              <div data-next-order-items="" class="cart-items__list">
+                                <div data-order-line-id="{item.id}" class="cart-item">
+                                  <div class="cart-item__wrapper">
+                                    <div class="cart-item__image-container">
+                                      <div class="cart-item__quantity-badge">
+                                        <div class="cart-item__quantity">{item.quantity}</div>
+                                      </div><img src="{item.image}" class="cart-item__image">
+                                    </div>
+                                    <div class="cart-item__details">
+                                      <div class="cart-item__content">
+                                        <div class="cart-item__description">
+                                          <div class="cart-item__header">
+                                            <div pb-cart="line_item-title" class="cart-item__title">{item.name}</div>
+                                          </div>
+                                          <div pb-cart="line_item-frequency" class="cart-item__frequency">One time purchase</div>
+                                        </div>
+                                        <div class="cart-item__pricing">
+                                          <div class="checkout__line-item__final-price">{item.lineTotal}</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div data-next-content="">
+                            <div class="order-totals">
+                              <div class="order-totals__line">
+                                <div class="order-totals__label">Subtotal · <span>4</span> items</div>
+                                <div data-next-display="order.subtotal" class="order-totals__value">$138.30<br></div>
+                              </div>
+                              <div class="order-totals__section">
+                                <div class="order-totals__line">
+                                  <div class="order-totals__label-group">
+                                    <div class="order-totals__label">Shipping<br></div>
+                                    <div data-checkout-tooltip-position="top" data-checkout-tooltip="Shipping tooltip" class="info-icons w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 14" focusable="false" aria-hidden="true" class="a8x1wu10 a8x1wuz _1fragem1y _1fragemof _1fragemkk _1fragemka _1fragemnm" fill="none" stroke="currentColor">
+                                        <circle cx="7" cy="7" r="5.6" stroke="currentColor"></circle>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.6 5.1c.2-1.3 2.6-1.3 2.8 0S6.95 6.4 6.95 7.45m.055 2.35H7v.005h.005z"></path>
+                                        <circle cx="7" cy="9.7" r="0.1" fill="currentColor"></circle>
+                                      </svg></div>
+                                  </div>
+                                  <div class="order-totals__value-group">
+                                    <div data-next-display="order.shipping" class="order-totals__value">FREE<br></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div data-next-show="order.hasTax" class="order-totals__section">
+                                <div class="order-totals__line">
+                                  <div class="order-totals__label-group">
+                                    <div class="order-totals__label">Tax<br></div>
+                                  </div>
+                                  <div class="order-totals__value-group">
+                                    <div data-next-display="order.tax" class="order-totals__value">$10<br></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="order-totals__section cc-total">
+                                <div class="order-totals__line order-totals__line--total">
+                                  <div class="order-totals__label order-totals__label--total">Total</div>
+                                  <div class="order-totals__value-group">
+                                    <div data-next-display="order.currency" class="summary-total__coin">USD<br></div>
+                                    <div data-next-display="order.total" class="order-totals__value order-totals__value--total">$109.96</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-5 mobile hide">
+                  <div class="div-block-3">
+                    <div class="rtc-logo w-embed"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 98.2 113.4" width="100%" height="100%">
+                        <!--  Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)   -->
+                        <g>
+                          <g id="Layer_1">
+                            <path fill="currentColor" class="cls-1" d="M98.2,28.3v18.9l-16.4,9.4-32.7-18.9-32.7,18.9L0,47.2v-18.9L49.1,0l49.1,28.3ZM81.8,56.7l-20.4,11.8-12.3-7.1-12.3,7.1-20.4-11.8L0,66.1v18.9l49.1,28.3,49.1-28.3v-18.9l-16.4-9.4Z"></path>
+                          </g>
+                        </g>
+                      </svg></div>
+                    <div data-i18n="123" class="small-text">Powered by 29next<br></div>
+                  </div>
+                  <div class="div-block-4">
+                    <div class="terms-text">
+                      <a href="#" class="footer-link">Terms of Service</a><br>
+                    </div>
+                    <div class="terms-text">
+                      <a href="#" class="footer-link">Privacy Policy</a><br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=685996de362613655dd702b4" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../js/next-staging-core.js" type="text/javascript"></script>
+</body>
+</html>

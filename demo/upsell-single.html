@@ -6,6 +6,17 @@
   <title>Upsell</title>
   <meta content="Upsell" property="og:title">
   <meta content="Upsell" property="twitter:title">
+
+
+    
+  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
+  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
+
+  <script src="https://campaign-cart-v2.pages.dev/config.js"></script>
+  <script src="https://campaign-cart-v2.pages.dev/loader.js"></script>
+
+
+  
   <meta content="width=device-width, initial-scale=1" name="viewport">
 
 
@@ -26,171 +37,6 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
-  <!--  DNS prefetch for faster API calls  -->
-  <link rel="dns-prefetch" href="//campaigns.apps.29next.com">
-  <link rel="dns-prefetch" href="//cdn-countries.muddy-wind-c7ca.workers.dev">
-
-  <!--  Preload modules for faster loading  -->
-  <script type="module">
-    const qs = new URLSearchParams(location.search);
-    const isDebug = qs.get('debug') === 'true';
-    const DEV_HOST = 'http://localhost:3000';
-    const PROD_HOST = 'https://campaign-cart-v2.pages.dev';
-    const DEV_ENTRY_PATH = '/src/index.ts';
-    const PROD_ENTRY_PATH = '/index.es.js';
-    const sdkUrl = isDebug ? DEV_HOST + DEV_ENTRY_PATH : PROD_HOST + PROD_ENTRY_PATH;
-    // Preload the SDK module
-    const link = document.createElement('link');
-    link.rel = 'modulepreload';
-    link.href = sdkUrl;
-    document.head.appendChild(link);
-  </script>
-
-  <!--  Enhanced SDK loader with parallel initialization  -->
-  <script type="module">
-    const qs = new URLSearchParams(location.search);
-    const isDebug = qs.get('debug') === 'true';
-    const DEV_HOST = 'http://localhost:3000';
-    const PROD_HOST = 'https://campaign-cart-v2.pages.dev';
-    const DEV_ENTRY_PATH = '/src/index.ts';
-    const PROD_ENTRY_PATH = '/index.es.js';
-    const sdkUrl = isDebug ? DEV_HOST + DEV_ENTRY_PATH : PROD_HOST + PROD_ENTRY_PATH;
-    // Store start time for performance tracking
-    window.tn29StartTime = performance.now();
-    // Check if data is already cached
-    const hasCampaignCache = !!sessionStorage.getItem('next-campaign-cache');
-    const hasLocationCache = !!sessionStorage.getItem('next_country_location_data');
-    // Start data preloading immediately (before SDK loads)
-    const configData = {
-      apiKey: document.querySelector('meta[name="next-api-key"]')?.content,
-      ...window.nextConfig
-    };
-    // Preload critical data if we have config
-    let dataPreloadPromise = null;
-    if (configData.apiKey) {
-      const preloadTasks = [];
-      // Only preload campaign if not cached
-      if (!hasCampaignCache) {
-        preloadTasks.push(
-          fetch('https://campaigns.apps.29next.com/api/v1/campaigns/', {
-            headers: {
-              'Authorization': configData.apiKey
-            }
-          })
-            .then(r => r.ok ? r.json() : null)
-            .then(data => {
-              if (data) {
-                const cacheData = {
-                  campaign: data,
-                  timestamp: Date.now(),
-                  apiKey: configData.apiKey
-                };
-                sessionStorage.setItem('next-campaign-cache', JSON.stringify(cacheData));
-                console.log('💾 Campaign data preloaded and cached');
-              }
-              return data;
-            })
-            .catch(() => null)
-        );
-      }
-      // Only preload location if not cached
-      if (!hasLocationCache) {
-        preloadTasks.push(
-          fetch('https://cdn-countries.muddy-wind-c7ca.workers.dev/location')
-            .then(r => r.ok ? r.json() : null)
-            .then(data => {
-              if (data) {
-                const cacheData = {
-                  data,
-                  timestamp: Date.now()
-                };
-                sessionStorage.setItem('next_country_location_data',
-                  JSON.stringify(cacheData));
-                console.log('💾 Location data preloaded and cached');
-              }
-              return data;
-            })
-            .catch(() => null)
-        );
-      }
-      // Only create promise if we have tasks to run
-      if (preloadTasks.length > 0) {
-        dataPreloadPromise = Promise.all(preloadTasks);
-      }
-    }
-    try {
-      // Load SDK in parallel with data preloading - NO ARTIFICIAL DELAY
-      const [sdk] = await Promise.all([
-        import(sdkUrl),
-        dataPreloadPromise || Promise.resolve()
-      ]);
-      // Make SDK available globally
-      window.NextCommerce = sdk;
-      // Performance tracking
-      const loadTime = performance.now() - window.nextStartTime;
-      if (isDebug) {
-        // Dev mode helpers
-        window.nextDebug = {
-          loadTime: `${loadTime.toFixed(2)}ms`,
-          cartStore: () => import(`${DEV_HOST}/src/stores/cartStore.ts`)
-            .then(m => m.useCartStore.getState()),
-          configStore: () => import(`${DEV_HOST}/src/stores/configStore.ts`)
-            .then(m => m.useConfigStore.getState()),
-          campaignStore: () => import(`${DEV_HOST}/src/stores/campaignStore.ts`)
-            .then(m => m.useCampaignStore.getState()),
-          performance: {
-            loadTime,
-            dataPreloaded: !!dataPreloadPromise,
-            cacheHits: performance.getEntriesByType('navigation')[0]
-          }
-        };
-        console.log('🚀 Next Commerce Campaign-Cart SDK v0.1 — DEV build loaded');
-        console.log(`⚡ Load time: ${loadTime.toFixed(2)}ms`);
-        console.log('💡 Try nextDebug.cartStore() or nextDebug.performance');
-      } else {
-        console.log('🚀 Next Commerce Campaign-Cart SDK v0.1 — ES Module loaded');
-        if (loadTime > 500) {
-          console.warn(`⚠️ Slow load detected: ${loadTime.toFixed(2)}ms`);
-        }
-      }
-      // Emit ready event with performance data
-      window.dispatchEvent(new CustomEvent('next:ready', {
-        detail: {
-          loadTime,
-          version: '0.1.0'
-        }
-      }));
-    } catch (error) {
-      console.error('Failed to load ES module:', error);
-      if (!isDebug) {
-        console.log('🔄 Attempting fallback loading...');
-      }
-    }
-  </script>
-
-  <!--  Optimized fallback for older browsers  -->
-  <script nomodule="">
-    const script = document.createElement('script');
-    script.src = 'https://campaign-cart-v2.pages.dev/index.umd.js';
-    script.async = true;
-    script.onload = function () {
-      console.log('🚀 Next Commerce Campaign-Cart SDK v0.1 — UMB fallback ready');
-      window.dispatchEvent(new CustomEvent('next:ready', {
-        detail: {
-          fallback: true,
-          version: '0.1.0'
-        }
-      }));
-    };
-    script.onerror = function () {
-      console.error('❌ Failed to load SDK - please contact support');
-    };
-    document.head.appendChild(script);
-  </script>
-
-
-  <script src="../js/config.js"></script>
 
 
 
