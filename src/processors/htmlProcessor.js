@@ -203,6 +203,9 @@ export class HtmlProcessor {
         campaignBlock += `  <link rel="dns-prefetch" href="${href}">\n`;
       });
       
+      // Add empty line before scripts
+      campaignBlock += '\n';
+      
       // Add script tags with comments
       config.scripts.forEach(script => {
         if (script.external) {
@@ -251,10 +254,9 @@ export class HtmlProcessor {
       const loaderScript = $('script[src*="campaign-cart-v2.pages.dev/loader.js"]').last();
       
       if (loaderScript.length > 0) {
-        // Add empty line, comment, empty line, then meta tags
+        // Add empty line, comment, then meta tags (no empty line between comment and tags)
         let metaBlock = '\n\n';
         metaBlock += '  <!-- NEXT Metatags -->\n';
-        metaBlock += '\n';
         metaTagsHtml.forEach(metaHtml => {
           metaBlock += `  ${metaHtml}\n`;
         });
