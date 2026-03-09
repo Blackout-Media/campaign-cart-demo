@@ -2,3 +2,4 @@ node_modules
 temp_auto_push.bat
 dist
 reports.gitignore
+temp_interactive_push.bat
